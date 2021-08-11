@@ -11,6 +11,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springbootDemo-mybatis-plus</module>
+        <module>demo-mybatis-plus2</module>
     </modules>
 
     <parent>
