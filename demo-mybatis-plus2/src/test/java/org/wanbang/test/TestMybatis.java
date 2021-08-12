@@ -18,7 +18,6 @@ public class TestMybatis {
 	@Autowired
 	private CityMapper cityMapper;
 
-
 	@Test
 	public void testQueryUser1() {
 		City city = cityMapper.selectOne(Wrappers.<City>query().lambda()
@@ -26,10 +25,5 @@ public class TestMybatis {
 
 		System.out.println(city);
 	}
-
-
-
-
-
 
 }
