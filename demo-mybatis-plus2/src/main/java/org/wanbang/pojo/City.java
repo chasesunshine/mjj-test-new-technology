@@ -1,24 +1,30 @@
 package org.wanbang.pojo;
 
-import org.jboss.logging.Field;
-
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain=true)	//链式设置属性
-@TableName(value="user")
-public class User {
+@TableName(value="city")
+public class City {
 	
 	@TableId(type=IdType.AUTO)		//表示主键自增
+	@TableField(value = "ID")
 	private Integer id;
 
+	@TableField(value = "Name")
 	private String name;
-	private Integer age;
-	private String sex;
 
+	@TableField(value = "CountryCode")
+	private String countryCode;
+
+	@TableField(value = "District")
+	private String district;
+
+	@TableField(value = "Population")
+	private Integer population;
 }

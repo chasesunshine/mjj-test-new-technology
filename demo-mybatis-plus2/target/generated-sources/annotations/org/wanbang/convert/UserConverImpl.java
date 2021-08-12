@@ -2,7 +2,6 @@ package org.wanbang.convert;
 
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
-import org.wanbang.pojo.User;
 import org.wanbang.pojo.common.UserVo;
 import org.wanbang.pojo.common.UserVo1;
 
