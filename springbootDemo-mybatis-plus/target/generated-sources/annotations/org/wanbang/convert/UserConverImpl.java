@@ -8,7 +8,7 @@ import org.wanbang.pojo.common.UserVo1;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-08-11T22:45:30+0800",
+    date = "2021-08-12T11:07:27+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_221 (Oracle Corporation)"
 )
 @Component

@@ -1,7 +1,8 @@
 server:
-  port: 8091
+  port: 8092
   servlet:
     context-path: /
+
 spring:
   datasource:
     #引入druid数据源
@@ -11,13 +12,6 @@ spring:
     username: root
     password: root
 
-#mybatis-plush配置
-mybatis-plus:
-  type-aliases-package: org.wanbang.pojo
-  mapper-locations: classpath:/mybatis/mappers/*.xml
-  configuration:
-    map-underscore-to-camel-case: true  #自动开启驼峰规则映射
-
-
-  
-  
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
