@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@MapperScan("org.wanbang.mapper")	//程序会自动为mybatis创建代理对象
 @NacosPropertySource(dataId = "mjj", autoRefreshed = true)
 public class Application_Mybatis3 {
 	
