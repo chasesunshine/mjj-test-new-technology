@@ -4,12 +4,12 @@ import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.wanbang.convert.UserConver;
 import org.wanbang.mapper.UserMapper;
-import org.wanbang.pojo.User;
+import org.wanbang.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.wanbang.pojo.common.UserVo;
-import org.wanbang.pojo.common.UserVo1;
+import org.wanbang.entity.common.UserVo;
+import org.wanbang.entity.common.UserVo1;
 
 import javax.annotation.Resource;
 
@@ -24,10 +24,11 @@ public class UserService {
     public String selectOne() {
         User user = userMapper.selectOne(Wrappers.<User>query().lambda()
                 .eq(User::getId,7));
+
         UserVo userVo = UserConver.item2Dto(user);
 
         UserVo1 convert = UserConver.convert(user);
 
-        return JSON.toJSONString(userVo);
+        return JSON.toJSONString(user);
     }
 }

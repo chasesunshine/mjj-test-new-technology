@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.wanbang.mapper.UserMapper;
-import org.wanbang.pojo.User;
+import org.wanbang.entity.User;
 
 @RunWith(SpringRunner.class)	//注意测试文件的位置 必须在主文件加载包路径下
 @SpringBootTest

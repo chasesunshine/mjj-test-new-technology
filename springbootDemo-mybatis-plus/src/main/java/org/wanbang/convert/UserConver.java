@@ -1,8 +1,8 @@
 package org.wanbang.convert;
 
-import org.wanbang.pojo.User;
-import org.wanbang.pojo.common.UserVo;
-import org.wanbang.pojo.common.UserVo1;
+import org.wanbang.entity.User;
+import org.wanbang.entity.common.UserVo;
+import org.wanbang.entity.common.UserVo1;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

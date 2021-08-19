@@ -1,4 +1,4 @@
-package org.wanbang.pojo;
+package org.wanbang.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

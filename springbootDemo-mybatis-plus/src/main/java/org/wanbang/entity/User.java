@@ -1,6 +1,4 @@
-package org.wanbang.pojo;
-
-import org.jboss.logging.Field;
+package org.wanbang.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

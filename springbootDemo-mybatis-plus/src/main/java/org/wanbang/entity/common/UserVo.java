@@ -1,4 +1,4 @@
-package org.wanbang.pojo.common;
+package org.wanbang.entity.common;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

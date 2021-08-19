@@ -2,8 +2,8 @@ package org.wanbang.convert;
 
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
-import org.wanbang.pojo.common.UserVo;
-import org.wanbang.pojo.common.UserVo1;
+import org.wanbang.entity.common.UserVo;
+import org.wanbang.entity.common.UserVo1;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
