@@ -26,8 +26,17 @@ public class TestStream {
         Product prod5 = new Product(5L, 10, new BigDecimal("15"), "百威啤酒", "啤酒");
         List<Product> prodList = Lists.newArrayList(prod1, prod2, prod3, prod4, prod5);
 
-        Map<String, List<Product>> prodMap= prodList.stream().collect(Collectors.groupingBy(Product::getCategory,Collectors.toList()));
-        System.out.println(JSON.toJSONString(prodMap));
+//        Map<String, List<Product>> prodMap= prodList.stream().collect(Collectors.groupingBy(Product::getCategory,Collectors.toList()));
+//        System.out.println(JSON.toJSONString(prodMap));
 
+        Map<String, List<Product>> prodMap= prodList.stream().collect(Collectors.groupingBy(item -> {
+            if(item.getNum() < 3) {
+                return "3";
+            }else {
+                return "other";
+            }
+        }));
+
+        System.out.println(JSON.toJSONString(prodMap));
     }
 }
