@@ -18,6 +18,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
 
+user:
+  id: 333
+  name: mjj
+  age: 444
+  sex: 男
 
   
   

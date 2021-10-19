@@ -18,6 +18,8 @@ public class TestFilter {
         List<String> a = new ArrayList<>();
         a.add("/bb");
         a.add("/aa");
+
+
         registrationBean.setUrlPatterns(a);
         Map<String,String> map = new HashMap<>();
         map.put("111","222");

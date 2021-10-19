@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import org.wanbang.config.BeanConfig;
 import org.wanbang.mapper.UserMapper;
 import org.wanbang.entity.User;
 
@@ -20,6 +21,7 @@ public class TestMybatis {
 	
 	@Autowired
 	private UserMapper userMapper;
+
 	
 	@Test
 	public void testFindUser() {
@@ -92,9 +94,13 @@ public class TestMybatis {
 
 		System.out.println(userList);
 	}
-	
-	
-	
+
+
+	@Test
+	public void testQueryUser2() {
+		User user = BeanConfig.getUser();
+		System.out.println(user.toString());
+	}
 	
 	
 	
