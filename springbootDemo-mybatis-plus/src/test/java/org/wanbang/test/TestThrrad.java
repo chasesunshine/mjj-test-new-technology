@@ -24,6 +24,7 @@ public class TestThrrad {
 	@Resource
 	private UserMapper userMapper;
 
+	// http://www.manongjc.com/article/9120.html
 	/**
 	 *    测试类
 	 */
