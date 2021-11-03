@@ -37,6 +37,7 @@ public class TestMybatis {
 		/*user.setName("诺克赛斯之手");
 		user.setAge(100);
 		user.setSex("男");*/
+		user.setId(99);
 		user.setName("诺克赛斯之手").setAge(100).setSex("男");
 		userMapper.insert(user);
 		System.out.println("入库成功");
