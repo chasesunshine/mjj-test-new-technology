@@ -3,9 +3,12 @@ package org.wanbang.filter;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -15,6 +18,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @Component
@@ -22,6 +27,10 @@ import javax.servlet.annotation.WebInitParam;
 @WebFilter(filterName = "FilterUtil", urlPatterns = { "/*" }, initParams = { @WebInitParam(name = "name", value = "xc"),
         @WebInitParam(name = "like", value = "java") })
 public class FilterUtil implements Filter {
+
+    private static final AntPathMatcher ANT_PATH_MATCHER = new AntPathMatcher();
+
+    public static final List<String> IGNORE_URI_PATTERN = Arrays.asList("/devops/**", "/oss/**","/api/wms/dubhe/**","/api/erp/**");
 
     /*
      * 过滤器初始化
@@ -73,6 +82,18 @@ public class FilterUtil implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+        HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+        String requestUrl = httpServletRequest.getRequestURI();
+        String contextPath = httpServletRequest.getContextPath();
+
+        // new AntPathMatcher()
+        // 在做uri匹配规则发现这个类，根据源码对该类进行分析，它主要用来做类URLs字符串匹配
+        boolean match = ANT_PATH_MATCHER.match(contextPath, requestUrl);
+        boolean isIgnore = IGNORE_URI_PATTERN.stream().anyMatch(uri -> ANT_PATH_MATCHER.match(contextPath + uri, requestUrl));
+
+
+        System.out.println(isIgnore);
         System.out.println("FilterDemo02执行前！！！");
         chain.doFilter(request, response); // 让目标资源执行，放行
         System.out.println("FilterDemo02执行后！！！");
