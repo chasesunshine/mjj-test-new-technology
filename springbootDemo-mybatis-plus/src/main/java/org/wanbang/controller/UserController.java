@@ -1,8 +1,10 @@
 package org.wanbang.controller;
 
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.wanbang.dto.UserReq;
+import org.wanbang.dto.UserReq1;
 import org.wanbang.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,17 @@ public class UserController {
             return validateResult.getAllErrors().get(0).getDefaultMessage();
         }
         return "Student Created";
+    }
+
+    /**
+     * 参数校验
+     *
+     * @param user
+     * @return
+     */
+    @PostMapping("/vaild3")
+    public String addStudent(@Validated @RequestBody UserReq1 user) {
+        return "Student Created1";
     }
 
 }
