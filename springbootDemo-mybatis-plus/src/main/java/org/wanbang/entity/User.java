@@ -1,6 +1,7 @@
 package org.wanbang.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -27,9 +28,12 @@ public class User {
 	private Integer age;
 	private String sex;
 
-	private LocalDateTime dateTime;
+	@TableField("begin_time")
+	private LocalDateTime beginTime;
 
+	@TableField("end_time")
 	private LocalDateTime endTime;
 
+	@TableField("gmt_create")
 	private LocalDateTime gmtCreate;
 }

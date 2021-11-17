@@ -1,18 +1,20 @@
 package org.wanbang.service;
 
 import com.alibaba.fastjson.JSON;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import org.springframework.aop.framework.AopContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
 import org.wanbang.convert.UserConver;
 import org.wanbang.mapper.UserMapper;
 import org.wanbang.entity.User;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.wanbang.entity.common.UserVo;
 import org.wanbang.entity.common.UserVo1;
+import org.wanbang.util.redis.RedisUtils;
+import org.wanbang.util.redis.SpringContextHolder;
 import org.wanbang.util.spring.SpringUtil;
 
 import javax.annotation.Resource;
@@ -24,10 +26,21 @@ public class UserService {
     private UserMapper userMapper;
     @Resource
     private UserConver UserConver;
+    @Resource
+    private RedisUtils redisUtils;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     public String selectOne() {
+        //redisUtils.set("token","12344");
+        stringRedisTemplate.opsForValue().set("token","123443");
+        redisTemplate.opsForSet().add("token1","dsadsadsa");
+
         User user = userMapper.selectOne(Wrappers.<User>query().lambda()
-                .eq(User::getId,7));
+                .eq(User::getId,102));
 
         UserVo userVo = UserConver.item2Dto(user);
 
