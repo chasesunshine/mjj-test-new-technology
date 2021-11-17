@@ -24,6 +24,12 @@ public class UserController {
         return s;
     }
 
+    @GetMapping("/selectOneAop")
+    public String  selectOneTest(){
+        String s = userService.deleteAopTest();
+        return s;
+    }
+
     @PostMapping("/vaild1")
     public String addStudent(@Valid @RequestBody UserReq user) {
         return "Student Created";
