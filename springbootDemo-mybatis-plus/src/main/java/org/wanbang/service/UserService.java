@@ -70,7 +70,8 @@ public class UserService {
      *
      * @return
      */
-    @Transactional(rollbackFor = Exception.class)
+    // 内层事务可以不加
+    //@Transactional(rollbackFor = Exception.class)
     public String deleteAop(Integer id,User user) {
         int delete = userMapper.deleteById(id);
         System.out.println("deleteAop 删除成功 " + delete);
