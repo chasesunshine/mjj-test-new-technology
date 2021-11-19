@@ -1,6 +1,7 @@
 package org.wanbang.service;
 
 import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -13,11 +14,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.wanbang.entity.common.UserVo;
 import org.wanbang.entity.common.UserVo1;
+import org.wanbang.util.common.CallBack;
 import org.wanbang.util.redis.RedisUtils;
 import org.wanbang.util.redis.SpringContextHolder;
 import org.wanbang.util.spring.SpringUtil;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -66,6 +69,14 @@ public class UserService {
         return JSON.toJSONString(s);
     }
 
+    @Transactional(rollbackFor = Exception.class)
+    public String deleteAopTest1() {
+
+        List<User> userLiat = getMaterialNo(sex-> userMapper.selectUserList(sex));
+
+        return JSON.toJSONString(userLiat);
+    }
+
     /**
      *
      * @return
@@ -87,4 +98,10 @@ public class UserService {
     private UserService getService(){
         return SpringUtil.getBean(this.getClass());   //SpringUtil工具类见下面代码
     }
+
+    public static List<User> getMaterialNo(CallBack callBack){
+        List<User> userList = callBack.selectUserList("男");
+        return userList;
+    }
+
 }

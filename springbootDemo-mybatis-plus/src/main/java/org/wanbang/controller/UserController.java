@@ -25,8 +25,14 @@ public class UserController {
     }
 
     @GetMapping("/selectOneAop")
-    public String  selectOneTest(){
+    public String selectOneTest(){
         String s = userService.deleteAopTest();
+        return s;
+    }
+
+    @GetMapping("/selectOneInterface")
+    public String selectOneInterface(){
+        String s = userService.deleteAopTest1();
         return s;
     }
 
