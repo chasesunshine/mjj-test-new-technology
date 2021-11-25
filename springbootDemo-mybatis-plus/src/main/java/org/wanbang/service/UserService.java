@@ -21,6 +21,7 @@ import org.wanbang.util.spring.SpringUtil;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @Slf4j
@@ -34,13 +35,20 @@ public class UserService {
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
-    @Autowired
+    @Resource(name = "redisStringTemplate")
     private RedisTemplate redisTemplate;
 
     public String selectOne() {
         //redisUtils.set("token","12344");
         stringRedisTemplate.opsForValue().set("token","123443");
-        redisTemplate.opsForSet().add("token1","dsadsadsa");
+        String mjj = String.format("mjj");
+        redisTemplate.opsForSet().add(mjj,"dsadsadsa123");
+        redisTemplate.opsForSet().add(mjj,"dsadsadsaxxx");
+
+        Boolean dsadsadsa123 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa123");
+        Boolean dsadsadsa12 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa12");
+        Set<String> resultSet = redisTemplate.opsForSet().members(mjj);
+        System.out.println(resultSet.toString());
 
         User user = userMapper.selectOne(Wrappers.<User>query().lambda()
                 .eq(User::getId,102));
