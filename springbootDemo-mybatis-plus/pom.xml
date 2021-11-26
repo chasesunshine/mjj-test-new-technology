@@ -41,6 +41,7 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
         </dependency>
+
     </dependencies>
 
     <!-- Package as an executable jar  可执行jar包  -->
