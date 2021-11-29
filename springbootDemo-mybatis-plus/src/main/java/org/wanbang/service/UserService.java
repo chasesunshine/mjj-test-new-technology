@@ -1,7 +1,6 @@
 package org.wanbang.service;
 
 import com.alibaba.fastjson.JSON;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -16,7 +15,6 @@ import org.wanbang.entity.common.UserVo;
 import org.wanbang.entity.common.UserVo1;
 import org.wanbang.util.common.CallBack;
 import org.wanbang.util.redis.RedisUtils;
-import org.wanbang.util.redis.SpringContextHolder;
 import org.wanbang.util.spring.SpringUtil;
 
 import javax.annotation.Resource;
