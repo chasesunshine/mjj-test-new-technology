@@ -27,5 +27,25 @@
          　　要触发@Recover方法，@Retryable方法不能存在返回值，只能是void
          　　非幂等下慎用
          　　使用@Retryable的方法里不能使用try  catch包裹，要在方法上抛出异常，不然不会触发
-    
+#demo-mybatis-plus2
+    - spring boot 2.x 使用mybatis拦截器实现系统日志记录（将完整参数的SQL语句记录到数据库中）   https://blog.csdn.net/C_AJing/article/details/110644477
+    - sql 
+        CREATE TABLE `sys_log` (
+          `id` bigint(20) NOT NULL COMMENT '主键',
+          `uri` varchar(255) DEFAULT NULL COMMENT '调用的接口',
+          `dao_method_name` varchar(1000) DEFAULT NULL COMMENT 'DAO层执行的方法名称',
+          `ip` varchar(100) DEFAULT NULL COMMENT 'ip地址',
+          `whole_sql` mediumtext COMMENT '完整SQL语句',
+          `remark` varchar(255) DEFAULT NULL COMMENT '描述',
+          `create_date` datetime DEFAULT NULL COMMENT '创建时间',
+          PRIMARY KEY (`id`) USING BTREE
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+        
+        CREATE TABLE `world_user` (
+          `id` bigint(20) NOT NULL AUTO_INCREMENT,
+          `age` int(11) DEFAULT NULL,
+          `name` varchar(255) DEFAULT NULL,
+          PRIMARY KEY (`id`) USING BTREE
+        ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+     - 注 ： 只能 记录 mybqtis 手写的sql，不支持 mybatisplus的自动生成语句的sql（也就是快捷sql）
     
