@@ -31,7 +31,7 @@
     - spring boot 2.x 使用mybatis拦截器实现系统日志记录（将完整参数的SQL语句记录到数据库中）   https://blog.csdn.net/C_AJing/article/details/110644477
         1.  sql 
             CREATE TABLE `sys_log` (
-              `id` bigint(20) NOT NULL COMMENT '主键',
+              `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
               `uri` varchar(255) DEFAULT NULL COMMENT '调用的接口',
               `dao_method_name` varchar(1000) DEFAULT NULL COMMENT 'DAO层执行的方法名称',
               `ip` varchar(100) DEFAULT NULL COMMENT 'ip地址',
@@ -39,14 +39,14 @@
               `remark` varchar(255) DEFAULT NULL COMMENT '描述',
               `create_date` datetime DEFAULT NULL COMMENT '创建时间',
               PRIMARY KEY (`id`) USING BTREE
-            ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
             
             CREATE TABLE `world_user` (
               `id` bigint(20) NOT NULL AUTO_INCREMENT,
               `age` int(11) DEFAULT NULL,
               `name` varchar(255) DEFAULT NULL,
               PRIMARY KEY (`id`) USING BTREE
-            ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+            ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
          （ 注 ： 只能 记录 mybqtis 手写的sql，不支持 mybatisplus的自动生成语句的sql（也就是快捷sql） ）
          
     - Java代理设计模式(Proxy)的四种具体实现：静态代理和动态代理

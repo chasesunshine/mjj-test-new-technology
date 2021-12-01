@@ -116,6 +116,7 @@ public class LogUtils {
                         // 没有UnRecordLog注解，并且方法满足记录格式则进行记录
                         if (method.getAnnotation(UnRecordLog.class) == null && verifyMethodName(methodName)) {
                             isRecord = true;
+                            desc = "没有RecordLog注解";
                         }
                     }
                     break;
@@ -153,7 +154,8 @@ public class LogUtils {
             ip = IPUtils.getIpAddress(request);
         }
         // id
-        paramList.add(System.currentTimeMillis());
+        //paramList.add(System.currentTimeMillis());
+
         // 调用的接口
         paramList.add(uri);
         //DAO层执行的方法名称

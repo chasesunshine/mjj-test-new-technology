@@ -60,6 +60,7 @@ public class MybatisLogInterceptor implements Interceptor {
             // 获取sql语句
             String originalSql = statement.toString();
 
+            // 将插入sql语句记录到日志
             String saveLogSql = LogUtils.getSaveLogSql(methodFullName, (String) map.get("remark"), originalSql);
 
             if (StringUtils.isNotBlank(saveLogSql)) {
