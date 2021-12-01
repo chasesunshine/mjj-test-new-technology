@@ -22,8 +22,13 @@ public class WorldUserService {
         return JSON.toJSONString(worldUser);
     }
 
-    public Integer insertOnedata() {
-        int mjj = userMapper.insertdData(WorldUser.builder().name("mjj1234").age(20).build());
+    public Integer insertOnedata(String name,Integer age) {
+        int mjj = userMapper.insertOneData(WorldUser.builder().name(name).age(age).build());
+        return mjj;
+    }
+
+    public Integer insert(String name,Integer age) {
+        int mjj = userMapper.insert(WorldUser.builder().name(name).age(age).build());
         return mjj;
     }
 }

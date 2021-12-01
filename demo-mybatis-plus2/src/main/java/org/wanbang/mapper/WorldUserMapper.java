@@ -5,5 +5,5 @@ import org.wanbang.entity.WorldUser;
 
 public interface WorldUserMapper extends BaseMapper<WorldUser> {
 
-    int insertdData(WorldUser mjj);
+    int insertOneData(WorldUser mjj);
 }

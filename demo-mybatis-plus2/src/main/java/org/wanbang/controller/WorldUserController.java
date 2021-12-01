@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.wanbang.service.WorldUserService;
 
@@ -20,9 +21,15 @@ public class WorldUserController {
         return s;
     }
 
-    @GetMapping("/inset")
-    public Integer insetOne(){
-        Integer s = worldUserService.insertOnedata();
+    @GetMapping("/inset/mybatis")
+    public Integer insetOneMybatis(@RequestParam("name") String name,@RequestParam("age")Integer age){
+        Integer s = worldUserService.insertOnedata(name,age);
+        return s;
+    }
+
+    @GetMapping("/inset/mybatisplus")
+    public Integer insetOneMybatisplus(@RequestParam("name") String name,@RequestParam("age")Integer age){
+        Integer s = worldUserService.insert(name,age);
         return s;
     }
 
