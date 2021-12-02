@@ -15,6 +15,7 @@ import org.wanbang.entity.common.UserVo;
 import org.wanbang.entity.common.UserVo1;
 import org.wanbang.util.common.CallBack;
 import org.wanbang.util.redis.RedisUtils;
+import org.wanbang.util.redis.lock.LockExecutor;
 import org.wanbang.util.spring.SpringUtil;
 
 import javax.annotation.Resource;
@@ -35,13 +36,28 @@ public class UserService {
     private StringRedisTemplate stringRedisTemplate;
     @Resource(name = "redisStringTemplate")
     private RedisTemplate redisTemplate;
+    @Resource
+    private LockExecutor lockExecutor;
+
+    public String TestRedisson() throws Exception {
+        User user = new User();
+        String a = "1";
+        String mjj1 = lockExecutor.exec("token", 3, () -> {
+
+            return "1";
+        });
+        return null;
+    }
 
     public String selectOne() {
         //redisUtils.set("token","12344");
         stringRedisTemplate.opsForValue().set("token","123443");
-        String mjj = String.format("mjj");
+        String mjj = String.format("mjj:mjj1:fxjk");
         redisTemplate.opsForSet().add(mjj,"dsadsadsa123");
         redisTemplate.opsForSet().add(mjj,"dsadsadsaxxx");
+        String mjj1 = String.format("mjj:mjj1:fxyjk");
+        redisTemplate.opsForSet().add(mjj1,"dsadsadsa123");
+        redisTemplate.opsForSet().add(mjj1,"dsadsadsaxxx");
 
         Boolean dsadsadsa123 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa123");
         Boolean dsadsadsa12 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa12");
