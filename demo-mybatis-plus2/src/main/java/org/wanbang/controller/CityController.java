@@ -1,5 +1,6 @@
 package org.wanbang.controller;
 
+import org.wanbang.common.enums.CacheNameEnum;
 import org.wanbang.service.CityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class CityController {
     @GetMapping("/selectOne")
     public String  selectOne(){
         String s = cityService.selectOne();
+        String fxjk = CacheNameEnum.SVC_NODE_ID.formatOrgId("fxjk");
         return s;
     }
 }
