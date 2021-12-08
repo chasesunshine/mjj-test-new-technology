@@ -26,4 +26,12 @@ public class TestMybatis {
 		System.out.println(city);
 	}
 
+	@Test
+	public void testQueryUser2() {
+		City build = City.builder().id(1).countryCode("2").build();
+		City build1 = City.builder().id(2).countryCode("3").build();
+		System.out.println(build);
+		System.out.println(build1);
+	}
+
 }
