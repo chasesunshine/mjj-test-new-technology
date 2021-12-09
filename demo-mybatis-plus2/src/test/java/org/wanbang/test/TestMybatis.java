@@ -11,6 +11,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.wanbang.mapper.CityMapper;
 import org.wanbang.entity.City;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RunWith(SpringRunner.class)	//注意测试文件的位置 必须在主文件加载包路径下
 @SpringBootTest
 public class TestMybatis {
@@ -33,5 +36,21 @@ public class TestMybatis {
 		System.out.println(build);
 		System.out.println(build1);
 	}
+	@Test
+	public void testQueryUser3() {
+		Map<Integer , City> cityMap= new HashMap<>();
+		City build = City.builder().id(1).countryCode("2").build();
+		City build1 = City.builder().id(2).countryCode("3").build();
+		cityMap.put(build.getId(),build);
+		cityMap.put(build1.getId(),build1);
+
+		System.out.println(cityMap.get(1));
+
+		City city = cityMap.get(1);
+		city.setCountryCode("4");
+		//cityMap.put(build.getId(),build.setCountryCode("4"));
+		System.out.println(cityMap.get(1));
+	}
+
 
 }
