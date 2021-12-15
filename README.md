@@ -59,6 +59,14 @@
             
     - 细说JDK动态代理的实现原理 
         网址 ： https://blog.csdn.net/mhmyqn/article/details/48474815
+    - spring 事务控制 设置手动回滚
+        https://blog.csdn.net/liuming690452074/article/details/107931852
+        
+        当我们需要在事务控制的service层类中使用try catch 去捕获异常后，就会使事务控制失效，因为该类的异常并没有抛出，就不是触发事务管理机制。
+        怎样才能即使用try catch去捕获异常，而又让出现异常后spring回滚呢，这里就要用到
+        TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+        完美解决问题。并且能够使该方法执行完。
+        
 # rocketmq
     - 视频地址 ：
         https://www.bilibili.com/video/BV1L4411y7mn?from=search&seid=9663894476986529042&spm_id_from=333.337.0.0

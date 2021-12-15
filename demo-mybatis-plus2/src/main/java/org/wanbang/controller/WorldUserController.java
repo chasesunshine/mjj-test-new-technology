@@ -27,8 +27,8 @@ public class WorldUserController {
         return s;
     }
 
-    @GetMapping("/inset/mybatisplus")
-    public Integer insetOneMybatisplus(@RequestParam("name") String name,@RequestParam("age")Integer age){
+    @GetMapping("/insret/mybatisplus")
+    public Integer insertOneMybatisplus(@RequestParam("name") String name,@RequestParam("age")Integer age){
         Integer s = worldUserService.insert(name,age);
         return s;
     }
