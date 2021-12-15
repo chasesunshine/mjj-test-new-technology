@@ -40,14 +40,4 @@ public class WorldUserService {
         return mjj;
     }
 
-    @Transactional(rollbackFor = Exception.class)
-    public Integer insert1(String name,Integer age) {
-        int mjj = userMapper.insert(WorldUser.builder().name(name).age(age).build());
-
-        if(true){
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-        }
-
-        return mjj;
-    }
 }
