@@ -40,4 +40,15 @@ public class WorldUserService {
         return mjj;
     }
 
+
+    public Integer insert1(String name,Integer age) {
+        int mjj = userMapper.insert(WorldUser.builder().name(name).age(2).build());
+
+        if(true){
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+        }
+
+        return mjj;
+    }
+
 }
