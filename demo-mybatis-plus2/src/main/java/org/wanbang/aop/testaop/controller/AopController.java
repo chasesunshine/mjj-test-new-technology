@@ -16,16 +16,12 @@ public class AopController {
 
     @GetMapping("/div")
     public Integer div(int a, int b){
-        a = 6;
-        b = 4;
         int div = ICalculatorService.div(a, b);
         return div;
     }
 
     @GetMapping("/mul")
     public Integer mul(int a, int b){
-        a = 6;
-        b = 4;
         int div = ICalculatorService.mul(a, b);
         return div;
     }
