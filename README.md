@@ -69,6 +69,10 @@
     - aop切面（测试的类：org.wanbang.aop.TransactionDemo）
         aop 切面能切 cglib代理 和 jdk动态代理（实现了接口的类）
         网址 ： AOP五种执行时机 https://www.cnblogs.com/yimengxianzhi/p/12261963.html
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
         
 # rocketmq
     - 视频地址 ：
