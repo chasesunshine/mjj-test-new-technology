@@ -3,12 +3,12 @@ package com.example.rocketmq.util;
 import com.alibaba.druid.sql.SQLUtils;
 import com.alibaba.druid.util.JdbcConstants;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.example.rocketmq.common.anno.RecordLog;
+import com.example.rocketmq.common.anno.UnRecordLog;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.wanbang.common.anno.RecordLog;
-import org.wanbang.common.anno.UnRecordLog;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
