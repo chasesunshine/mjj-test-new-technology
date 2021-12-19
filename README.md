@@ -78,6 +78,8 @@
     - 视频地址 ：
         https://www.bilibili.com/video/BV1L4411y7mn?from=search&seid=9663894476986529042&spm_id_from=333.337.0.0
     - 各章节概要
-        - 1. RocketMQ专题大纲介绍
-        - 2. 第一章知识概要
+        - p1  1. RocketMQ专题大纲介绍
+        - p2  2. 第一章知识概要
+        - p3  3. MQ作用介绍
+        
     
