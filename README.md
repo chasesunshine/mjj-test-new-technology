@@ -88,6 +88,20 @@
             一致性问题
         - p5  5. 各大MQ产品比较
         - p6  6. Rocketmq的安装
+            - 启动命令详见 （rocketmq-doc    RocketMQ-01.md     ## 2.3 启动RocketMQ）
+                记住是在 linux 的 bin目录下操作
+                # 启动NameServer
+                    nohup sh mqnamesrv &
+                # 查看启动日志
+                    tail -f ~/logs/rocketmqlogs/namesrv.log
+                # 启动Broker
+                    nohup sh mqbroker -n localhost:9876 &
+                # 查看启动日志
+                    tail -f ~/logs/rocketmqlogs/broker.log 
+                # 1.关闭NameServer
+                    sh mqshutdown namesrv
+                # 2.关闭Broker
+                    sh mqshutdown broker
         
         
     
