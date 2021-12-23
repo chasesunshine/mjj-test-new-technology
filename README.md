@@ -90,6 +90,9 @@
         - p6  6. Rocketmq的安装
             - 启动命令详见 （rocketmq-doc    RocketMQ-01.md     ## 2.3 启动RocketMQ）
                 记住是在 linux 的 bin目录下操作
+                # 编辑runbroker.sh和runserver.sh修改默认JVM大小
+                    vi runbroker.sh
+                    vi runserver.sh
                 # 启动NameServer
                     nohup sh mqnamesrv &
                 # 查看启动日志
@@ -102,6 +105,24 @@
                     sh mqshutdown namesrv
                 # 2.关闭Broker
                     sh mqshutdown broker
+            - 注意点（https://blog.csdn.net/qq173684423/article/details/77930061）
+                # tools.sh
+                    JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g -Xmn256m -XX:PermSize=128m -XX:MaxPermSize=128m"
+        - p7  7. 测试发送消息和接收消息
+                bin 目录下两个窗口，一个发送消息，一个接收消息
+                # 发送消息
+                    1.设置环境变量
+                      export NAMESRV_ADDR=localhost:9876
+                    2.使用安装包的Demo发送消息
+                      sh tools.sh org.apache.rocketmq.example.quickstart.Producer
+                # 接收消息
+                    1.设置环境变量
+                        export NAMESRV_ADDR=localhost:9876
+                    2.接收消息
+                        sh tools.sh org.apache.rocketmq.example.quickstart.Consumer
+        - p8  8. RocketMQ各角色介绍
+                
+                
         
         
     
