@@ -121,7 +121,26 @@
                     2.接收消息
                         sh tools.sh org.apache.rocketmq.example.quickstart.Consumer
         - p8  8. RocketMQ各角色介绍
+                * Producer：消息的发送者；举例：发信者
+                * Consumer：消息接收者；举例：收信者
+                * Broker：暂存和传输消息；举例：邮局
+                * NameServer：管理Broker；举例：各个邮局的管理机构
+                * Topic：区分消息的种类；一个发送者可以发送消息给一个或者多个Topic；一个消息的接收者可以订阅一个或者多个Topic消息
+                * Message Queue：相当于是Topic的分区；用于并行发送和接收消息
+        - p9  9.RocketMQ集群特点
+                - NameServer是一个几乎无状态节点，可集群部署，节点之间无任何信息同步。
                 
+                - Broker部署相对复杂，Broker分为Master与Slave，一个Master可以对应多个Slave，
+                    但是一个Slave只能对应一个Master，Master与Slave的对应关系通过指定相同的BrokerName，
+                    不同的BrokerId来定义，BrokerId为0表示Master，非0表示Slave。Master也可以部署多个。
+                    每个Broker与NameServer集群中的所有节点建立长连接，定时注册Topic信息到所有NameServer。
+                - Producer与NameServer集群中的其中一个节点（随机选择）建立长连接，定期从NameServer取Topic路由信息，
+                    并向提供Topic服务的Master建立长连接，且定时向Master发送心跳。
+                    Producer完全无状态，可集群部署。
+                - Consumer与NameServer集群中的其中一个节点（随机选择）建立长连接，定期从NameServer取Topic路由信息，
+                    并向提供Topic服务的Master、Slave建立长连接，且定时向Master、Slave发送心跳。Consumer既可以从Master订阅消息，
+                    也可以从Slave订阅消息，订阅规则由Broker配置决定。
+        - p10  10.RocketMQ各种集群模式介绍
                 
         
         
