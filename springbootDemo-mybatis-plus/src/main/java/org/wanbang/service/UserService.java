@@ -59,6 +59,14 @@ public class UserService {
         redisTemplate.opsForSet().add(mjj1,"dsadsadsa123");
         redisTemplate.opsForSet().add(mjj1,"dsadsadsaxxx");
 
+        //新增hashMap值
+        redisTemplate.opsForHash().put("Person","name","ligang");
+        redisTemplate.opsForHash().put("Person","age","31");
+        redisTemplate.opsForHash().put("Person","slary",10000);
+        Object mapValue = redisTemplate.opsForHash().get("Person","age");  //31
+        System.out.println("通过get(H key, Object hashKey)方法获取map键的值:" + mapValue);
+
+
         Boolean dsadsadsa123 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa123");
         Boolean dsadsadsa12 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa12");
         Set<String> resultSet = redisTemplate.opsForSet().members(mjj);
