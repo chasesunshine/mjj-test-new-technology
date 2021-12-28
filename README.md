@@ -162,8 +162,54 @@
                     - 缺点：性能比异步复制模式略低（大约低10%左右），发送单个消息的RT会略高，且目前版本在主节点宕机后，
                         备机不能自动切换为主机。
         - p11  11.双主双从（2m-2s）集群介绍和工作流程说明
-                
-                
-        
-        
+                1. 启动NameServer，NameServer起来后监听端口，等待Broker、Producer、Consumer连上来，相当于一个路由控制中心。
+                2. Broker启动，跟所有的NameServer保持长连接，定时发送心跳包。心跳包中包含当前Broker信息(IP+端口等)以及存储所有Topic信息。
+                    注册成功后，NameServer集群中就有Topic跟Broker的映射关系。
+                3. 收发消息前，先创建Topic，创建Topic时需要指定该Topic要存储在哪些Broker上，也可以在发送消息时自动创建Topic。
+                4. Producer发送消息，启动时先跟NameServer集群中的其中一台建立长连接，并从NameServer中获取当前发送的Topic存在哪些Broker上，
+                    轮询从队列列表中选择一个队列，然后与队列所在的Broker建立长连接从而向Broker发消息。
+                5. Consumer跟Producer类似，跟其中一台NameServer建立长连接，获取当前订阅Topic存在哪些Broker上，然后直接跟Broker建立连接通道，
+                    开始消费消息。
+        - p12  12.集群搭建1
+                在第一台虚拟机上
+                    1. Host添加信息
+                        ```bash
+                        vim /etc/hosts
+                        配置如下:
+                            ```bash
+                            # nameserver
+                            192.168.25.135 rocketmq-nameserver1
+                            192.168.25.138 rocketmq-nameserver2
+                            # broker
+                            192.168.25.135 rocketmq-master1
+                            192.168.25.135 rocketmq-slave2
+                            192.168.25.138 rocketmq-master2
+                            192.168.25.138 rocketmq-slave1
+                        配置完成后, 重启网卡
+                            ```bash
+                            systemctl restart network
+                    2. 防火墙配置
+                        宿主机需要远程访问虚拟机的rocketmq服务和web服务，需要开放相关的端口号，简单粗暴的方式是直接关闭防火墙
+                            ```bash
+                            # 关闭防火墙
+                            systemctl stop firewalld.service 
+                            # 查看防火墙的状态
+                            firewall-cmd --state 
+                            # 禁止firewall开机启动
+                            systemctl disable firewalld.service
+                            # 重启防火墙
+                            firewall-cmd --reload
+                    3. 环境变量配置
+                        ```bash
+                        vim /etc/profile
+                        在profile文件的末尾加入如下命令
+                            ```bash
+                            #set rocketmq
+                            ROCKETMQ_HOME=/usr/local/rocketmq/rocketmq-all-4.4.0-bin-release
+                            PATH=$PATH:$ROCKETMQ_HOME/bin
+                            export ROCKETMQ_HOME PATH
+                        输入:wq! 保存并退出， 并使得配置立刻生效：
+                            ```bash
+                            source /etc/profile
+        - p13  13.集群搭建2
     
