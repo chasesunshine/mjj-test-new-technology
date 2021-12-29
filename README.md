@@ -51,7 +51,7 @@
          
     - Java代理设计模式(Proxy)的四种具体实现：静态代理和动态代理
         网址 ： https://www.cnblogs.com/wangenxian/p/10885309.html
-        项目地址 ： org.wanbang.proxy
+        项目地址 ： org.wanbang.study.proxy
         1. 问题 ： 
             面试问题：Java里的代理设计模式（Proxy Design Pattern）一共有几种实现方式？这个题目很像孔乙己问“茴香豆的茴字有哪几种写法？
             所谓代理模式，是指客户端(Client)并不直接调用实际的对象(下图右下角的RealSubject)，而是通过调用代理(Proxy)，来间接的调用实际的对象。
@@ -66,7 +66,7 @@
         怎样才能即使用try catch去捕获异常，而又让出现异常后spring回滚呢，这里就要用到
         TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         完美解决问题。并且能够使该方法执行完。
-    - aop切面（测试的类：org.wanbang.aop.TransactionDemo）(完整的 ： org.wanbang.aop)
+    - aop切面（测试的类：org.wanbang.study.aop.TransactionDemo）(完整的 ： org.wanbang.study.aop)
         aop 切面能切 cglib代理 和 jdk动态代理（实现了接口的类）
         网址 ： AOP五种执行时机 https://www.cnblogs.com/yimengxianzhi/p/12261963.html
         <dependency>
