@@ -21,6 +21,7 @@ import org.wanbang.util.spring.SpringUtil;
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Service
 @Slf4j
@@ -51,26 +52,52 @@ public class UserService {
 
     public String selectOne() {
         //redisUtils.set("token","12344");
+        // redis - String
         stringRedisTemplate.opsForValue().set("token","123443");
+        System.out.println("redis - String:"+stringRedisTemplate.opsForValue().get("token"));
+
+        // redis - Set
         String mjj = String.format("mjj:mjj1:fxjk");
         redisTemplate.opsForSet().add(mjj,"dsadsadsa123");
+        redisTemplate.opsForSet().add(mjj,"dsadsadsaxxx");
         redisTemplate.opsForSet().add(mjj,"dsadsadsaxxx");
         String mjj1 = String.format("mjj:mjj1:fxyjk");
         redisTemplate.opsForSet().add(mjj1,"dsadsadsa123");
         redisTemplate.opsForSet().add(mjj1,"dsadsadsaxxx");
-
-        //新增hashMap值
-        redisTemplate.opsForHash().put("Person","name","ligang");
-        redisTemplate.opsForHash().put("Person","age","31");
-        redisTemplate.opsForHash().put("Person","slary",10000);
-        Object mapValue = redisTemplate.opsForHash().get("Person","age");  //31
-        System.out.println("通过get(H key, Object hashKey)方法获取map键的值:" + mapValue);
-
-
         Boolean dsadsadsa123 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa123");
         Boolean dsadsadsa12 = redisTemplate.opsForSet().isMember(mjj, "dsadsadsa12");
         Set<String> resultSet = redisTemplate.opsForSet().members(mjj);
+        System.out.println("redis-set-isMember: "+dsadsadsa123);
+        System.out.println("redis-set-isMember: "+dsadsadsa12);
         System.out.println(resultSet.toString());
+
+//        // redis - Zset
+//        String mjj2 = String.format("fxjk");
+//        Set<String > set = new TreeSet<>();
+//        set.add("dsadsadsa123");
+//        set.add("dsadsadsaxxx");
+//        redisTemplate.opsForZSet().add(mjj2,set);
+
+
+        //redis - Hashmap
+        redisTemplate.opsForHash().put("Person","name","ligang");
+        redisTemplate.opsForHash().put("Person","age","31");
+        redisTemplate.opsForHash().put("Person","slary",10000);
+        redisTemplate.opsForHash().put("Person1","name1","ligang1");
+        redisTemplate.opsForHash().put("Person1","age1","311");
+        redisTemplate.opsForHash().put("Person1","slary1",100001);
+        Object mapValue = redisTemplate.opsForHash().get("Person","age");  //31
+        List person = redisTemplate.opsForHash().values("Person");
+        System.out.println("redis - hashmap - allValue : " + person.toString());
+        System.out.println("通过get(H key, Object hashKey)方法获取map键的值:" + mapValue);
+
+        //redis - List
+        redisTemplate.opsForList().leftPush("list",new User().setId(1).setName("1"));
+        redisTemplate.opsForList().leftPush("list",new User().setId(2).setName("2"));
+        redisTemplate.opsForList().leftPush("list",new User().setId(3).setName("3"));
+        String listValue = redisTemplate.opsForList().index("list",1) + "";
+        System.out.println("通过index(K key, long index)方法获取指定位置的值:" + listValue);
+
 
         User user = userMapper.selectOne(Wrappers.<User>query().lambda()
                 .eq(User::getId,102));
