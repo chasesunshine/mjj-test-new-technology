@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.wanbang.mapper.CityMapper;
 import org.wanbang.entity.City;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,5 +53,13 @@ public class TestMybatis {
 		System.out.println(cityMap.get(1));
 	}
 
+
+	@Test
+	public void testQueryUser4() {
+		ArrayList<Object> objects = new ArrayList<>();
+		objects.stream().forEach(o -> {
+
+		});
+	}
 
 }
