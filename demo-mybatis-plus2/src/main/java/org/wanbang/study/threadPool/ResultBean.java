@@ -1,7 +1,5 @@
 package org.wanbang.study.threadPool;
 
-package com.ts.common.model;
-
 import java.io.Serializable;
 
 import com.alibaba.fastjson.JSON;

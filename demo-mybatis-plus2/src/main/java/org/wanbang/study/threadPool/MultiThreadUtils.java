@@ -108,6 +108,7 @@ public class MultiThreadUtils<T> {
         }
         // 关闭线程池
         threadpool.shutdownNow();
+
         // 执行结束时间
         long end_l = System.currentTimeMillis();
         logger.info("总耗时:{}ms", (end_l - l));
