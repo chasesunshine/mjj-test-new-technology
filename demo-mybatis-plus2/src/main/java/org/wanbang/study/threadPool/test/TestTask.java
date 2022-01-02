@@ -3,7 +3,7 @@ package org.wanbang.study.threadPool.test;
 
 import com.alibaba.fastjson.JSON;
 import org.wanbang.study.threadPool.ITask;
-import org.wanbang.study.threadPool.ITaskImpl;
+import org.wanbang.study.threadPool.impl.ITaskImpl;
 import org.wanbang.study.threadPool.MultiThreadUtils;
 import org.wanbang.study.threadPool.ResultBean;
 

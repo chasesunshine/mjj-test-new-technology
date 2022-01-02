@@ -1,4 +1,7 @@
-package org.wanbang.study.threadPool;
+package org.wanbang.study.threadPool.impl;
+
+import org.wanbang.study.threadPool.ITask;
+import org.wanbang.study.threadPool.ResultBean;
 
 import java.util.Map;
 
@@ -13,7 +16,7 @@ import java.util.Map;
  * @version 2.0
  *
  */
-public class ITaskImpl<T, E> implements ITask<ResultBean<String>, Integer>{
+public class ITaskImpl<T, E> implements ITask<ResultBean<String>, Integer> {
 
     @Override
     public ResultBean execute(Integer e, Map<String, Object> params) {
