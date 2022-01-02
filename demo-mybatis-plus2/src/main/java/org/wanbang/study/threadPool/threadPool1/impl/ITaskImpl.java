@@ -1,7 +1,7 @@
-package org.wanbang.study.threadPool.impl;
+package org.wanbang.study.threadPool.threadPool1.impl;
 
-import org.wanbang.study.threadPool.ITask;
-import org.wanbang.study.threadPool.ResultBean;
+import org.wanbang.study.threadPool.threadPool1.ITask;
+import org.wanbang.study.threadPool.threadPool1.ResultBean;
 
 import java.util.Map;
 

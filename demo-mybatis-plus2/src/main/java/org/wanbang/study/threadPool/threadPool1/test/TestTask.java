@@ -1,11 +1,11 @@
-package org.wanbang.study.threadPool.test;
+package org.wanbang.study.threadPool.threadPool1.test;
 
 
 import com.alibaba.fastjson.JSON;
-import org.wanbang.study.threadPool.ITask;
-import org.wanbang.study.threadPool.impl.ITaskImpl;
-import org.wanbang.study.threadPool.MultiThreadUtils;
-import org.wanbang.study.threadPool.ResultBean;
+import org.wanbang.study.threadPool.threadPool1.ITask;
+import org.wanbang.study.threadPool.threadPool1.impl.ITaskImpl;
+import org.wanbang.study.threadPool.threadPool1.MultiThreadUtils;
+import org.wanbang.study.threadPool.threadPool1.ResultBean;
 
 import java.util.ArrayList;
 import java.util.HashMap;

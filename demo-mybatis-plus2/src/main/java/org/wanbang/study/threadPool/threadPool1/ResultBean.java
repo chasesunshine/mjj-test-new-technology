@@ -1,4 +1,4 @@
-package org.wanbang.study.threadPool;
+package org.wanbang.study.threadPool.threadPool1;
 
 import java.io.Serializable;
 

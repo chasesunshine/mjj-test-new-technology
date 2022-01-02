@@ -1,4 +1,4 @@
-package org.wanbang.study.threadPool;
+package org.wanbang.study.threadPool.threadPool1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,6 +94,8 @@ public class MultiThreadUtils<T> {
             // 将数据分配给各个线程
             HandleCallable execute = new HandleCallable<T>(String.valueOf(i), subData, params, task);
             // 将线程加入到线程池
+            // 个人理解 ：  这一步默认执行 new Thread(futureTask1,"Thread-1: ").start(); 方法
+            // 直接可以执行  Callable 里面 ——> call() 方法里面的东西
             pool.submit(execute);
         }
 
