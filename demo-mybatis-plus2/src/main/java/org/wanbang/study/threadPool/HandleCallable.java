@@ -23,11 +23,18 @@ public class HandleCallable<E> implements Callable<ResultBean> {
     private static Logger logger = LoggerFactory.getLogger(HandleCallable.class);
     // 线程名称
     private String threadName = "";
+
     // 需要处理的数据
     private List<E> data;
-    // 辅助参数
+
+    /**
+     * 辅助参数
+     */
     private Map<String, Object> params;
-    // 具体执行任务
+
+    /**
+     * 具体执行任务
+     */
     private ITask<ResultBean<String>, E> task;
 
     public HandleCallable(String threadName, List<E> data, Map<String, Object> params,
