@@ -32,6 +32,14 @@ public class MultiThreadUtils<T> {
     // 线程池管理器
     private CompletionService<ResultBean> pool = null;
 
+    public int getThreadCount() {
+        return threadCount;
+    }
+
+    public void setThreadCount(int threadCount) {
+        this.threadCount = threadCount;
+    }
+
     /**
      *
      * 初始化线程池和线程个数<BR>
@@ -47,7 +55,6 @@ public class MultiThreadUtils<T> {
         MultiThreadUtils instance = new MultiThreadUtils();
         threadCount = threadCount;
         instance.setThreadCount(threadCount);
-
         return instance;
     }
 
@@ -113,14 +120,6 @@ public class MultiThreadUtils<T> {
         long end_l = System.currentTimeMillis();
         logger.info("总耗时:{}ms", (end_l - l));
         return ResultBean.newInstance().setData(result);
-    }
-
-    public int getThreadCount() {
-        return threadCount;
-    }
-
-    public void setThreadCount(int threadCount) {
-        this.threadCount = threadCount;
     }
 
 }

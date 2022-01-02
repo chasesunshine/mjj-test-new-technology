@@ -25,7 +25,7 @@ import java.util.Map;
 // https://www.cnblogs.com/qixing/p/9451714.html
 public class TestTask{
     public static void main(String[] args) {
-        // 需要多线程处理的大量数据list
+        // 需要多线程处理的大量数据list(构造list数据)
         List<Integer> data = new ArrayList<>(10000);
         for(int i = 0; i < 10000; i ++){
             data.add(i + 1);
