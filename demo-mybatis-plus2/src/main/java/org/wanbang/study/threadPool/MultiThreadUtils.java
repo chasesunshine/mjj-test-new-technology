@@ -103,7 +103,7 @@ public class MultiThreadUtils<T> {
             // 每个线程处理结果集
             ResultBean<List<ResultBean<String>>> threadResult;
             try {
-                // 这里是执行线程
+                // 这里是获得数据
                 threadResult = pool.take().get();
                 result.addAll(threadResult.getData());
             } catch (InterruptedException e) {
