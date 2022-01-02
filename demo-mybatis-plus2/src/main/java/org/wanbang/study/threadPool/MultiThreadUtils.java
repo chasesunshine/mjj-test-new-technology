@@ -80,13 +80,15 @@ public class MultiThreadUtils<T> {
         int length = data.size();
         // 每个线程处理的数据个数
         int taskCount = length / threadCount;
+
         // 划分每个线程调用的数据
         for (int i = 0; i < threadCount; i++) {
             // 每个线程任务数据list
-            List<T> subData = null;
+            List<T> subData;
             if (i == (threadCount - 1)) {
                 subData = data.subList(i * taskCount, length);
             } else {
+                // 源码 ： List<E> subList(int fromIndex, int toIndex);  从哪到哪
                 subData = data.subList(i * taskCount, (i + 1) * taskCount);
             }
             // 将数据分配给各个线程
@@ -101,6 +103,7 @@ public class MultiThreadUtils<T> {
             // 每个线程处理结果集
             ResultBean<List<ResultBean<String>>> threadResult;
             try {
+                // 这里是执行线程
                 threadResult = pool.take().get();
                 result.addAll(threadResult.getData());
             } catch (InterruptedException e) {
@@ -110,6 +113,7 @@ public class MultiThreadUtils<T> {
             }
 
         }
+
         // 关闭线程池
         threadpool.shutdownNow();
 

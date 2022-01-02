@@ -37,8 +37,7 @@ public class HandleCallable<E> implements Callable<ResultBean> {
      */
     private ITask<ResultBean<String>, E> task;
 
-    public HandleCallable(String threadName, List<E> data, Map<String, Object> params,
-                          ITask<ResultBean<String>, E> task) {
+    public HandleCallable(String threadName, List<E> data, Map<String, Object> params, ITask<ResultBean<String>, E> task) {
         this.threadName = threadName;
         this.data = data;
         this.params = params;
@@ -49,6 +48,7 @@ public class HandleCallable<E> implements Callable<ResultBean> {
     public ResultBean<List<ResultBean<String>>> call() throws Exception {
         // 该线程中所有数据处理返回结果
         ResultBean<List<ResultBean<String>>> resultBean = ResultBean.newInstance();
+        // 开始执行线程里面的数据
         if (data != null && data.size() > 0) {
             logger.info("线程：{},共处理:{}个数据，开始处理......", threadName, data.size());
             // 返回结果集

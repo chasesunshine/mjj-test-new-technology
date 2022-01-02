@@ -27,7 +27,7 @@ public class TestTask{
     public static void main(String[] args) {
         // 需要多线程处理的大量数据list(构造list数据)
         List<Integer> data = new ArrayList<>(10000);
-        for(int i = 0; i < 10000; i ++){
+        for(int i = 0; i < 9998; i ++){
             data.add(i + 1);
         }
 
