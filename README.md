@@ -105,9 +105,11 @@
                     sh mqshutdown namesrv
                 # 2.关闭Broker
                     sh mqshutdown broker
+                    
             - 注意点（https://blog.csdn.net/qq173684423/article/details/77930061）
                 # tools.sh
                     JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g -Xmn256m -XX:PermSize=128m -XX:MaxPermSize=128m"
+                    
         - p7  7. 测试发送消息和接收消息
                 bin 目录下两个窗口，一个发送消息，一个接收消息
                 # 发送消息
@@ -178,13 +180,13 @@
                         配置如下:
                             ```bash
                             # nameserver
-                            192.168.25.135 rocketmq-nameserver1
-                            192.168.25.138 rocketmq-nameserver2
+                            47.101.44.136 rocketmq-nameserver1
+                            192.168.146.130 rocketmq-nameserver2
                             # broker
-                            192.168.25.135 rocketmq-master1
-                            192.168.25.135 rocketmq-slave2
-                            192.168.25.138 rocketmq-master2
-                            192.168.25.138 rocketmq-slave1
+                            47.101.44.136 rocketmq-master1
+                            47.101.44.136 rocketmq-slave2
+                            192.168.146.130 rocketmq-master2
+                            192.168.146.130 rocketmq-slave1
                         配置完成后, 重启网卡
                             ```bash
                             systemctl restart network
@@ -192,7 +194,7 @@
                         宿主机需要远程访问虚拟机的rocketmq服务和web服务，需要开放相关的端口号，简单粗暴的方式是直接关闭防火墙
                             ```bash
                             # 关闭防火墙
-                            systemctl stop firewalld.service 
+                            systemctl stop firewalld.service
                             # 查看防火墙的状态
                             firewall-cmd --state 
                             # 禁止firewall开机启动
@@ -205,15 +207,63 @@
                         在profile文件的末尾加入如下命令
                             ```bash
                             #set rocketmq
-                            ROCKETMQ_HOME=/usr/local/rocketmq/rocketmq-all-4.4.0-bin-release
+                            ROCKETMQ_HOME=/usr/local/src/rocketmq/rocketmq-all-4.4.0-bin-release
                             PATH=$PATH:$ROCKETMQ_HOME/bin
                             export ROCKETMQ_HOME PATH
                         输入:wq! 保存并退出， 并使得配置立刻生效：
                             ```bash
                             source /etc/profile
+                    4.  3.3.7 创建消息存储路径
+                            ```bash
+                            mkdir /usr/local/src/common/rocketmq/store
+                            mkdir /usr/local/src/common/rocketmq/store/commitlog
+                            mkdir /usr/local/src/common/rocketmq/store/consumequeue
+                            mkdir /usr/local/src/common/rocketmq/store/index
+                第二台上也要做同样的操作
+                    注意点：centos6 上操作是不一致的
+                        1. centos6的网卡重启方法：service network restart
+                            关闭防火墙：service iptables stop
+                            开启防火墙：service iptables start
+                            重启防火墙：service iptables restart
+                            查看防火墙状态：service iptables status
+                        2. Bringing up interface eth0: Error: No suitable device found: no device found for connection 'System
+                            https://blog.csdn.net/weibin_6388/article/details/84821760
+                        3. Shutting down interface Auto_eth1:  Device has MAC address 00:00:00:00:00:00 00:0C:29:3A:EB:99, instead of configured address 00:0C:29:00:1D:E8. Ignoring.
+                            https://blog.csdn.net/hepannnn/article/details/78159857
+                            修改 /etc/network-scripts/ifcfg-Auto_eth1 文件
+                            
         - p13  13.集群搭建2
-        
+                broker配置文件
+                    见   README_集群搭建2配置.md
         - p14  14.集群搭建3
-        
+                修改启动脚本文件
+                    1）runbroker.sh
+                        ```sh
+                        vi /usr/local/rocketmq/bin/runbroker.sh
+                        
+                        需要根据内存大小进行适当的对JVM参数进行调整：
+                        ```bash
+                        #===================================================
+                        # 开发环境配置 JVM Configuration
+                        JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
+                    2）runserver.sh
+                        ```sh
+                        vim /usr/local/rocketmq/bin/runserver.sh
+                        ```bash
+                        JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m"
+                服务启动
+                    1）启动NameServe集群
+                    分别在192.168.25.135和192.168.25.138启动NameServer
+                        ```bash
+                        cd /usr/local/rocketmq/bin
+                        nohup sh mqnamesrv &
+                        
+                     注意 ： 启动失败的话vim nohup.out查看nohup日志，小编是因为jdk版本过低不能识别metaspace参数，改为1.8后即可正常运行。其它问题也可以通过查看日志文件分析，可能是路径错误等原因
+                            释放缓存  echo 1 > /proc/sys/vm/drop_caches
+                                    echo 2 > /proc/sys/vm/drop_caches  
+                                    echo 0 > /proc/sys/vm/drop_caches 
+                            linux杀死进程 
+                                    解决办法：首先用ps axuf查看进程树
+                                    杀死该进程的方法为 top -9 进程PID
         - p15  15.集群搭建小结
     
