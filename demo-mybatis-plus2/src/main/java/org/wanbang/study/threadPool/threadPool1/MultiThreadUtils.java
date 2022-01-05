@@ -70,7 +70,7 @@ public class MultiThreadUtils<T> {
      */
     @SuppressWarnings("rawtypes")
     public ResultBean execute(List<T> data, Map<String, Object> params, ITask<ResultBean<String>, T> task) {
-        // 创建线程池
+        // 创建线程池       ExecutorService 的 submit有返回值(要执行结果就用submit)，而execute没有
         ExecutorService threadpool = Executors.newFixedThreadPool(threadCount);
         // 根据线程池初始化线程池管理器
         pool = new ExecutorCompletionService<ResultBean>(threadpool);
@@ -96,6 +96,7 @@ public class MultiThreadUtils<T> {
             // 将线程加入到线程池
             // 个人理解 ：  这一步默认执行 new Thread(futureTask1,"Thread-1: ").start(); 方法
             // 直接可以执行  Callable 里面 ——> call() 方法里面的东西
+            // 翻源码会发现 这个 线程池管理器内部执行.execute方法    executor.execute(new QueueingFuture(f));
             pool.submit(execute);
         }
 
