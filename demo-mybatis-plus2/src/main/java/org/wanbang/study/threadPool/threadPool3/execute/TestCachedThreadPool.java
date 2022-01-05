@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
  *
  * @author leizhimin 2008-11-25 14:28:59
  */
+ // https://www.cnblogs.com/wanqieddy/p/3853863.html
 public class TestCachedThreadPool {
     public static void main(String[] args) {
 //                ExecutorService executorService = Executors.newCachedThreadPool();

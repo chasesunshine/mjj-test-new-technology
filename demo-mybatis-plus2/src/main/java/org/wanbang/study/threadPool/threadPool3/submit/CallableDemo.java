@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
+// https://www.cnblogs.com/wanqieddy/p/3853863.html
 public class CallableDemo {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newCachedThreadPool();
