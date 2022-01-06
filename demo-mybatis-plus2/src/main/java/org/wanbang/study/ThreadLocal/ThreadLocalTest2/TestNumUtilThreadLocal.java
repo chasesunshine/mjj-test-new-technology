@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 // https://cloud.tencent.com/developer/article/1442006
-public class ThreadLocalTestNumUtil {
+public class TestNumUtilThreadLocal {
     //  什么鬼，不是加10么，怎么都输出了28？
     //  这主要是因为线程切换的原因，线程陆续将addNum值设置为0 ，3，7
     //  但是都没有执行完（没有执行到return addNum+10这一步）就被切换了，
@@ -15,7 +15,7 @@ public class ThreadLocalTestNumUtil {
         for (int i = 0; i < 20; i++) {
             int num = i;
             service.execute(()->{
-                System.out.println(num + " " +  NumUtil.add10(num));
+                System.out.println(num + " " +  NumUtilThreadLocal.add10(num));
             });
         }
         service.shutdown();
