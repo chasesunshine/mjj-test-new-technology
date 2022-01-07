@@ -115,6 +115,7 @@
                 # linux退出状态码及exit命令
                     例如 ： [1]+  Exit 127                nohup sh mqnamesrv
                     表示  127 　　　　　　　没找到命令
+                * 注意看 /etc/profile 里面的 ROCKETMQ_HOME 配置是否符合路径信息
         - p7  7. 测试发送消息和接收消息
                 bin 目录下两个窗口，一个发送消息，一个接收消息
                 # 发送消息
