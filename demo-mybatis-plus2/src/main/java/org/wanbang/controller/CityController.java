@@ -32,4 +32,10 @@ public class CityController {
         String fxjk = CacheNameEnum.SVC_NODE_ID.formatOrgId("fxjk");
         return s;
     }
+
+    @GetMapping("/test/config/properties")
+    public String testConfigProperties(){
+        String s = cityService.testConfigProperties();
+        return s;
+    }
 }
