@@ -1,4 +1,4 @@
-package org.wanbang.study.ThreadLocal.ThreadLocalTest2;
+package org.wanbang.study.threadLocal.ThreadLocalTest2;
 
 import java.util.concurrent.TimeUnit;
 

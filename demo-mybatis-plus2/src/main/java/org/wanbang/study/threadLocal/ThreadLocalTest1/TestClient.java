@@ -1,4 +1,4 @@
-package org.wanbang.study.ThreadLocal.ThreadLocalTest1;
+package org.wanbang.study.threadLocal.ThreadLocalTest1;
 
 public class TestClient implements Runnable {
     private ThreadLocalUtil sn;

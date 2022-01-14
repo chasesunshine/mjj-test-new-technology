@@ -1,4 +1,4 @@
-package org.wanbang.study.ThreadLocal.ThreadLocalTest1;
+package org.wanbang.study.threadLocal.ThreadLocalTest1;
 
 // https://blog.csdn.net/never_tears/article/details/78657718
 public class ThreadLocalUtil {
