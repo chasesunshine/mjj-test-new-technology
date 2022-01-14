@@ -109,7 +109,13 @@
             - 注意点（https://blog.csdn.net/qq173684423/article/details/77930061）
                 # tools.sh
                     JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g -Xmn256m -XX:PermSize=128m -XX:MaxPermSize=128m"
-                    
+            - 注意点 2（https://blog.csdn.net/yang13563758128/article/details/104224794）
+                tail -f nohup.out 用来 查看执行信息
+            - 注意点 3 （https://blog.csdn.net/weixin_33929309/article/details/94658754）
+                # linux退出状态码及exit命令
+                    例如 ： [1]+  Exit 127                nohup sh mqnamesrv
+                    表示  127 　　　　　　　没找到命令
+                * 注意看 /etc/profile 里面的 ROCKETMQ_HOME 配置是否符合路径信息
         - p7  7. 测试发送消息和接收消息
                 bin 目录下两个窗口，一个发送消息，一个接收消息
                 # 发送消息
@@ -131,7 +137,6 @@
                 * Message Queue：相当于是Topic的分区；用于并行发送和接收消息
         - p9  9.RocketMQ集群特点
                 - NameServer是一个几乎无状态节点，可集群部署，节点之间无任何信息同步。
-                
                 - Broker部署相对复杂，Broker分为Master与Slave，一个Master可以对应多个Slave，
                     但是一个Slave只能对应一个Master，Master与Slave的对应关系通过指定相同的BrokerName，
                     不同的BrokerId来定义，BrokerId为0表示Master，非0表示Slave。Master也可以部署多个。
@@ -145,19 +150,16 @@
         - p10  10.RocketMQ各种集群模式介绍
                 1）单Master模式
                     这种方式风险较大，一旦Broker重启或者宕机时，会导致整个服务不可用。不建议线上环境使用,可以用于本地测试。
-                
                 2）多Master模式
                     一个集群无Slave，全是Master，例如2个Master或者3个Master，这种模式的优缺点如下：
                     - 优点：配置简单，单个Master宕机或重启维护对应用无影响，在磁盘配置为RAID10时，
                         即使机器宕机不可恢复情况下，由于RAID10磁盘非常可靠，消息也不会丢（异步刷盘丢失少量消息，同步刷盘一条不丢），性能最高；
                     - 缺点：单台机器宕机期间，这台机器上未被消费的消息在机器恢复之前不可订阅，消息实时性会受到影响。
-                
                 3）多Master多Slave模式（异步）
                     每个Master配置一个Slave，有多对Master-Slave，HA采用异步复制方式，主备有短暂消息延迟（毫秒级），这种模式的优缺点如下：
                     - 优点：即使磁盘损坏，消息丢失的非常少，且消息实时性不会受影响，同时Master宕机后，消费者仍然可以从Slave消费，
                         而且此过程对应用透明，不需要人工干预，性能同多Master模式几乎一样；
                     - 缺点：Master宕机，磁盘损坏情况下会丢失少量消息。
-                
                 4）多Master多Slave模式（同步）
                     每个Master配置一个Slave，有多对Master-Slave，HA采用同步双写方式，即只有主备都写成功，才向应用返回成功，这种模式的优缺点如下：
                     - 优点：数据与服务都无单点故障，Master宕机情况下，消息无延迟，服务可用性与数据可用性都非常高；
@@ -172,98 +174,29 @@
                     轮询从队列列表中选择一个队列，然后与队列所在的Broker建立长连接从而向Broker发消息。
                 5. Consumer跟Producer类似，跟其中一台NameServer建立长连接，获取当前订阅Topic存在哪些Broker上，然后直接跟Broker建立连接通道，
                     开始消费消息。
-        - p12  12.集群搭建1
+        - p12  12.集群搭建1（见   README_集群搭建配置.md）
                 在第一台虚拟机上
                     1. Host添加信息
-                        ```bash
-                        vim /etc/hosts
-                        配置如下:
-                            ```bash
-                            # nameserver
-                            47.101.44.136 rocketmq-nameserver1
-                            192.168.146.130 rocketmq-nameserver2
-                            # broker
-                            47.101.44.136 rocketmq-master1
-                            47.101.44.136 rocketmq-slave2
-                            192.168.146.130 rocketmq-master2
-                            192.168.146.130 rocketmq-slave1
-                        配置完成后, 重启网卡
-                            ```bash
-                            systemctl restart network
                     2. 防火墙配置
-                        宿主机需要远程访问虚拟机的rocketmq服务和web服务，需要开放相关的端口号，简单粗暴的方式是直接关闭防火墙
-                            ```bash
-                            # 关闭防火墙
-                            systemctl stop firewalld.service
-                            # 查看防火墙的状态
-                            firewall-cmd --state 
-                            # 禁止firewall开机启动
-                            systemctl disable firewalld.service
-                            # 重启防火墙
-                            firewall-cmd --reload
                     3. 环境变量配置
-                        ```bash
-                        vim /etc/profile
-                        在profile文件的末尾加入如下命令
-                            ```bash
-                            #set rocketmq
-                            ROCKETMQ_HOME=/usr/local/src/rocketmq/rocketmq-all-4.4.0-bin-release
-                            PATH=$PATH:$ROCKETMQ_HOME/bin
-                            export ROCKETMQ_HOME PATH
-                        输入:wq! 保存并退出， 并使得配置立刻生效：
-                            ```bash
-                            source /etc/profile
-                    4.  3.3.7 创建消息存储路径
-                            ```bash
-                            mkdir /usr/local/src/common/rocketmq/store
-                            mkdir /usr/local/src/common/rocketmq/store/commitlog
-                            mkdir /usr/local/src/common/rocketmq/store/consumequeue
-                            mkdir /usr/local/src/common/rocketmq/store/index
+                    4.  创建消息存储路径
                 第二台上也要做同样的操作
-                    注意点：centos6 上操作是不一致的
-                        1. centos6的网卡重启方法：service network restart
-                            关闭防火墙：service iptables stop
-                            开启防火墙：service iptables start
-                            重启防火墙：service iptables restart
-                            查看防火墙状态：service iptables status
-                        2. Bringing up interface eth0: Error: No suitable device found: no device found for connection 'System
-                            https://blog.csdn.net/weibin_6388/article/details/84821760
-                        3. Shutting down interface Auto_eth1:  Device has MAC address 00:00:00:00:00:00 00:0C:29:3A:EB:99, instead of configured address 00:0C:29:00:1D:E8. Ignoring.
-                            https://blog.csdn.net/hepannnn/article/details/78159857
-                            修改 /etc/network-scripts/ifcfg-Auto_eth1 文件
-                            
-        - p13  13.集群搭建2
+        - p13  13.集群搭建2（见   README_集群搭建配置.md）
                 broker配置文件
-                    见   README_集群搭建2配置.md
-        - p14  14.集群搭建3
+        - p14  14.集群搭建3（见   README_集群搭建配置.md）
                 修改启动脚本文件
-                    1）runbroker.sh
-                        ```sh
-                        vi /usr/local/rocketmq/bin/runbroker.sh
-                        
-                        需要根据内存大小进行适当的对JVM参数进行调整：
-                        ```bash
-                        #===================================================
-                        # 开发环境配置 JVM Configuration
-                        JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
-                    2）runserver.sh
-                        ```sh
-                        vim /usr/local/rocketmq/bin/runserver.sh
-                        ```bash
-                        JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m"
                 服务启动
-                    1）启动NameServe集群
-                    分别在192.168.25.135和192.168.25.138启动NameServer
-                        ```bash
-                        cd /usr/local/rocketmq/bin
-                        nohup sh mqnamesrv &
-                        
-                     注意 ： 启动失败的话vim nohup.out查看nohup日志，小编是因为jdk版本过低不能识别metaspace参数，改为1.8后即可正常运行。其它问题也可以通过查看日志文件分析，可能是路径错误等原因
-                            释放缓存  echo 1 > /proc/sys/vm/drop_caches
-                                    echo 2 > /proc/sys/vm/drop_caches  
-                                    echo 0 > /proc/sys/vm/drop_caches 
-                            linux杀死进程 
-                                    解决办法：首先用ps axuf查看进程树
-                                    杀死该进程的方法为 top -9 进程PID
+                
+                - 注意点 ： 启动失败的话vim nohup.out查看nohup日志，小编是因为jdk版本过低不能识别metaspace参数，改为1.8后即可正常运行。其它问题也可以通过查看日志文件分析，可能是路径错误等原因
+                    释放缓存  echo 1 > /proc/sys/vm/drop_caches
+                            echo 2 > /proc/sys/vm/drop_caches  
+                            echo 0 > /proc/sys/vm/drop_caches 
+                    linux杀死进程 
+                            解决办法：首先用ps axuf查看进程树
+                            杀死该进程的方法为 top -9 进程PID
         - p15  15.集群搭建小结
+                总结前面的
+        - P16  16.mqadmin命令介绍
+                了解即可
+        - P17  17.rocketmq-console集群监控
     
