@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration xmlns="http://ch.qos.logback/xml/ns/logback"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback https://raw.githubusercontent.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd">
+               xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback https://raw.githubusercontent.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd
+http://ch.qos.logback/xml/ns/logback ">
 
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
     <property name="log-home" value="./demo-mybatis-plus2/src/main/resources/logs"/>
     <property name="std-format" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:  %msg%n"/>
     <property name="ad-format" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:  %msg%n"/>
 
-    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender" >
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <!-- 输出的格式 -->
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${std-format}</pattern>
@@ -45,13 +46,12 @@
         </encoder>
     </appender>
 
-    <appender name="adConsoleAppender" class="ch.qos.logback.core.ConsoleAppender" >
+    <appender name="adConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <!-- 输出的格式 -->
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${ad-format}</pattern>
         </encoder>
     </appender>
-
 
 
     <!--ADService层日志-->
