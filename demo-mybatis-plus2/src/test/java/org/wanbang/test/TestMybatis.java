@@ -62,4 +62,11 @@ public class TestMybatis {
 		});
 	}
 
+	@Test
+	public void testQueryUser5() {
+		String value = "、1、2、3";
+		String substring = value.substring(1);
+		System.out.println(substring);
+	}
+
 }
