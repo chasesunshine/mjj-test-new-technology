@@ -17,6 +17,7 @@ public class SysLogController {
     @GetMapping("/selectOne")
     public String  selectOne(){
         String s = sysLogService.selectOne();
+        log.info("获取资料 : "+s);
         return s;
     }
 }
