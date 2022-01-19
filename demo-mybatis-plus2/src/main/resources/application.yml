@@ -20,6 +20,3 @@ mybatis-plus:
 
 template:
   purchaseOrderDeliverGoodsExcel: https://fosun-public-dev.oss-cn-hangzhou.aliyuncs.com/scm-pms/SRM-批量导入发货.xlsx
-
-
-
