@@ -59,13 +59,13 @@ http://ch.qos.logback/xml/ns/logback ">
     <!--ADService层日志-->
     <!--<logger name="com.gatewayserver.gatewayserver.service.impl.AdServiceImpl" level="INFO" additivity="false">-->
     <!--<appender-ref ref="adConsoleAppender" />-->
-    <!--<appender-ref ref="fileAppender"/>-->
+    <!--<appender-ref ref="adFileAppender"/>-->
     <!--</logger>-->
 
+    <!--这里是输出的内容信息-->
     <root level="info">
         <appender-ref ref="consoleAppender"/>
         <appender-ref ref="fileAppender"/>
-        <appender-ref ref="adFileAppender"/>
     </root>
 
 
