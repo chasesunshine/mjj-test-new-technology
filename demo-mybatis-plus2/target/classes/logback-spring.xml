@@ -4,8 +4,10 @@
                xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback https://raw.githubusercontent.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd
 http://ch.qos.logback/xml/ns/logback ">
 
-    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径    ./ 表示当前目录-->
     <property name="log-home" value="./demo-mybatis-plus2/src/main/resources/logs"/>
+
+
     <property name="std-format" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:  %msg%n"/>
     <property name="ad-format" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:  %msg%n"/>
 
@@ -63,6 +65,7 @@ http://ch.qos.logback/xml/ns/logback ">
     <root level="info">
         <appender-ref ref="consoleAppender"/>
         <appender-ref ref="fileAppender"/>
+        <appender-ref ref="adFileAppender"/>
     </root>
 
 
