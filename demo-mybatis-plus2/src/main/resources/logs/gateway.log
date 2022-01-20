@@ -15,3 +15,5 @@
 2022-01-20 10:24:47.485 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-01-20 10:24:47.497 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
 2022-01-20 10:24:47.500 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 4.68 seconds (JVM running for 6.197)
+2022-01-20 10:30:03.526 [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 10:30:03.527 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-0} closing ...
