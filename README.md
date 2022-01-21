@@ -66,7 +66,7 @@
         怎样才能即使用try catch去捕获异常，而又让出现异常后spring回滚呢，这里就要用到
         TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         完美解决问题。并且能够使该方法执行完。
-    - aop切面（测试的类：org.wanbang.study.aop.TransactionDemo）(完整的 ： org.wanbang.study.aop)
+    - aop切面（测试的类：TransactionDemo）(完整的 ： org.wanbang.study.aop)
         aop 切面能切 cglib代理 和 jdk动态代理（实现了接口的类）
         网址 ： AOP五种执行时机 https://www.cnblogs.com/yimengxianzhi/p/12261963.html
         <dependency>

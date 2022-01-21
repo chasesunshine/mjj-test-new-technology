@@ -8,7 +8,7 @@ import org.wanbang.entity.common.UserVo1;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-01-19T15:46:34+0800",
+    date = "2022-01-21T14:55:10+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_221 (Oracle Corporation)"
 )
 @Component

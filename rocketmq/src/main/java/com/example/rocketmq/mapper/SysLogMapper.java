@@ -1,7 +1,7 @@
 package com.example.rocketmq.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.wanbang.entity.SysLog;
+import com.example.rocketmq.entity.SysLog;
 
 public interface SysLogMapper extends BaseMapper<SysLog> {
 
