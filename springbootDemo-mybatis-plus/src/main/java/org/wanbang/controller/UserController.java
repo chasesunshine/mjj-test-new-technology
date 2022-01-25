@@ -24,6 +24,16 @@ public class UserController {
         return s;
     }
 
+    /**
+     * 延时队列测试
+     * @return
+     */
+    @GetMapping("/test/delayQueue")
+    public String  delayQueue(){
+        String s = userService.delayQueue();
+        return s;
+    }
+
     @GetMapping("/selectOneAop")
     public String selectOneTest(){
         String s = userService.deleteAopTest();

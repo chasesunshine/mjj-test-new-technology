@@ -22,6 +22,7 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Slf4j
@@ -108,6 +109,18 @@ public class UserService {
 
         return JSON.toJSONString(user);
     }
+
+    /**
+     * 测试延时队列
+     * @return
+     */
+    public String delayQueue() {
+        stringRedisTemplate.opsForValue().set("token1","123443",3, TimeUnit.SECONDS);
+        redisTemplate.opsForHash().put("Person","name","ligang");
+        redisTemplate.expire("Person",5,TimeUnit.SECONDS);
+        return "1";
+    }
+
 
 
     @Transactional(rollbackFor = Exception.class)
