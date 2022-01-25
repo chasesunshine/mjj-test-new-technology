@@ -199,4 +199,16 @@
         - P16  16.mqadmin命令介绍
                 了解即可
         - P17  17.rocketmq-console集群监控
-    
+               `RocketMQ`有一个对其扩展的开源项目[incubator-rocketmq-externals](https://github.com/apache/rocketmq-externals)，
+               这个项目中有一个子模块叫`rocketmq-console`，这个便是管理控制台项目了，
+               先将[incubator-rocketmq-externals](https://github.com/apache/rocketmq-externals)拉到本地，
+               因为我们需要自己对`rocketmq-console`进行编译打包运行。
+               1. 下载并编译打包
+                   git clone https://github.com/apache/rocketmq-externals
+                   cd rocketmq-console
+                   mvn clean package -Dmaven.test.skip=true
+                   * 注意：打包前在```rocketmq-console```中配置```namesrv```集群地址：
+                     rocketmq.config.namesrvAddr=192.168.25.135:9876;192.168.25.138:9876
+               2. 启动rocketmq-console：
+                  java -jar rocketmq-console-ng-1.0.0.jar
+                  启动成功后，我们就可以通过浏览器访问`http://localhost:8080`进入控制台界面了
