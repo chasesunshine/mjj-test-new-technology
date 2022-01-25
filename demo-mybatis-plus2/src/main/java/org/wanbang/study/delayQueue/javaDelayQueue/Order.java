@@ -1,4 +1,4 @@
-package org.wanbang.study.delayQueue.DelayQueue;
+package org.wanbang.study.delayQueue.javaDelayQueue;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

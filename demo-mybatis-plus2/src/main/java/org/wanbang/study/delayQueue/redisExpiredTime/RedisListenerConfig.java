@@ -1,4 +1,4 @@
-package org.wanbang.study.delayQueue.Redis;
+package org.wanbang.study.delayQueue.redisExpiredTime;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

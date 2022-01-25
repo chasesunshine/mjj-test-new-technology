@@ -1,24 +1,9 @@
-package org.wanbang.study.delayQueue.Quartz;
+package org.wanbang.study.delayQueue.redisSortedSet;
 
-import org.assertj.core.groups.Tuple;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
-
-import java.util.Calendar;
-import java.util.Set;
-
-@Component
-public class QuartzDemo {
-
-    //每隔五秒
-    @Scheduled(cron = "0/5 * * * * ? ")
-    public void process(){
-        System.out.println("我是定时任务！");
-    }
-
-//    /**
-//     * 消费消息
-//     */
+public class Redis {
+    /**
+     * 消费消息
+     */
 //    public void pollOrderQueue() {
 //
 //        while (true) {
