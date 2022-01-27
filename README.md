@@ -118,7 +118,7 @@
                 * 注意看 /etc/profile 里面的 ROCKETMQ_HOME 配置是否符合路径信息
         - p7  7. 测试发送消息和接收消息
                 bin 目录下两个窗口，一个发送消息，一个接收消息
-                # 发送消息
+                # 发送消息iptables restart
                     1.设置环境变量
                       export NAMESRV_ADDR=localhost:9876
                     2.使用安装包的Demo发送消息
