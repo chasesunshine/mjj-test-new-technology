@@ -371,6 +371,9 @@
                 ```sh
                     cd /usr/local/rocketmq/bin
                     nohup sh mqbroker -c /usr/local/src/java/rocketmq/rocketmq-all-4.4.0-bin-release/conf/2m-2s-sync/broker-a-s.properties &
+            3）网址 ：
+                http://47.101.44.136:8080/
+                http://192.168.146.130:8080/
             查看日志
             ```sh
                 查看nameServer日志
