@@ -13,6 +13,7 @@
         <module>springbootDemo-mybatis-plus</module>
         <module>demo-mybatis-plus2</module>
         <module>test-nacos</module>
+        <module>springboot-core</module>
     </modules>
 
     <parent>
