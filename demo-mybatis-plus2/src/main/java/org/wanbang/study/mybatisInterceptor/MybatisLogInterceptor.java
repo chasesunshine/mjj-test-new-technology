@@ -1,4 +1,4 @@
-package org.wanbang.Interceptor.mybatis;
+package org.wanbang.study.mybatisInterceptor;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
