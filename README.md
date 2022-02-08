@@ -213,4 +213,19 @@
                   java -jar rocketmq-console-ng-1.0.0.jar
                   启动成功后，我们就可以通过浏览器访问`http://localhost:8080`进入控制台界面了
         - P18  18.消息发送样例介绍和步骤分析
+                * 消息发送者步骤分析r
+                    1.创建消息生产者producer，并制定生产者组名
+                    2.指定Nameserver地址
+                    3.启动producer
+                    4.创建消息对象，指定主题Topic、Tag和消息体
+                    5.发送消息
+                    6.关闭生产者producer
+                * 消息消费者步骤分析
+                    1.创建消费者Consumer，制定消费者组名
+                    2.指定Nameserver地址
+                    3.订阅主题Topic和Tag
+                    4.设置回调函数，处理消息
+                    5.启动消费者consumer
+        -P19  19.发送同步消息
+
                 
