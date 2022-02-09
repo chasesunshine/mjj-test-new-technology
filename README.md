@@ -220,12 +220,17 @@
                     4.创建消息对象，指定主题Topic、Tag和消息体
                     5.发送消息
                     6.关闭生产者producer
-                * 消息消费者步骤分析
+        -P19  19.发送同步消息
+            com.example.rocketmq.test.base.producer.SyncProducer
+        -P20  20.发送异步消息
+            com.example.rocketmq.test.base.producer.AsyncProducer
+        -P21  21.发送单向消息
+            com.example.rocketmq.test.base.producer.OnewayProducer
+        -P22  22.消息消费基本流程
+                 * 消息消费者步骤分析
                     1.创建消费者Consumer，制定消费者组名
                     2.指定Nameserver地址
                     3.订阅主题Topic和Tag
                     4.设置回调函数，处理消息
-                    5.启动消费者consumer
-        -P19  19.发送同步消息
-
-                
+                    5.启动消费者consumer  
+                 com.example.rocketmq.test.base.consumer.Consumer

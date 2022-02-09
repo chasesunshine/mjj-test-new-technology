@@ -324,7 +324,11 @@
                         #sendMessageThreadPoolNums=128
                         #拉消息线程池数量
                         #pullMessageThreadPoolNums=128
-                     
+                        
+            注意点：
+                /usr/local/src/java/rocketmq/rocketmq-all-4.4.0-bin-release/conf/broker.conf
+                namesrvAddr=192.168.146.130:9876
+                brokerIP1=192.168.146.130         
                      
     - p14  14.集群搭建3
         修改启动脚本文件
@@ -357,10 +361,12 @@
                 master1：
                 ```bash
                     cd /usr/local/rocketmq/bin
+                    nohup sh mqbroker -c /usr/local/src/java/rocketmq/rocketmq-all-4.4.0-bin-release/conf/2m-2s-sync/broker-a.properties &
                     nohup sh mqbroker -c /usr/local/src/common/rocketmq/rocketmq-all-4.4.0-bin-release/conf/2m-2s-sync/broker-a.properties &
                 slave2：
                 ```sh
                     cd /usr/local/rocketmq/bin
+                    nohup sh mqbroker -c /usr/local/src/java/rocketmq/rocketmq-all-4.4.0-bin-release/conf/2m-2s-sync/broker-b-s.properties &
                     nohup sh mqbroker -c /usr/local/src/common/rocketmq/rocketmq-all-4.4.0-bin-release/conf/2m-2s-sync/broker-b-s.properties &
             * 在192.168.25.138上启动master2和slave2
                 master2
@@ -375,9 +381,22 @@
                 注意要开放两个服务器的8080端口
                 http://47.101.44.136:8080/
                 http://192.168.146.130:8080/
+                http://192.168.146.132:8080/
             查看日志
             ```sh
                 查看nameServer日志
                     tail -500f ~/logs/rocketmqlogs/namesrv.log
                 查看broker日志
                     tail -500f ~/logs/rocketmqlogs/broker.log
+                    
+        注意点：
+           本地连接服务器上rocketmq 出现closeChannel: close the connection to remote address[] result: true            
+           解决1：
+                https://blog.csdn.net/lwycc2333/article/details/106629237 
+                日志：tail -f ~/logs/rocketmqlogs/broker.log
+                日志出现：  2022-02-09 21:17:49 WARN brokerOutApi_thread_1 - registerBroker Exception, rocketmq-nameserver1:9876
+           解决2：
+                https://blog.csdn.net/AlbertFly/article/details/82182059
+                问题 可能有两个
+                1个是要连接的服务器的nameserver 服务宕机或者网络不通
+                2 是要连接的服务器 有防火墙（关闭防火墙即可）
