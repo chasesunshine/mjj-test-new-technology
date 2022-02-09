@@ -234,3 +234,4 @@
                     4.设置回调函数，处理消息
                     5.启动消费者consumer  
                  com.example.rocketmq.test.base.consumer.Consumer
+        -P23  23.消费者广播模式和负载均衡模式
