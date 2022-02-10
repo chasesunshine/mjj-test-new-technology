@@ -19,6 +19,10 @@ public class Consumer {
         consumer.subscribe("Base", "Tag1");
         //负载均衡模式消费
         consumer.setMessageModel(MessageModel.CLUSTERING);
+
+        // 广播模式消费
+        //consumer.setMessageModel(MessageModel.BROADCASTING);
+
         // 注册回调函数，处理消息
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override
