@@ -110,6 +110,18 @@ public class UserService {
         return JSON.toJSONString(user);
     }
 
+    public String selectOne1() {
+        User user = userMapper.selectOne(Wrappers.<User>query().lambda()
+                .eq(User::getId,102));
+
+        user.setOrgId("111");
+        // 转换的时候不会  转换与映射继承的类的成员变量
+        UserVo userVo = UserConver.item2Dto(user);
+        UserVo1 convert = UserConver.convert(user);
+
+        return JSON.toJSONString(user);
+    }
+
     /**
      * 测试延时队列
      * @return

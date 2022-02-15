@@ -24,6 +24,12 @@ public class UserController {
         return s;
     }
 
+    @GetMapping("/selectOne1")
+    public String  selectOne1(){
+        String s = userService.selectOne1();
+        return s;
+    }
+
     /**
      * 延时队列测试
      * @return
