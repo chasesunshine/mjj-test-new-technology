@@ -1,4 +1,4 @@
-package org.wanbang.study.copyAll.quoteCopy.test;
+package org.wanbang.study.copyAll.objectCopy.test;
 
 import org.wanbang.study.copyAll.objectCopy.Teacher;
 

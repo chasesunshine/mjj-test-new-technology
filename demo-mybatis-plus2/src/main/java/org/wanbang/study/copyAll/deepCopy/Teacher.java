@@ -1,6 +1,6 @@
 package org.wanbang.study.copyAll.deepCopy;
 
-class Teacher implements Cloneable {
+public class Teacher implements Cloneable {
     private String name;
     private int age;
 

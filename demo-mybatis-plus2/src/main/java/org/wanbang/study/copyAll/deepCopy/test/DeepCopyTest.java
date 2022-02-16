@@ -1,4 +1,7 @@
-package org.wanbang.study.copyAll.deepCopy;
+package org.wanbang.study.copyAll.deepCopy.test;
+
+import org.wanbang.study.copyAll.deepCopy.Student;
+import org.wanbang.study.copyAll.deepCopy.*;
 
 // 深拷贝
 // 深拷贝是一个整个独立的对象拷贝，深拷贝会拷贝所有的属性,并拷贝属性指向的动态分配的内存。
@@ -31,5 +34,4 @@ public class DeepCopyTest {
         System.out.println("student1的teacher为： " + student1.getTeacher().getName());
         System.out.println("student2的teacher为： " + student2.getTeacher().getName());
     }
-
 }

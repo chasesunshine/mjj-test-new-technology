@@ -33,5 +33,6 @@ public class ShallowCopyTest {
         teacher.setName("jack");
         System.out.println("student1的teacher为： " + student1.getTeacher().getName());
         System.out.println("student2的teacher为： " + student2.getTeacher().getName());
+
     }
 }

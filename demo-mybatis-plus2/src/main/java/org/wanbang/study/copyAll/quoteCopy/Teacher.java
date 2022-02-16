@@ -1,6 +1,6 @@
 package org.wanbang.study.copyAll.quoteCopy;
 
-public class Teacher implements Cloneable {
+public class Teacher {
     private String name;
     private int age;
 
@@ -23,10 +23,5 @@ public class Teacher implements Cloneable {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Object clone() throws CloneNotSupportedException {
-        Object object = super.clone();
-        return object;
     }
 }
