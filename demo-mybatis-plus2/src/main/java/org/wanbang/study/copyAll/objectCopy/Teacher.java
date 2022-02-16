@@ -25,6 +25,7 @@ public class Teacher implements Cloneable {
         this.age = age;
     }
 
+    @Override
     public Object clone() throws CloneNotSupportedException {
         Object object = super.clone();
         return object;
