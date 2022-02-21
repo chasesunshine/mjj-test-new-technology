@@ -248,3 +248,5 @@
                 com.example.rocketmq.test.order.Producer
                 com.example.rocketmq.test.order.OrderStep
         -P26  26.顺序消息消费者
+                com.example.rocketmq.test.order.ConsumerInOrder
+        -P27  27.延迟消息
