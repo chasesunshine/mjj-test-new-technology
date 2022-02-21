@@ -250,3 +250,9 @@
         -P26  26.顺序消息消费者
                 com.example.rocketmq.test.order.ConsumerInOrder
         -P27  27.延迟消息
+                com.example.rocketmq.test.delay.Producer
+                com.example.rocketmq.test.delay.Consumer
+        -P28  28.发送批量消息
+                com.example.rocketmq.test.batch.Producer
+                com.example.rocketmq.test.batch.Consumer
+        -P29  29.过滤消息的两种方式
