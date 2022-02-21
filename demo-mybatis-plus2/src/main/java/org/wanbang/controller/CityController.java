@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.wanbang.service.CityServiceTestAop;
+import org.wanbang.study.redisLock.LockExecutor;
+
+import javax.annotation.Resource;
 
 @Slf4j
 @RestController
@@ -18,6 +21,9 @@ public class CityController {
 
     @Autowired
     private CityServiceTestAop cityServiceTestAop;
+
+    @Resource
+    LockExecutor lockExecutor;
 
     @GetMapping("/selectOne")
     public String  selectOne(){
@@ -37,5 +43,16 @@ public class CityController {
     public String testConfigProperties(){
         String s = cityService.testConfigProperties();
         return s;
+    }
+
+    /**
+     * 测试分布式锁
+     *
+     * @return
+     */
+    @GetMapping("/redis/lock")
+    public String redisLock(){
+        String key = CacheNameEnum.DELIVER_LOCK.formatOrgId("fxjk","123");
+        return lockExecutor.exec(key, 10, () -> cityService.selectOne());
     }
 }

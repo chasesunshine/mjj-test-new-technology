@@ -8,6 +8,12 @@ public enum CacheNameEnum {
     SVC_NODE_ID("svc-node-id"),
 
     /**
+     * 采购订单发货锁
+     */
+    DELIVER_LOCK("lock:deliver:%s"),
+
+
+    /**
      * 凭证信息
      */
     SAFETY_AUTH("token:%s"),
@@ -217,6 +223,18 @@ public enum CacheNameEnum {
 
     public String formatOrgId(String orgId) {
         return this.pattern+orgId;
+    }
+
+    /**
+     * 格式化现实
+     *
+     * @param value
+     * @return
+     */
+    public String formatOrgId(String orgId, Object... value) {
+        String patternBuilder = this.pattern + ":" + orgId;
+        String format = String.format(patternBuilder, value);
+        return format;
     }
 
 }

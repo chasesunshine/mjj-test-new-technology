@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-mybatis-plus2</artifactId>
+
+    <properties>
+        <redisson.version>3.13.6</redisson.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -39,6 +44,13 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
+        </dependency>
+
+        <!-- redis配置 -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>${redisson.version}</version>
         </dependency>
     </dependencies>
 

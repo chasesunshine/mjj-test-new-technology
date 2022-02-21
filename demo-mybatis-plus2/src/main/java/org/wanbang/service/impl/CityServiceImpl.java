@@ -15,8 +15,9 @@ import javax.annotation.Resource;
 @Service
 @Slf4j
 public class CityServiceImpl implements CityService {
-    @Autowired
+    @Resource
     private CityMapper cityMapper;
+
     @Resource
     private TemplateProperties templateProperties;
 
