@@ -23,8 +23,10 @@ public class Linked <T>{
         }
     }
 
-    private Node head;    		//头结点
-    private int size;			//链表元素个数
+    //头结点
+    private Node head;
+    //链表元素个数
+    private int size;
     //构造函数
     public Linked(){
         this.head = null;
@@ -35,10 +37,12 @@ public class Linked <T>{
     public int getSize(){
         return this.size;
     }
+
     //判断链表是否为空
     public boolean isEmpty(){
         return this.size == 0;
     }
+
     //链表头部添加元素
     public void addFirst(T t){
         Node node = new Node(t);	//节点对象
@@ -47,10 +51,12 @@ public class Linked <T>{
         // this.head = new Node(e,head);等价上述代码
         this.size++;
     }
+
     //向链表尾部插入元素
     public void addLast(T t){
         this.add(t, this.size);
     }
+
     //向链表中间插入元素
     public void add(T t,int index){
         if (index <0 || index >size){
@@ -72,6 +78,7 @@ public class Linked <T>{
         preNode.next = node;
         this.size++;
     }
+
     //删除链表元素
     public void remove(T t){
         if(head == null){
@@ -83,10 +90,8 @@ public class Linked <T>{
             head = head.next;
             this.size--;
         }
-        /**
-         * 上面已经对头节点判别是否要进行删除
-         * 所以要对头结点的下一个结点进行判别
-         */
+        //上面已经对头节点判别是否要进行删除
+        //所以要对头结点的下一个结点进行判别
         Node cur = this.head;
         while(cur != null && cur.next != null){
             if(cur.next.t.equals(t)){
@@ -97,6 +102,7 @@ public class Linked <T>{
         }
 
     }
+
     //删除链表第一个元素
     public T removeFirst(){
         if(this.head == null){
@@ -109,6 +115,7 @@ public class Linked <T>{
         this.size--;
         return delNode.t;
     }
+
     //删除链表的最后一个元素
     public T removeLast(){
         if(this.head == null){
@@ -129,6 +136,7 @@ public class Linked <T>{
         this.size--;
         return cur.t;
     }
+
     //链表中是否包含某个元素
     public boolean contains(T t){
         Node cur = this.head;
@@ -140,6 +148,7 @@ public class Linked <T>{
         }
         return false;
     }
+
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer();
