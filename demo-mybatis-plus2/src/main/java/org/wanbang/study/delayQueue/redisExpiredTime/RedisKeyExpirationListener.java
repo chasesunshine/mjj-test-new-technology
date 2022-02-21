@@ -6,7 +6,9 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RedisKeyExpirationListener extends KeyExpirationEventMessageListener {
+public class RedisKeyExpirationListener {
+
+}/*extends KeyExpirationEventMessageListener {
 
     public RedisKeyExpirationListener(RedisMessageListenerContainer listenerContainer) {
         super(listenerContainer);
@@ -16,4 +18,4 @@ public class RedisKeyExpirationListener extends KeyExpirationEventMessageListene
         String expiredKey = message.toString();
         System.out.println("监听到key：" + expiredKey + "已过期");
     }
-}
+}*/

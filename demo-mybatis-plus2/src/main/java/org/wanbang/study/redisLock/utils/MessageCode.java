@@ -94,7 +94,7 @@ public class MessageCode {
             }
         }
         try {
-            return MessageFormat.format(this.getMessage(), sub);
+            return MessageFormat.format(this.getMessage(), (Object) sub);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
             return this.getMessage();

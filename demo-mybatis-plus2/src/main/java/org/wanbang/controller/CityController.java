@@ -50,9 +50,9 @@ public class CityController {
      *
      * @return
      */
-    @GetMapping("/redis/lock")
-    public String redisLock(){
-        String key = CacheNameEnum.DELIVER_LOCK.formatOrgId("fxjk","123");
-        return lockExecutor.exec(key, 10, () -> cityService.selectOne());
-    }
+//    @GetMapping("/redis/lock")
+//    public String redisLock(){
+//        String key = CacheNameEnum.DELIVER_LOCK.formatOrgId("fxjk","123");
+//        return lockExecutor.exec(key, 10, () -> cityService.selectOne());
+//    }
 }

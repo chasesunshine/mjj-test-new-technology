@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "org.wanbang.config.Person",
+      "sourceType": "org.wanbang.config.Person"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
