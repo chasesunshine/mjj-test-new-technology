@@ -51,4 +51,19 @@ public class WorldUserService {
         return mjj;
     }
 
+    @Transactional(rollbackFor = Exception.class)
+    public String selectTwo() {
+        WorldUser build1 = WorldUser.builder().name("mjj1").age(2).sex("男").build();
+        WorldUser build2 = WorldUser.builder().name("lj2").age(3).sex("xxx").build();
+        userMapper.insert(build1);
+
+        // 只需要方法外部加事务即可
+        asnRewrite(userMapper,build2);
+        return "s";
+    }
+
+    private void asnRewrite(WorldUserMapper userMapper, WorldUser build2) {
+        userMapper.insert(build2);
+    }
+
 }

@@ -5,4 +5,6 @@ public interface CityService {
     String selectOne();
 
     String testConfigProperties();
+
+    String selectTwo();
 }

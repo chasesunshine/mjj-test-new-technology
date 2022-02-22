@@ -18,5 +18,7 @@ public class WorldUser implements Serializable {
     private Integer age;
 
     private String name;
+
+    private String sex;
 }
 

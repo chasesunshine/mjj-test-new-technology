@@ -33,4 +33,9 @@ public class WorldUserController {
         return s;
     }
 
+    @GetMapping("/selectTwo")
+    public String  selectTwo(){
+        String s = worldUserService.selectTwo();
+        return s;
+    }
 }

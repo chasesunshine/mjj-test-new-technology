@@ -45,6 +45,12 @@ public class CityController {
         return s;
     }
 
+    @GetMapping("/selectOne2")
+    public String  selectOne2(){
+        String s = cityService.selectTwo();
+        return s;
+    }
+
     /**
      * 测试分布式锁
      *
