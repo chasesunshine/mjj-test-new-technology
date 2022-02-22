@@ -1,6 +1,12 @@
 {
   "groups": [
     {
+      "name": "auth",
+      "type": "org.wanbang.config.properties.AuthProperties",
+      "sourceType": "org.wanbang.config.SpringConfig",
+      "sourceMethod": "authProperties()"
+    },
+    {
       "name": "template",
       "type": "org.wanbang.config.properties.TemplateProperties",
       "sourceType": "org.wanbang.config.SpringConfig",
@@ -8,6 +14,23 @@
     }
   ],
   "properties": [
+    {
+      "name": "auth.auth-list",
+      "type": "java.util.List<org.wanbang.config.properties.AuthDto>",
+      "description": "认证信息",
+      "sourceType": "org.wanbang.config.properties.AuthProperties"
+    },
+    {
+      "name": "auth.paths",
+      "type": "java.util.List<java.lang.String>",
+      "description": "需要认证的路径",
+      "sourceType": "org.wanbang.config.properties.AuthProperties"
+    },
+    {
+      "name": "template.material-excel",
+      "type": "java.lang.String",
+      "sourceType": "org.wanbang.config.properties.TemplateProperties"
+    },
     {
       "name": "template.material-excel",
       "type": "java.lang.String",
@@ -17,7 +40,17 @@
     {
       "name": "template.purchase-detail-excel",
       "type": "java.lang.String",
+      "sourceType": "org.wanbang.config.properties.TemplateProperties"
+    },
+    {
+      "name": "template.purchase-detail-excel",
+      "type": "java.lang.String",
       "description": "采购明细_批量导入物料",
+      "sourceType": "org.wanbang.config.properties.TemplateProperties"
+    },
+    {
+      "name": "template.purchase-order-deliver-goods-excel",
+      "type": "java.lang.String",
       "sourceType": "org.wanbang.config.properties.TemplateProperties"
     },
     {
