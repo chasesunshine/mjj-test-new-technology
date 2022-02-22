@@ -255,4 +255,25 @@
         -P28  28.发送批量消息
                 com.example.rocketmq.test.batch.Producer
                 com.example.rocketmq.test.batch.Consumer
-        -P29  29.过滤消息的两种方式
+        -P29  29.过滤消息的两种方式(支持sql语句)
+                发送消息时，你能通过`putUserProperty`来设置消息的属性
+                DefaultMQProducer producer = new DefaultMQProducer("please_rename_unique_group_name");
+                producer.start();
+                Message msg = new Message("TopicTest",
+                   tag,
+                   ("Hello RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET)
+                );
+                // 设置一些属性
+                msg.putUserProperty("a", String.valueOf(i));
+                SendResult sendResult = producer.send(msg);
+                producer.shutdown();
+        -P30  30.Tag过滤
+                com.example.rocketmq.test.filter.tag.Producer
+                com.example.rocketmq.test.filter.tag.Consumer
+        -P31  31.SQL语法过滤
+                发送消息时，你能通过`putUserProperty`来设置消息的属性
+                消费消息时：用MessageSelector.bySql来使用sql筛选消息
+                com.example.rocketmq.test.filter.sql.Producer
+                com.example.rocketmq.test.filter.sql.Consumer
+        -P32  32.事务消息的流程分析
+                

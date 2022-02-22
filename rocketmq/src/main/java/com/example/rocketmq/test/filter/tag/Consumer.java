@@ -1,4 +1,4 @@
-package com.example.rocketmq.test.base.consumer;
+package com.example.rocketmq.test.filter.tag;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
@@ -16,19 +16,16 @@ public class Consumer {
         // 指定Namesrv地址信息.
         consumer.setNamesrvAddr("192.168.146.130:9876;192.168.146.132:9876");
         // 订阅Topic
-        consumer.subscribe("Base", "Tag1");
+        consumer.subscribe("FilterTagTopic", "Tag1 || Tag2");
         //负载均衡模式消费
         consumer.setMessageModel(MessageModel.CLUSTERING);
-
-        // 广播模式消费
-        //consumer.setMessageModel(MessageModel.BROADCASTING);
 
         // 注册回调函数，处理消息
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
                 for (MessageExt msg:msgs) {
-                    System.out.println("线程名称 ："+Thread.currentThread().getName() +" - "+ new String(msg.getBody()));
+                    System.out.println("线程名称 ："+Thread.currentThread().getName() +" - "+new String(msg.getBody()));
                 }
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
             }
