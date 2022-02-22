@@ -19,7 +19,7 @@ public class WorldUserService {
 
     public String selectOne() {
         WorldUser worldUser = userMapper.selectOne(Wrappers.<WorldUser>query().lambda()
-                .eq(org.wanbang.entity.WorldUser::getId, 1));
+                .eq(org.wanbang.entity.WorldUser::getId, 13));
 
         return JSON.toJSONString(worldUser);
     }
