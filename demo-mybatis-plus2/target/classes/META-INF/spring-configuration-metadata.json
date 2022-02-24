@@ -29,28 +29,13 @@
     {
       "name": "template.material-excel",
       "type": "java.lang.String",
-      "sourceType": "org.wanbang.config.properties.TemplateProperties"
-    },
-    {
-      "name": "template.material-excel",
-      "type": "java.lang.String",
       "description": "批量导入物料模板",
       "sourceType": "org.wanbang.config.properties.TemplateProperties"
     },
     {
       "name": "template.purchase-detail-excel",
       "type": "java.lang.String",
-      "sourceType": "org.wanbang.config.properties.TemplateProperties"
-    },
-    {
-      "name": "template.purchase-detail-excel",
-      "type": "java.lang.String",
       "description": "采购明细_批量导入物料",
-      "sourceType": "org.wanbang.config.properties.TemplateProperties"
-    },
-    {
-      "name": "template.purchase-order-deliver-goods-excel",
-      "type": "java.lang.String",
       "sourceType": "org.wanbang.config.properties.TemplateProperties"
     },
     {
