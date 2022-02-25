@@ -22,12 +22,17 @@ public class Main {
         int bufferSize=1024;
         ExecutorService executor=Executors.newFixedThreadPool(8);
 
-        Disruptor<Trade> disruptor = new Disruptor<>(new EventFactory<Trade>() {
-            @Override
-            public Trade newInstance() {
-                return new Trade();
-            }
-        }, bufferSize, executor, ProducerType.SINGLE, new BusySpinWaitStrategy());
+        Disruptor<Trade> disruptor = new Disruptor<Trade>(
+                new EventFactory<Trade>() {
+                    @Override
+                    public Trade newInstance() {
+                        return new Trade();
+                    }
+                },
+                bufferSize,
+                executor,
+                ProducerType.SINGLE,
+                new BusySpinWaitStrategy());
 
         //菱形操作
         //使用disruptor创建消费者组C1,C2
