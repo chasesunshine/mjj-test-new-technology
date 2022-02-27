@@ -10,9 +10,9 @@ public class TestService1 {
     private TestService2 testService2;
 
     // 使用构造方法注入 - 循环依赖
-    public TestService1(TestService2 testService2) {
-        this.testService2 = testService2;
-    }
+//    public TestService1(TestService2 testService2) {
+//         this.testService2 = testService2;
+//    }
 
     public void test1() {
         System.out.println("test1");

@@ -8,9 +8,9 @@ public class TestService2 {
     @Autowired
     private TestService1 testService1;
 
-    public TestService2(TestService1 testService1) {
-        this.testService1 = testService1;
-    }
+//    public TestService2(TestService1 testService1) {
+//        this.testService1 = testService1;
+//    }
 
     public void test2() {
         System.out.println("test2");
