@@ -158,7 +158,6 @@ public class DisruptorTest {
         EventTranslatorOneArg<DisruptorTest.MessageEvent,String> translator = new DisruptorTest.MessageEventTranslator();
         ringBuffer1.publishEvent(translator,"Hello Disruptor!");
 
-        System.out.println("\n\n\n");
 
         // 要在这个线程
         Thread.sleep(2000);
