@@ -2,7 +2,7 @@ package org.wanbang.study.disruptorStudy;
 
 // 初识Disruptor
 // https://www.cnblogs.com/flyingeagle/articles/10247490.html
-public class doc3 {
+public class doc3Main {
     // 一.Disruptor是什么？
     //　　Disruptor是一个高性能的异步处理框架，或者可以认为是线程间通信的高效低延时的内存消息组件，它最大特点是高性能，
     //   其LMAX架构可以获得每秒6百万订单，用1微秒的延迟获得吞吐量为100K+。
