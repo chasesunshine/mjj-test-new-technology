@@ -33,7 +33,7 @@ public class DisruptorTest {
     public static class MessageEventFactory implements EventFactory<MessageEvent> {
         @Override
         public MessageEvent newInstance() {
-            //log.info("消息事件工厂类");
+            log.info("消息事件工厂类 \n");
             return new MessageEvent();
         }
     }
@@ -44,7 +44,7 @@ public class DisruptorTest {
     public static class MessageThreadFactory implements ThreadFactory {
         @Override
         public Thread newThread(Runnable r) {
-            log.info("消费者线程工厂类");
+            log.info("消费者线程工厂类  \n");
             return new Thread(r,"Simple Disruptor Test Thread");
         }
     }
@@ -66,7 +66,7 @@ public class DisruptorTest {
     public static class MessageEventHandler implements EventHandler<MessageEvent> {
         @Override
         public void onEvent(MessageEvent messageEvent, long l, boolean b) throws Exception {
-            System.out.println("消息事件处理类，这里只打印消息:" + messageEvent.getMessage());
+            System.out.println("消息事件处理类，这里只打印消息:" + messageEvent.getMessage() + "\n");
         }
     }
 
@@ -125,12 +125,12 @@ public class DisruptorTest {
      *
      * 4. 启动 disruptor 返回 RingBuffer对象
      *
-     * 5. 基于 RingBuffer对象 ， 推送事件让 消息事件处理类 处理
+     * 5. 获取到 RingBuffer对象 ， 推送事件让 消息事件处理类 处理
      *
      * @param args
      */
     public static void main(String[] args) throws InterruptedException {
-        int ringBufferSize = 1024;//必须是2的N次方
+        int ringBufferSize = 8;//必须是2的N次方
         Disruptor<MessageEvent> disruptor = new Disruptor<MessageEvent>(
                 new MessageEventFactory(),
                 ringBufferSize,
@@ -148,7 +148,7 @@ public class DisruptorTest {
         RingBuffer<MessageEvent> ringBuffer = disruptor.start();
 
         ThreadLocalDisruptor.setRingBuffer(ringBuffer);
-        //MessageEventProducer producer = new MessageEventProducer(ringBuffer);
+        // MessageEventProducer producer = new MessageEventProducer(ringBuffer);
 //        EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
 //        ringBuffer.publishEvent(translator,message);
 
@@ -156,13 +156,13 @@ public class DisruptorTest {
         Thread.sleep(2000);
         RingBuffer<DisruptorTest.MessageEvent> ringBuffer1 = ThreadLocalDisruptor.getRingBuffer();
         EventTranslatorOneArg<DisruptorTest.MessageEvent,String> translator = new DisruptorTest.MessageEventTranslator();
-        ringBuffer1.publishEvent(translator,"Hello Disruptor!");
+        ringBuffer1.publishEvent(translator,"Hello Disruptor1!");
 
 
         // 要在这个线程
         Thread.sleep(2000);
         RingBuffer<DisruptorTest.MessageEvent> ringBuffer2 = ThreadLocalDisruptor.getRingBuffer();
         EventTranslatorOneArg<DisruptorTest.MessageEvent,String> translator2 = new DisruptorTest.MessageEventTranslator();
-        ringBuffer2.publishEvent(translator2,"Hello Disruptor!!!");
+        ringBuffer2.publishEvent(translator2,"Hello Disruptor2!!!");
     }
 }
