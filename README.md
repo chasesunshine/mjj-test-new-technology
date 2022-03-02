@@ -276,4 +276,23 @@
                 com.example.rocketmq.test.filter.sql.Producer
                 com.example.rocketmq.test.filter.sql.Consumer
         -P32  32.事务消息的流程分析
+                1）事务消息发送及提交
+                (1) 发送消息（half消息）。
+                (2) 服务端响应消息写入结果。
+                (3) 根据发送结果执行本地事务（如果写入失败，此时half消息对业务不可见，本地逻辑不执行）。
+                (4) 根据本地事务状态执行Commit或者Rollback（Commit操作生成消息索引，消息对消费者可见）
+                2）事务补偿
+                (1) 对没有Commit/Rollback的事务消息（pending状态的消息），从服务端发起一次“回查”
+                (2) Producer收到回查消息，检查回查消息对应的本地事务的状态
+                (3) 根据本地事务状态，重新Commit或者Rollback
+                其中，补偿阶段用于解决消息Commit或者Rollback发生超时或者失败的情况。
+                3）事务消息状态
+                事务消息共有三种状态，提交状态、回滚状态、中间状态：
+                * TransactionStatus.CommitTransaction: 提交事务，它允许消费者消费此消息。
+                * TransactionStatus.RollbackTransaction: 回滚事务，它代表该消息将被删除，不允许被消费。
+                * TransactionStatus.Unknown: 中间状态，它代表需要检查消息队列来确定状态。
+        -P33  33.事务消息的实现
+                com.example.rocketmq.test.transaction.Producer
+                com.example.rocketmq.test.transaction.Consumer
+        -P34  34.总结
                 
