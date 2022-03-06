@@ -1,4 +1,4 @@
-package org.wanbang.study.deadLock.test2;
+package org.wanbang.study.deadLock.test2.trueDemo;
 
 import java.util.concurrent.Semaphore;
 
