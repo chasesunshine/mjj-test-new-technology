@@ -1,4 +1,9 @@
-package org.wanbang.study.designMode.adapter;
+package org.wanbang.study.designMode.adapter.test;
+
+import org.wanbang.study.designMode.adapter.NewActionB;
+import org.wanbang.study.designMode.adapter.NewAdapter;
+import org.wanbang.study.designMode.adapter.NewClient;
+import org.wanbang.study.designMode.adapter.OldActionA;
 
 public class AdapterTest {
     public static void main(String[] args) {
