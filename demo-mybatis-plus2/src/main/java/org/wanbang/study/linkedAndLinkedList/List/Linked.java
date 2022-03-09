@@ -1,16 +1,13 @@
-package org.wanbang.study.linkedAndLinkedList;
+package org.wanbang.study.linkedAndLinkedList.List;
 
-/**
- * 单向链表
- * https://blog.csdn.net/weixin_36605200/article/details/88804537
- *
- * @Author mjj
- * @Date 18:24 2021/11/16
- * @Param
- * @return
- **/
 public class Linked <T>{
+    //构造函数
+    public Linked(){
+        this.head = null;
+        this.size = 0;
+    }
 
+    // 链表存储的结点
     private class Node{
         private T t;
         private Node next;
@@ -27,11 +24,6 @@ public class Linked <T>{
     private Node head;
     //链表元素个数
     private int size;
-    //构造函数
-    public Linked(){
-        this.head = null;
-        this.size = 0;
-    }
 
     //获取链表元素的个数
     public int getSize(){
@@ -90,8 +82,10 @@ public class Linked <T>{
             head = head.next;
             this.size--;
         }
-        //上面已经对头节点判别是否要进行删除
-        //所以要对头结点的下一个结点进行判别
+        /**
+         * 上面已经对头节点判别是否要进行删除
+         * 所以要对头结点的下一个结点进行判别
+         */
         Node cur = this.head;
         while(cur != null && cur.next != null){
             if(cur.next.t.equals(t)){
@@ -167,6 +161,8 @@ public class Linked <T>{
             linked.addFirst(i);
             System.out.println(linked);
         }
+        System.out.println("单向链表的数据 ："+linked);
+
         linked.addLast(33);
         linked.addFirst(33);
         linked.add(33, 5);
@@ -178,6 +174,5 @@ public class Linked <T>{
         System.out.println("删除最后一个元素："+linked.removeLast());
         System.out.println(linked);
     }
+
 }
-
-
