@@ -15,6 +15,7 @@ spring:
     port: 6379
     password: 123456
 
+
 #mybatis-plush配置
 mybatis-plus:
   type-aliases-package: org.wanbang.pojo
