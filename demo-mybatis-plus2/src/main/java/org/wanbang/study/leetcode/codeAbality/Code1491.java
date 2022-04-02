@@ -39,9 +39,9 @@ public class Code1491 {
             }
             sum = sum + salary[i];
         }
-        BigDecimal length = new BigDecimal((salary.length - 2));
-        BigDecimal sumValue = new BigDecimal((sum - lowValue - hignValue));
-        BigDecimal average = sumValue.divide(length);
-        return average.doubleValue();
+        double length = (salary.length - 2);
+        double sumValue = (sum - lowValue - hignValue);
+        double average = sumValue/length;
+        return average;
     }
 }
