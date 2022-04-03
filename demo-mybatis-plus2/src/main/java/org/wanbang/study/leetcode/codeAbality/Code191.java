@@ -2,6 +2,8 @@ package org.wanbang.study.leetcode.codeAbality;
 
 // https://leetcode-cn.com/problems/number-of-1-bits/
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 191. 位1的个数
  * 编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为汉明重量）。
@@ -30,14 +32,40 @@ package org.wanbang.study.leetcode.codeAbality;
  * 输出：31
  * 解释：输入的二进制串 11111111111111111111111111111101 中，共有 31 位为 '1'。
  */
+@Slf4j
 public class Code191 {
     public static void main(String[] args) {
-        int i = hammingWeight(2);
+        int i = hammingWeight(00000000000000000000000000001011);
+        int i1 = hammingWeight1(00000000000000000000000000001011);
         System.out.println(i);
+        System.out.println(i1);
+
+
+        log.info("String.valueOf(00000000000000000000000000001011); 最后转换为 521 是八进制");
+        String s = String.valueOf(00000000000000000000000000001011);
+        System.out.println(s);
+        String str = Integer.toBinaryString(00000000000000000000000000001011);
+        System.out.println(str);
     }
 
-    // you need to treat n as an unsigned value
     public static int hammingWeight(int n) {
-        return 1;
+        int value = 0;
+        for (int i = 0; i < 32; i++) {
+            if ((n & (1 << i)) != 0) {
+                value++;
+            }
+        }
+        return value;
+    }
+
+    // 第二种解法
+    public static int hammingWeight1(int n) {
+        String str = Integer.toBinaryString(n);
+        int count=0;
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='1')
+                count++;
+        }
+        return count;
     }
 }
