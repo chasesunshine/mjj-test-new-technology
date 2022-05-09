@@ -1,16 +1,16 @@
-2022-02-25 17:20:32.461 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 17992 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:20:32.559 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:20:33.772 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:20:33.775 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:20:33.860 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 75ms. Found 0 repository interfaces.
-2022-02-25 17:20:34.262 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36d58086] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:20:36.100 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:20:36.640 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:20:36.803 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:20:36.819 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:20:36.820 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:20:36.821 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:20:36.822 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:01:48.809 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 20368 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:01:48.869 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:01:51.540 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:01:51.547 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:01:51.680 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 112ms. Found 0 repository interfaces.
+2022-04-28 17:01:52.325 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a626158e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:01:55.281 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:01:56.222 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:01:56.496 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:01:56.517 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:01:56.517 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:01:56.518 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:01:56.519 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -18,33 +18,33 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:20:36.822 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:20:36.822 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:20:36.822 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@20a967fe
-2022-02-25 17:20:36.930 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:20:36.930 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:20:36.938 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 5.089 seconds (JVM running for 6.386)
-2022-02-25 17:20:37.183 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:20:37.185 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:20:37.185 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:20:37.185 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:20:37.185 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:20:37.186 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:20:37.187 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:20:37.192 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-02-25 17:20:59.966 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 8804 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:20:59.968 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:21:00.863 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:21:00.865 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:21:00.919 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 42ms. Found 0 repository interfaces.
-2022-02-25 17:21:01.334 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46459d26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:21:03.422 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:21:03.928 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:21:04.093 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:21:04.104 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:21:04.105 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:21:04.105 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:21:04.106 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:01:56.520 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:01:56.520 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:01:56.520 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@34d713a2
+2022-04-28 17:01:56.682 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:01:56.682 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:01:56.694 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 8.591 seconds (JVM running for 10.844)
+2022-04-28 17:01:57.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:01:57.175 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:01:57.176 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:01:57.177 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:01:57.177 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:01:57.177 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:01:57.179 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:01:57.187 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:02:37.180 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 22992 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:02:37.186 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:02:38.377 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:02:38.380 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:02:38.469 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 77ms. Found 0 repository interfaces.
+2022-04-28 17:02:38.905 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bec2d2e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:02:41.098 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:02:41.965 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:02:42.209 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:02:42.224 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:02:42.224 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:02:42.225 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:02:42.226 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -52,33 +52,33 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:21:04.106 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:21:04.106 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:21:04.106 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@759de304
-2022-02-25 17:21:04.263 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:21:04.264 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:21:04.273 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 4.976 seconds (JVM running for 6.075)
-2022-02-25 17:21:04.440 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:21:04.442 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:21:04.442 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:21:04.442 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:21:04.442 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:21:04.443 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:21:04.444 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:21:04.448 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-02-25 17:22:28.088 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 42788 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:22:28.089 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:22:28.962 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:22:28.965 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:22:29.032 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 54ms. Found 0 repository interfaces.
-2022-02-25 17:22:29.403 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4efb10c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:22:31.242 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:22:31.752 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:22:31.917 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:22:31.928 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:22:31.928 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:22:31.929 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:22:31.929 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:02:42.226 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:02:42.226 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:02:42.226 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@12c0c0b3
+2022-04-28 17:02:42.367 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:02:42.367 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:02:42.379 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 6.019 seconds (JVM running for 7.264)
+2022-04-28 17:02:42.971 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:02:42.974 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:02:42.975 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:02:42.975 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:02:42.977 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:02:42.980 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:02:42.983 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:02:42.990 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:08:54.126 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 18596 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:08:54.127 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:08:55.449 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:08:55.452 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:08:55.552 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 82ms. Found 0 repository interfaces.
+2022-04-28 17:08:56.031 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$433f2f1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:08:58.537 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:08:59.319 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:08:59.576 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:08:59.596 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:08:59.596 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:08:59.597 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:08:59.598 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -86,33 +86,33 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:22:31.929 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:22:31.929 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:22:31.929 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3b4825f0
-2022-02-25 17:22:32.018 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:22:32.018 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:22:32.027 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 4.539 seconds (JVM running for 5.726)
-2022-02-25 17:22:32.171 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:22:32.173 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:22:32.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:22:32.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:22:32.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:22:32.174 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:22:32.175 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:22:32.178 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-02-25 17:23:29.120 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 23668 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:23:29.123 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:23:30.019 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:23:30.020 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:23:30.072 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 42ms. Found 0 repository interfaces.
-2022-02-25 17:23:30.470 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46459d26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:23:32.260 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:23:32.755 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:23:32.929 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:23:32.942 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:23:32.942 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:23:32.943 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:23:32.944 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:08:59.598 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:08:59.598 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:08:59.598 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5d3ff859
+2022-04-28 17:08:59.718 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:08:59.718 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:08:59.728 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 6.258 seconds (JVM running for 7.738)
+2022-04-28 17:09:00.158 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:09:00.161 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:09:00.161 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:09:00.161 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:09:00.162 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:09:00.163 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:09:00.165 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:09:00.173 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:09:56.045 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 27860 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:09:56.116 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:09:57.368 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:09:57.370 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:09:57.464 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 82ms. Found 0 repository interfaces.
+2022-04-28 17:09:57.918 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$433f2f1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:10:00.461 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:10:01.126 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:10:01.337 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:10:01.351 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:10:01.352 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:10:01.353 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:10:01.355 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -120,33 +120,33 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:23:32.944 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:23:32.944 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:23:32.944 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7980cf2c
-2022-02-25 17:23:33.023 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:23:33.024 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:23:33.031 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 4.501 seconds (JVM running for 5.558)
-2022-02-25 17:23:33.193 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:23:33.195 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:23:33.195 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:23:33.195 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:23:33.196 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:23:33.196 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:23:33.197 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:23:33.200 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-02-25 17:36:03.475 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 2824 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:36:03.479 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:36:04.288 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:36:04.294 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:36:04.342 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
-2022-02-25 17:36:04.712 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46459d26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:36:06.645 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:36:07.152 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:36:07.344 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:36:07.357 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:36:07.357 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:36:07.358 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:36:07.359 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:10:01.355 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:10:01.355 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:10:01.355 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5d3ff859
+2022-04-28 17:10:01.475 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:10:01.476 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:10:01.487 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 5.982 seconds (JVM running for 7.034)
+2022-04-28 17:10:01.860 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:10:01.863 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:10:01.863 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:10:01.863 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:10:01.863 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:10:01.865 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:10:01.866 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:10:01.870 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:10:51.444 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 22404 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:10:51.446 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:10:53.096 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:10:53.101 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:10:53.251 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 128ms. Found 0 repository interfaces.
+2022-04-28 17:10:53.970 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c63be919] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:10:57.491 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:10:58.513 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:10:58.838 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:10:58.867 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:10:58.868 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:10:58.869 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:10:58.871 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -154,33 +154,33 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:36:07.359 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:36:07.359 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:36:07.359 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7980cf2c
-2022-02-25 17:36:07.435 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:36:07.435 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:36:07.443 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 4.597 seconds (JVM running for 5.662)
-2022-02-25 17:36:07.592 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:36:07.594 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:36:07.594 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:36:07.594 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:36:07.595 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:36:07.596 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:36:07.597 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:36:07.600 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-02-25 17:36:36.906 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 47828 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:36:36.907 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:36:37.720 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:36:37.722 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:36:37.769 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
-2022-02-25 17:36:38.161 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46459d26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:36:40.076 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:36:40.575 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:36:40.723 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:36:40.738 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:36:40.738 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:36:40.739 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:36:40.739 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:10:58.871 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:10:58.871 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:10:58.872 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5dcd0cdf
+2022-04-28 17:10:59.033 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:10:59.034 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:10:59.053 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 8.148 seconds (JVM running for 9.237)
+2022-04-28 17:10:59.549 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:10:59.551 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:10:59.552 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:10:59.552 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:10:59.552 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:10:59.554 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:10:59.556 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:10:59.562 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:12:03.462 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 23056 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:12:03.463 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:12:04.953 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:12:04.957 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:12:05.042 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 74ms. Found 0 repository interfaces.
+2022-04-28 17:12:05.544 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c63be919] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:12:08.490 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:12:09.842 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:12:10.256 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:12:10.278 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:12:10.278 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:12:10.279 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:12:10.280 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -188,33 +188,33 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:36:40.739 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:36:40.739 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:36:40.739 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7980cf2c
-2022-02-25 17:36:40.840 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:36:40.840 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:36:40.847 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 4.516 seconds (JVM running for 5.725)
-2022-02-25 17:36:41.021 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:36:41.022 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:36:41.023 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:36:41.023 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:36:41.023 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:36:41.024 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:36:41.025 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:36:41.028 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-02-25 17:42:10.071 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Starting doc on LAPTOP-QCULS2RT with PID 46720 (started by chasesunshine in D:\AllWorkSpace\ideaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-02-25 17:42:10.073 [main] INFO  org.wanbang.study.springCircleDependence.doc:  No active profile set, falling back to default profiles: default
-2022-02-25 17:42:11.024 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-02-25 17:42:11.027 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-25 17:42:11.086 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
-2022-02-25 17:42:11.466 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e5269c62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-25 17:42:13.397 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:42:13.893 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-02-25 17:42:14.044 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-02-25 17:42:14.056 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-02-25 17:42:14.057 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-02-25 17:42:14.057 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-02-25 17:42:14.058 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-04-28 17:12:10.280 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:12:10.280 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:12:10.280 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5dcd0cdf
+2022-04-28 17:12:10.461 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:12:10.462 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:12:10.483 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 7.794 seconds (JVM running for 8.905)
+2022-04-28 17:12:11.334 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:12:11.347 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:12:11.348 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:12:11.350 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:12:11.352 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:12:11.355 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:12:11.358 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:12:11.367 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:13:30.487 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 28436 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:13:30.493 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:13:32.207 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:13:32.211 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:13:32.339 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 108ms. Found 0 repository interfaces.
+2022-04-28 17:13:32.914 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c63be919] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:13:35.849 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:13:36.985 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:13:37.391 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:13:37.415 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:13:37.416 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:13:37.417 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:13:37.418 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -222,17 +222,263 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-02-25 17:42:14.058 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-02-25 17:42:14.058 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-02-25 17:42:14.058 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@20a967fe
-2022-02-25 17:42:14.139 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-02-25 17:42:14.139 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-02-25 17:42:14.148 [main] INFO  org.wanbang.study.springCircleDependence.doc:  Started doc in 4.546 seconds (JVM running for 5.666)
-2022-02-25 17:42:14.333 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:42:14.335 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-02-25 17:42:14.335 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-02-25 17:42:14.335 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-02-25 17:42:14.336 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-02-25 17:42:14.337 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-25 17:42:14.338 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-02-25 17:42:14.343 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:13:37.418 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:13:37.418 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:13:37.419 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5dcd0cdf
+2022-04-28 17:13:37.607 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:13:37.608 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:13:37.628 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 7.825 seconds (JVM running for 9.216)
+2022-04-28 17:13:38.026 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:13:38.029 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:13:38.030 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:13:38.030 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:13:38.031 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:13:38.034 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:13:38.036 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:13:38.044 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:17:40.605 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 19672 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:17:40.636 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:17:41.972 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:17:41.982 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:17:42.189 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 156ms. Found 0 repository interfaces.
+2022-04-28 17:17:43.030 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e82c10eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:17:46.333 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:17:47.188 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:17:53.833 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 25016 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:17:53.836 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:17:55.570 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:17:55.574 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:17:55.736 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 143ms. Found 0 repository interfaces.
+2022-04-28 17:17:56.660 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$beef4f47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:18:01.279 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:18:03.044 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:18:03.617 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:18:03.647 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:18:03.648 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:18:03.650 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:18:03.650 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:18:03.650 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:18:03.650 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:18:03.650 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@699d96bc
+2022-04-28 17:18:03.836 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:18:03.837 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:18:03.853 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 11.178 seconds (JVM running for 13.277)
+2022-04-28 17:19:37.168 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:19:37.173 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:19:37.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:19:37.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:19:37.174 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:19:37.175 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:19:37.178 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:19:37.186 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:24:09.787 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 22052 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:24:09.791 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:24:11.054 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:24:11.058 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:24:11.145 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 71ms. Found 0 repository interfaces.
+2022-04-28 17:24:11.636 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b273baa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:24:14.322 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:24:15.141 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:24:15.372 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:24:15.387 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:24:15.387 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:24:15.388 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:24:15.389 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:24:15.389 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:24:15.389 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:24:15.390 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@659f226a
+2022-04-28 17:24:15.514 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:24:15.515 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:24:15.527 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 6.403 seconds (JVM running for 7.562)
+2022-04-28 17:24:15.795 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:24:15.797 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:24:15.797 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:24:15.797 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:24:15.798 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:24:15.799 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:24:15.800 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:24:15.805 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:27:05.976 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 21368 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:27:05.980 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:27:07.969 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:27:07.975 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:27:08.123 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 122ms. Found 0 repository interfaces.
+2022-04-28 17:27:09.163 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$74d8aeb8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:27:12.699 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:27:13.824 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:27:14.196 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:27:14.220 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:27:14.221 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:27:14.222 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:27:14.223 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:27:14.223 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:27:14.223 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:27:14.223 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7dd3981e
+2022-04-28 17:27:14.375 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:27:14.375 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:27:14.391 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 9.494 seconds (JVM running for 11.107)
+2022-04-28 17:27:44.199 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:27:44.201 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:27:44.201 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:27:44.202 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:27:44.202 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:27:44.203 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:27:44.206 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:27:44.211 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:28:22.737 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 9872 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:28:22.739 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:28:24.230 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:28:24.233 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:28:24.335 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
+2022-04-28 17:28:24.811 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$625635c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:28:27.384 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:28:28.717 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:28:29.066 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:28:29.091 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:28:29.092 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:28:29.093 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:28:29.094 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:28:29.094 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:28:29.095 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:28:29.095 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6025d790
+2022-04-28 17:28:29.276 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:28:29.277 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:28:29.300 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 7.401 seconds (JVM running for 8.572)
+2022-04-28 17:28:29.766 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:28:29.772 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:28:29.772 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:28:29.772 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:28:29.775 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:28:29.777 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:28:29.780 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:28:29.785 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:30:53.182 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 12208 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:30:53.186 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:30:56.806 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:30:56.811 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:30:57.015 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 174ms. Found 0 repository interfaces.
+2022-04-28 17:30:57.957 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c63be919] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:31:02.277 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:31:03.465 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:31:03.776 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:31:03.798 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:31:03.798 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:31:03.799 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:31:03.801 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:31:03.801 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:31:03.801 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:31:03.801 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5dcd0cdf
+2022-04-28 17:31:03.967 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:31:03.968 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:31:03.981 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 11.745 seconds (JVM running for 13.433)
+2022-04-28 17:31:04.368 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:31:04.372 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:31:04.372 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:31:04.372 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:31:04.372 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:31:04.373 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:31:04.375 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:31:04.381 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:31:26.179 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 25140 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:31:26.182 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:31:28.918 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:31:28.924 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:31:29.114 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 166ms. Found 0 repository interfaces.
+2022-04-28 17:31:29.905 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b273baa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:31:33.440 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:31:34.521 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:31:34.905 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:31:34.939 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:31:34.939 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:31:34.941 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:31:34.942 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:31:34.943 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:31:34.943 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:31:34.943 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@659f226a
+2022-04-28 17:31:35.135 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:31:35.136 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:31:35.160 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 10.003 seconds (JVM running for 11.948)
+2022-04-28 17:31:35.552 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:31:35.554 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:31:35.555 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:31:35.556 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:31:35.556 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:31:35.557 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:31:35.559 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:31:35.567 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-04-28 17:32:16.906 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 6164 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-04-28 17:32:16.933 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-04-28 17:32:19.100 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-28 17:32:19.104 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-28 17:32:19.245 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 121ms. Found 0 repository interfaces.
+2022-04-28 17:32:19.878 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$433f2f1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-28 17:32:23.250 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:32:24.290 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-04-28 17:32:24.596 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-04-28 17:32:24.622 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-04-28 17:32:24.622 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-04-28 17:32:24.623 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-04-28 17:32:24.624 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-04-28 17:32:24.624 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-04-28 17:32:24.624 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-04-28 17:32:24.625 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5d3ff859
+2022-04-28 17:32:24.817 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-04-28 17:32:24.817 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-04-28 17:32:24.833 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 8.861 seconds (JVM running for 10.637)
+2022-04-28 17:32:25.173 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:32:25.176 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-04-28 17:32:25.176 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-04-28 17:32:25.177 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-04-28 17:32:25.178 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-04-28 17:32:25.179 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-28 17:32:25.183 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-04-28 17:32:25.189 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed

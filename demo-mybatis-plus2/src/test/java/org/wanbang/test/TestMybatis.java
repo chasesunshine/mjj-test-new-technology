@@ -1,6 +1,10 @@
 package org.wanbang.test;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +15,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.wanbang.mapper.CityMapper;
 import org.wanbang.entity.City;
 
+import javax.annotation.Resource;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -20,7 +26,7 @@ import java.util.Map;
 @SpringBootTest
 public class TestMybatis {
 
-	@Autowired
+	@Resource
 	private CityMapper cityMapper;
 
 	@Test
@@ -86,4 +92,26 @@ public class TestMybatis {
 		System.out.println(time1 - time);
 	}
 
+
+	@Test
+	public void test11111() throws IllegalAccessException {
+		City build = City.builder().id(1).countryCode("2").name("3").build();
+		Object obj = build;
+		System.out.println(build);
+		System.out.println(obj);
+
+		Field[] declaredFields = build.getClass().getDeclaredFields();
+		String urlAdd = "";
+		for (Field f:declaredFields) {
+			f.setAccessible(true);
+			String name = f.getName();
+			Object value = f.get(obj);
+			if(ObjectUtils.isEmpty(value)){
+				continue;
+			}
+			urlAdd = urlAdd + name+"="+value.toString()+"&";
+		}
+		System.out.println(urlAdd.substring(0,urlAdd.length()-1));
+
+	}
 }
