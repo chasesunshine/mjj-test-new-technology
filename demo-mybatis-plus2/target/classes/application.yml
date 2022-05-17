@@ -17,7 +17,6 @@ spring:
 
 #mybatis-plush配置
 mybatis-plus:
-  type-aliases-package: org.wanbang.pojo
   mapper-locations: classpath:/mybatis/mappers/*.xml
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
