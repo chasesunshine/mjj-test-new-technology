@@ -588,3 +588,11 @@
 2022-05-26 15:16:13.875 [http-nio-8091-exec-1] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
 2022-05-26 15:16:13.885 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
 2022-05-26 15:16:14.095 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 15:20:36.239 [Thread-17] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 15:20:36.241 [Thread-17] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-05-26 15:20:36.242 [Thread-17] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-26 15:20:36.242 [Thread-17] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 15:20:36.242 [Thread-17] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-26 15:20:36.243 [Thread-17] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-26 15:20:36.244 [Thread-17] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-05-26 15:20:36.248 [Thread-17] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
