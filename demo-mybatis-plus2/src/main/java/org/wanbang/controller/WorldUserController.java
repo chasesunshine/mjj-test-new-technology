@@ -6,7 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.wanbang.common.entity.Result;
 import org.wanbang.service.WorldUserService;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @RestController
@@ -25,6 +29,13 @@ public class WorldUserController {
     public Integer insetOneMybatis(@RequestParam("name") String name,@RequestParam("age")Integer age){
         Integer s = worldUserService.insertOnedata(name,age);
         return s;
+    }
+
+    @GetMapping("/inset/mybatis/test")
+    public Result insetOneMybatisTest(HttpServletRequest httpServletRequest ,HttpServletResponse httpServletResponse){
+        Integer s = worldUserService.insetOneMybatisTest();
+        String traceId = (String) httpServletRequest.getAttribute("traceId");
+        return Result.success(s,traceId);
     }
 
     @GetMapping("/insret/mybatisplus")

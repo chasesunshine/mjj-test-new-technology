@@ -1,25 +1,25 @@
-2022-05-09 15:45:28.118 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DESKTOP-RIVUA3L with PID 27004 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-05-09 15:45:28.132 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
-2022-05-09 15:45:28.234 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-09 15:45:28.234 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-09 15:45:33.226 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 15:45:33.238 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-05-09 15:45:33.625 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 317ms. Found 0 repository interfaces.
-2022-05-09 15:45:35.218 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ed1b0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-05-09 15:45:36.271 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
-2022-05-09 15:45:36.292 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
-2022-05-09 15:45:36.305 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
-2022-05-09 15:45:36.306 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
-2022-05-09 15:45:36.316 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
-2022-05-09 15:45:36.466 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
-2022-05-09 15:45:36.466 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 8231 ms
-2022-05-09 15:45:39.221 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-09 15:45:39.929 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-05-09 15:45:40.171 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-05-09 15:45:40.190 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-05-09 15:45:40.191 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-05-09 15:45:40.192 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-05-09 15:45:40.193 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-05-26 14:05:41.423 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DESKTOP-RIVUA3L with PID 11420 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-05-26 14:05:41.455 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-05-26 14:05:41.505 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-26 14:05:41.505 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-26 14:05:44.076 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-26 14:05:44.079 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-05-26 14:05:44.151 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2022-05-26 14:05:44.572 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$372da68b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-26 14:05:45.043 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2022-05-26 14:05:45.143 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:05:45.151 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2022-05-26 14:05:45.151 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-05-26 14:05:45.157 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
+2022-05-26 14:05:45.241 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2022-05-26 14:05:45.241 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 3735 ms
+2022-05-26 14:05:46.487 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:05:46.964 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-05-26 14:05:47.169 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-05-26 14:05:47.182 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-26 14:05:47.182 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-05-26 14:05:47.182 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-05-26 14:05:47.183 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -27,21 +27,245 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-05-09 15:45:40.193 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-05-09 15:45:40.194 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-05-09 15:45:40.194 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@29d90559
-2022-05-09 15:45:40.422 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
-2022-05-09 15:45:40.471 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-05-09 15:45:40.471 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-05-09 15:45:40.487 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
-2022-05-09 15:45:40.516 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
-2022-05-09 15:45:40.548 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-05-09 15:45:40.554 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 13.787 seconds (JVM running for 16.975)
-2022-05-09 15:45:42.627 [Thread-32] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-05-09 15:45:42.629 [Thread-32] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-05-09 15:45:42.629 [Thread-32] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-05-09 15:45:42.629 [Thread-32] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-05-09 15:45:42.630 [Thread-32] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-05-09 15:45:42.631 [Thread-32] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-09 15:45:42.632 [Thread-32] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-05-09 15:45:42.637 [Thread-32] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-05-26 14:05:47.183 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-26 14:05:47.183 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-05-26 14:05:47.184 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4241eb9a
+2022-05-26 14:05:47.292 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2022-05-26 14:05:47.318 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-05-26 14:05:47.319 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-26 14:05:47.325 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:05:47.335 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2022-05-26 14:05:47.350 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2022-05-26 14:05:47.352 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 6.715 seconds (JVM running for 8.106)
+2022-05-26 14:06:26.675 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 14:06:26.675 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
+2022-05-26 14:06:26.687 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 12 ms
+2022-05-26 14:06:26.699 [http-nio-8091-exec-1] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:06:26.709 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:06:26.937 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:06:58.409 [http-nio-8091-exec-3] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:06:58.410 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:06:58.421 [http-nio-8091-exec-3] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:07:40.311 [http-nio-8091-exec-6] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:07:40.312 [http-nio-8091-exec-6] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:07:40.322 [http-nio-8091-exec-6] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:13:44.540 [Thread-20] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:13:44.546 [Thread-20] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-05-26 14:13:44.547 [Thread-20] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-26 14:13:44.547 [Thread-20] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:13:44.547 [Thread-20] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-26 14:13:44.553 [Thread-20] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:13:44.557 [Thread-20] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-05-26 14:13:44.566 [Thread-20] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-05-26 14:13:51.223 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DESKTOP-RIVUA3L with PID 7368 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-05-26 14:13:51.227 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-05-26 14:13:51.315 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-26 14:13:51.315 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-26 14:13:52.134 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-26 14:13:52.135 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-05-26 14:13:52.194 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 49ms. Found 0 repository interfaces.
+2022-05-26 14:13:52.525 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7f53ce4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-26 14:13:52.965 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2022-05-26 14:13:52.978 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:13:52.985 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2022-05-26 14:13:52.985 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-05-26 14:13:52.990 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
+2022-05-26 14:13:53.063 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2022-05-26 14:13:53.063 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1748 ms
+2022-05-26 14:13:54.023 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:13:54.334 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-05-26 14:13:54.432 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-05-26 14:13:54.440 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-26 14:13:54.441 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-05-26 14:13:54.441 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-05-26 14:13:54.442 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-26 14:13:54.442 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-26 14:13:54.442 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-05-26 14:13:54.442 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@76a09382
+2022-05-26 14:13:54.531 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2022-05-26 14:13:54.552 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-05-26 14:13:54.553 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-26 14:13:54.559 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:13:54.569 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2022-05-26 14:13:54.583 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2022-05-26 14:13:54.585 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 4.037 seconds (JVM running for 5.368)
+2022-05-26 14:14:03.258 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 14:14:03.258 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
+2022-05-26 14:14:03.273 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 14 ms
+2022-05-26 14:14:03.288 [http-nio-8091-exec-1] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:14:03.300 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:14:03.504 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:14:11.003 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:14:11.005 [Thread-16] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-05-26 14:14:11.005 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-26 14:14:11.005 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:14:11.005 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-26 14:14:11.006 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:14:11.007 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-05-26 14:14:11.009 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-05-26 14:21:33.766 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DESKTOP-RIVUA3L with PID 20328 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-05-26 14:21:33.769 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-05-26 14:21:33.850 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-26 14:21:33.851 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-26 14:21:34.542 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-26 14:21:34.543 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-05-26 14:21:34.603 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 50ms. Found 0 repository interfaces.
+2022-05-26 14:21:34.921 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2320c93e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-26 14:21:35.344 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2022-05-26 14:21:35.353 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:21:35.359 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2022-05-26 14:21:35.359 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-05-26 14:21:35.365 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
+2022-05-26 14:21:35.436 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2022-05-26 14:21:35.436 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1585 ms
+2022-05-26 14:21:36.379 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:21:36.693 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-05-26 14:21:36.788 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-05-26 14:21:36.797 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-26 14:21:36.797 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-05-26 14:21:36.798 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-05-26 14:21:36.799 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-26 14:21:36.799 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-26 14:21:36.799 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-05-26 14:21:36.799 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4ca35c9a
+2022-05-26 14:21:36.887 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2022-05-26 14:21:36.910 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-05-26 14:21:36.910 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-26 14:21:36.916 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:21:36.926 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2022-05-26 14:21:36.943 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2022-05-26 14:21:36.946 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.829 seconds (JVM running for 4.964)
+2022-05-26 14:21:45.229 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 14:21:45.229 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
+2022-05-26 14:21:45.236 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 7 ms
+2022-05-26 14:21:45.245 [http-nio-8091-exec-1] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:21:45.253 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:21:45.414 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:28:08.755 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:28:08.756 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-05-26 14:28:08.756 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-26 14:28:08.756 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:28:08.756 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-26 14:28:08.757 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:28:08.758 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-05-26 14:28:08.762 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-05-26 14:28:14.875 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DESKTOP-RIVUA3L with PID 19312 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-05-26 14:28:14.879 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-05-26 14:28:14.988 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-26 14:28:14.988 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-26 14:28:15.804 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-26 14:28:15.806 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-05-26 14:28:15.876 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 57ms. Found 0 repository interfaces.
+2022-05-26 14:28:16.167 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cdb42301] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-26 14:28:16.562 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2022-05-26 14:28:16.649 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:28:16.656 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2022-05-26 14:28:16.657 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-05-26 14:28:16.662 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
+2022-05-26 14:28:16.739 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2022-05-26 14:28:16.739 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1751 ms
+2022-05-26 14:28:17.696 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:28:18.008 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-05-26 14:28:18.105 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-05-26 14:28:18.113 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-26 14:28:18.113 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-05-26 14:28:18.114 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-05-26 14:28:18.114 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-26 14:28:18.114 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-26 14:28:18.114 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-05-26 14:28:18.114 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@427e04a0
+2022-05-26 14:28:18.203 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2022-05-26 14:28:18.226 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-05-26 14:28:18.226 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-26 14:28:18.251 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:28:18.260 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2022-05-26 14:28:18.276 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2022-05-26 14:28:18.278 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 4.095 seconds (JVM running for 5.253)
+2022-05-26 14:28:22.625 [http-nio-8091-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 14:28:22.625 [http-nio-8091-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
+2022-05-26 14:28:22.636 [http-nio-8091-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 11 ms
+2022-05-26 14:28:22.641 [http-nio-8091-exec-2] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:28:22.652 [http-nio-8091-exec-2] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:28:22.820 [http-nio-8091-exec-2] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:30:21.446 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:30:21.447 [Thread-16] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-05-26 14:30:21.447 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-26 14:30:21.447 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:30:21.448 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-26 14:30:21.449 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:30:21.449 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-05-26 14:30:21.452 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-05-26 14:30:28.392 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DESKTOP-RIVUA3L with PID 19776 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-05-26 14:30:28.396 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-05-26 14:30:28.455 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-26 14:30:28.455 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-26 14:30:29.237 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-26 14:30:29.239 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-05-26 14:30:29.295 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2022-05-26 14:30:29.602 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9596c405] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-26 14:30:30.035 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2022-05-26 14:30:30.044 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:30:30.049 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2022-05-26 14:30:30.050 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-05-26 14:30:30.055 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
+2022-05-26 14:30:30.128 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2022-05-26 14:30:30.128 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1672 ms
+2022-05-26 14:30:31.092 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:30:31.422 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-05-26 14:30:31.518 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-05-26 14:30:31.527 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-26 14:30:31.527 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-05-26 14:30:31.528 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-05-26 14:30:31.528 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-26 14:30:31.528 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-26 14:30:31.528 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-05-26 14:30:31.529 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@71b0c003
+2022-05-26 14:30:31.623 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2022-05-26 14:30:31.647 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-05-26 14:30:31.647 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-26 14:30:31.653 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2022-05-26 14:30:31.664 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2022-05-26 14:30:31.678 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2022-05-26 14:30:31.680 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 4.01 seconds (JVM running for 5.056)
+2022-05-26 14:30:37.075 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 14:30:37.075 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
+2022-05-26 14:30:37.080 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 5 ms
+2022-05-26 14:30:37.087 [http-nio-8091-exec-1] INFO  o.w.study.filterAndInterceptor.filter.MyFilter:  经过了 implements Filter 的过滤器
+2022-05-26 14:30:37.095 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-05-26 14:30:37.251 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-05-26 14:30:53.651 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:30:53.653 [Thread-16] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-05-26 14:30:53.653 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-26 14:30:53.653 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-26 14:30:53.654 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-26 14:30:53.655 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-26 14:30:53.655 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-05-26 14:30:53.658 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed

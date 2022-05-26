@@ -10,6 +10,8 @@ import org.wanbang.entity.WorldUser;
 import org.wanbang.mapper.WorldUserMapper;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -27,6 +29,31 @@ public class WorldUserService {
     public Integer insertOnedata(String name,Integer age) {
         int mjj = userMapper.insertOneData(WorldUser.builder().name(name).age(age).build());
         return mjj;
+    }
+
+    public Integer insetOneMybatisTest() {
+        List<WorldUser> worldUsers = new ArrayList<>();
+        WorldUser build = WorldUser.builder().name("12345").age(1).build();
+        WorldUser build1 = WorldUser.builder().name("1234567891011123").age(1).build();
+        WorldUser build2 = WorldUser.builder().name("123456789").age(1).build();
+        worldUsers.add(build);
+        worldUsers.add(build1);
+        worldUsers.add(build2);
+
+        for (int i = 0; i < worldUsers.size(); i++) {
+            try {
+                Integer integer = insetOneMybatisTest1(worldUsers.get(i));
+            }catch (Exception e){
+                log.info("错误");
+            }
+        }
+        return 1;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public Integer insetOneMybatisTest1(WorldUser worldUser) {
+        int i = userMapper.insertOneData(worldUser);
+        return i;
     }
 
     @Transactional(rollbackFor = Exception.class)

@@ -2,10 +2,13 @@ package org.wanbang.study.filterAndInterceptor.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.wanbang.common.entity.Result;
+import org.wanbang.util.MDCUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,6 +48,14 @@ public class TokenInterceptor implements HandlerInterceptor {
 
 
         // 否则返回true 进入controller
+
+
+        String traceIdKey = "traceId";
+        String traceId = MDCUtils.mdc();
+        request.setAttribute(traceIdKey, traceId);
+        MDC.clear();
+        MDC.put(traceIdKey, traceId);
+
         return true;
     }
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
