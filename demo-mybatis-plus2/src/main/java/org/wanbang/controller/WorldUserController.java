@@ -32,10 +32,10 @@ public class WorldUserController {
     }
 
     @GetMapping("/inset/mybatis/test")
-    public Result insetOneMybatisTest(HttpServletRequest httpServletRequest ,HttpServletResponse httpServletResponse){
+    public Result insetOneMybatisTest(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse){
         Integer s = worldUserService.insetOneMybatisTest();
-        String traceId = (String) httpServletRequest.getAttribute("traceId");
-        return Result.success(s,traceId);
+//        String traceId = (String) httpServletRequest.getAttribute("traceId");
+        return Result.success(s,"traceId");
     }
 
     @GetMapping("/insret/mybatisplus")

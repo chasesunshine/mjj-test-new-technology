@@ -27,27 +27,27 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 @AllArgsConstructor
 @WebFilter(filterName = "authFilter", urlPatterns = "/**")
-public class MyFilter implements Filter {
-
-    public void destroy() {
-        // TODO Auto-generated method stub
-    }
-
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log.info("经过了 implements Filter 的过滤器");
-        //掉包的request
-
-        request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
-
-        FilterSetRequest req = new FilterSetRequest((HttpServletRequest)request);
-        chain.doFilter(req, response);
-    }
-
-    public void init(FilterConfig arg0)
-            throws ServletException {
-
-    }
+public class MyFilter { //implements Filter {
+//
+//    public void destroy() {
+//        // TODO Auto-generated method stub
+//    }
+//
+//    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+//        log.info("经过了 implements Filter 的过滤器");
+//        //掉包的request
+//
+//        request.setCharacterEncoding("utf-8");
+//        response.setContentType("text/html;charset=utf-8");
+//
+//        FilterSetRequest req = new FilterSetRequest((HttpServletRequest)request);
+//        chain.doFilter(req, response);
+//    }
+//
+//    public void init(FilterConfig arg0)
+//            throws ServletException {
+//
+//    }
 
 }
 
