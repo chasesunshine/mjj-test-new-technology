@@ -114,4 +114,13 @@ public class TestMybatis {
 		System.out.println(urlAdd.substring(0,urlAdd.length()-1));
 
 	}
+
+
+
+	@Test
+	public void testQueryUser8() {
+		String value = "、1、2、3";
+		String substring = value.substring(1);
+		System.out.println(substring);
+	}
 }
