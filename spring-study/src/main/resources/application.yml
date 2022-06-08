@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8099
   servlet:
     context-path: /
 spring:
@@ -7,13 +7,9 @@ spring:
     #引入druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/world?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1:3306/spring?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: root
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    password: 123456
 
 #mybatis-plush配置
 mybatis-plus:
