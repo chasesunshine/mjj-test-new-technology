@@ -17,6 +17,12 @@ import java.sql.Statement;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * spring boot 2.x 使用mybatis拦截器实现系统日志记录（将完整参数的SQL语句记录到数据库中）
+ *
+ * https://blog.csdn.net/C_AJing/article/details/110644477
+ */
+
 @Intercepts({
         @Signature(type = StatementHandler.class, method = "query", args = {Statement.class, ResultHandler.class}),
         @Signature(type = StatementHandler.class, method = "update", args = {Statement.class}),
