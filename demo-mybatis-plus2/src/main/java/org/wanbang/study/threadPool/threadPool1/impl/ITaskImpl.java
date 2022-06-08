@@ -18,15 +18,21 @@ import java.util.Map;
  */
 public class ITaskImpl<T, E> implements ITask<ResultBean<String>, Integer> {
 
+    /**
+     *
+     * @param dealData 单线程要处理的数据
+     * @param params 其他辅助参数
+     * @return
+     */
     @Override
-    public ResultBean execute(Integer e, Map<String, Object> params) {
+    public ResultBean execute(Integer dealData, Map<String, Object> params) {
         /**
          * 具体业务逻辑：将list中的元素加上辅助参数中的数据返回
          */
         int addNum = Integer.valueOf(String.valueOf(params.get("addNum")));
-        e = e + addNum;
+        dealData = dealData + addNum;
         ResultBean<String> resultBean = ResultBean.newInstance();
-        resultBean.setData(e.toString());
+        resultBean.setData(dealData.toString());
         return resultBean;
     }
 }
