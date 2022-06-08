@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wanbang.test.eduorder.dao.EduOrderDao">
+
+    <resultMap id="BaseResultMap" type="org.wanbang.test.eduorder.entity.EduOrder">
+        <!--@Table edu_order-->
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="platformId" column="platform_id" jdbcType="VARCHAR"/>
+        <result property="platformName" column="platform_name" jdbcType="VARCHAR"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="deliveryAddress" column="delivery_address" jdbcType="VARCHAR"/>
+        <result property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+        <result property="outOrderNo" column="out_order_no" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="OTHER"/>
+        <result property="deliveryStatus" column="delivery_status" jdbcType="OTHER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="creator" column="creator" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          id, platform_id, platform_name, user_id, user_name, delivery_address, order_no, out_order_no, status, delivery_status, create_time, creator
+        from jtdb.edu_order
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          id, platform_id, platform_name, user_id, user_name, delivery_address, order_no, out_order_no, status, delivery_status, create_time, creator
+        from jtdb.edu_order
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          id, platform_id, platform_name, user_id, user_name, delivery_address, order_no, out_order_no, status, delivery_status, create_time, creator
+        from jtdb.edu_order
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="platformId != null and platformId != ''">
+                and platform_id = #{platformId}
+            </if>
+            <if test="platformName != null and platformName != ''">
+                and platform_name = #{platformName}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="userName != null and userName != ''">
+                and user_name = #{userName}
+            </if>
+            <if test="deliveryAddress != null and deliveryAddress != ''">
+                and delivery_address = #{deliveryAddress}
+            </if>
+            <if test="orderNo != null and orderNo != ''">
+                and order_no = #{orderNo}
+            </if>
+            <if test="outOrderNo != null and outOrderNo != ''">
+                and out_order_no = #{outOrderNo}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="deliveryStatus != null">
+                and delivery_status = #{deliveryStatus}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="creator != null and creator != ''">
+                and creator = #{creator}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into jtdb.edu_order(platform_id, platform_name, user_id, user_name, delivery_address, order_no, out_order_no, status, delivery_status, create_time, creator)
+        values (#{platformId}, #{platformName}, #{userId}, #{userName}, #{deliveryAddress}, #{orderNo}, #{outOrderNo}, #{status}, #{deliveryStatus}, #{createTime}, #{creator})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update jtdb.edu_order
+        <set>
+            <if test="platformId != null and platformId != ''">
+                platform_id = #{platformId},
+            </if>
+            <if test="platformName != null and platformName != ''">
+                platform_name = #{platformName},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="userName != null and userName != ''">
+                user_name = #{userName},
+            </if>
+            <if test="deliveryAddress != null and deliveryAddress != ''">
+                delivery_address = #{deliveryAddress},
+            </if>
+            <if test="orderNo != null and orderNo != ''">
+                order_no = #{orderNo},
+            </if>
+            <if test="outOrderNo != null and outOrderNo != ''">
+                out_order_no = #{outOrderNo},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="deliveryStatus != null">
+                delivery_status = #{deliveryStatus},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="creator != null and creator != ''">
+                creator = #{creator},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from jtdb.edu_order where id = #{id}
+    </delete>
+
+</mapper>
