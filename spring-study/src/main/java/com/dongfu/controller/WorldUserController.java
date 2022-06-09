@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Slf4j
 @RestController
@@ -18,6 +20,20 @@ public class WorldUserController {
     @GetMapping("/selectOne")
     public String  selectOne(){
         String s = worldUserService.selectOne();
+        return s;
+    }
+
+    /**
+     * 测试重定向
+     * @param httpServletResponse
+     * @return
+     * @throws IOException
+     */
+    @GetMapping("/selectOne1")
+    public String  selectOne1(HttpServletResponse httpServletResponse) throws IOException {
+        String s = worldUserService.selectOne();
+        httpServletResponse.sendRedirect("https://www.baidu.com/?tn=40020637_5_oem_dg");
+
         return s;
     }
 
