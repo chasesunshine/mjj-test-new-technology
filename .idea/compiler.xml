@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-study" />
         <module name="demo-mybatis-plus2" />
-        <module name="test-nacos" />
         <module name="rocketmq" />
         <module name="springbootDemo-mybatis-plus" />
         <module name="demo-job" />
         <module name="springboot-core" />
-        <module name="spring-study" />
+        <module name="test-nacos" />
       </profile>
     </annotationProcessing>
   </component>
