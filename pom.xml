@@ -16,6 +16,7 @@
         <module>springboot-core</module>
         <module>demo-job</module>
         <module>spring-study</module>
+        <module>spring-bilibili-study</module>
     </modules>
 
     <parent>
