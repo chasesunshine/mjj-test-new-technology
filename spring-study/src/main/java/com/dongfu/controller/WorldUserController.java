@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -37,4 +38,16 @@ public class WorldUserController {
         return s;
     }
 
+    /**
+     * 测试重定向
+     * @param httpServletResponse
+     * @return
+     * @throws IOException
+     */
+    @GetMapping("/selectOne2")
+    public String  selectOne2(HttpServletResponse httpServletResponse){
+
+        return (String) Optional.ofNullable(null)
+                .orElseThrow(() -> new RuntimeException("mdProdInst查询为空"));
+    }
 }
