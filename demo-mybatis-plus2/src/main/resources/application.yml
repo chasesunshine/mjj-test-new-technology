@@ -39,3 +39,10 @@ auth:
       clientSecret: 9ffdb33ef5802146e555cf9e1082e314
     - clientKey: srm
       clientSecret: 3ee9b850c745f9c89b0faecc885980ca
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    dao: debug
+    org:
+      mybatis: debug

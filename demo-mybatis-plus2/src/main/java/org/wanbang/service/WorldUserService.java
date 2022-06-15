@@ -32,6 +32,7 @@ public class WorldUserService {
     }
 
     public Integer insetOneMybatisTest() {
+        log.info("测试数据库");
         List<WorldUser> worldUsers = new ArrayList<>();
         WorldUser build = WorldUser.builder().name("12345").age(1).build();
         WorldUser build1 = WorldUser.builder().name("1234567891011123").age(1).build();
