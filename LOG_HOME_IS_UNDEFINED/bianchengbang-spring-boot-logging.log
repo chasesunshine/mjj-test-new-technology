@@ -1,0 +1,32 @@
+2022-06-15 16:35:50 [ restartedMain ] ------------------ [ INFO  ] [ com.dongfu.Application_Spring : 50 ] -
+                Starting Application_Spring on DFSH2617 with PID 7872 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\spring-study\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 16:35:50 [ restartedMain ] ------------------ [ INFO  ] [ com.dongfu.Application_Spring : 675 ] -
+                No active profile set, falling back to default profiles: default
+2022-06-15 16:35:51 [ restartedMain ] ------------------ [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] -
+                Initializing ProtocolHandler ["http-nio-8099"]
+2022-06-15 16:35:51 [ restartedMain ] ------------------ [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] -
+                Starting service [Tomcat]
+2022-06-15 16:35:51 [ restartedMain ] ------------------ [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] -
+                Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-06-15 16:35:51 [ restartedMain ] ------------------ [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] -
+                The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\AllSoftware\WorkSoftware\GitInstallPackage\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2022-06-15 16:35:51 [ restartedMain ] ------------------ [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] -
+                Initializing Spring embedded WebApplicationContext
+2022-06-15 16:35:52 [ restartedMain ] ------------------ [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] -
+                Starting ProtocolHandler ["http-nio-8099"]
+2022-06-15 16:35:52 [ restartedMain ] ------------------ [ INFO  ] [ org.apache.tomcat.util.net.NioSelectorPool : 173 ] -
+                Using a shared selector for servlet write/read
+2022-06-15 16:35:52 [ restartedMain ] ------------------ [ INFO  ] [ com.dongfu.Application_Spring : 59 ] -
+                Started Application_Spring in 2.561 seconds (JVM running for 3.627)
+2022-06-15 16:36:12 [ http-nio-8099-exec-1 ] ------------------ [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-15 16:36:12 [ http-nio-8099-exec-1 ] ------------------ [ INFO  ] [ com.dongfu.service.impl.WorldUserServiceImpl : 26 ] -
+                日志输出
+2022-06-15 16:36:12 [ http-nio-8099-exec-1 ] ------------------ [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1003 ] -
+                {dataSource-1} inited
+2022-06-15 16:37:03 [ http-nio-8099-exec-3 ] ------------------ [ INFO  ] [ com.dongfu.service.impl.WorldUserServiceImpl : 26 ] -
+                日志输出
+2022-06-15 16:37:25 [ Thread-13 ] ------------------ [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1965 ] -
+                {dataSource-1} closing ...
+2022-06-15 16:37:25 [ Thread-13 ] ------------------ [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2037 ] -
+                {dataSource-1} closed

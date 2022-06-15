@@ -9,9 +9,9 @@ import java.io.Serializable;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("world_user")
+@TableName("world_user1")
 @Builder
-public class WorldUser implements Serializable {
+public class WorldUser1 implements Serializable {
 
     private long id;
 
