@@ -5,4 +5,5 @@ import com.dongfu.entity.WorldUser;
 
 public interface WorldUserMapper extends BaseMapper<WorldUser> {
 
+    WorldUser selectData();
 }

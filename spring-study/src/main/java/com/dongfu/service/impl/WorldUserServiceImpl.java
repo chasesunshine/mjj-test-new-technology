@@ -23,9 +23,16 @@ public class WorldUserServiceImpl implements WorldUserService {
      */
     @Override
     public String selectOne() {
+        log.info("日志输出");
         WorldUser worldUser = userMapper.selectOne(Wrappers.<WorldUser>query().lambda()
                 .eq(WorldUser::getId, 1));
         return JSON.toJSONString(worldUser);
     }
 
+    @Override
+    public String selectOne1() {
+        log.info("日志输出");
+        WorldUser worldUser = userMapper.selectData();
+        return JSON.toJSONString(worldUser);
+    }
 }

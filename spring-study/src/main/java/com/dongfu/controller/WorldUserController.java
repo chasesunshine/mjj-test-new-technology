@@ -32,8 +32,8 @@ public class WorldUserController {
      */
     @GetMapping("/selectOne1")
     public String  selectOne1(HttpServletResponse httpServletResponse) throws IOException {
-        String s = worldUserService.selectOne();
-        httpServletResponse.sendRedirect("https://www.baidu.com/?tn=40020637_5_oem_dg");
+        String s = worldUserService.selectOne1();
+        //httpServletResponse.sendRedirect("https://www.baidu.com/?tn=40020637_5_oem_dg");
 
         return s;
     }

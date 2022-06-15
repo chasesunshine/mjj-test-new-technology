@@ -4,4 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dongfu.mapper.WorldUserMapper">
 
+    <select id="selectData" resultType="com.dongfu.entity.WorldUser">
+        select * from world_user where id = 2;
+    </select>
 </mapper>
