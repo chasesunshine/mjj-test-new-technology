@@ -19,4 +19,5 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志
 
 logging:
-  config: classpath:logback-spring.xml
+  config: classpath:logback-spring.xml      #引入上面配置
+  path: D:\\tmp\\log
