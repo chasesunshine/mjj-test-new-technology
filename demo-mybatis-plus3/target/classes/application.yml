@@ -17,3 +17,6 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志
+
+logging:
+  config: classpath:logback-spring.xml
