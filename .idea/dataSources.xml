@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jtdb" uuid="5c4cde20-124d-4448-a2b8-6efab285bb20">
+    <data-source source="LOCAL" name="spring" uuid="20188421-0dee-4657-8441-bc4454b5a559">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/spring?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
   </component>
 </project>

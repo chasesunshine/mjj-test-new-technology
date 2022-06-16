@@ -20,7 +20,7 @@ mybatis-plus:
   mapper-locations: classpath:/mybatis/mappers/*.xml
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志
 
 template:
   purchaseOrderDeliverGoodsExcel: https://fosun-public-dev.oss-cn-hangzhou.aliyuncs.com/scm-pms/SRM-批量导入发货.xlsx
