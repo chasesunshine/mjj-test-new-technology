@@ -1,5 +1,6 @@
 package org.wanbang.controller;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.web.bind.annotation.*;
 import org.wanbang.entity.SpringWorld;
 import org.wanbang.service.SpringWordService;
@@ -21,7 +22,7 @@ public class SpringWordController {
     @GetMapping("/selectOne")
     public String  selectOne(){
         SpringWorld springWorld = springWordService.queryById((long) 1);
-        return springWorld.toString();
+        return JSON.toJSONString(springWorld);
     }
 }
 
