@@ -1,0 +1,73 @@
+Index: spring-study/target/classes/mybatis.mappers/WorldUserMapper.xml
+===================================================================
+--- spring-study/target/classes/mybatis.mappers/WorldUserMapper.xml	(revision ba5f596fee693d9279ae8667461a4dd000515519)
++++ spring-study/target/classes/mybatis.mappers/WorldUserMapper.xml	(revision ba5f596fee693d9279ae8667461a4dd000515519)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8" ?>
+-<!DOCTYPE mapper
+-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+-<mapper namespace="com.dongfu.mapper.WorldUserMapper">
+-
+-    <select id="selectData" resultType="com.dongfu.entity.WorldUser">
+-        select * from world_user where id = 2;
+-    </select>
+-</mapper>
+\ No newline at end of file
+diff --git spring-study/target/classes/com/dongfu/entity/WorldUser$WorldUserBuilder.class spring-study/target/classes/com/dongfu/entity/WorldUser$WorldUserBuilder.class
+deleted file mode 100644
+index aea5a10f2731a2c9f73bff0c3bf1f8936c294291..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git spring-study/target/classes/com/dongfu/entity/WorldUser.class spring-study/target/classes/com/dongfu/entity/WorldUser.class
+deleted file mode 100644
+index 21321f5690f0868d59362223308b06493f293d7d..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git spring-study/target/classes/com/dongfu/mapper/WorldUserMapper.class spring-study/target/classes/com/dongfu/mapper/WorldUserMapper.class
+deleted file mode 100644
+index ddd4837cb284ff87bca5c032d93eb6dc0185dd67..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git spring-study/target/classes/com/dongfu/service/impl/WorldUserServiceImpl.class spring-study/target/classes/com/dongfu/service/impl/WorldUserServiceImpl.class
+index aa65d9c8274bf87f9d4523c40942ae3f76628592..49d4e133c9a611b51ae335c85bddc2ce57acde27
+GIT binary patch
+literal 3536
+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
+

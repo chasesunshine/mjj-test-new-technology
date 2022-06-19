@@ -15,8 +15,8 @@
         <module>test-nacos</module>
         <module>springboot-core</module>
         <module>demo-job</module>
-        <module>spring-study</module>
         <module>spring-bilibili-study</module>
+        <module>demo-mybatis-plus3</module>
     </modules>
 
     <parent>
