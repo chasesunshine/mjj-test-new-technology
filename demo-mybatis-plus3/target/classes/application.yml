@@ -20,8 +20,4 @@ mybatis-plus:
 
 logging:
   config: classpath:logback-spring.xml      #引入上面配置
-  path: D:\\tmp\\log
-  level:
-    dao: debugs
-    org:
-      mybatis: debug
+  path: C:\\tmp\\log
