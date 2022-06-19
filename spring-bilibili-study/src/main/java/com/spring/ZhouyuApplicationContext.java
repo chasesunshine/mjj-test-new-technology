@@ -3,9 +3,12 @@ package com.spring;
 import java.io.File;
 import java.lang.annotation.Annotation;
 import java.net.URL;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ZhouyuApplicationContext {
     private Class configClass;
+
+    private ConcurrentHashMap<String ,Object> singleObjects = new ConcurrentHashMap<>(); //单例池
 
     public ZhouyuApplicationContext(Class configClass) {
         this.configClass = configClass;
@@ -39,6 +42,13 @@ public class ZhouyuApplicationContext {
                         aClass = classLoader.loadClass(className);
                         if(aClass.isAnnotationPresent(Component.class)){
                             // 当前类 是 一个bean
+                            // 解析类，判断当前bean 是单例bean，还是 prototype 的bean
+                            // BeanDefinition
+
+                            Component componentAnnotation = aClass.getAnnotation(Component.class);
+                            String beanName = componentAnnotation.value();
+
+
                         }
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
@@ -51,6 +61,7 @@ public class ZhouyuApplicationContext {
     }
 
     public Object getBean(String beanName){
+
         return null;
     }
 }
