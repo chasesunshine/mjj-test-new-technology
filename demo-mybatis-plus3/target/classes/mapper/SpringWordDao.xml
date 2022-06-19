@@ -3,7 +3,7 @@
 <mapper namespace="org.wanbang.dao.SpringWordDao">
 
     <resultMap id="BaseResultMap" type="org.wanbang.entity.SpringWord">
-        <!--@Table spring_word-->
+        <!--@Table spring_world-->
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="age" column="age" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
@@ -14,7 +14,7 @@
     <select id="queryById" resultMap="BaseResultMap">
         select
           id, age, name, sex
-        from spring_word
+        from spring_world
         where id = #{id} and 1 = 1
     </select>
 

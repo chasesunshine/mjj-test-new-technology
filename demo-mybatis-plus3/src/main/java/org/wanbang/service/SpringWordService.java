@@ -1,6 +1,6 @@
 package org.wanbang.service;
 
-import org.wanbang.entity.SpringWord;
+import org.wanbang.entity.SpringWorld;
 
 /**
  * (SpringWord)表服务接口
@@ -16,6 +16,6 @@ public interface SpringWordService {
      * @param id 主键
      * @return 实例对象
      */
-    SpringWord queryById(Long id);
+    SpringWorld queryById(Long id);
 
 }

@@ -376,3 +376,26 @@
 2022-06-19 14:36:46.996 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2022-06-19 14:36:47.025 [http-nio-8099-exec-1] INFO  org.wanbang.service.impl.SpringWordServiceImpl - 通过ID查询单条数据
 2022-06-19 14:36:47.089 [http-nio-8099-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-06-19 14:38:58.948 [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-19 14:38:58.949 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-06-19 14:38:58.951 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-06-19 14:39:07.225 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - Starting Application_Mybatis3 on DESKTOP-RIVUA3L with PID 15992 (C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3\target\classes started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-19 14:39:07.236 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - No active profile set, falling back to default profiles: default
+2022-06-19 14:39:07.339 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-19 14:39:07.339 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-19 14:39:09.068 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8099 (http)
+2022-06-19 14:39:09.091 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-19 14:39:09.091 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-06-19 14:39:09.100 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\bin;C:\AllSoftWare\WorkSoftWare\jdk1.8.0_221\jre\bin;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\platform-tools;C:\AllSoftWare\WorkSoftWare\AboutAndroidStudio\android-sdk-windows\tools;C:\AllSoftWare\WorkSoftWare\nodejsInstallPackage\nodejs\;C:\AllSoftWare\WorkSoftWare\GitInstallPackage\Git\Git\cmd;C:\AllSoftWare\WorkSoftWare\TortoiseGit 2.10.0.2_64InstallPackage\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\AllSoftWare\WorkSoftWare\mavenInstallPackage2\apache-maven-3.5.3\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\10619\AppData\Roaming\npm;C:\AllSoftWare\qq游戏大厅\QQGameTempest\Hall.57773\;.]
+2022-06-19 14:39:09.193 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-19 14:39:09.194 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1854 ms
+2022-06-19 14:39:11.039 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-19 14:39:11.262 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-06-19 14:39:11.321 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8099 (http) with context path ''
+2022-06-19 14:39:11.325 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - Started Application_Mybatis3 in 5.464 seconds (JVM running for 7.723)
+2022-06-19 14:39:24.290 [http-nio-8099-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-19 14:39:24.291 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-19 14:39:24.300 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2022-06-19 14:39:24.326 [http-nio-8099-exec-1] INFO  org.wanbang.service.impl.SpringWordServiceImpl - 通过ID查询单条数据
+2022-06-19 14:39:24.389 [http-nio-8099-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-06-19 14:39:35.231 [http-nio-8099-exec-3] INFO  org.wanbang.service.impl.SpringWordServiceImpl - 通过ID查询单条数据

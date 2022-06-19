@@ -1,7 +1,7 @@
 package org.wanbang.controller;
 
 import org.springframework.web.bind.annotation.*;
-import org.wanbang.entity.SpringWord;
+import org.wanbang.entity.SpringWorld;
 import org.wanbang.service.SpringWordService;
 
 import javax.annotation.Resource;
@@ -20,8 +20,8 @@ public class SpringWordController {
 
     @GetMapping("/selectOne")
     public String  selectOne(){
-        SpringWord springWord = springWordService.queryById((long) 1);
-        return springWord.toString();
+        SpringWorld springWorld = springWordService.queryById((long) 1);
+        return springWorld.toString();
     }
 }
 

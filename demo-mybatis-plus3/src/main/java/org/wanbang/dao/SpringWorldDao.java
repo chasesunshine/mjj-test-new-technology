@@ -1,9 +1,7 @@
 package org.wanbang.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.wanbang.entity.SpringWord;
-import org.apache.ibatis.annotations.Param;
-import java.util.List;
+import org.wanbang.entity.SpringWorld;
 
 /**
  * (SpringWord)表数据库访问层
@@ -11,7 +9,7 @@ import java.util.List;
  * @author makejava
  * @since 2022-06-16 10:17:36
  */
-public interface SpringWordDao extends BaseMapper<SpringWord> {
+public interface SpringWorldDao extends BaseMapper<SpringWorld> {
 
     /**
      * 通过ID查询单条数据
@@ -19,7 +17,7 @@ public interface SpringWordDao extends BaseMapper<SpringWord> {
      * @param id 主键
      * @return 实例对象
      */
-    SpringWord queryById(Long id);
+    SpringWorld queryById(Long id);
 
 }
 

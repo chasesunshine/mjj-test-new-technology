@@ -1,8 +1,8 @@
 package org.wanbang.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import org.wanbang.entity.SpringWord;
-import org.wanbang.dao.SpringWordDao;
+import org.wanbang.entity.SpringWorld;
+import org.wanbang.dao.SpringWorldDao;
 import org.wanbang.service.SpringWordService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 @Service
 public class SpringWordServiceImpl implements SpringWordService {
     @Resource
-    private SpringWordDao springWordDao;
+    private SpringWorldDao springWorldDao;
 
     /**
      * 通过ID查询单条数据
@@ -26,10 +26,10 @@ public class SpringWordServiceImpl implements SpringWordService {
      * @return 实例对象
      */
     @Override
-    public SpringWord queryById(Long id) {
+    public SpringWorld queryById(Long id) {
         log.info("通过ID查询单条数据");
 
-        return this.springWordDao.queryById(id);
+        return this.springWorldDao.queryById(id);
     }
 
 }

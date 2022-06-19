@@ -17,7 +17,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @TableName("spring_world")
 @Builder
-public class SpringWord implements Serializable {
+public class SpringWorld implements Serializable {
     private static final long serialVersionUID = -83513220652821879L;
     
     private Long id;
