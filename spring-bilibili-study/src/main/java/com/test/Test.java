@@ -8,5 +8,7 @@ public class Test {
         ZhouyuApplicationContext zhouyuApplicationContext = new ZhouyuApplicationContext(AppConfig.class);
 
         Object userService = zhouyuApplicationContext.getBean("userService");  // map<beanName,bean对象>
+
+        System.out.println(userService);
     }
 }
