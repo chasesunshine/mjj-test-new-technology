@@ -51,7 +51,8 @@ public class TestServiceImpl implements TestService {
             for (int sheetIndex = 0; sheetIndex < sheetNum; sheetIndex++){
                 //第几个sheet页
                 importParams.setStartSheetIndex(sheetIndex);
-                List<TestExcelImportResp> coursePriceImportResp = ExcelImportUtil.importExcel(file.getInputStream(), CoursePriceImportResp.class, importParams);
+                InputStream inputStream = file.getInputStream();
+                List<TestExcelImportResp> coursePriceImportResp = ExcelImportUtil.importExcel(inputStream, TestExcelImportResp.class, importParams);
 
                 coursePriceImportRespAll.addAll(coursePriceImportResp);
             }

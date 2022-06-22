@@ -26,7 +26,7 @@ public class TestExcelImportResp implements Serializable {
      * 课程名称
      */
     @Excel(name = "名称")
-    private String Name;
+    private String mjjName;
 
     /**
      * 金额
