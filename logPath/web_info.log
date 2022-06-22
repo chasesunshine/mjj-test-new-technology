@@ -514,3 +514,40 @@
 2022-06-22 17:04:17.952 [http-nio-8099-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
 2022-06-22 17:05:20.635 [Thread-12] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-22 17:05:20.635 [Thread-12] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
+2022-06-22 17:08:54.929 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - Starting Application_Mybatis3 on DFSH2617 with PID 21536 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-22 17:08:54.932 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - No active profile set, falling back to default profiles: default
+2022-06-22 17:08:54.970 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-22 17:08:54.970 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-22 17:08:56.045 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8099 (http)
+2022-06-22 17:08:56.062 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-22 17:08:56.062 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-06-22 17:08:56.067 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\AllSoftware\WorkSoftware\GitInstallPackage\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2022-06-22 17:08:56.135 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-22 17:08:56.136 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1166 ms
+2022-06-22 17:08:57.054 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-22 17:08:57.256 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8099 (http) with context path ''
+2022-06-22 17:08:57.258 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - Started Application_Mybatis3 in 2.73 seconds (JVM running for 4.534)
+2022-06-22 17:10:01.312 [http-nio-8099-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-22 17:10:01.312 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-22 17:10:01.317 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-06-22 17:10:16.036 [http-nio-8099-exec-1] INFO  org.wanbang.service.impl.TestServiceImpl - 过滤无效值
+2022-06-22 17:10:18.085 [Thread-11] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-22 17:10:18.086 [Thread-11] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
+2022-06-22 17:51:19.762 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - Starting Application_Mybatis3 on DFSH2617 with PID 12536 (C:\Users\majiajian\.m2\repository\org\springframework\boot\spring-boot-starter-parent\2.1.1.RELEASE\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-22 17:51:19.765 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - No active profile set, falling back to default profiles: default
+2022-06-22 17:51:19.802 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-22 17:51:19.802 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-22 17:51:20.848 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8099 (http)
+2022-06-22 17:51:20.865 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-22 17:51:20.865 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-06-22 17:51:20.870 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\AllSoftware\WorkSoftware\GitInstallPackage\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2022-06-22 17:51:20.940 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-22 17:51:20.940 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1138 ms
+2022-06-22 17:51:21.866 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-22 17:51:22.116 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8099 (http) with context path ''
+2022-06-22 17:51:22.119 [restartedMain] INFO  org.wanbang.Application_Mybatis3 - Started Application_Mybatis3 in 2.934 seconds (JVM running for 4.448)
+2022-06-22 17:51:33.543 [http-nio-8099-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-22 17:51:33.544 [http-nio-8099-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-22 17:51:33.549 [http-nio-8099-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-06-22 18:03:58.857 [Thread-12] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-22 18:03:58.858 [Thread-12] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...

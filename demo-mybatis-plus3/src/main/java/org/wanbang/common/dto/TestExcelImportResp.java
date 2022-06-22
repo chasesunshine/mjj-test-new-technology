@@ -32,7 +32,7 @@ public class TestExcelImportResp implements Serializable {
      * 金额
      */
     @Excel(name = "图片")
-    private XSSFPictureData picture;
+    private String picture;
 
 
 }
