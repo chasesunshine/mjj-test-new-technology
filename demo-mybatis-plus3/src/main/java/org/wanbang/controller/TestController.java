@@ -16,6 +16,7 @@ import org.wanbang.service.TestService;
 import javax.annotation.Resource;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
 
@@ -42,6 +43,17 @@ public class TestController {
     @PostMapping("/import/file")
     public Result importFile(@RequestParam(value = "file", required = false) MultipartFile file) {
         return testService.importFile(file);
+    }
+
+    /**
+     * 批量导入 企业培训价格
+     *
+     * @param file
+     * @return
+     */
+    @PostMapping("/import/file1")
+    public Result importFile1(@RequestParam(value = "file", required = false) MultipartFile file) throws IOException {
+        return testService.importFile1(file);
     }
 
 }

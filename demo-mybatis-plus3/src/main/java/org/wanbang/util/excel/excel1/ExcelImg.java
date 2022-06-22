@@ -1,4 +1,4 @@
-package org.wanbang.util;
+package org.wanbang.util.excel.excel1;
 /**
 * @description: TODO
 * @author majiajian
@@ -36,6 +36,9 @@ import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
  * @author: LiGuoWei
  * @date: 2019年1月21日下午4:10:37
  */
+
+// poi 读取excel中的图片，并获取图片做业务处理
+    // https://blog.csdn.net/qq_36457575/article/details/86594577?utm_term=poi%E8%AF%BB%E5%8F%96excel%E4%B8%AD%E5%9B%BE%E7%89%87&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-86594577-null-null&spm=3001.4430
 public class ExcelImg {
 
     public static void getDataFromExcel(String filePath) throws IOException {

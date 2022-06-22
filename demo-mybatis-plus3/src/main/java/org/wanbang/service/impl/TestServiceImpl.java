@@ -1,11 +1,17 @@
 package org.wanbang.service.impl;
 
+import ch.qos.logback.core.util.FileUtil;
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ooxml.POIXMLDocumentPart;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.PictureData;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -16,8 +22,7 @@ import org.wanbang.common.dto.TestExcelImportResp;
 import org.wanbang.common.entity.Result;
 import org.wanbang.service.TestService;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -77,6 +82,74 @@ public class TestServiceImpl implements TestService {
 
         return null;
     }
+
+    @Override
+    public Result importFile1(MultipartFile multipartFile) throws IOException {
+
+        File file = multipartFileToFile(multipartFile);
+
+        // 文件路径可以根据自己需求来 我的是放在本地根路径下了
+        XSSFWorkbook wb = null;
+        try {
+            wb = new XSSFWorkbook(file);
+        } catch (IOException | InvalidFormatException e) {
+            e.printStackTrace();
+        }
+        int numberOfSheets = wb.getNumberOfSheets();
+
+        XSSFSheet sheet = wb.getSheetAt(0);
+        List<POIXMLDocumentPart> list = sheet.getRelations();
+        for (POIXMLDocumentPart part : list) {
+            if (part instanceof XSSFDrawing) {
+                XSSFDrawing drawing = (XSSFDrawing) part;
+                List<XSSFShape> shapes = drawing.getShapes();
+                for (XSSFShape shape : shapes) {
+                    XSSFPicture picture = (XSSFPicture) shape;
+                    PictureData pic = picture.getPictureData();
+                    XSSFClientAnchor anchor = picture.getPreferredSize();
+                    CTMarker marker = anchor.getFrom();
+                    // 获取图片格式
+                    String ext = pic.suggestFileExtension();
+
+                    byte[] data = pic.getData();
+                    log.info("行号[{}],单元格[{}],图片格式[{}]", marker.getRow(), marker.getCol(), ext);
+                }
+            }
+        }
+
+
+        return null;
+    }
+
+    private File multipartFileToFile(MultipartFile file) throws IOException {
+        File toFile = null;
+        if (file.equals("") || file.getSize() <= 0) {
+            file = null;
+        } else {
+            InputStream ins = null;
+            ins = file.getInputStream();
+            toFile = new File(file.getOriginalFilename());
+            inputStreamToFile(ins, toFile);
+            ins.close();
+        }
+        return toFile;
+    }
+    //获取流文件
+    private static void inputStreamToFile(InputStream ins, File file) {
+        try {
+            OutputStream os = new FileOutputStream(file);
+            int bytesRead = 0;
+            byte[] buffer = new byte[8192];
+            while ((bytesRead = ins.read(buffer, 0, 8192)) != -1) {
+                os.write(buffer, 0, bytesRead);
+            }
+            os.close();
+            ins.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     public static Workbook getWorkBook(MultipartFile file) throws IOException {
