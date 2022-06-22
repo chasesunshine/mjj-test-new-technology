@@ -69,7 +69,6 @@ public class ZhouyuApplicationContext {
                 if(fileName.endsWith(".class")){
                     String className = fileName.substring(fileName.indexOf("com"), fileName.indexOf(".class"));
                     className = className.replace("\\",".");
-                    System.out.println(className);
 
                     Class<?> aClass = null;
                     try {
@@ -105,7 +104,7 @@ public class ZhouyuApplicationContext {
 
     public Object getBean(String beanName){
         // 看map里面是否有bean的定义，再看是否是 单例 或者是 原型（多例）
-        if(beanDefinitionMap.contains(beanName)){
+        if(beanDefinitionMap.containsKey(beanName)){
             BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
             if(beanDefinition.getScope().equals("singleton")){
                 Object o = singleObjects.get(beanName);
