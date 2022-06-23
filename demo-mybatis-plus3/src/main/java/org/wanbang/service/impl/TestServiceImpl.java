@@ -145,11 +145,24 @@ public class TestServiceImpl implements TestService {
             }
             os.close();
             ins.close();
+
+
+            delteTempFile(file);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * 删除本地临时文件
+     * @param file
+     */
+    public static void delteTempFile(File file) {
+        if (file != null) {
+            File del = new File(file.toURI());
+            del.delete();
+        }
+    }
 
 
     public static Workbook getWorkBook(MultipartFile file) throws IOException {
