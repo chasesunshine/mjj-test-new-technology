@@ -117,7 +117,7 @@ public class TestServiceImpl implements TestService {
             }
         }
 
-
+        delteTempFile(file);
         return null;
     }
 
