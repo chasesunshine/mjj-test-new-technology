@@ -146,8 +146,6 @@ public class TestServiceImpl implements TestService {
             os.close();
             ins.close();
 
-
-            delteTempFile(file);
         } catch (Exception e) {
             e.printStackTrace();
         }
