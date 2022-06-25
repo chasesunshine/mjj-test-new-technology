@@ -11,5 +11,30 @@
 
     <artifactId>demo-mybatis-plus3</artifactId>
 
+    <dependencies>
+        <!-- easypoi excel-->
+        <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>cn.afterturn</groupId>
+                    <artifactId>easypoi-wps</artifactId>
+                </exclusion>
+            </exclusions>
+            <version>4.4.0</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+
+    </dependencies>
 </project>
