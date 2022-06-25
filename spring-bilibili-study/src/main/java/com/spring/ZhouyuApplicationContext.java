@@ -25,7 +25,7 @@ public class ZhouyuApplicationContext {
             String beanName = entry.getKey();
             BeanDefinition beanDefinition = entry.getValue();
             if(beanDefinition.getScope().equals("singleton")){
-                Object bean = createBean(beanDefinition); //单例bean
+                Object bean = createBean(beanName,beanDefinition); //单例bean
 
                 singleObjects.put(beanName,bean);
             }
@@ -33,7 +33,7 @@ public class ZhouyuApplicationContext {
 
     }
 
-    public Object createBean(BeanDefinition beanDefinition){
+    public Object createBean(String beanName , BeanDefinition beanDefinition){
         Class clazz = beanDefinition.getClazz();
         try {
             Object instance = clazz.getDeclaredConstructor().newInstance();
@@ -46,6 +46,10 @@ public class ZhouyuApplicationContext {
                     declaredField.set(instance,bean);
 
                 }
+            }
+
+            if(instance instanceof BeanNameAware){
+                ((BeanNameAware)instance).setBeanName(beanName);
             }
 
             return instance;
@@ -124,7 +128,7 @@ public class ZhouyuApplicationContext {
                 return o;
             }else {
                 //创建bean对象？
-                Object bean = createBean(beanDefinition);
+                Object bean = createBean(beanName,beanDefinition);
                 return bean;
             }
         }else {
