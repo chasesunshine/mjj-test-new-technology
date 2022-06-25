@@ -1,0 +1,28 @@
+准备工作:
+ com.zhouyu.AppConfig 上写一个@ComponentScan注解，value为扫描的包的路径（"com.zhouyu.service"）
+ @ComponentScan注解，作用于类
+ @Component注解，作用于类(service层)
+ com.spring.BeanDefinition 用于存放 service层 class类的属性
+ ZhouyuApplicationContext 中 准备两个map，一个是 单例bean map（singleObjects）,一个是 存放 service层class类的属性的map（beanDefinitionMap）
+1. com.spring.ZhouyuApplicationContext 的构造方法 解析 AppConfig
+方法：scan(configClass)
+    ComponentScan注解 是否存在
+    扫描路径（"com.zhouyu.service"）
+    扫描 三种类加载器
+    扫描 路径下面的所有包文件
+    判断 包 下面class文件 是否有 @Component注解
+    判断是否是 单例还是需要新建一个 然后放入 专门存储class类属性的com.spring.BeanDefinition
+2. 对 BeanDefinitionMap 进行解析，并放入 单例bean map中
+    如果 类的属性是 单例bean(scope - singleton),创建bean对象
+        beanDefinition从中获取 类的属性
+        利用反射创建对象 clazz.getDeclaredConstructor().newInstance();
+        最后放入 单例bean map中
+3. 获取 bean对象( zhouyuApplicationContext.getBean("userService") )
+    如果 BeanDefinitionMap 中有存在 对应的bean
+    从中获取 beanName 对应的 class类的属性
+    判断 是否是 单例bean
+        是的话 单例bean map中 获取对应的bean对象
+        不是的话 创建 新的 bean对象
+
+创建bean对象
+
