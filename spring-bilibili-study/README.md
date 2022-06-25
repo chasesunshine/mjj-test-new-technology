@@ -6,3 +6,4 @@
 # P6 【手写Spring】手写Spring之依赖注入模拟实现
 # P7 【手写Spring】手写Spring之Aware回调模拟实现
 # P8 【手写Spring】手写Spring之初始化机制模拟实现
+# P9 【手写Spring】手写Spring之BeanPostProcessor模拟实现
