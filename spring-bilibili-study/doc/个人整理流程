@@ -25,4 +25,12 @@
         不是的话 创建 新的 bean对象
 
 创建bean对象
+    获取 专门存储class类属性的com.spring.BeanDefinition 对象
+    类对象 构造方法创建实例 .getDeclaredConstructor().newInstance()
+    1. 依赖注入 - 一个类a 是另一个类b 其中的一个属性，外层 遍历类b的属性
+        类a 上有没有 @Autowired注解 ，有的话 getBean(declaredField.getName())，然后为 类a 创建 对象a(设置属性可见)
+    2. Aware 回调
+        没什么好说的
+    3. 初始化
+        目前只是测试打印，需要的话可以自己初始化一些属性的值
 

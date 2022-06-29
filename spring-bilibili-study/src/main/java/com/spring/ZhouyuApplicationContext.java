@@ -130,7 +130,7 @@ public class ZhouyuApplicationContext {
         }
     }
 
-    public Object getBean(String beanName){
+    public Object  getBean(String beanName){
         // 看map里面是否有bean的定义，再看是否是 单例 或者是 原型（多例）
         if(beanDefinitionMap.containsKey(beanName)){
             BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
