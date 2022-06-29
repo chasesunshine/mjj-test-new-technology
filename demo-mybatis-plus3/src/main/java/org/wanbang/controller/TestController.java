@@ -2,7 +2,9 @@ package org.wanbang.controller;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.alibaba.schedulerx.shade.org.h2.schema.Constant;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,4 +58,13 @@ public class TestController {
         return testService.importFile1(file);
     }
 
+    public static void main(String[] args) {
+        Short a = 1;
+        if(!ObjectUtils.isEmpty(a)){
+            boolean b = a == Constant.INDEX;
+            String s = String.valueOf(b);
+            System.out.printf(s);
+
+        }
+    }
 }
