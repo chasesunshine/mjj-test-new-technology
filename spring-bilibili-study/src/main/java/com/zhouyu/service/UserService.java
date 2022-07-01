@@ -11,7 +11,13 @@ public class UserService implements BeanNameAware, InitializingBean {
     @Autowired
     private OrderService orderService;
 
+    private String name;
+
     private String beanName;
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public void setBeanName(String name) {

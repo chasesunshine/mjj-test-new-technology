@@ -4,6 +4,8 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -12,6 +14,7 @@ public class ZhouyuApplicationContext {
 
     private ConcurrentHashMap<String ,Object> singleObjects = new ConcurrentHashMap<>(); //单例池
     private ConcurrentHashMap<String ,BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>(); //单例池
+    private List<BeanPostProcessor> beanPostProcessorList = new ArrayList<BeanPostProcessor>();
 
 
     public ZhouyuApplicationContext(Class configClass) {
@@ -53,6 +56,12 @@ public class ZhouyuApplicationContext {
                 ((BeanNameAware)instance).setBeanName(beanName);
             }
 
+            // 对这个已经创建好的对象 进行加工（初始化前）
+            for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
+                instance = beanPostProcessor.postProcessBeforeInitialization(instance, beanName);
+
+            }
+
             // 初始化
             if(instance instanceof InitializingBean){
                 try {
@@ -60,6 +69,13 @@ public class ZhouyuApplicationContext {
                 }catch (Exception e){
                     e.printStackTrace();
                 }
+            }
+
+            //BeanPostProcessor  Spring对外的拓展机制
+            // 对这个已经创建好的对象 进行加工（初始化后）
+            for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
+                instance = beanPostProcessor.postProcessAfterInitialization(instance, beanName);
+
             }
 
 
@@ -106,6 +122,12 @@ public class ZhouyuApplicationContext {
                             // 解析类，判断当前bean 是单例bean，还是 prototype 的bean
                             // BeanDefinition
 
+                            // 判断 当前这个对象是否实现了这个接口
+                            if(BeanPostProcessor.class.isAssignableFrom(aClass)){
+                                BeanPostProcessor instance = (BeanPostProcessor)aClass.getDeclaredConstructor().newInstance();
+                                beanPostProcessorList.add(instance);
+                            }
+
                             Component componentAnnotation = aClass.getAnnotation(Component.class);
                             String beanName = componentAnnotation.value();
 
@@ -122,6 +144,14 @@ public class ZhouyuApplicationContext {
 
                         }
                     } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (InstantiationException e) {
+                        e.printStackTrace();
+                    } catch (InvocationTargetException e) {
+                        e.printStackTrace();
+                    } catch (NoSuchMethodException e) {
+                        e.printStackTrace();
+                    } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
                 }
