@@ -3,6 +3,7 @@ package com.test;
 import com.spring.ZhouyuApplicationContext;
 import com.zhouyu.AppConfig;
 import com.zhouyu.service.UserService;
+import com.zhouyu.service.UserServiceImpl;
 
 public class Test {
     public static void main(String[] args) {
@@ -17,8 +18,8 @@ public class Test {
 //        System.out.println(userService2);
 
 
-        UserService userServiceTest = (UserService)zhouyuApplicationContext.getBean("userService");
-        userServiceTest.test();
+        UserService userServiceImplTest = (UserServiceImpl)zhouyuApplicationContext.getBean("userService");
+        userServiceImplTest.test();     // 1. 代理对象  2. 业务test
 
     }
 }

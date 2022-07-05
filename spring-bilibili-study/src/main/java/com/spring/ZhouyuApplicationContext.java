@@ -75,7 +75,6 @@ public class ZhouyuApplicationContext {
             // 对这个已经创建好的对象 进行加工（初始化后）
             for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
                 instance = beanPostProcessor.postProcessAfterInitialization(instance, beanName);
-
             }
 
 
