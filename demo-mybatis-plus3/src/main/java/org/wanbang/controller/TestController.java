@@ -20,7 +20,10 @@ import javax.annotation.Resource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -60,26 +63,50 @@ public class TestController {
         return testService.importFile1(file);
     }
 
-    public static void main(String[] args) {
-//        Short a = 1;
-//        if(!ObjectUtils.isEmpty(a)){
-//            boolean b = a == Constant.INDEX;
-//            String s = String.valueOf(b);
-//            System.out.printf(s);
+//    public static void main(String[] args) {
+////        Short a = 1;
+////        if(!ObjectUtils.isEmpty(a)){
+////            boolean b = a == Constant.INDEX;
+////            String s = String.valueOf(b);
+////            System.out.printf(s);
+////
+////        }
 //
-//        }
+//        HashMap<Integer , SpringWorld> objectObjectHashMap = new HashMap<>();
+//        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
+//        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
+//        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
+//        objectObjectHashMap.put(1,build);
+//        objectObjectHashMap.put(2,build1);
+//        objectObjectHashMap.put(3,build2);
+//
+//        SpringWorld springWorld = objectObjectHashMap.get(1);
+//        springWorld.setAge(8);
+//
+//        System.out.printf(objectObjectHashMap.get(1).getAge().toString());
+//    }
 
-        HashMap<Integer , SpringWorld> objectObjectHashMap = new HashMap<>();
-        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
-        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
-        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
-        objectObjectHashMap.put(1,build);
-        objectObjectHashMap.put(2,build1);
-        objectObjectHashMap.put(3,build2);
+    public static void main(String[] args) {
+        String s1 = "13:58";
+        String s2 = "13:59";
+        Boolean value ;
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:ss");
+        try {
+            Date parse1 = sdf.parse(s1);
+            Date parse2 = sdf.parse(s2);
 
-        SpringWorld springWorld = objectObjectHashMap.get(1);
-        springWorld.setAge(8);
+            int i = parse2.compareTo(parse1);
+            if(i > 0 ){
+                value = true;
+            }else {
+                value =  false;
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+            value =  false;
+        }
 
-        System.out.printf(objectObjectHashMap.get(1).getAge().toString());
+        String s = "2";
+        System.out.println(value);
     }
 }
