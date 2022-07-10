@@ -1,0 +1,6 @@
+Bean创建的生命周期
+                                       (对象)orderService属性基于 @Autowired 进行属性填充
+class(类 UserService.class --> 实例化 --> 对象 --> 属性填充（依赖注入） --> 初始化 afterPropertiesSet()--> AOP --> 代理对象 --> Bean对象
+                                                                     这个初始化就是 实现 InitializingBean 接口, 被称之为 bean的初始化,和jvm里面对象的初始化 是 两个东西
+以上 实例化 与 初始化 的区别？
+* 简单来说 实例化相当于正常的new一个对象 初始化就相当于往对象内set东西

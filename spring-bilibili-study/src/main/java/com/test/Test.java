@@ -7,6 +7,7 @@ import com.zhouyu.service.UserServiceImpl;
 
 public class Test {
     public static void main(String[] args) {
+        // 启动Spring
         ZhouyuApplicationContext zhouyuApplicationContext = new ZhouyuApplicationContext(AppConfig.class);
 
 //        Object userService = zhouyuApplicationContext.getBean("userService");  // map<beanName,bean对象>
