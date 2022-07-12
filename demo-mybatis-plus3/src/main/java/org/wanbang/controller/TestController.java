@@ -87,26 +87,31 @@ public class TestController {
 //    }
 
     public static void main(String[] args) {
-        String s1 = "13:58";
-        String s2 = "13:59";
-        Boolean value ;
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:ss");
-        try {
-            Date parse1 = sdf.parse(s1);
-            Date parse2 = sdf.parse(s2);
+//        String s1 = "13:58";
+//        String s2 = "13:59";
+//        Boolean value ;
+//        SimpleDateFormat sdf = new SimpleDateFormat("HH:ss");
+//        try {
+//            Date parse1 = sdf.parse(s1);
+//            Date parse2 = sdf.parse(s2);
+//
+//            int i = parse2.compareTo(parse1);
+//            if(i > 0 ){
+//                value = true;
+//            }else {
+//                value =  false;
+//            }
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//            value =  false;
+//        }
+//
+//        String s = "2";
+//        System.out.println(value);
 
-            int i = parse2.compareTo(parse1);
-            if(i > 0 ){
-                value = true;
-            }else {
-                value =  false;
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-            value =  false;
-        }
-
-        String s = "2";
-        System.out.println(value);
+        String a = "1.2";
+        String[] split = a.split("\\.");
+        System.out.println(split[0]);
+        System.out.println(split[1]);
     }
 }
