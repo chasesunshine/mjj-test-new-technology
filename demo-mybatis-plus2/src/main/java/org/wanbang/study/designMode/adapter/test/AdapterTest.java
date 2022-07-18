@@ -14,10 +14,10 @@ public class AdapterTest {
         // 但是为什么精确找到 NewActionB 并执行代码
         client.userDo(newB);//调用器调用
 
-//        System.out.println("-------------------------");
-//
-//        OldActionA oldA = new OldActionA();//不符合新调用器规则的类
-//        NewAdapter newA = new NewAdapter(oldA);//能够对不符合调用器规则的类进行适配的适配器
-//        client.userDo(newA);//调用器调用
+        System.out.println("-------------------------");
+
+        OldActionA oldA = new OldActionA();//不符合新调用器规则的类
+        NewAdapter newA = new NewAdapter(oldA);//能够对不符合调用器规则的类进行适配的适配器
+        client.userDo(newA);//调用器调用
     }
 }
