@@ -27,18 +27,18 @@ public class RedisController {
     @Resource
     private SpringWordService springWordService;
 
-    @Resource
-    private LockExecutor lockExecutor;
+//    @Resource
+//    private LockExecutor lockExecutor;
 
     @GetMapping("/selectOne")
     public void  selectOne(){
-        try {
-            String mjj1 = lockExecutor.exec("Mjj:token", 3, () -> {
-                return "1";
-            });
-            System.out.println("1");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            String mjj1 = lockExecutor.exec("Mjj:token", 3, () -> {
+//                return "1";
+//            });
+//            System.out.println("1");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 }
