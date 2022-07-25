@@ -2,14 +2,14 @@ package org.wanbang.controller;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.io.IoUtil;
+import cn.hutool.poi.excel.ExcelWriter;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.alibaba.schedulerx.shade.org.h2.schema.Constant;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.wanbang.common.dto.GoodsHasImgModel;
 import org.wanbang.common.entity.Result;
@@ -17,9 +17,12 @@ import org.wanbang.entity.SpringWorld;
 import org.wanbang.service.TestService;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
@@ -114,4 +117,53 @@ public class TestController {
         System.out.println(split[0]);
         System.out.println(split[1]);
     }
+
+    @GetMapping("/import/file2")
+    public void exportTemplate(HttpServletResponse response) {
+        ExcelWriter writer = new ExcelWriter(false, "公司");
+
+        List<String> company = CollUtil.newArrayList("COMPANY_ID", "CITY_CODE", "COMPANY_NAME", "IDENTIFIER", "ADDRESS", "BUSINESS_SCOPE", "CONTACT_ADDRESS","ECONOMIC_TYPE", "REG_CAPITAL","LEGAL_NAME", "LEGAL_ID", "LEGAL_PHONE", "LEGAL_PHOTO");
+        List<String> companys = CollUtil.newArrayList("3301HZJS8068", "330100","332529199203140011","18057894789");
+
+        List<List<String>> companyExcel = CollUtil.newArrayList(company, companys);
+        writer.write(companyExcel, true);
+        writer.autoSizeColumnAll();
+
+        writer.setSheet("车辆");
+
+        List<String> vehicle = CollUtil.newArrayList("VEHICLE_NO", "PLATE_COLOR", "SEATS", "STATE", "FLAG");
+        List<String> vehicles = CollUtil.newArrayList("浙A127FB","1","5","0","1");
+
+        List<List<String>> vehicleExcel = CollUtil.newArrayList(vehicle, vehicles);
+        writer.write(vehicleExcel, true);
+        writer.autoSizeColumnAll();
+
+        writer.setSheet("司机");
+
+        List<String> driver = CollUtil.newArrayList("DRIVER_NAME", "DRIVER_PHONE", "DRIVER_FLAG");
+        List<String> drivers =
+                CollUtil.newArrayList("王先生", "17516717771","1");
+
+        List<List<String>> driverExcel = CollUtil.newArrayList(driver, drivers);
+        writer.write(driverExcel, true);
+        writer.autoSizeColumnAll();
+
+
+        ServletOutputStream out = null;
+        String codedFileName;
+        try {
+            response.setContentType("application/vnd.ms-excel");
+            response.setCharacterEncoding("utf-8");
+            codedFileName = URLEncoder.encode("car-vehicle-driver", "UTF-8");
+            response.setHeader("Content-disposition", "attachment;filename=" + codedFileName + ".xlsx");
+            out = response.getOutputStream();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            writer.flush(out, true);
+            writer.close();
+            IoUtil.close(out);
+        }
+    }
+
 }

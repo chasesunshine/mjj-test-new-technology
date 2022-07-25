@@ -41,6 +41,12 @@
             <version>1.2.5.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-poi</artifactId>
+            <version>5.7.22</version>
+        </dependency>
+
         <!-- redission -->
         <!--<dependency>
             <groupId>org.redisson</groupId>
