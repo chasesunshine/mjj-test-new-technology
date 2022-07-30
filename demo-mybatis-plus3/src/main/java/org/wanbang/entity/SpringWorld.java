@@ -27,5 +27,7 @@ public class SpringWorld implements Serializable {
     private String name;
     
     private String sex;
+
+    private Integer value;
 }
 
