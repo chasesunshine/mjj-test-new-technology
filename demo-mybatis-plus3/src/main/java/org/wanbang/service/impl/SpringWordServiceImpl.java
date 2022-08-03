@@ -59,12 +59,14 @@ public class SpringWordServiceImpl implements SpringWordService {
         return update;
     }
 
+
+
     @Override
     public SpringWorld updateTwo(long l) {
         try {
 
             SpringWorld build = SpringWorld.builder().id(l).age(21).name("123").build();
-            CurrentCglibProxy.currentProxyByCglib(SpringWordServiceImpl.class).updateBatch(build);
+            CurrentCglibProxy.currentProxyByCglib(SpringWordServiceImpl.class).updateBatch2(build);
 
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -74,7 +76,7 @@ public class SpringWordServiceImpl implements SpringWordService {
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public Integer updateBatch(SpringWorld build){
+    public Integer updateBatch2(SpringWorld build){
         int update = springWorldDao.updateById(build);
         if(true){
             throw new RuntimeException("13");
