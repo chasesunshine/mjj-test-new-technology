@@ -18,4 +18,5 @@ public interface SpringWordService {
      */
     SpringWorld queryById(Long id);
 
+    SpringWorld updateOne(long l);
 }

@@ -29,6 +29,12 @@ public class SpringWordController {
         return JSON.toJSONString(springWorld);
     }
 
+    @GetMapping("/updateOne")
+    public String updateOne() {
+        SpringWorld springWorld = springWordService.updateOne((long) 1);
+        return JSON.toJSONString(springWorld);
+    }
+
     public static void main(String[] args) {
         SpringWorld build = SpringWorld.builder().age(1).value(3).build();
         SpringWorld build1 = SpringWorld.builder().age(2).value(3).build();

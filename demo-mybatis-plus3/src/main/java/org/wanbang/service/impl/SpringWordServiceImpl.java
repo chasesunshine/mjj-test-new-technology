@@ -1,6 +1,7 @@
 package org.wanbang.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 import org.wanbang.entity.SpringWorld;
 import org.wanbang.dao.SpringWorldDao;
 import org.wanbang.service.SpringWordService;
@@ -30,6 +31,24 @@ public class SpringWordServiceImpl implements SpringWordService {
         log.info("通过ID查询单条数据");
 
         return this.springWorldDao.queryById(id);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public SpringWorld updateOne(long l) {
+        try {
+
+            SpringWorld build = SpringWorld.builder().id(l).age(2).build();
+            int update = springWorldDao.updateById(build);
+
+            if(true){
+                throw new RuntimeException("13");
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 
 }
