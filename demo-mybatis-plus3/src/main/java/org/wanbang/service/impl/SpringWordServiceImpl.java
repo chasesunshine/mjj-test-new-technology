@@ -6,6 +6,8 @@ import org.wanbang.entity.SpringWorld;
 import org.wanbang.dao.SpringWorldDao;
 import org.wanbang.service.SpringWordService;
 import org.springframework.stereotype.Service;
+import org.wanbang.util.proxy.CurrentCglibProxy;
+
 import javax.annotation.Resource;
 
 /**
@@ -38,12 +40,9 @@ public class SpringWordServiceImpl implements SpringWordService {
     public SpringWorld updateOne(long l) {
         try {
 
-            SpringWorld build = SpringWorld.builder().id(l).age(2).build();
-            int update = springWorldDao.updateById(build);
+            SpringWorld build = SpringWorld.builder().id(l).age(21).name("123").build();
+            updateBatch1(build);
 
-            if(true){
-                throw new RuntimeException("13");
-            }
         }catch (Exception e){
             System.out.println(e.getMessage());
             System.out.println(e.getMessage());
@@ -51,4 +50,35 @@ public class SpringWordServiceImpl implements SpringWordService {
         return null;
     }
 
+    @Transactional(rollbackFor = Exception.class)
+    public Integer updateBatch1(SpringWorld build){
+        int update = springWorldDao.updateById(build);
+        if(true){
+            throw new RuntimeException("13");
+        }
+        return update;
+    }
+
+    @Override
+    public SpringWorld updateTwo(long l) {
+        try {
+
+            SpringWorld build = SpringWorld.builder().id(l).age(21).name("123").build();
+            CurrentCglibProxy.currentProxyByCglib(SpringWordServiceImpl.class).updateBatch(build);
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public Integer updateBatch(SpringWorld build){
+        int update = springWorldDao.updateById(build);
+        if(true){
+            throw new RuntimeException("13");
+        }
+        return update;
+    }
 }

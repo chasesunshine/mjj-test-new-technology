@@ -1,6 +1,7 @@
 package org.wanbang.controller;
 
 import com.alibaba.fastjson.JSON;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.*;
 import org.wanbang.entity.SpringWorld;
 import org.wanbang.service.SpringWordService;
@@ -17,6 +18,7 @@ import java.util.stream.Collectors;
  * @author makejava
  * @since 2022-06-16 10:17:35
  */
+@EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @RestController
 @RequestMapping("springWord")
 public class SpringWordController {
@@ -32,6 +34,12 @@ public class SpringWordController {
     @GetMapping("/updateOne")
     public String updateOne() {
         SpringWorld springWorld = springWordService.updateOne((long) 1);
+        return JSON.toJSONString(springWorld);
+    }
+
+    @GetMapping("/updateTwo")
+    public String updateTwo() {
+        SpringWorld springWorld = springWordService.updateTwo((long) 2);
         return JSON.toJSONString(springWorld);
     }
 

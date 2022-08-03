@@ -47,6 +47,12 @@
             <version>5.7.22</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.6</version>
+        </dependency>
+
         <!-- redission -->
         <!--<dependency>
             <groupId>org.redisson</groupId>
