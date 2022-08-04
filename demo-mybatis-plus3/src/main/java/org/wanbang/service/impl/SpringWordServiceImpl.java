@@ -35,13 +35,12 @@ public class SpringWordServiceImpl implements SpringWordService {
         return this.springWorldDao.queryById(id);
     }
 
-    @Transactional(rollbackFor = Exception.class)
     @Override
     public SpringWorld updateOne(long l) {
         try {
 
             SpringWorld build = SpringWorld.builder().id(l).age(21).name("123").build();
-            updateBatch1(build);
+            this.updateBatch1(build);
 
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -66,7 +65,8 @@ public class SpringWordServiceImpl implements SpringWordService {
         try {
 
             SpringWorld build = SpringWorld.builder().id(l).age(21).name("123").build();
-            CurrentCglibProxy.currentProxyByCglib(SpringWordServiceImpl.class).updateBatch2(build);
+            SpringWordServiceImpl springWordService = CurrentCglibProxy.currentProxyByCglib(SpringWordServiceImpl.class);
+            springWordService.updateBatch2(build);
 
         }catch (Exception e){
             System.out.println(e.getMessage());
