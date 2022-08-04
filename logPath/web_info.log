@@ -53,3 +53,6 @@
 2022-08-04 09:51:07.208 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2022-08-04 09:51:07.216 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
 2022-08-04 09:51:42.369 [http-nio-8099-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-04 09:57:38.571 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-04 09:57:38.572 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-08-04 09:57:38.576 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
