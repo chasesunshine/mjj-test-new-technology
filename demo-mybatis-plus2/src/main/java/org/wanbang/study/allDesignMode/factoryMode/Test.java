@@ -1,7 +1,7 @@
 package org.wanbang.study.allDesignMode.factoryMode;
 
-import org.wanbang.study.allDesignMode.factoryMode.factory.StoreFactory;
 import org.wanbang.study.allDesignMode.factoryMode.common.ICommodity;
+import org.wanbang.study.allDesignMode.factoryMode.factory.StoreFactory;
 
 import java.util.HashMap;
 import java.util.Map;

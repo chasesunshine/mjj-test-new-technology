@@ -8,10 +8,10 @@ package org.wanbang.study.allDesignMode.factoryMode.vo;
 
 public class CouponResult {
     public String getCode() {
-        return "code";
+        return "0000";
     }
 
     public String getInfo() {
-        return "info";
+        return "发放成功";
     }
 }
