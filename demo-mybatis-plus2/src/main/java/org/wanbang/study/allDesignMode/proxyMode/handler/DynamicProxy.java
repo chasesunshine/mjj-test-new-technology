@@ -13,6 +13,7 @@ import java.lang.reflect.Method;
 public class DynamicProxy implements InvocationHandler {
     //　这个就是我们要代理的真实对象
     private Object subject;
+    private Integer count = 0;
 
     //    构造方法，给我们要代理的真实对象赋初值
     public DynamicProxy(Object subject) {
@@ -21,6 +22,8 @@ public class DynamicProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object object, Method method, Object[] args) throws Throwable{
+        count = count + 1;
+        System.out.println("\n 调用次数 : " + count );
         //　　在代理真实对象前我们可以添加一些自己的操作
         System.out.println("before rent house");
 
@@ -32,6 +35,7 @@ public class DynamicProxy implements InvocationHandler {
         //　　在代理真实对象后我们也可以添加一些自己的操作
         System.out.println("after rent house");
 
+        System.out.println("\n");
         return null;
     }
 }
