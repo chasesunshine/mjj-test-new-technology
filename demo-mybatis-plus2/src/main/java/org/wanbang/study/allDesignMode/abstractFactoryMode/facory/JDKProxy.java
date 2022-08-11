@@ -10,6 +10,9 @@ import java.lang.reflect.Proxy;
 * @version 1.0
 */
 
+/**
+ * 这⾥主要的作⽤就是完成代理类，同时对于使⽤哪个集群有外部通过⼊参进⾏传递。
+ */
 public class JDKProxy {
     public static <T> T getProxy(Class<T> interfaceClass, ICacheAdapter cacheAdapter) throws Exception {
         InvocationHandler handler = new JDKInvocationHandler(cacheAdapter);

@@ -7,7 +7,7 @@ import org.wanbang.study.allDesignMode.abstractFactoryMode.facory.impl.IIRCacheA
 import org.wanbang.study.allDesignMode.abstractFactoryMode.service.impl.CacheServiceImpl;
 
 /**
-* @description: TODO
+* @description: 抽象⼯⼚模式
 * @author majiajian
 * @date 2022/8/10 20:39
 * @version 1.0

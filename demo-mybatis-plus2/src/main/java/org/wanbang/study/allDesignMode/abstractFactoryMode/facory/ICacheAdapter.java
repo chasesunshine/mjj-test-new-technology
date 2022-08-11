@@ -9,6 +9,10 @@ import java.util.concurrent.TimeUnit;
 * @version 1.0
 */
 
+/**
+ * 这个类的主要作⽤是让所有集群的提供⽅，能在统⼀的⽅法名称下进⾏操作。也⽅⾯后续的拓展
+ *
+ */
 public interface ICacheAdapter {
     String get(String key);
     void set(String key, String value);
