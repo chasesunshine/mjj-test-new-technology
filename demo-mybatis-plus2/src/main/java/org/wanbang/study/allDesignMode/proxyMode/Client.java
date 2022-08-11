@@ -32,7 +32,7 @@ public class Client {
         Class<?>[] interfaces = realSubject.getClass().getInterfaces();
         Subject subject = (Subject) Proxy.newProxyInstance(classLoader, interfaces, handler);
 
-        System.out.println(subject.getClass().getName());
+        System.out.println(subject.getClass().getName()); // com.sun.proxy.$Proxy0
         subject.rent();
         subject.hello("world");
     }
