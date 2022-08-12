@@ -34,8 +34,7 @@ public class LoginSsoDecorator extends SsoDecorator {
     }
 
     @Override
-    public boolean preHandle(String request, String response, Object
-            handler) {
+    public boolean preHandle(String request, String response, Object handler) {
         boolean success = super.preHandle(request, response, handler);
         if (!success) return false;
         String userId = request.substring(8);
@@ -44,5 +43,5 @@ public class LoginSsoDecorator extends SsoDecorator {
         // 模拟⽅法校验
         return "queryUserInfo".equals(method);
     }
-    
+
 }
