@@ -7,6 +7,11 @@
       "sourceMethod": "authProperties()"
     },
     {
+      "name": "itstack.door",
+      "type": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties",
+      "sourceType": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties"
+    },
+    {
       "name": "template",
       "type": "org.wanbang.config.properties.TemplateProperties",
       "sourceType": "org.wanbang.config.SpringConfig",
@@ -25,6 +30,11 @@
       "type": "java.util.List<java.lang.String>",
       "description": "需要认证的路径",
       "sourceType": "org.wanbang.config.properties.AuthProperties"
+    },
+    {
+      "name": "itstack.door.user-str",
+      "type": "java.lang.String",
+      "sourceType": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties"
     },
     {
       "name": "template.material-excel",

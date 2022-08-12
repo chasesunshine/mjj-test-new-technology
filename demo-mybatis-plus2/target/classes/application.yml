@@ -46,3 +46,9 @@ logging:
     dao: debug
     org:
       mybatis: debug
+
+# ⾃定义中间件配置
+itstack:
+  door:
+  enabled: true
+  userStr: 1001,aaaa,ccc #⽩名单⽤户ID，多个逗号隔
