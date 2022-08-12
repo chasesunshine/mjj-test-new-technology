@@ -1,7 +1,6 @@
 package org.wanbang.study.allDesignMode.constructMode.appearanceMode;
 
 import com.alibaba.fastjson.JSON;
-import com.baomidou.mybatisplus.core.toolkit.BeanUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -11,6 +10,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.wanbang.study.allDesignMode.constructMode.appearanceMode.annotation.DoDoor;
@@ -82,7 +82,7 @@ public class DoJoinPoint {
         for (Object arg : args) {
             try {
                 if (null == filedValue || "".equals(filedValue)) {
-                    //filedValue = BeanUtils.getProperty(arg, filed);
+                    filedValue = BeanUtils.getProperty(arg, filed);
                 } else {
                     break;
                 }
