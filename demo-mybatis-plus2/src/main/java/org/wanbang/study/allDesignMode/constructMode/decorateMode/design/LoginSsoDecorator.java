@@ -28,9 +28,11 @@ public class LoginSsoDecorator extends SsoDecorator {
         authMap.put("huahua", "queryUserInfo");
         authMap.put("doudou", "queryUserInfo");
     }
+
     public LoginSsoDecorator(HandlerInterceptor handlerInterceptor) {
         super(handlerInterceptor);
     }
+
     @Override
     public boolean preHandle(String request, String response, Object
             handler) {
@@ -42,4 +44,5 @@ public class LoginSsoDecorator extends SsoDecorator {
         // 模拟⽅法校验
         return "queryUserInfo".equals(method);
     }
+    
 }

@@ -15,12 +15,14 @@ import org.wanbang.study.allDesignMode.constructMode.decorateMode.common.Handler
  */
 public abstract class SsoDecorator implements HandlerInterceptor {
     private HandlerInterceptor handlerInterceptor;
+
     private SsoDecorator(){}
+
     public SsoDecorator(HandlerInterceptor handlerInterceptor) {
         this.handlerInterceptor = handlerInterceptor;
     }
-    public boolean preHandle(String request, String response, Object
-            handler) {
+
+    public boolean preHandle(String request, String response, Object handler) {
         return handlerInterceptor.preHandle(request, response, handler);
     }
 }
