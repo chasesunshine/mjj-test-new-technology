@@ -30,6 +30,19 @@ public class Test {
 
 
     public static void main(String[] args) {
+        TreeRich treeRich = getTreeRich();
+        System.out.println("决策树组合结构信息：" + JSON.toJSONString(treeRich));
+
+        IEngine treeEngineHandle = new TreeEngineHandle();
+        Map<String, String> decisionMatter = new HashMap<>();
+        decisionMatter.put("gender", "man");
+        decisionMatter.put("age", "29");
+        EngineResult result = treeEngineHandle.process(10001L, "Oli09pLkdjh", treeRich, decisionMatter);
+
+        System.out.println("测试结果：{}"+ JSON.toJSONString(result));
+    }
+
+    private static TreeRich getTreeRich() {
         // 节点：1
         TreeNode treeNode_01 = new TreeNode();
         treeNode_01.setTreeId(10001L);
@@ -139,17 +152,6 @@ public class Test {
         treeNodeMap.put(112L, treeNode_112);
         treeNodeMap.put(121L, treeNode_121);
         treeNodeMap.put(122L, treeNode_122);
-        TreeRich treeRich = new TreeRich(treeRoot, treeNodeMap);
-
-
-        System.out.println("决策树组合结构信息：" + JSON.toJSONString(treeRich));
-
-        IEngine treeEngineHandle = new TreeEngineHandle();
-        Map<String, String> decisionMatter = new HashMap<>();
-        decisionMatter.put("gender", "man");
-        decisionMatter.put("age", "29");
-        EngineResult result = treeEngineHandle.process(10001L, "Oli09pLkdjh", treeRich, decisionMatter);
-
-        System.out.println("测试结果：{}"+ JSON.toJSONString(result));
+        return new TreeRich(treeRoot, treeNodeMap);
     }
 }
