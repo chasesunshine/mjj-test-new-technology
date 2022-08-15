@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.wanbang.study.allDesignMode.constructMode.appearanceMode.annotation.DoDoor;
 import org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterService;
+import org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties;
 
 import java.lang.reflect.Method;
 
@@ -31,12 +32,16 @@ public class DoJoinPoint {
     private Logger logger = LoggerFactory.getLogger(DoJoinPoint.class);
     @Autowired
     private StarterService starterService;
+    @Autowired
+    private StarterServiceProperties starterServiceProperties;
+
 
     @Pointcut("@annotation(org.wanbang.study.allDesignMode.constructMode.appearanceMode.annotation.DoDoor)")
     public void aopPoint() {
     }
     @Around("aopPoint()")
     public Object doRouter(ProceedingJoinPoint jp) throws Throwable {
+        String userStr = starterServiceProperties.getUserStr();
         //获取内容
         Method method = getMethod(jp);
         DoDoor door = method.getAnnotation(DoDoor.class);

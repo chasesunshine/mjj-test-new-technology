@@ -2,11 +2,14 @@ package org.wanbang.config;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.wanbang.config.properties.AuthProperties;
 import org.wanbang.config.properties.TemplateProperties;
+import org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterService;
+import org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -33,7 +36,22 @@ public class SpringConfig {
     @Bean
     @ConfigurationProperties("auth")
     public AuthProperties authProperties() {
-        return new AuthProperties();
+        AuthProperties authProperties = new AuthProperties();
+        return authProperties;
     }
 
+
+    @Bean
+    @ConfigurationProperties("itstack.door")
+    public StarterServiceProperties starterServiceProperties() {
+        StarterServiceProperties starterServiceProperties = new StarterServiceProperties();
+        return starterServiceProperties;
+    }
+
+    @Bean("starterService")
+    public StarterService starterService(@Qualifier("starterServiceProperties") StarterServiceProperties starterServiceProperties) {
+        StarterService starterService = new StarterService();
+        starterService.setUserStr(starterServiceProperties.getUserStr());
+        return starterService;
+    }
 }

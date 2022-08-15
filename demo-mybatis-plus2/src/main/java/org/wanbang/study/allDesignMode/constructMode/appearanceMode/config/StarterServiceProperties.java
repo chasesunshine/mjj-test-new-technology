@@ -1,6 +1,8 @@
 package org.wanbang.study.allDesignMode.constructMode.appearanceMode.config;
 
+import lombok.*;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @description: TODO
@@ -9,15 +11,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @version 1.0
  */
 
-@ConfigurationProperties("itstack.door")
+@Getter
+@Setter
 public class StarterServiceProperties {
     private String userStr;
-    public String getUserStr() {
-        System.out.println("userStr:"+userStr);
-        return userStr;
-    }
-
-    public void setUserStr(String userStr) {
-        this.userStr = userStr;
-    }
 }

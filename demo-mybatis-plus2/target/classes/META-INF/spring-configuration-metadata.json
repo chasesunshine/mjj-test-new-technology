@@ -9,7 +9,8 @@
     {
       "name": "itstack.door",
       "type": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties",
-      "sourceType": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties"
+      "sourceType": "org.wanbang.config.SpringConfig",
+      "sourceMethod": "starterServiceProperties()"
     },
     {
       "name": "template",

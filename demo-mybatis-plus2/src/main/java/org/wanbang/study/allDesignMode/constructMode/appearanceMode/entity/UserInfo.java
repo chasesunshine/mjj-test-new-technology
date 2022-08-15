@@ -1,4 +1,7 @@
 package org.wanbang.study.allDesignMode.constructMode.appearanceMode.entity;
+
+import lombok.Data;
+
 /**
 * @description: TODO
 * @author majiajian
@@ -6,6 +9,7 @@ package org.wanbang.study.allDesignMode.constructMode.appearanceMode.entity;
 * @version 1.0
 */
 
+@Data
 public class UserInfo {
     private String userId;
 

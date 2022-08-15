@@ -1,5 +1,6 @@
 package org.wanbang.study.allDesignMode.constructMode.appearanceMode.config;
 
+import lombok.Data;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -11,17 +12,18 @@ import org.springframework.util.StringUtils;
 * @version 1.0
 */
 
+@Data
 @Service
 public class StarterService {
-    private static String userStr;
+    private String userStr;
 
     public String[] split(String separatorChar) {
         String[] split = StringUtils.split(this.userStr, separatorChar);
         return split;
     }
 
-    public StarterService setvalue(String userStr) {
-        this.userStr = userStr;
-        return new StarterService();
-    }
+//    public StarterService setvalue(String userStr) {
+//        this.userStr = userStr;
+//        return new StarterService();
+//    }
 }
