@@ -32,16 +32,13 @@ public class DoJoinPoint {
     private Logger logger = LoggerFactory.getLogger(DoJoinPoint.class);
     @Autowired
     private StarterService starterService;
-    @Autowired
-    private StarterServiceProperties starterServiceProperties;
-
 
     @Pointcut("@annotation(org.wanbang.study.allDesignMode.constructMode.appearanceMode.annotation.DoDoor)")
     public void aopPoint() {
     }
+
     @Around("aopPoint()")
     public Object doRouter(ProceedingJoinPoint jp) throws Throwable {
-        String userStr = starterServiceProperties.getUserStr();
         //获取内容
         Method method = getMethod(jp);
         DoDoor door = method.getAnnotation(DoDoor.class);
@@ -63,16 +60,13 @@ public class DoJoinPoint {
     private Method getMethod(JoinPoint jp) throws NoSuchMethodException {
         Signature sig = jp.getSignature();
         MethodSignature methodSignature = (MethodSignature) sig;
-        return getClass(jp).getMethod(methodSignature.getName(),
-                methodSignature.getParameterTypes());
+        return getClass(jp).getMethod(methodSignature.getName(), methodSignature.getParameterTypes());
     }
-    private Class<? extends Object> getClass(JoinPoint jp) throws
-            NoSuchMethodException {
+    private Class<? extends Object> getClass(JoinPoint jp) throws NoSuchMethodException {
         return jp.getTarget().getClass();
     }
     //返回对象
-    private Object returnObject(DoDoor doGate, Method method) throws
-            IllegalAccessException, InstantiationException {
+    private Object returnObject(DoDoor doGate, Method method) throws IllegalAccessException, InstantiationException {
         Class<?> returnType = method.getReturnType();
         String returnJson = doGate.returnJson();
         if ("".equals(returnJson)) {
@@ -80,6 +74,7 @@ public class DoJoinPoint {
         }
         return JSON.parseObject(returnJson, returnType);
     }
+
     //获取属性值
     private String getFiledValue(String filed, Object[] args) {
         String filedValue = null;
