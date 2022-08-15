@@ -1,6 +1,7 @@
 package org.wanbang.study.allDesignMode.constructMode.appearanceMode;
 
 import com.alibaba.fastjson.JSON;
+import org.apache.commons.beanutils.BeanUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -10,7 +11,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.wanbang.study.allDesignMode.constructMode.appearanceMode.annotation.DoDoor;
@@ -42,8 +42,7 @@ public class DoJoinPoint {
         DoDoor door = method.getAnnotation(DoDoor.class);
         //获取字段值
         String keyValue = getFiledValue(door.key(), jp.getArgs());
-        logger.info("itstack door handler method：{} value：{}",
-                method.getName(), keyValue);
+        logger.info("itstack door handler method：{} value：{}", method.getName(), keyValue);
         if (null == keyValue || "".equals(keyValue)) return jp.proceed();
         //配置内容
         String[] split = starterService.split(",");

@@ -13,6 +13,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class StarterServiceProperties {
     private String userStr;
     public String getUserStr() {
+        System.out.println("userStr:"+userStr);
         return userStr;
     }
 
