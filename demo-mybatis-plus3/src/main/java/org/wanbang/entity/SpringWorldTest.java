@@ -17,21 +17,18 @@ import java.io.Serializable;
 @AllArgsConstructor
 @TableName("spring_world")
 @Builder
-public class SpringWorld implements Serializable {
+public class SpringWorldTest implements Serializable {
     private static final long serialVersionUID = -83513220652821879L;
-    
+
     private Long id;
-    
+
     private Integer age;
-    
+
     private String name;
-    
+
     private String sex;
 
     private Integer value;
 
-    public SpringWorldTest getTest(){
-        return SpringWorldTest.builder().id((long) 2).age(5).build();
-    }
 }
 

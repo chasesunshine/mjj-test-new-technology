@@ -5,6 +5,7 @@ import cn.afterturn.easypoi.excel.entity.ImportParams;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.poi.excel.ExcelWriter;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.alibaba.schedulerx.shade.org.h2.schema.Constant;
@@ -92,32 +93,10 @@ public class TestController {
 //    }
 
     public static void main(String[] args) {
-//        String s1 = "13:58";
-//        String s2 = "13:59";
-//        Boolean value ;
-//        SimpleDateFormat sdf = new SimpleDateFormat("HH:ss");
-//        try {
-//            Date parse1 = sdf.parse(s1);
-//            Date parse2 = sdf.parse(s2);
-//
-//            int i = parse2.compareTo(parse1);
-//            if(i > 0 ){
-//                value = true;
-//            }else {
-//                value =  false;
-//            }
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//            value =  false;
-//        }
-//
-//        String s = "2";
-//        System.out.println(value);
+        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
+        String s = JSON.toJSONString(build);
+        System.out.println(s);
 
-        String a = "1.2";
-        String[] split = a.split("\\.");
-        System.out.println(split[0]);
-        System.out.println(split[1]);
     }
 
     @GetMapping("/import/file2")
