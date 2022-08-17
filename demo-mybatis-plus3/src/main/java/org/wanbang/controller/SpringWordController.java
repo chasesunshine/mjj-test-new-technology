@@ -84,5 +84,6 @@ public class SpringWordController {
         System.out.println(JSON.toJSONString(collect));
         System.out.println(JSON.toJSONString(collect1));
     }
+
 }
 
