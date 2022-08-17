@@ -16,6 +16,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 公众号：bugstack⾍洞栈
  * Create by ⼩傅哥(fustack) @2020
  */
+
+/**
+ *
+ * 这⾥处理模拟 redis 的操作⼯具类外，还提供了⼀个定时任务⽤于模拟库存的使⽤，这样⽅⾯我
+ * 们在测试的时候可以观察到库存的变化。
+ *
+ */
 public class RedisUtils {
     private ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
     private AtomicInteger stock = new AtomicInteger(0);

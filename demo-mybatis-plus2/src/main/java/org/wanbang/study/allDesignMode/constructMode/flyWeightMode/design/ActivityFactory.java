@@ -17,11 +17,20 @@ import java.util.Map;
  * 公众号：bugstack⾍洞栈
  * Create by ⼩傅哥(fustack) @2020
  */
+
+/**
+ * 这⾥提供的是⼀个享元⼯⼚ ，通过 map 结构存放已经从库表或者接⼝中查询到的数据，存放到
+ * 内存中，⽤于下次可以直接获取。
+ * 这样的结构⼀般在我们的编程开发中还是⽐较常⻅的，当然也有些时候为了分布式的获取，会把数
+ * 据存放到redis中，可以按需选择。
+ *
+ */
 public class ActivityFactory {
     static Map<Long, Activity> activityMap = new HashMap<Long, Activity>();
 
     public static Activity getActivity(Long id) {
         Activity activity = activityMap.get(id);
+
         if (null == activity) {
             // 模拟从实际业务应⽤从接⼝中获取活动信息
             activity = new Activity();
@@ -32,6 +41,7 @@ public class ActivityFactory {
             activity.setStopTime(new Date());
             activityMap.put(id, activity);
         }
+
         return activity;
     }
 }
