@@ -13,4 +13,5 @@ package org.wanbang.study.allDesignMode.constructMode;
  *
  */
 public class doc {
+
 }

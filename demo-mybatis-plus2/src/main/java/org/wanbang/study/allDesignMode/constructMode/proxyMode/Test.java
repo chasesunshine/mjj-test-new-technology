@@ -1,4 +1,9 @@
 package org.wanbang.study.allDesignMode.constructMode.proxyMode;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.wanbang.study.allDesignMode.constructMode.proxyMode.dao.IUserDao;
+
 /**
 * @description: TODO
 * @author majiajian
@@ -7,4 +12,10 @@ package org.wanbang.study.allDesignMode.constructMode.proxyMode;
 */
 
 public class Test {
+    public static void main(String[] args) {
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring-config.xml");
+        IUserDao userDao = beanFactory.getBean("userDao", IUserDao.class);
+        String res = userDao.queryUserInfo("100001");
+        System.out.println("测试结果：" + res);
+    }
 }
