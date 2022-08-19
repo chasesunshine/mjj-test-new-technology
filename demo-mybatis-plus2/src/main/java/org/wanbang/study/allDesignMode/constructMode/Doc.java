@@ -12,6 +12,6 @@ package org.wanbang.study.allDesignMode.constructMode;
  * 结构型模式包括：适配器、桥接、组合、装饰器、外观、享元、代理，这7类。
  *
  */
-public class doc {
+public class Doc {
 
 }

@@ -12,6 +12,6 @@ package org.wanbang.study.allDesignMode.createMode;
  *     创建者模式包括：⼯⼚⽅法、抽象⼯⼚、⽣成器、原型、单例，这5类
  *
  */
-public class doc {
+public class Doc {
 
 }
