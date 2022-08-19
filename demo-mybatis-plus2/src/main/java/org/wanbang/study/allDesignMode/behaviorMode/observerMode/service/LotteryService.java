@@ -32,7 +32,10 @@ public abstract class LotteryService {
     private EventManager eventManager;
 
     public LotteryService() {
+        //把事件类型放入 构造器初始化
         eventManager = new EventManager(EventManager.EventType.MQ, EventManager.EventType.Message);
+
+        // subscribe - 订阅
         eventManager.subscribe(EventManager.EventType.MQ, new MQEventListener());
         eventManager.subscribe(EventManager.EventType.Message, new MessageEventListener());
     }

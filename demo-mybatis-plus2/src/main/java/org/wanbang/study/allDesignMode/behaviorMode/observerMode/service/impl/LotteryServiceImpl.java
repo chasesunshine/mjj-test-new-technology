@@ -19,12 +19,17 @@ import java.util.Date;
 public class LotteryServiceImpl extends LotteryService {
     private MinibusTargetService minibusTargetService = new MinibusTargetService();
 
+    public LotteryServiceImpl(){
+        System.out.println("子类");
+    }
+
     @Override
     protected LotteryResult doDraw(String uId) {
         // 摇号
         String lottery = minibusTargetService.lottery(uId);
 
         // 结果
-        return new LotteryResult(uId, lottery, new Date());
+        LotteryResult lotteryResult = new LotteryResult(uId, lottery, new Date());
+        return lotteryResult;
     }
 }
