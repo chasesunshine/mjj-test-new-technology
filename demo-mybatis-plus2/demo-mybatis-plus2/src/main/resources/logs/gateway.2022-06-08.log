@@ -1,5 +1,5 @@
-2022-06-06 14:44:37.084 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 18024 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-06-06 14:44:37.217 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-06-06 14:44:37.084 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 18024 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-06-06 14:44:37.217 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
 2022-06-06 14:44:38.773 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-06-06 14:44:38.779 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-06-06 14:44:38.935 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 125ms. Found 0 repository interfaces.
@@ -23,7 +23,7 @@
 2022-06-06 14:44:44.537 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1716c037
 2022-06-06 14:44:44.700 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-06-06 14:44:44.701 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-06-06 14:44:44.719 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 8.872 seconds (JVM running for 10.953)
+2022-06-06 14:44:44.719 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Started TestMybatis in 8.872 seconds (JVM running for 10.953)
 2022-06-06 14:44:45.138 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-06 14:44:45.141 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-06 14:44:45.142 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -32,8 +32,8 @@
 2022-06-06 14:44:45.145 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-06 14:44:45.149 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-06 14:44:45.158 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-06 14:45:40.988 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 15836 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-06-06 14:45:41.022 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-06-06 14:45:40.988 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 15836 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-06-06 14:45:41.022 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
 2022-06-06 14:45:42.092 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-06-06 14:45:42.097 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-06-06 14:45:42.236 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 114ms. Found 0 repository interfaces.
@@ -57,7 +57,7 @@
 2022-06-06 14:45:47.698 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7c421952
 2022-06-06 14:45:48.025 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-06-06 14:45:48.025 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-06-06 14:45:48.039 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 7.75 seconds (JVM running for 9.196)
+2022-06-06 14:45:48.039 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Started TestMybatis in 7.75 seconds (JVM running for 9.196)
 2022-06-06 14:45:58.355 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-06 14:45:58.358 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-06 14:45:58.358 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -66,8 +66,8 @@
 2022-06-06 14:45:58.361 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-06 14:45:58.364 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-06 14:45:58.371 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-06 14:46:16.340 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 20672 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-06-06 14:46:16.341 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-06-06 14:46:16.340 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 20672 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-06-06 14:46:16.341 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
 2022-06-06 14:46:17.866 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-06-06 14:46:17.872 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-06-06 14:46:18.042 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 147ms. Found 0 repository interfaces.
@@ -91,7 +91,7 @@
 2022-06-06 14:46:23.624 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7848321e
 2022-06-06 14:46:23.812 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-06-06 14:46:23.812 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-06-06 14:46:23.827 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 8.391 seconds (JVM running for 9.798)
+2022-06-06 14:46:23.827 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Started TestMybatis in 8.391 seconds (JVM running for 9.798)
 2022-06-06 14:46:24.131 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-06 14:46:24.135 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-06 14:46:24.135 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -100,8 +100,8 @@
 2022-06-06 14:46:24.138 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-06 14:46:24.141 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-06 14:46:24.147 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-06 14:47:56.971 [main] INFO  org.wanbang.test.TestMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 22588 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-06-06 14:47:56.974 [main] INFO  org.wanbang.test.TestMybatis:  No active profile set, falling back to default profiles: default
+2022-06-06 14:47:56.971 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Starting TestMybatis on DESKTOP-RIVUA3L with PID 22588 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-06-06 14:47:56.974 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
 2022-06-06 14:47:58.427 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-06-06 14:47:58.432 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-06-06 14:47:58.568 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 112ms. Found 0 repository interfaces.
@@ -125,7 +125,7 @@
 2022-06-06 14:48:03.808 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@c6a692e
 2022-06-06 14:48:03.976 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-06-06 14:48:03.976 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-06-06 14:48:03.994 [main] INFO  org.wanbang.test.TestMybatis:  Started TestMybatis in 8.081 seconds (JVM running for 11.388)
+2022-06-06 14:48:03.994 [main] INFO  org.wanbang.test.TestEditing2ArraignmentMybatis:  Started TestMybatis in 8.081 seconds (JVM running for 11.388)
 2022-06-06 14:48:42.680 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-06 14:48:42.682 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-06 14:48:42.682 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
