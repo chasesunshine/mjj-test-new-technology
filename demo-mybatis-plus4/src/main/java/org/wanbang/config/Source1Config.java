@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 */
 
 @Configuration
-@MapperScan(basePackages = "org.wanbang.dao.source1dao", sqlSessionFactoryRef = "source1SqlSessionFactory")
+@MapperScan(basePackages = "org.wanbang.dao.source1dao", sqlSessionFactoryRef = "source1SqlSessionTemplate")
 public class Source1Config {
 
     @ConfigurationProperties(prefix = "spring.datasource.dynamic.datasource.source1")
