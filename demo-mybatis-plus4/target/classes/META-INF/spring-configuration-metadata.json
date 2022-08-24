@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.dynamic.datasource.source1",
+      "type": "javax.sql.DataSource",
+      "sourceType": "org.wanbang.config.Source1Config",
+      "sourceMethod": "mysqlDataSource(org.springframework.boot.autoconfigure.jdbc.DataSourceProperties)"
+    },
+    {
+      "name": "spring.datasource.dynamic.datasource.source2",
+      "type": "javax.sql.DataSource",
+      "sourceType": "org.wanbang.config.Source2Config",
+      "sourceMethod": "mysqlDataSource(org.springframework.boot.autoconfigure.jdbc.DataSourceProperties)"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

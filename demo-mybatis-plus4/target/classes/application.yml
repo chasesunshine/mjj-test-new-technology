@@ -1,0 +1,28 @@
+server:
+  port: 8100
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    druib:
+      source1:
+        #引入druid数据源
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/mjj_test4?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+        username: root
+        password: root
+      source2:
+        #引入druid数据源
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/mjj_test5?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+        username: root
+        password: root
+  main:
+    allow-bean-definition-overriding: true
+
+#mybatis-plush配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*/*.xml
+  configuration:
+    map-underscore-to-camel-case: true  #自动开启驼峰规则映射
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志
