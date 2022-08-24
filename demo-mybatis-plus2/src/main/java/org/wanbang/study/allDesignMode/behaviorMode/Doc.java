@@ -11,4 +11,5 @@ package org.wanbang.study.allDesignMode.behaviorMode;
  *
  */
 public class Doc {
+
 }

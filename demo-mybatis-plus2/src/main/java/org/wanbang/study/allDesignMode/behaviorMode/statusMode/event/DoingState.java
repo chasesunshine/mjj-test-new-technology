@@ -10,8 +10,8 @@ import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.State;
 * @date 2022/8/23 20:17
 * @version 1.0
 */
-
 public class DoingState extends State {
+
     @Override
     public Result arraignment(String activityId, Enum<Status> currentStatus) {
         return null;
@@ -46,4 +46,5 @@ public class DoingState extends State {
     public Result doing(String activityId, Enum<Status> currentStatus) {
         return null;
     }
+
 }

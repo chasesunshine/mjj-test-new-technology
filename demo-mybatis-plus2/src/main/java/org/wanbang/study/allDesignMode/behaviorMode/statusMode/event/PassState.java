@@ -1,17 +1,18 @@
 package org.wanbang.study.allDesignMode.behaviorMode.statusMode.event;
-/**
-* @description: TODO
-* @author majiajian
-* @date 2022/8/23 20:18
-* @version 1.0
-*/
+
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.enums.Status;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.Result;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.State;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.service.ActivityService;
 
-
+/**
+ * @description: TODO
+ * @author majiajian
+ * @date 2022/8/23 20:18
+ * @version 1.0
+ */
 public class PassState extends State {
+
     public Result arraignment(String activityId, Enum<Status> currentStatus) {
         return new Result("0001", "已审核状态不可重复提审");
     }
@@ -25,7 +26,6 @@ public class PassState extends State {
         return new Result("0000", "活动审核拒绝完成");
     }
 
-    @Override
     public Result checkRevoke(String activityId, Enum<Status> currentStatus) {
         return new Result("0001", "审核通过不可撤销(可先拒绝审核)");
     }
@@ -43,4 +43,5 @@ public class PassState extends State {
         ActivityService.execStatus(activityId, currentStatus, Status.Doing);
         return new Result("0000", "活动变更活动中完成");
     }
+
 }

@@ -8,7 +8,6 @@ import org.wanbang.study.allDesignMode.behaviorMode.statusMode.enums.Status;
  * @date 2022/8/23 20:19
  * @version 1.0
  */
-
 public abstract class State {
     /**
      *  活动提审

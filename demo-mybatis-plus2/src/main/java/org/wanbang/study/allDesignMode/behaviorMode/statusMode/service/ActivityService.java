@@ -2,20 +2,9 @@ package org.wanbang.study.allDesignMode.behaviorMode.statusMode.service;
 
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.entity.ActivityInfo;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.enums.Status;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
-/**
- * @description: TODO
- * @author majiajian
- * @date 2022/8/23 20:23
- * @version 1.0
- */
-
 import java.util.Date;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 类名称:ActivityService
@@ -62,7 +51,7 @@ public class ActivityService {
      * @param afterStatus
      */
     public static synchronized void execStatus(String activityId, Enum<Status> beforeStatus, Enum<Status> afterStatus) {
-        if (! beforeStatus.equals(statusMap.get(activityId))) return;
+        if (!beforeStatus.equals(statusMap.get(activityId))) return;
         statusMap.put(activityId, afterStatus);
     }
 }

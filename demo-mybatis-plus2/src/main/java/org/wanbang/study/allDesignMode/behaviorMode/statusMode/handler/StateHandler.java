@@ -2,7 +2,6 @@ package org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler;
 
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.enums.Status;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.event.*;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -12,7 +11,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date 2022/8/23 20:19
  * @version 1.0
  */
-
 public class StateHandler {
     private Map<Enum<Status>, State> stateMap = new ConcurrentHashMap<Enum<Status>, State>();
 
@@ -25,36 +23,33 @@ public class StateHandler {
         stateMap.put(Status.Pass, new PassState()); // 审核通过
         stateMap.put(Status.Refuse, new RefuseState()); // 审核拒绝
     }
-    public Result arraignment(String activityId, Enum<Status>
-            currentStatus) {
-        return stateMap.get(currentStatus).arraignment(activityId, currentStatus);
+
+    public Result arraignment(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).arraignment(activityId,currentStatus);
     }
-    public Result checkPass(String activityId, Enum<Status> currentStatus)
-    {
-        return stateMap.get(currentStatus).checkPass(activityId,
-                currentStatus);
+
+    public Result checkPass(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).checkPass(activityId,currentStatus);
     }
-    public Result checkRefuse(String activityId, Enum<Status>
-            currentStatus) {
-        return stateMap.get(currentStatus).checkRefuse(activityId,
-                currentStatus);
+
+    public Result checkRefuse(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).checkRefuse(activityId,currentStatus);
     }
-    public Result checkRevoke(String activityId, Enum<Status>
-            currentStatus) {
-        return stateMap.get(currentStatus).checkRevoke(activityId,
-                currentStatus);
+
+    public Result checkRevoke(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).checkRevoke(activityId,currentStatus);
     }
-    public Result close(String activityId, Enum<Status> currentStatus) {
-        return stateMap.get(currentStatus).close(activityId,
-                currentStatus);
+
+    public Result close(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).close(activityId,currentStatus);
     }
-    public Result open(String activityId, Enum<Status> currentStatus) {
-        return stateMap.get(currentStatus).open(activityId,
-                currentStatus);
+
+    public Result open(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).open(activityId,currentStatus);
     }
-    public Result doing(String activityId, Enum<Status> currentStatus) {
-        return stateMap.get(currentStatus).doing(activityId,
-                currentStatus);
+
+    public Result doing(String activityId, Enum<Status> currentStatus){
+        return stateMap.get(currentStatus).doing(activityId,currentStatus);
     }
 
 }

@@ -10,8 +10,8 @@ import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.State;
 * @date 2022/8/23 20:18
 * @version 1.0
 */
-
 public class RefuseState extends State {
+
     @Override
     public Result arraignment(String activityId, Enum<Status> currentStatus) {
         return null;

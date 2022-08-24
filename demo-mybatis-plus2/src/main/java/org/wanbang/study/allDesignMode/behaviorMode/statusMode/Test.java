@@ -14,7 +14,6 @@ import org.wanbang.study.allDesignMode.behaviorMode.statusMode.service.ActivityS
 * @date 2022/8/23 20:14
 * @version 1.0
 */
-
 public class Test {
     private static Logger logger = LoggerFactory.getLogger(Test.class);
 
@@ -23,6 +22,7 @@ public class Test {
         ActivityService.init(activityId, Status.Editing);
         StateHandler stateHandler = new StateHandler();
         Result result = stateHandler.arraignment(activityId, Status.Editing);
+
         logger.info("测试结果(编辑中To提审活动)：{}", JSON.toJSONString(result));
         logger.info("活动信息：{} 状态：{}", JSON.toJSONString(ActivityService.queryActivityInfo(activityId)), JSON.toJSONString(ActivityService.queryActivityInfo(activityId).getStatus()));
 

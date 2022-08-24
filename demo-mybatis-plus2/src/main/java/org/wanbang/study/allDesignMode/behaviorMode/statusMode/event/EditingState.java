@@ -1,19 +1,18 @@
 package org.wanbang.study.allDesignMode.behaviorMode.statusMode.event;
-/**
- * @description: TODO
- * @author majiajian
- * @date 2022/8/23 20:18
- * @version 1.0
- */
 
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.enums.Status;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.Result;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.State;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.service.ActivityService;
 
+/**
+ * @description: TODO
+ * @author majiajian
+ * @date 2022/8/23 20:17
+ * @version 1.0
+ */
 public class EditingState extends State {
 
-    @Override
     public Result arraignment(String activityId, Enum<Status> currentStatus) {
         // 活动编辑状态 变为提审状态
         ActivityService.execStatus(activityId, currentStatus, Status.Check);
@@ -28,7 +27,6 @@ public class EditingState extends State {
         return new Result("0001", "编辑中不可审核拒绝");
     }
 
-    @Override
     public Result checkRevoke(String activityId, Enum<Status> currentStatus) {
         return new Result("0001", "编辑中不可撤销审核");
     }
@@ -45,4 +43,5 @@ public class EditingState extends State {
     public Result doing(String activityId, Enum<Status> currentStatus) {
         return new Result("0001", "编辑中活动不可执行活动中变更");
     }
+
 }

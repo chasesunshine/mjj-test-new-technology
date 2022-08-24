@@ -3,6 +3,7 @@ package org.wanbang.study.allDesignMode.behaviorMode.statusMode.event;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.enums.Status;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.Result;
 import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.State;
+import org.wanbang.study.allDesignMode.behaviorMode.statusMode.service.ActivityService;
 
 /**
  * @description: TODO
@@ -10,8 +11,6 @@ import org.wanbang.study.allDesignMode.behaviorMode.statusMode.handler.State;
  * @date 2022/8/23 20:17
  * @version 1.0
  */
-import org.wanbang.study.allDesignMode.behaviorMode.statusMode.service.ActivityService;
-
 public class CheckState extends State {
 
     public Result arraignment(String activityId, Enum<Status> currentStatus) {

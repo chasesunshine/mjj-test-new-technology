@@ -14,4 +14,5 @@ package org.wanbang.study.allDesignMode.behaviorMode.statusMode;
  *
  */
 public class Doc {
+
 }
