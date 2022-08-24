@@ -46,7 +46,7 @@ public class Source2Config {
         return sqlSessionFactoryBean.getObject();
     }
 
-    @Bean("source2SqlSessionFactory")
+    @Bean("source2SqlSessionTemplate")
     @Primary
     public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source2SqlSessionFactory")SqlSessionFactory sqlSessionFactory) throws Exception {
         SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
