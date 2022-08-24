@@ -17,6 +17,7 @@
         <module>demo-job</module>
         <module>spring-bilibili-study</module>
         <module>demo-mybatis-plus3</module>
+        <module>demo-mybatis-plus4</module>
     </modules>
 
     <parent>
