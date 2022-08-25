@@ -35,6 +35,9 @@ public class SpringWordServiceImpl implements SpringWordService {
         return this.springWorldDao.queryById(id);
     }
 
+
+
+
     @Override
     public SpringWorld updateOne(long l) {
         try {
@@ -83,4 +86,5 @@ public class SpringWordServiceImpl implements SpringWordService {
         }
         return update;
     }
+
 }
