@@ -11,6 +11,8 @@ import org.wanbang.entity.TestUser1;
  * @since 2022-06-16 10:17:36
  */
 public interface TestUser1Dao extends BaseMapper<TestUser1> {
+
     TestUser1 queryById(@Param("id") Long id);
+
 }
 

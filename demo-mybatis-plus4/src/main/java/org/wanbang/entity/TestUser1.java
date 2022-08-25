@@ -2,7 +2,6 @@ package org.wanbang.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
-
 import java.io.Serializable;
 
 /**

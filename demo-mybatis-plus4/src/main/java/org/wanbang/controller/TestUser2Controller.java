@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.wanbang.entity.TestUser2;
 import org.wanbang.service.TestUser2Service;
-
 import javax.annotation.Resource;
 
 /**

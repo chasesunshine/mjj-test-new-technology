@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.wanbang.dao.source1dao.TestUser1Dao;
 import org.wanbang.service.TestUser1Service;
 import org.wanbang.entity.TestUser1;
-
 import javax.annotation.Resource;
 
 /**

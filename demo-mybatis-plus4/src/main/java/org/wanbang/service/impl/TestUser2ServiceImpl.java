@@ -3,10 +3,8 @@ package org.wanbang.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.wanbang.dao.source2dao.TestUser2Dao;
-import org.wanbang.entity.TestUser1;
 import org.wanbang.entity.TestUser2;
 import org.wanbang.service.TestUser2Service;
-
 import javax.annotation.Resource;
 
 /**

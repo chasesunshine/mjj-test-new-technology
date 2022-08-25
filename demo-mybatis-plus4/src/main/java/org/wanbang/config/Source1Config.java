@@ -1,10 +1,8 @@
 package org.wanbang.config;
 
-import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.annotation.MapperScan;
-import org.mybatis.spring.boot.autoconfigure.MybatisProperties;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -23,7 +21,6 @@ import javax.sql.DataSource;
  * @date 2022/8/24 19:08
  * @version 1.0
  */
-
 @Configuration
 @MapperScan(basePackages = "org.wanbang.dao.source1dao", sqlSessionFactoryRef = "source1SqlSessionFactory")
 public class Source1Config {
