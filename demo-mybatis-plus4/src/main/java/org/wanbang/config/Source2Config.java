@@ -18,18 +18,18 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 /**
-* @description: TODO
-* @author majiajian
-* @date 2022/8/24 19:08
-* @version 1.0
-*/
+ * @description: TODO
+ * @author majiajian
+ * @date 2022/8/24 19:08
+ * @version 1.0
+ */
 
 @Configuration
-@MapperScan(basePackages = "org.wanbang.dao.source2dao", sqlSessionFactoryRef = "source2SqlSessionTemplate")
+@MapperScan(basePackages = "org.wanbang.dao.source2dao", sqlSessionFactoryRef = "source2SqlSessionFactory")
 public class Source2Config {
 
-    @ConfigurationProperties(prefix = "spring.datasource.dynamic.datasource.source2")
     @Primary
+    @ConfigurationProperties(prefix = "spring.datasource.source2")
     @Bean("source2DataSource")
     public DataSource mysqlDataSource(DataSourceProperties properties){
         return DataSourceBuilder.create(properties.getClassLoader())
@@ -37,8 +37,8 @@ public class Source2Config {
                 .build();
     }
 
-    @Bean("source2SqlSessionFactory")
     @Primary
+    @Bean("source2SqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory(@Qualifier("source2DataSource") DataSource dataSource) throws Exception {
         MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
@@ -46,16 +46,16 @@ public class Source2Config {
         return sqlSessionFactoryBean.getObject();
     }
 
-    @Bean("source2SqlSessionTemplate")
-    @Primary
-    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source2SqlSessionFactory")SqlSessionFactory sqlSessionFactory) throws Exception {
-        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
-        return sqlSessionTemplate;
-    }
-
     @Bean("source2TransactionManager")
     public DataSourceTransactionManager transactionManager(@Qualifier("source2DataSource") DataSource dataSource){
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);
         return transactionManager;
     }
+
+//    @Bean("source2SqlSessionTemplate")
+//    @Primary
+//    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source2SqlSessionFactory")SqlSessionFactory sqlSessionFactory) throws Exception {
+//        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
+//        return sqlSessionTemplate;
+//    }
 }

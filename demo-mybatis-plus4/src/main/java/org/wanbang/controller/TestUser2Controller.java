@@ -23,7 +23,7 @@ public class TestUser2Controller {
 
     @GetMapping("/selectOne")
     public String selectOne() {
-        TestUser2 testUser2 = testUser2Service.queryById((long) 1);
+        TestUser2 testUser2 = testUser2Service.queryById((long) 11);
         return JSON.toJSONString(testUser2);
     }
 }
