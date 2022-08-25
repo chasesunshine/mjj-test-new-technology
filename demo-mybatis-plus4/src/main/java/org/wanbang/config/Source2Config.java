@@ -30,9 +30,7 @@ public class Source2Config {
     @ConfigurationProperties(prefix = "spring.datasource.source2")
     @Bean("source2DataSource")
     public DataSource mysqlDataSource(DataSourceProperties properties){
-        return DataSourceBuilder.create(properties.getClassLoader())
-                .type(HikariDataSource.class)
-                .build();
+        return DataSourceBuilder.create().build();
     }
 
     @Primary
