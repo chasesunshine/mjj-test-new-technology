@@ -1,8 +1,8 @@
 package org.wanbang.config;
 
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
-import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -48,10 +48,10 @@ public class Source2Config {
         return transactionManager;
     }
 
-//    @Bean("source2SqlSessionTemplate")
-//    @Primary
-//    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source2SqlSessionFactory")SqlSessionFactory sqlSessionFactory) throws Exception {
-//        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
-//        return sqlSessionTemplate;
-//    }
+    @Bean("source2SqlSessionTemplate")
+    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source2SqlSessionFactory")SqlSessionFactory sqlSessionFactory) {
+        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
+        return sqlSessionTemplate;
+    }
+
 }

@@ -1,7 +1,9 @@
 package org.wanbang.config;
 
+import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -34,11 +36,21 @@ public class Source1Config {
 
     @Primary
     @Bean("source1SqlSessionFactory")
-    public SqlSessionFactory sqlSessionFactory(@Qualifier("source1DataSource") DataSource dataSource) throws Exception {
+    public SqlSessionFactory sqlSessionFactory(@Qualifier("source1DataSource") DataSource dataSource , @Qualifier("mybatisConfiguration") MybatisConfiguration config) throws Exception {
         MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
         sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/mapper1/*Dao.xml"));
+
+        // 设置当前数据源的配置
+        sqlSessionFactoryBean.setConfiguration(config);
         return sqlSessionFactoryBean.getObject();
+    }
+
+    // 注入 MyBatisPlus 的配置属性
+    @Bean("mybatisConfiguration")
+    @ConfigurationProperties(prefix = "mybatis-plus.configuration")
+    public MybatisConfiguration globalConfiguration() {
+        return new MybatisConfiguration();
     }
 
     @Bean("source1TransactionManager")
@@ -47,10 +59,10 @@ public class Source1Config {
         return transactionManager;
     }
 
-//    @Bean("source1SqlSessionTemplate")
-//    @Primary
-//    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source1SqlSessionFactory")SqlSessionFactory sqlSessionFactory) throws Exception {
-//        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
-//        return sqlSessionTemplate;
-//    }
+    @Bean("source1SqlSessionTemplate")
+    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("source1SqlSessionFactory")SqlSessionFactory sqlSessionFactory) {
+        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
+        return sqlSessionTemplate;
+    }
+
 }
