@@ -37,6 +37,7 @@ public abstract class NetMall {
         Map<String, String> reptile = reptile(skuUrl); // 2. 爬⾍商品
         return createBase64(reptile); // 3. 组装海报
     }
+
     // 模拟登录
     protected abstract Boolean login(String uId, String uPwd);
 
