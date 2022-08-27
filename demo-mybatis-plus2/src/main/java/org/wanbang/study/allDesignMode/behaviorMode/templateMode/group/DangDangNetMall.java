@@ -30,7 +30,6 @@ public class DangDangNetMall extends NetMall {
 
     @Override
     public Map<String, String> reptile(String skuUrl) {
-
         String str = HttpClient.doGet(skuUrl,null);
         Pattern p9 = Pattern.compile("(?<=title\\>).*(?=</title)");
         Matcher m9 = p9.matcher(str);
@@ -39,8 +38,7 @@ public class DangDangNetMall extends NetMall {
             map.put("name", m9.group());
         }
         map.put("price", "4548.00");
-        logger.info("模拟当当商品爬⾍解析：{} | {} 元 {}", map.get("name"),
-                map.get("price"), skuUrl);
+        logger.info("模拟当当商品爬⾍解析：{} | {} 元 {}", map.get("name"),map.get("price"), skuUrl);
         return map;
     }
     @Override

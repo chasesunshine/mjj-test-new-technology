@@ -25,6 +25,7 @@ public abstract class NetMall {
         this.uId = uId;
         this.uPwd = uPwd;
     }
+
     /**
      * ⽣成商品推⼴海报
      *
@@ -38,8 +39,10 @@ public abstract class NetMall {
     }
     // 模拟登录
     protected abstract Boolean login(String uId, String uPwd);
+
     // 爬⾍提取商品信息(登录后的优惠价格)
     protected abstract Map<String, String> reptile(String skuUrl);
+
     // ⽣成商品海报信息
     protected abstract String createBase64(Map<String, String> goodsInfo);
 }
