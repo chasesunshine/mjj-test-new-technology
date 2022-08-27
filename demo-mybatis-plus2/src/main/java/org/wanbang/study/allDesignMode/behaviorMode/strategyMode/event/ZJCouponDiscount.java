@@ -5,12 +5,11 @@ import org.wanbang.study.allDesignMode.behaviorMode.strategyMode.common.ICouponD
 import java.math.BigDecimal;
 
 /**
- * @description: TODO
+ * @description: 优惠券接⼝实现 - 直减
  * @author majiajian
  * @date 2022/8/25 12:25
  * @version 1.0
  */
-
 public class ZJCouponDiscount implements ICouponDiscount<Double> {
 
     /**

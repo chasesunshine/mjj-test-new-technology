@@ -22,11 +22,14 @@ public class TestMj {
     
     public static void main(String[] args) {
         // 满100减10，商品100元
-        Context<Map<String,String>> context = new Context<Map<String,String>>(new MJCouponDiscount());
-        Map<String,String> mapReq = new HashMap<String, String>();
+        Context<Map<String,String>> context = new Context<>(new MJCouponDiscount());
+
+        Map<String,String> mapReq = new HashMap<>();
         mapReq.put("x","100");
         mapReq.put("n","10");
+
         BigDecimal discountAmount = context.discountAmount(mapReq, new BigDecimal(100));
         logger.info("测试结果：满减优惠后⾦额 {}", discountAmount);
     }
+
 }

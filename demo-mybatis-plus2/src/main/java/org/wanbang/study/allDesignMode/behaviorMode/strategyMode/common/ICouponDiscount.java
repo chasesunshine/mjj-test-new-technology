@@ -3,7 +3,7 @@ package org.wanbang.study.allDesignMode.behaviorMode.strategyMode.common;
 import java.math.BigDecimal;
 
 /**
-* @description: TODO
+* @description: 优惠券接⼝
 * @author majiajian
 * @date 2022/8/25 12:26
 * @version 1.0

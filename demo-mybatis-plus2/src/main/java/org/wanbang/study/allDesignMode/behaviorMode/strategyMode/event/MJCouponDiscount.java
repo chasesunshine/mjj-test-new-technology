@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 /**
-* @description: TODO
+* @description: 优惠券接⼝实现 - 满减
 * @author majiajian
 * @date 2022/8/25 12:25
 * @version 1.0
