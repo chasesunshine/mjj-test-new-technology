@@ -35,4 +35,5 @@ public class DataView {
             user.accept(visitor);
         }
     }
+
 }

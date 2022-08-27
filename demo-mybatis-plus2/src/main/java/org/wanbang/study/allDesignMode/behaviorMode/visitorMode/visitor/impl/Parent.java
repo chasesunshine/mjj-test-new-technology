@@ -21,8 +21,7 @@ public class Parent implements Visitor {
     }
 
     public void visit(Teacher teacher) {
-        logger.info("⽼师信息 姓名：{} 班级：{} 级别：{}", teacher.name,
-                teacher.clazz, teacher.identity);
+        logger.info("⽼师信息 姓名：{} 班级：{} 级别：{}", teacher.name, teacher.clazz, teacher.identity);
     }
 
 }
