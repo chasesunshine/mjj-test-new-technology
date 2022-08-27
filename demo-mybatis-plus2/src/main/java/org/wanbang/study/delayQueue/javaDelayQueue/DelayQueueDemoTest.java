@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
 public class DelayQueueDemoTest {
 
     public static void main(String[] args) throws InterruptedException {
-        Order Order1 = new Order("Order1", 5, TimeUnit.SECONDS);
-        Order Order2 = new Order("Order2", 10, TimeUnit.SECONDS);
-        Order Order3 = new Order("Order3", 15, TimeUnit.SECONDS);
+        Order Order1 = new Order("Order1", 6, TimeUnit.SECONDS);
+        Order Order2 = new Order("Order2", 12, TimeUnit.SECONDS);
+        Order Order3 = new Order("Order3", 16, TimeUnit.SECONDS);
         DelayQueue<Order> delayQueue = new DelayQueue<>();
         delayQueue.put(Order1);
         delayQueue.put(Order2);
@@ -27,7 +27,7 @@ public class DelayQueueDemoTest {
             if (task != null) {
                 System.out.format("订单:{%s}被取消, 取消时间:{%s}\n", task.name, LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
             }
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         }
     }
 }
