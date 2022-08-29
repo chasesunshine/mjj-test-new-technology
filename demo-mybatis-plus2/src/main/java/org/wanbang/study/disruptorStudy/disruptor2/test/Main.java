@@ -36,7 +36,8 @@ public class Main {
 
         //菱形操作
         //使用disruptor创建消费者组C1,C2
-        EventHandlerGroup<Trade> handlerGroup = disruptor.handleEventsWith(new Handler1(), new Handler2());
+        EventHandlerGroup<Trade> handlerGroup = disruptor.handleEventsWith(new Handler1());
+        handlerGroup.then(new Handler2());
         //声明在C1,C2完事之后执行JMS消息发送操作 也就是流程走到C3
         handlerGroup.then(new Handler3());
 
