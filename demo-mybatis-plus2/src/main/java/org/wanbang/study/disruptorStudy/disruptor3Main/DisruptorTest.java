@@ -25,26 +25,6 @@ public class DisruptorTest {
         }
     }
 
-//    /**
-//     * 消息生产者类
-//     */
-//    public static class MessageEventProducer{
-//        private RingBuffer<MessageEvent> ringBuffer;
-//
-//        public MessageEventProducer(RingBuffer<MessageEvent> ringBuffer) {
-//            this.ringBuffer = ringBuffer;
-//        }
-//
-//        /**
-//         * 将接收到的消息输出到ringBuffer
-//         * @param message
-//         */
-//        public void onData(String message){
-//            EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
-//            ringBuffer.publishEvent(translator,message);
-//        }
-//    }
-
     /**
      * 1. 创建 Disruptor 对象（参数）
      *      - 消息事件工厂类        implements EventFactory<T>

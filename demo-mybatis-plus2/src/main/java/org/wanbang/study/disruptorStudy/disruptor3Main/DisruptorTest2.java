@@ -14,6 +14,7 @@ import org.wanbang.study.disruptorStudy.disruptor3Main.handler.MessageExceptionH
 
 @Slf4j
 public class DisruptorTest2 {
+
     /**
      * 消息转换类，负责将消息转换为事件
      */
@@ -35,15 +36,27 @@ public class DisruptorTest2 {
             this.ringBuffer = ringBuffer;
         }
 
-        /**
-         * 将接收到的消息输出到ringBuffer
-         * @param message
-         */
-        public void onData(String message){
-            EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
-            ringBuffer.publishEvent(translator,message);
-        }
     }
+
+    //    /**
+    //     * 消息生产者类
+    //     */
+    //    public static class MessageEventProducer{
+    //        private RingBuffer<MessageEvent> ringBuffer;
+    //
+    //        public MessageEventProducer(RingBuffer<MessageEvent> ringBuffer) {
+    //            this.ringBuffer = ringBuffer;
+    //        }
+    //
+    //        /**
+    //         * 将接收到的消息输出到ringBuffer
+    //         * @param message
+    //         */
+    //        public void onData(String message){
+    //            EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
+    //            ringBuffer.publishEvent(translator,message);
+    //        }
+    //    }
 
     /**
      * 1. 创建 Disruptor 对象（参数）
@@ -85,7 +98,10 @@ public class DisruptorTest2 {
         // 启动 disruptor 返回 RingBuffer对象
         RingBuffer<MessageEvent> ringBuffer = disruptor.start();
         MessageEventProducer producer = new MessageEventProducer(ringBuffer);
-        producer.onData(message);
+
+        // 将接收到的消息输出到ringBuffer
+        EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
+        ringBuffer.publishEvent(translator,message);
 
     }
 }
