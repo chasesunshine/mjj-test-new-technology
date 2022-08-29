@@ -97,11 +97,11 @@ public class DisruptorTest2 {
 
         // 启动 disruptor 返回 RingBuffer对象
         RingBuffer<MessageEvent> ringBuffer = disruptor.start();
-        MessageEventProducer producer = new MessageEventProducer(ringBuffer);
 
         // 将接收到的消息输出到ringBuffer
         EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
         ringBuffer.publishEvent(translator,message);
 
+        disruptor.shutdown();
     }
 }

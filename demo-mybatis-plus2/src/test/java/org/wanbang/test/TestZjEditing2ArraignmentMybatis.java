@@ -6,6 +6,8 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.lmax.disruptor.EventTranslatorOneArg;
+import com.lmax.disruptor.RingBuffer;
 import com.sun.xml.internal.ws.util.UtilException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +17,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import org.wanbang.mapper.CityMapper;
 import org.wanbang.entity.City;
+import org.wanbang.study.disruptorStudy.disruptor3Main.DisruptorTest2;
+import org.wanbang.study.disruptorStudy.disruptor3Main.event.MessageEvent;
 
 import javax.annotation.Resource;
 import java.lang.reflect.Field;
@@ -31,6 +35,8 @@ public class TestZjEditing2ArraignmentMybatis {
 
 	@Resource
 	private CityMapper cityMapper;
+	@Resource
+	private RingBuffer ringBuffer;
 
 	private static final Charset ENCODER = StandardCharsets.UTF_8;
 	private static final MessageDigest MESSAGE;
@@ -44,6 +50,16 @@ public class TestZjEditing2ArraignmentMybatis {
 			throw new UtilException("获取MD5 对象失败", e);
 		}
 	}
+
+	@Test
+	public void testDis() {
+		String message = "Hello Disruptor!";
+
+		// 将接收到的消息输出到ringBuffer
+		EventTranslatorOneArg<MessageEvent,String> translator = new DisruptorTest2.MessageEventTranslator();
+		ringBuffer.publishEvent(translator,message);
+	}
+
 
 	@Test
 	public void testQueryUser1() {
@@ -167,7 +183,6 @@ public class TestZjEditing2ArraignmentMybatis {
 	/**
 	 * 转化成16 进制
 	 *
-	 * @param ib byte
 	 * @return java.lang.String
 	 */
 	@Test
@@ -204,5 +219,8 @@ public class TestZjEditing2ArraignmentMybatis {
 		System.out.println(result);
 		System.out.println(result2);
 	}
+
+
+
 
 }
