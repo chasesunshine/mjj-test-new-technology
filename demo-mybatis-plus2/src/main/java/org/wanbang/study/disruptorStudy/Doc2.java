@@ -1,6 +1,6 @@
 package org.wanbang.study.disruptorStudy;
 
-public class doc2 {
+public class Doc2 {
     // Disruptor 系列（二）使用场景
     // https://www.cnblogs.com/binarylei/p/9221560.html
 

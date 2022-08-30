@@ -94,9 +94,10 @@ public class DisruptorTest2 {
         disruptor.handleEventsWith(new MessageEventHandler());
         // 设置 异常处理类
         disruptor.setDefaultExceptionHandler(new MessageExceptionHandler());
-
-        // 启动 disruptor 返回 RingBuffer对象
-        RingBuffer<MessageEvent> ringBuffer = disruptor.start();
+        // 启动 disruptor
+        disruptor.start();
+        // 获取 RingBuffer对象
+        RingBuffer<MessageEvent> ringBuffer = disruptor.getRingBuffer();
 
         // 将接收到的消息输出到ringBuffer
         EventTranslatorOneArg<MessageEvent,String> translator = new MessageEventTranslator();
