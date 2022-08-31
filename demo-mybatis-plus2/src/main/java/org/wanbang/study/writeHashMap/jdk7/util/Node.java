@@ -1,4 +1,4 @@
-package org.wanbang.study.writeHashMap.util;
+package org.wanbang.study.writeHashMap.jdk7.util;
 /**
 * @description: TODO
 * @author majiajian

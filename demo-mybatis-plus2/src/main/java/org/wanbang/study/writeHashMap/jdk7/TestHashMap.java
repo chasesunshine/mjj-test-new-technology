@@ -1,9 +1,6 @@
-package org.wanbang.study.writeHashMap;
+package org.wanbang.study.writeHashMap.jdk7;
 
-import com.alibaba.schedulerx.shade.scala.collection.mutable.HashTable;
-import org.wanbang.study.writeHashMap.util.MyHashMap;
-
-import java.util.Hashtable;
+import org.wanbang.study.writeHashMap.jdk7.util.MyHashMap;
 
 /**
 * @description: TODO

@@ -1,7 +1,5 @@
 package org.wanbang.study.writeHashMap;
 
-import org.wanbang.study.writeHashMap.util.MyHashMap;
-
 import java.util.Hashtable;
 
 /**

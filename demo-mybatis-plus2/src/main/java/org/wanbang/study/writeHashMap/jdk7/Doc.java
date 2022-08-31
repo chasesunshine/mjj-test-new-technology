@@ -1,4 +1,4 @@
-package org.wanbang.study.writeHashMap;
+package org.wanbang.study.writeHashMap.jdk7;
 /**
 * @description: 手写一个简单的HashMap
 * @author majiajian
