@@ -21,7 +21,7 @@ public class SyncThread implements Runnable {
         }
     }
 
-    public synchronized void run() {
+    public void run() {
         method();
     }
 }
