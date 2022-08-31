@@ -1,5 +1,5 @@
-2022-08-29 14:27:19.286 [main] INFO  org.wanbang.test.TestZjEditing2ArraignmentMybatis:  Starting TestZjEditing2ArraignmentMybatis on DFSH2617 with PID 22296 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:27:19.316 [main] INFO  org.wanbang.test.TestZjEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
+2022-08-29 14:27:19.286 [main] INFO  org.wanbang.test.TestHashMapZjEditing2ArraignmentMybatis:  Starting TestZjEditing2ArraignmentMybatis on DFSH2617 with PID 22296 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:27:19.316 [main] INFO  org.wanbang.test.TestHashMapZjEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
 2022-08-29 14:27:20.336 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:27:20.339 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:27:20.424 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 70ms. Found 0 repository interfaces.
@@ -50,7 +50,7 @@
 2022-08-29 14:27:24.086 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@503a7990
 2022-08-29 14:27:24.197 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:27:24.198 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:27:24.208 [main] INFO  org.wanbang.test.TestZjEditing2ArraignmentMybatis:  Started TestZjEditing2ArraignmentMybatis in 5.485 seconds (JVM running for 7.133)
+2022-08-29 14:27:24.208 [main] INFO  org.wanbang.test.TestHashMapZjEditing2ArraignmentMybatis:  Started TestZjEditing2ArraignmentMybatis in 5.485 seconds (JVM running for 7.133)
 2022-08-29 14:27:37.573 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
 2022-08-29 14:27:37.584 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-08-29 14:27:37.586 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
@@ -60,8 +60,8 @@
 2022-08-29 14:27:37.588 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-08-29 14:27:37.589 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-08-29 14:27:37.594 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:29:04.380 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 21732 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:29:04.383 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:29:04.380 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 21732 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:29:04.383 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:29:05.298 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:29:05.300 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:29:05.379 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
@@ -112,7 +112,7 @@
 2022-08-29 14:29:08.557 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@59a2388e
 2022-08-29 14:29:08.679 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:29:08.680 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:29:08.690 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.109 seconds (JVM running for 6.11)
+2022-08-29 14:29:08.690 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 5.109 seconds (JVM running for 6.11)
 2022-08-29 14:29:08.867 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
 2022-08-29 14:29:08.874 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-08-29 14:29:08.876 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
@@ -122,8 +122,8 @@
 2022-08-29 14:29:08.878 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-08-29 14:29:08.879 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-08-29 14:29:08.882 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:34:08.293 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 17764 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:34:08.294 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:34:08.293 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 17764 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:34:08.294 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:34:09.199 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:34:09.202 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:34:09.274 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 61ms. Found 0 repository interfaces.
@@ -174,7 +174,7 @@
 2022-08-29 14:34:12.326 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@68ef01a5
 2022-08-29 14:34:12.416 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:34:12.416 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:34:12.424 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 4.809 seconds (JVM running for 5.723)
+2022-08-29 14:34:12.424 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 4.809 seconds (JVM running for 5.723)
 2022-08-29 14:34:12.601 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
 2022-08-29 14:34:12.607 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-08-29 14:34:12.608 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
@@ -184,8 +184,8 @@
 2022-08-29 14:34:12.610 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-08-29 14:34:12.611 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-08-29 14:34:12.614 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:36:14.568 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 21664 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:36:14.570 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:36:14.568 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 21664 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:36:14.570 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:36:15.807 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:36:15.812 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:36:15.934 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 97ms. Found 0 repository interfaces.
@@ -199,8 +199,8 @@
 2022-08-29 14:36:16.225 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
 2022-08-29 14:36:16.225 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-08-29 14:36:16.848 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fcc914b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:36:18.062 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 15792 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:36:18.064 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:36:18.062 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 15792 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:36:18.064 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:36:19.265 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:36:19.267 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:36:19.363 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
@@ -265,7 +265,7 @@
 
 2022-08-29 14:36:22.275 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:36:22.275 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:36:22.303 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 8.455 seconds (JVM running for 10.01)
+2022-08-29 14:36:22.303 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 8.455 seconds (JVM running for 10.01)
 2022-08-29 14:36:23.492 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
 2022-08-29 14:36:24.231 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
 2022-08-29 14:36:24.441 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
@@ -285,7 +285,7 @@
 2022-08-29 14:36:24.458 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3ad8717d
 2022-08-29 14:36:24.559 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:36:24.560 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:36:24.567 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 7.4 seconds (JVM running for 8.759)
+2022-08-29 14:36:24.567 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 7.4 seconds (JVM running for 8.759)
 2022-08-29 14:36:24.733 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
 2022-08-29 14:36:24.734 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
@@ -308,8 +308,8 @@
 2022-08-29 14:36:36.202 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-08-29 14:36:36.203 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-08-29 14:36:36.207 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:37:23.503 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 24956 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:37:23.504 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:37:23.503 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 24956 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:37:23.504 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:37:24.605 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:37:24.609 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:37:24.748 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 116ms. Found 0 repository interfaces.
@@ -340,8 +340,8 @@
 2022-08-29 14:37:27.688 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
 2022-08-29 14:37:28.950 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:37:30.061 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 2540 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:37:30.062 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:37:30.061 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 2540 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:37:30.062 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:37:31.226 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
 2022-08-29 14:37:31.510 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
 2022-08-29 14:37:31.544 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
@@ -360,7 +360,7 @@
 2022-08-29 14:37:31.555 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39a8e2fa
 2022-08-29 14:37:31.802 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:37:31.802 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:37:31.816 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 8.956 seconds (JVM running for 10.377)
+2022-08-29 14:37:31.816 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 8.956 seconds (JVM running for 10.377)
 2022-08-29 14:37:31.933 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:37:31.939 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:37:32.114 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 157ms. Found 0 repository interfaces.
@@ -409,7 +409,7 @@
 2022-08-29 14:37:35.462 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@e7b265e
 2022-08-29 14:37:35.572 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:37:35.572 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:37:35.581 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 6.652 seconds (JVM running for 8.243)
+2022-08-29 14:37:35.581 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 6.652 seconds (JVM running for 8.243)
 2022-08-29 14:37:35.780 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
 2022-08-29 14:37:35.782 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
@@ -434,8 +434,8 @@
 2022-08-29 14:37:43.737 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-08-29 14:37:43.740 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-08-29 14:37:43.747 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:38:41.958 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 20436 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:38:41.960 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:38:41.958 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 20436 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:38:41.960 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:38:43.191 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:38:43.195 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:38:43.312 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 99ms. Found 0 repository interfaces.
@@ -449,8 +449,8 @@
 2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
 2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-08-29 14:38:44.240 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$498ad5e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:38:45.762 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 11568 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:38:45.764 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-08-29 14:38:45.762 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Starting TestDisruptor on DFSH2617 with PID 11568 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-08-29 14:38:45.764 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  No active profile set, falling back to default profiles: default
 2022-08-29 14:38:47.183 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-08-29 14:38:47.187 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-08-29 14:38:47.309 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
@@ -499,7 +499,7 @@
 2022-08-29 14:38:50.011 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3a8fb023
 2022-08-29 14:38:50.189 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:38:50.189 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:38:50.206 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 9.006 seconds (JVM running for 10.301)
+2022-08-29 14:38:50.206 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 9.006 seconds (JVM running for 10.301)
 2022-08-29 14:38:50.464 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
 2022-08-29 14:38:50.465 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
@@ -535,7 +535,7 @@
 2022-08-29 14:38:52.356 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6be6931f
 2022-08-29 14:38:52.463 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-08-29 14:38:52.464 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:38:52.473 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 7.666 seconds (JVM running for 8.972)
+2022-08-29 14:38:52.473 [main] INFO  org.wanbang.test.TestHashMapDisruptor:  Started TestDisruptor in 7.666 seconds (JVM running for 8.972)
 2022-08-29 14:38:52.657 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
 2022-08-29 14:38:52.658 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件

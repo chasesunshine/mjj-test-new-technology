@@ -12,7 +12,7 @@ import java.util.Hashtable;
 * @version 1.0
 */
 
-public class Test {
+public class TestHashMap {
     public static void main(String[] args) {
         MyHashMap<String, String> objectObjectMyHashMap = new MyHashMap<>();
         objectObjectMyHashMap.put("xx1","2");
@@ -23,12 +23,5 @@ public class Test {
 
         String value = (String) objectObjectMyHashMap.get("xx1");
         System.out.println(value);
-
-
-
-
-        Hashtable ht = new Hashtable();
-        ht.put("1","2");
-        System.out.println("hashTable是 在 put 的时候 对整个 put方法加锁 - synchronized");
     }
 }

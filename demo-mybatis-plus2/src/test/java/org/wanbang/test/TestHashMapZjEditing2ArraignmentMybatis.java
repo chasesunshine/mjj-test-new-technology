@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 
 @RunWith(SpringRunner.class)	//注意测试文件的位置 必须在主文件加载包路径下
 @SpringBootTest
-public class TestZjEditing2ArraignmentMybatis {
+public class TestHashMapZjEditing2ArraignmentMybatis {
 
 	@Resource
 	private CityMapper cityMapper;

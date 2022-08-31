@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)	//注意测试文件的位置 必须在主文件加载包路径下
 @SpringBootTest
-public class TestDisruptor {
+public class TestHashMapDisruptor {
 	@Resource
 	private Disruptor disruptor;
 
