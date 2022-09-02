@@ -1,7 +1,7 @@
 2022-08-03 15:25:01.821 [http-nio-8099-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: 13] with root cause
 java.lang.RuntimeException: 13
-	at org.wanbang.service.impl.SpringWordServiceImpl.updateOne(SpringWordServiceImpl.java:43)
-	at org.wanbang.service.impl.SpringWordServiceImpl$$FastClassBySpringCGLIB$$f8095205.invoke(<generated>)
+	at SpringStudyServiceImpl.updateOne(SpringWordServiceImpl.java:43)
+	at SpringStudyServiceImpl$$FastClassBySpringCGLIB$$f8095205.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -9,7 +9,7 @@ java.lang.RuntimeException: 13
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.wanbang.service.impl.SpringWordServiceImpl$$EnhancerBySpringCGLIB$$349c90b4.updateOne(<generated>)
+	at SpringStudyServiceImpl$$EnhancerBySpringCGLIB$$349c90b4.updateOne(<generated>)
 	at org.wanbang.controller.SpringWordController.updateOne(SpringWordController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
