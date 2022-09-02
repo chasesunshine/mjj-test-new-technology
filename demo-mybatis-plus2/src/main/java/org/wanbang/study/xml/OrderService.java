@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.xml;
+package org.wanbang.study.xml;
 
 public interface OrderService {
     public void addOrder();

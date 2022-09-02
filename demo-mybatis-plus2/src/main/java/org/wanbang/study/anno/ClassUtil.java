@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.anno;
+package org.wanbang.study.anno;
 
 import java.io.File;
 import java.io.FileFilter;

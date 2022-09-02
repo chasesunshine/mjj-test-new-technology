@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.anno;
+package org.wanbang.study.anno;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;

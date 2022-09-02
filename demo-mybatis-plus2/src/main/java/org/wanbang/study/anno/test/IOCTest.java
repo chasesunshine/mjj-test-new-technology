@@ -1,7 +1,7 @@
-package org.wanbang.study.ioc.anno.test;
+package org.wanbang.study.anno.test;
 
-import org.wanbang.study.ioc.anno.ExtClassPathXmlApplicationContext;
-import org.wanbang.study.ioc.anno.UserService;
+import org.wanbang.study.anno.ExtClassPathXmlApplicationContext;
+import org.wanbang.study.anno.UserService;
 
 // https://blog.csdn.net/yz2015/article/details/80556694
 /**

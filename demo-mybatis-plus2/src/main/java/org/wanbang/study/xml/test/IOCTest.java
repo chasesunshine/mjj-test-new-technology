@@ -1,7 +1,7 @@
-package org.wanbang.study.ioc.xml.test;
+package org.wanbang.study.xml.test;
 
-import org.wanbang.study.ioc.xml.ExtClassPathXmlApplicationContext;
-import org.wanbang.study.ioc.xml.OrderService;
+import org.wanbang.study.xml.ExtClassPathXmlApplicationContext;
+import org.wanbang.study.xml.OrderService;
 
 // https://blog.csdn.net/yz2015/article/details/80556694
 /**

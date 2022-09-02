@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.xml;
+package org.wanbang.study.xml;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
