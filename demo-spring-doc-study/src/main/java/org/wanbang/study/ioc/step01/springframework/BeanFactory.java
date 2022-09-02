@@ -24,9 +24,10 @@ public class BeanFactory {
     public Object getBean(String name) {
         return beanDefinitionMap.get(name).getBean();
     }
-    public void registerBeanDefinition(String name, BeanDefinition beanDefinition)
-    {
+
+    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
         beanDefinitionMap.put(name, beanDefinition);
     }
+
 }
 
