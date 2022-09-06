@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import org.springframework.web.bind.annotation.*;
 import org.wanbang.entity.SpringStudy;
 import org.wanbang.service.SpringStudyService;
+import org.wanbang.test.TestSpringContainer;
 
 import javax.annotation.Resource;
 
@@ -18,11 +19,19 @@ import javax.annotation.Resource;
 public class SpringStudyController {
     @Resource
     private SpringStudyService springStudyService;
+    @Resource
+    private TestSpringContainer testSpringContainer;
 
     @GetMapping("/selectOne")
     public String selectOne() {
         SpringStudy springStudy = springStudyService.queryById((long) 1);
         return JSON.toJSONString(springStudy);
+    }
+
+    @GetMapping("/testSpringContainer")
+    public String testSpringContainer() {
+        String test = testSpringContainer.test();
+        return JSON.toJSONString(test);
     }
 
 }
