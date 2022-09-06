@@ -1,8 +1,8 @@
-package org.wanbang.study.ioc.step01;
+package org.wanbang.study.ioc.ioc02.step01;
 
-import org.wanbang.study.ioc.step01.springframework.BeanDefinition;
-import org.wanbang.study.ioc.step01.springframework.BeanFactory;
-import org.wanbang.study.ioc.step01.springframework.bean.UserService;
+import org.wanbang.study.ioc.ioc02.step01.springframework.BeanDefinition;
+import org.wanbang.study.ioc.ioc02.step01.springframework.BeanFactory;
+import org.wanbang.study.ioc.ioc02.step01.springframework.bean.UserService;
 
 /**
 * @description: TODO

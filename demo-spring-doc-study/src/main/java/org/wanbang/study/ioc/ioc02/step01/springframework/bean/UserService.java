@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.step01.springframework.bean;
+package org.wanbang.study.ioc.ioc02.step01.springframework.bean;
 /**
 * @description: TODO
 * @author majiajian

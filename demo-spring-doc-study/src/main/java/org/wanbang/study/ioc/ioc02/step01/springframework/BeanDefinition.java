@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.step01.springframework;
+package org.wanbang.study.ioc.ioc02.step01.springframework;
 /**
 * @description: 1. BeanDefinition，用于定义 Bean 实例化信息，现在的实现是以一个 Object 存放对象
 * @author majiajian

@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.step01.springframework;
+package org.wanbang.study.ioc.ioc02.step01.springframework;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.step01;
+package org.wanbang.study.ioc.ioc02.step01;
 /**
 * @description: 创建简单的 Bean 容器
 * @author majiajian
