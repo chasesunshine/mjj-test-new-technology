@@ -1,4 +1,4 @@
-package org.wanbang.test.list;
+package org.wanbang.test1.list;
 
 /**
  * 单向链表

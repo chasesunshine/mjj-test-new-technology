@@ -1,17 +1,9 @@
-package org.wanbang.test;
+package org.wanbang.test1;
 
 
-import com.lmax.disruptor.EventTranslatorOneArg;
-import com.lmax.disruptor.RingBuffer;
-import com.lmax.disruptor.dsl.Disruptor;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.wanbang.study.disruptorStudy.disruptor3Main.DisruptorTest2;
-import org.wanbang.study.disruptorStudy.disruptor3Main.event.MessageEvent;
-
-import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)	//注意测试文件的位置 必须在主文件加载包路径下
 @SpringBootTest

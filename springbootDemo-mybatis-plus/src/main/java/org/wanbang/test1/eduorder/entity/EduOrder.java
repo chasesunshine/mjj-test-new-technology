@@ -1,4 +1,4 @@
-package org.wanbang.test.eduorder.entity;
+package org.wanbang.test1.eduorder.entity;
 
 import java.util.Date;
 import java.io.Serializable;

@@ -1,6 +1,6 @@
-package org.wanbang.test.eduorder.dao;
+package org.wanbang.test1.eduorder.dao;
 
-import org.wanbang.test.eduorder.entity.EduOrder;
+import org.wanbang.test1.eduorder.entity.EduOrder;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 

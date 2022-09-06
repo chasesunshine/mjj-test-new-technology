@@ -1,9 +1,6 @@
-package org.wanbang.test;
+package org.wanbang.test1;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.lmax.disruptor.EventTranslatorOneArg;
@@ -11,7 +8,6 @@ import com.lmax.disruptor.RingBuffer;
 import com.sun.xml.internal.ws.util.UtilException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 

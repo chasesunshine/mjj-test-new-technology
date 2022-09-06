@@ -1,4 +1,4 @@
-package org.wanbang.test;
+package org.wanbang.test1;
 
 import org.springframework.stereotype.Component;
 import org.wanbang.dao.SpringStudyDao;
