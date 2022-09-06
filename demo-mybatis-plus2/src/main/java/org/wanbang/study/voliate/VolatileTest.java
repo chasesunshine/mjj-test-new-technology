@@ -19,9 +19,10 @@ public class VolatileTest {
                 int i = 1;
                 //不断的对i进行自增操作
                 // 不使用  volatile关键字得时候 主线程的stop没有通知到子线程  ，  所以stop没有被更新到
+//                System.out.println("子线程里面的 stop :"+stop);
                 while (!stop) {
                     i++;
-                    //log.info("执行while"+i);
+//                    log.info("执行while"+i);
                 }
                 System.out.println("Thread stop i=" + i);
             }

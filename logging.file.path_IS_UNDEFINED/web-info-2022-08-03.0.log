@@ -15,7 +15,7 @@
 2022-08-03 15:14:07.144 [http-nio-8099-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-03 15:14:07.145 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2022-08-03 15:14:07.153 [http-nio-8099-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
-2022-08-03 15:14:07.181 [http-nio-8099-exec-1] INFO  org.wanbang.service.impl.SpringWordServiceImpl - 通过ID查询单条数据
+2022-08-03 15:14:07.181 [http-nio-8099-exec-1] INFO  SpringStudyServiceImpl - 通过ID查询单条数据
 2022-08-03 15:14:07.242 [http-nio-8099-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2022-08-03 15:24:01.554 [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-08-03 15:24:01.555 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...

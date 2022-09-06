@@ -1,43 +1,152 @@
-2022-08-29 14:27:19.286 [main] INFO  org.wanbang.test.TestZjEditing2ArraignmentMybatis:  Starting TestZjEditing2ArraignmentMybatis on DFSH2617 with PID 22296 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:27:19.316 [main] INFO  org.wanbang.test.TestZjEditing2ArraignmentMybatis:  No active profile set, falling back to default profiles: default
-2022-08-29 14:27:20.336 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:27:20.339 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:27:20.424 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 70ms. Found 0 repository interfaces.
-2022-08-29 14:27:20.557 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:27:20.558 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:27:20.558 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:27:20.558 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:27:20.559 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:27:20.559 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:27:20.559 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:27:20.559 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:27:20.559 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:27:20.922 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd77c75e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:38:57.438 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 7636 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:38:57.460 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:38:58.554 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:38:58.556 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:38:58.643 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 74ms. Found 0 repository interfaces.
+2022-09-06 18:38:58.789 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:38:58.789 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:38:58.789 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:38:58.790 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:38:58.790 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:38:58.790 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:38:58.790 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:38:58.791 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:38:58.791 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:38:59.156 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e2cbf6a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:39:00.720 [main] WARN  o.s.w.context.support.GenericWebApplicationContext:  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getDisruptor' defined in class path resource [org/wanbang/study/disruptorStudy/disruptor3Main/disruptorspringconfig/DisruptorInitial.class]: No matching factory method found: factory bean 'disruptorInitial'; factory method 'getDisruptor()'. Check that a method with the specified name exists and that it is non-static.
+2022-09-06 18:39:00.721 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-0} closing ...
+2022-09-06 18:39:00.729 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:  
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-06 18:39:00.732 [main] ERROR org.springframework.boot.SpringApplication:  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getDisruptor' defined in class path resource [org/wanbang/study/disruptorStudy/disruptor3Main/disruptorspringconfig/DisruptorInitial.class]: No matching factory method found: factory bean 'disruptorInitial'; factory method 'getDisruptor()'. Check that a method with the specified name exists and that it is non-static.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2022-09-06 18:39:00.733 [main] ERROR o.springframework.test.context.TestContextManager:  Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@10a9d961] to prepare test instance [org.wanbang.test.TestDisruptor@6afbe6a1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getDisruptor' defined in class path resource [org/wanbang/study/disruptorStudy/disruptor3Main/disruptorspringconfig/DisruptorInitial.class]: No matching factory method found: factory bean 'disruptorInitial'; factory method 'getDisruptor()'. Check that a method with the specified name exists and that it is non-static.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+2022-09-06 18:43:02.079 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 13952 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:43:02.080 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:43:03.063 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:43:03.066 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:43:03.167 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
+2022-09-06 18:43:03.315 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:43:03.315 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:43:03.315 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:43:03.316 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:43:03.316 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:43:03.316 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:43:03.316 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:43:03.316 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:43:03.316 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:43:03.767 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$26f20e11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:43:05.139 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.384 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:22.393 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
+2022-09-06 18:43:05.140 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:27:23.122 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:27:23.840 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:27:24.066 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:27:24.084 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:27:24.084 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:27:24.085 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:27:24.086 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:43:05.934 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:43:06.634 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:43:06.844 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:43:06.858 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:43:06.859 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:43:06.859 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:43:06.860 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -45,61 +154,60 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:27:24.086 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:27:24.086 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:27:24.086 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@503a7990
-2022-08-29 14:27:24.197 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:27:24.198 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:27:24.208 [main] INFO  org.wanbang.test.TestZjEditing2ArraignmentMybatis:  Started TestZjEditing2ArraignmentMybatis in 5.485 seconds (JVM running for 7.133)
-2022-08-29 14:27:37.573 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:27:37.584 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:27:37.586 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:27:37.586 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:27:37.587 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:27:37.587 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:27:37.588 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:27:37.589 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:27:37.594 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:29:04.380 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 21732 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:29:04.383 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:29:05.298 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:29:05.300 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:29:05.379 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
-2022-08-29 14:29:05.485 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:29:05.486 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:29:05.486 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:29:05.486 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:29:05.487 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:29:05.487 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:29:05.487 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:29:05.487 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:29:05.487 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:29:05.813 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$678757f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:29:07.150 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:06.860 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:43:06.860 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:43:06.860 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@27e21083
+2022-09-06 18:43:06.975 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:43:06.975 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:43:06.984 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.691 seconds (JVM running for 7.014)
+2022-09-06 18:43:09.831 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:43:12.642 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:43:12.644 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:43:12.644 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:43:12.644 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:43:12.644 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:43:12.645 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:43:12.647 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:43:12.650 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:48:30.267 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 16240 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:48:30.268 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:48:31.226 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:48:31.230 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:48:31.333 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 87ms. Found 0 repository interfaces.
+2022-09-06 18:48:31.475 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:48:31.476 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:48:31.476 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:48:31.476 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:48:31.477 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:48:31.477 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:48:31.477 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:48:31.477 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:48:31.477 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:48:31.896 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8444ffd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:48:33.217 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.151 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.157 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
+2022-09-06 18:48:33.218 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:29:07.758 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:29:08.378 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:29:08.541 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:29:08.555 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:29:08.555 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:29:08.556 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:29:08.557 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:48:34.133 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:48:34.785 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:48:34.986 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:48:35.001 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:48:35.001 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:48:35.002 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:48:35.003 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -107,61 +215,60 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:29:08.557 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:29:08.557 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:29:08.557 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@59a2388e
-2022-08-29 14:29:08.679 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:29:08.680 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:29:08.690 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.109 seconds (JVM running for 6.11)
-2022-08-29 14:29:08.867 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:29:08.874 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:29:08.876 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:29:08.876 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:29:08.876 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:29:08.877 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:29:08.878 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:29:08.879 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:29:08.882 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:34:08.293 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 17764 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:34:08.294 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:34:09.199 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:34:09.202 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:34:09.274 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 61ms. Found 0 repository interfaces.
-2022-08-29 14:34:09.398 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:34:09.398 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:34:09.399 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:34:09.399 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:34:09.400 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:34:09.400 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:34:09.400 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:34:09.400 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:34:09.400 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:34:09.701 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf2b194] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:48:35.003 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:48:35.004 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:48:35.004 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5f7cd50e
+2022-09-06 18:48:35.109 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:48:35.110 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:48:35.119 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.474 seconds (JVM running for 6.885)
+2022-09-06 18:48:41.299 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:49:13.740 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:49:13.742 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:49:13.743 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:49:13.743 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:49:13.743 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:49:13.744 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:49:13.746 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:49:13.750 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:52:49.180 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 10356 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:52:49.182 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:52:50.116 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:52:50.119 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:52:50.237 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 101ms. Found 0 repository interfaces.
+2022-09-06 18:52:50.369 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:52:50.369 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:52:50.369 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:52:50.370 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:52:50.370 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:52:50.370 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:52:50.371 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:52:50.371 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:52:50.371 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:52:50.762 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$863a37cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:52:52.790 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:52.792 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:52.792 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:52.792 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:52.792 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.977 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:52.793 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.978 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:52.793 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:10.985 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
+2022-09-06 18:52:52.793 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:34:11.608 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:34:12.144 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:34:12.312 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:34:12.324 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:34:12.324 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:34:12.325 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:34:12.326 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:52:53.884 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:52:55.137 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:52:55.346 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:52:55.360 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:52:55.361 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:52:55.362 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:52:55.363 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -169,74 +276,60 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:34:12.326 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:34:12.326 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:34:12.326 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@68ef01a5
-2022-08-29 14:34:12.416 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:34:12.416 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:34:12.424 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 4.809 seconds (JVM running for 5.723)
-2022-08-29 14:34:12.601 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:34:12.607 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:34:12.608 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:34:12.609 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:34:12.609 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:34:12.609 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:34:12.610 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:34:12.611 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:34:12.614 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:36:14.568 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 21664 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:36:14.570 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:36:15.807 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:36:15.812 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:36:15.934 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 97ms. Found 0 repository interfaces.
-2022-08-29 14:36:16.222 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:36:16.223 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:36:16.223 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:36:16.224 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:36:16.224 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:36:16.225 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:36:16.225 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:36:16.225 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:36:16.225 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:36:16.848 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fcc914b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:36:18.062 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 15792 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:36:18.064 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:36:19.265 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:36:19.267 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:36:19.363 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
-2022-08-29 14:36:19.577 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:36:19.577 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:36:19.577 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:36:19.578 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:36:19.579 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:36:19.580 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:36:19.580 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:36:19.580 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:36:19.580 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:36:19.643 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:52:55.363 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:52:55.363 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:52:55.363 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@71b3ba5a
+2022-09-06 18:52:55.491 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:52:55.491 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:52:55.503 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 6.899 seconds (JVM running for 8.39)
+2022-09-06 18:53:09.962 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:36:19.647 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:53:35.654 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:53:35.655 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:53:35.656 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:53:35.656 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:53:35.656 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:53:35.657 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:53:35.659 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:53:35.663 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:55:53.848 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 15448 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:55:53.849 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:55:54.778 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:55:54.781 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:55:54.883 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
+2022-09-06 18:55:55.005 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:55:55.005 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:55:55.006 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:55:55.006 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:55:55.007 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:55:55.007 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:55:55.007 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:55:55.007 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:55:55.007 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:55:55.410 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0324452] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:55:56.793 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:19.647 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:56.793 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:19.648 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:56.794 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:19.648 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:56.794 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:19.648 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:56.794 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:19.648 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:56.794 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:19.648 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:56.794 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
 
-2022-08-29 14:36:20.111 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$375ad512] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:36:20.617 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:36:21.673 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:36:21.979 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:36:22.006 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:36:22.007 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:36:22.008 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:36:22.010 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:55:56.794 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+
+2022-09-06 18:55:57.645 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:55:58.323 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:55:58.532 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:55:58.547 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:55:58.548 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:55:58.549 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:55:58.550 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -244,35 +337,44 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:36:22.010 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:36:22.011 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:36:22.011 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@e36bc01
-2022-08-29 14:36:22.144 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:55:58.550 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:55:58.550 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:55:58.550 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@49e0b123
+2022-09-06 18:55:58.662 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:55:58.662 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:55:58.673 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.478 seconds (JVM running for 6.966)
+2022-09-06 18:56:02.934 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:36:22.145 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.145 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.145 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.146 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.146 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.146 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.146 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:36:22.275 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:36:22.275 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:36:22.303 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 8.455 seconds (JVM running for 10.01)
-2022-08-29 14:36:23.492 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:36:24.231 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:36:24.441 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:36:24.455 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:36:24.456 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:36:24.457 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:36:24.458 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:56:02.951 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:56:02.953 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:56:02.953 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:56:02.953 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:56:02.954 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:56:02.955 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:56:02.957 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:56:02.960 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:57:02.705 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 11344 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:57:02.707 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:57:03.569 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:57:03.571 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:57:03.653 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
+2022-09-06 18:57:03.779 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:57:03.780 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:57:03.780 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:57:03.780 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:57:03.781 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:57:03.781 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:57:03.781 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:57:03.781 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:57:03.781 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:57:04.107 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$677fb24b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:57:06.067 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:57:06.723 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:57:06.932 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:57:06.947 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:57:06.948 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:57:06.949 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:57:06.950 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -280,74 +382,45 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:36:24.458 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:36:24.458 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:36:24.458 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3ad8717d
-2022-08-29 14:36:24.559 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:36:24.560 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:36:24.567 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 7.4 seconds (JVM running for 8.759)
-2022-08-29 14:36:24.733 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
+2022-09-06 18:57:06.950 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:57:06.950 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:57:06.950 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6921cfa
+2022-09-06 18:57:07.066 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:57:07.067 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:57:07.075 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 4.936 seconds (JVM running for 6.309)
+2022-09-06 18:57:19.574 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:36:24.734 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:36:24.740 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:36:24.742 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:36:24.742 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:36:24.742 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:36:24.742 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:36:24.743 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:36:24.745 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:36:24.749 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:36:30.963 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
-
-2022-08-29 14:36:33.553 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:36:36.199 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:36:36.200 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:36:36.200 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:36:36.200 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:36:36.201 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:36:36.202 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:36:36.203 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:36:36.207 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:37:23.503 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 24956 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:37:23.504 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:37:24.605 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:37:24.609 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:37:24.748 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 116ms. Found 0 repository interfaces.
-2022-08-29 14:37:25.102 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:37:25.103 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:37:25.103 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:37:25.104 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:37:25.105 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:37:25.105 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:37:25.105 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:37:25.105 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:37:25.105 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:37:25.657 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1f5d6a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:37:27.673 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.676 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.677 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.687 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.688 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.688 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.688 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:27.688 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:28.950 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:37:30.061 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 2540 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:37:30.062 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:37:31.226 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:37:31.510 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:37:31.544 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:37:31.545 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:37:31.550 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:37:31.552 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:57:20.429 [main] INFO  o.w.s.d.d.translate.MessageEventTranslator:  消息转换类，负责将消息转换为事件
+2022-09-06 18:57:33.100 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:57:33.102 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:57:33.103 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:57:33.103 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:57:33.103 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:57:33.104 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:57:33.105 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:57:33.109 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:58:19.010 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 9436 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:58:19.011 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:58:19.869 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:58:19.872 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:58:19.962 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 73ms. Found 0 repository interfaces.
+2022-09-06 18:58:20.105 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:58:20.106 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:58:20.106 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:58:20.106 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:58:20.107 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:58:20.107 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:58:20.107 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:58:20.107 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:58:20.107 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:58:20.508 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2d2c342] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:58:22.564 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:58:23.218 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:58:23.416 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:58:23.430 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:58:23.430 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:58:23.431 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:58:23.431 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -355,48 +428,45 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:37:31.553 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:37:31.554 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:37:31.555 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39a8e2fa
-2022-08-29 14:37:31.802 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:37:31.802 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:37:31.816 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 8.956 seconds (JVM running for 10.377)
-2022-08-29 14:37:31.933 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:37:31.939 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:37:32.114 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 157ms. Found 0 repository interfaces.
-2022-08-29 14:37:32.303 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:37:32.304 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:37:32.304 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:37:32.305 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:37:32.305 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:37:32.305 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:37:32.305 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:37:32.305 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:37:32.306 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:37:32.687 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf2b194] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:37:34.014 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
+2022-09-06 18:58:23.431 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:58:23.432 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:58:23.432 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@70c205bf
+2022-09-06 18:58:23.549 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:58:23.549 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:58:23.559 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.013 seconds (JVM running for 6.362)
+2022-09-06 18:58:23.760 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:37:34.014 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.014 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.014 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.015 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.015 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.015 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.015 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:37:34.667 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:37:35.262 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:37:35.446 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:37:35.459 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:37:35.460 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:37:35.460 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:37:35.461 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-06 18:58:23.761 [main] INFO  o.w.s.d.d.translate.MessageEventTranslator:  消息转换类，负责将消息转换为事件
+2022-09-06 18:58:28.810 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:58:28.812 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:58:28.812 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:58:28.812 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:58:28.812 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:58:28.813 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:58:28.815 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:58:28.819 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:58:53.780 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 9420 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-09-06 18:58:53.781 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
+2022-09-06 18:58:54.666 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 18:58:54.669 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-09-06 18:58:54.766 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
+2022-09-06 18:58:54.898 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-09-06 18:58:54.899 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-09-06 18:58:54.899 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-09-06 18:58:54.899 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-09-06 18:58:54.900 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-09-06 18:58:54.900 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-09-06 18:58:54.900 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-09-06 18:58:54.900 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-09-06 18:58:54.900 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-09-06 18:58:55.309 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$494f2635] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 18:58:57.319 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:58:57.967 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-09-06 18:58:58.151 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-09-06 18:58:58.166 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-06 18:58:58.166 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-09-06 18:58:58.167 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-09-06 18:58:58.168 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -404,159 +474,20 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-29 14:37:35.462 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:37:35.462 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:37:35.462 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@e7b265e
-2022-08-29 14:37:35.572 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:37:35.572 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:37:35.581 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 6.652 seconds (JVM running for 8.243)
-2022-08-29 14:37:35.780 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
+2022-09-06 18:58:58.168 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-06 18:58:58.168 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-09-06 18:58:58.168 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2c08c787
+2022-09-06 18:58:58.273 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-09-06 18:58:58.273 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-06 18:58:58.284 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 5.078 seconds (JVM running for 6.477)
+2022-09-06 18:58:58.490 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
 
-2022-08-29 14:37:35.782 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:37:38.710 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
-
-2022-08-29 14:37:38.711 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:37:40.786 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:37:40.810 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:37:40.814 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:37:40.815 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:37:40.815 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:37:40.816 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:37:40.820 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:37:40.825 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:37:40.833 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:37:43.717 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:37:43.730 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:37:43.732 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:37:43.734 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:37:43.734 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:37:43.735 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:37:43.737 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:37:43.740 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:37:43.747 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:38:41.958 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 20436 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:38:41.960 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:38:43.191 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:38:43.195 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:38:43.312 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 99ms. Found 0 repository interfaces.
-2022-08-29 14:38:43.516 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:38:43.517 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:38:43.517 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:38:43.518 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:38:43.519 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:38:44.240 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$498ad5e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:38:45.762 [main] INFO  org.wanbang.test.TestDisruptor:  Starting TestDisruptor on DFSH2617 with PID 11568 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-08-29 14:38:45.764 [main] INFO  org.wanbang.test.TestDisruptor:  No active profile set, falling back to default profiles: default
-2022-08-29 14:38:47.183 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-29 14:38:47.187 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-08-29 14:38:47.309 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.310 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:47.340 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 119ms. Found 0 repository interfaces.
-2022-08-29 14:38:47.647 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2022-08-29 14:38:47.647 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2022-08-29 14:38:47.647 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-08-29 14:38:47.648 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
-2022-08-29 14:38:47.648 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-08-29 14:38:47.648 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
-2022-08-29 14:38:47.648 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-08-29 14:38:47.648 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
-2022-08-29 14:38:47.648 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2022-08-29 14:38:48.202 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86492385] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-29 14:38:48.526 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:38:49.720 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:38:49.989 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:38:50.008 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:38:50.009 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:38:50.010 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:38:50.011 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-29 14:38:50.011 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:38:50.011 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:38:50.011 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3a8fb023
-2022-08-29 14:38:50.189 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:38:50.189 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:38:50.206 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 9.006 seconds (JVM running for 10.301)
-2022-08-29 14:38:50.464 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.465 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.465 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.465 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.469 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.479 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.480 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:50.480 [main] INFO  o.w.s.d.disruptor3Main.factory.MessageEventFactory:  消息事件工厂类 
-
-2022-08-29 14:38:51.489 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:38:52.154 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2022-08-29 14:38:52.336 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2022-08-29 14:38:52.353 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-29 14:38:52.353 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2022-08-29 14:38:52.354 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2022-08-29 14:38:52.355 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-29 14:38:52.355 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-29 14:38:52.356 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2022-08-29 14:38:52.356 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6be6931f
-2022-08-29 14:38:52.463 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2022-08-29 14:38:52.464 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-29 14:38:52.473 [main] INFO  org.wanbang.test.TestDisruptor:  Started TestDisruptor in 7.666 seconds (JVM running for 8.972)
-2022-08-29 14:38:52.657 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
-
-2022-08-29 14:38:52.658 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:38:57.237 [main] INFO  o.w.s.d.d.factory.MessageThreadFactory:  消费者线程工厂类  
-
-2022-08-29 14:38:57.239 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:38:57.661 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:38:57.682 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:38:57.688 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:38:57.688 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:38:57.688 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:38:57.690 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:38:57.696 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:38:57.702 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:38:57.711 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-08-29 14:39:02.241 [main] INFO  o.w.s.disruptorStudy.disruptor3Main.DisruptorTest2:  消息转换类，负责将消息转换为事件
-2022-08-29 14:39:02.268 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:39:02.275 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2022-08-29 14:39:02.276 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-29 14:39:02.276 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-29 14:39:02.279 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-29 14:39:02.291 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-29 14:39:02.295 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2022-08-29 14:39:02.302 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-09-06 18:58:58.512 [main] INFO  o.w.s.d.d.translate.MessageEventTranslator:  消息转换类，负责将消息转换为事件
+2022-09-06 18:59:03.567 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:59:03.571 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-09-06 18:59:03.571 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-06 18:59:03.572 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-06 18:59:03.573 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-06 18:59:03.576 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 18:59:03.580 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-09-06 18:59:03.586 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed

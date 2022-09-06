@@ -10,6 +10,7 @@ public class SyncThread implements Runnable {
         count = 0;
     }
     public void run() {
+        System.out.println("代码块之外 :"+ Thread.currentThread().getName());
         synchronized (this){
             for (int i = 0; i < 5; i++) {
                 try {
