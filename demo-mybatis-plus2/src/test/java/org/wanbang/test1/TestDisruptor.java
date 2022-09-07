@@ -23,12 +23,16 @@ public class TestDisruptor {
 	public void testDisruptor1() throws InterruptedException {
 		String message1 = "Hello Disruptor1!";
 		String message2 = "Hello Disruptor2!";
+		String message3 = "Hello Disruptor3!";
 
 		disruptorOperate.publishEvent(message1);
-//		disruptorOperate.shutDown();
 
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		disruptorOperate.publishEvent(message2);
+
+		disruptorOperate.shutDown();
+		Thread.sleep(2000);
+		disruptorOperate.publishEvent(message3);
 
 	}
 

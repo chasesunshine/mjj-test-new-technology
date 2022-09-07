@@ -27,13 +27,18 @@ public class DisruptorOperate {
      * @param messsge
      */
     public void publishEvent(String messsge){
-        // 获取 初始化完成的  RingBuffer 对象
-        RingBuffer ringBuffer = disruptor.getRingBuffer();
+        RingBuffer ringBuffer;
+        try {
+            // 判断 disruptor 是否启动
+            ringBuffer = disruptor.start();
+        }catch (Exception e ){
+            // 获取 初始化完成的  RingBuffer 对象
+            ringBuffer = disruptor.getRingBuffer();
+        }
 
         // 将接收到的消息输出到ringBuffer
         EventTranslatorOneArg<MessageEventOwner,String> translator = new MessageEventTranslator();
         ringBuffer.publishEvent(translator,messsge);
-
     }
 
     public void shutDown(){

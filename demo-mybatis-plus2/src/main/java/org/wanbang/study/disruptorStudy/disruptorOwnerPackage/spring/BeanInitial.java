@@ -42,9 +42,6 @@ public class BeanInitial {
         // 设置 异常处理类
         disruptor.setDefaultExceptionHandler(new MessageExceptionHandler());
 
-        // 启动disruptor
-        disruptor.start();
-
         return disruptor;
     }
 
