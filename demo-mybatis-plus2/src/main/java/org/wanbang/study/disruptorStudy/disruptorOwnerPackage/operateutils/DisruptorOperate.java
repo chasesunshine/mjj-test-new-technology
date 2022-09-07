@@ -29,7 +29,7 @@ public class DisruptorOperate {
     public void publishEvent(String messsge){
         RingBuffer ringBuffer;
         try {
-            // 判断 disruptor 是否启动
+            // 判断 disruptor 是否启动（内部封装有判断并抛出异常） 并获取 RingBuffer 对象
             ringBuffer = disruptor.start();
         }catch (Exception e ){
             // 获取 初始化完成的  RingBuffer 对象
