@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @description: TODO
+* @description: 核心类 - 注册类信息 、 获取类信息
 * @author majiajian
 * @date 2022/9/7 18:35
 * @version 1.0
