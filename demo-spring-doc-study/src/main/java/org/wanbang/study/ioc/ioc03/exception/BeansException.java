@@ -7,9 +7,13 @@ package org.wanbang.study.ioc.ioc03.exception;
 */
 
 public class BeansException extends Throwable{
-    public BeansException(String instantiation_of_bean_failed, ReflectiveOperationException e) {
+
+    public BeansException(String message, ReflectiveOperationException e) {
+        System.out.println("错误信息 :"+message);
     }
 
-    public BeansException(String s) {
+    public BeansException(String message) {
+        System.out.println("错误信息 :"+message);
     }
+
 }

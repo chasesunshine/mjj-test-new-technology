@@ -10,5 +10,7 @@ import org.wanbang.study.ioc.ioc03.factory.config.BeanDefinition;
 */
 
 public interface BeanDefinitionRegistry {
+
     void registerBeanDefinition(String beanName, BeanDefinition beanDefinition);
+
 }
