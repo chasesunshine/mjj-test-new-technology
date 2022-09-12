@@ -6,7 +6,7 @@ import org.wanbang.entity.SpringWorld;
 import org.wanbang.dao.SpringWorldDao;
 import org.wanbang.service.SpringWordService;
 import org.springframework.stereotype.Service;
-import org.wanbang.util.proxy.CurrentCglibProxy;
+import org.wanbang.util.proxy.CurrentProxy;
 
 import javax.annotation.Resource;
 
@@ -68,7 +68,7 @@ public class SpringWordServiceImpl implements SpringWordService {
         try {
 
             SpringWorld build = SpringWorld.builder().id(l).age(21).name("123").build();
-            SpringWordServiceImpl springWordService = CurrentCglibProxy.currentProxyByCglib(SpringWordServiceImpl.class);
+            SpringWordServiceImpl springWordService = CurrentProxy.currentProxyByAop(SpringWordServiceImpl.class);
             springWordService.updateBatch2(build);
 
         }catch (Exception e){
