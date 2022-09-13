@@ -13,8 +13,8 @@
         <module name="rocketmq" />
         <module name="springbootDemo-mybatis-plus" />
         <module name="spring-bilibili-study" />
-        <module name="demo-spring-doc-study" />
         <module name="demo-job" />
+        <module name="demo-spring-doc-study" />
         <module name="springboot-core" />
         <module name="test-nacos" />
       </profile>
