@@ -28,10 +28,11 @@ public class ApiTest {
         BeanDefinition beanDefinition = new BeanDefinition(UserService.class);
         beanFactory.registerBeanDefinition("userService", beanDefinition);
 
-        // 3.获取 bean
+        // 3. 第一次获取 bean
         UserService userService = (UserService) beanFactory.getBean("userService", "小傅哥");
         userService.queryUserInfo();
 
+        // 第二次获取 bean
         UserService userService1 = (UserService) beanFactory.getBean("userService", "小马哥");
         userService1.queryUserInfo();
     }
