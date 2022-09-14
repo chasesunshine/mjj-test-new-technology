@@ -1,5 +1,6 @@
 package org.wanbang.study.ioc.ioc04.factory.support;
 
+import lombok.extern.slf4j.Slf4j;
 import org.wanbang.study.ioc.ioc04.exception.BeansException;
 import org.wanbang.study.ioc.ioc04.factory.BeanFactory;
 import org.wanbang.study.ioc.ioc04.factory.config.BeanDefinition;
@@ -23,6 +24,7 @@ import org.wanbang.study.ioc.ioc04.factory.config.BeanDefinition;
  * AbstractAutowireCapableBeanFactory、DefaultListableBeanFactory，这两个类分别
  * 做了相应的实现处理，接着往下看。
  */
+@Slf4j
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
 
     @Override
@@ -40,6 +42,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     public Object getBean(String name,Object... args) throws BeansException {
         Object bean = getSingleton(name);
         if (bean != null) {
+            log.info("容器里已存在 bean");
             return bean;
         }
         BeanDefinition beanDefinition = getBeanDefinition(name);

@@ -32,5 +32,7 @@ public class ApiTest {
         UserService userService = (UserService) beanFactory.getBean("userService", "小傅哥");
         userService.queryUserInfo();
 
+        UserService userService1 = (UserService) beanFactory.getBean("userService", "小马哥");
+        userService1.queryUserInfo();
     }
 }
