@@ -15,8 +15,9 @@ public class PayService {
 
     private final int totalNum = 100000;
 
+    // 第一次：延时 2 s ， 第二次：延时 2*2.5 s  第三次：延时 2*2.5*2.5 s
     // (注，重试捕获返回参数要一致 recover 和 minGoodsnum 返回的参数要一致)
-    @Retryable(value = Exception.class, maxAttempts = 3, backoff = @Backoff(delay = 2000L, multiplier = 1.5))
+    @Retryable(value = Exception.class, maxAttempts = 4, backoff = @Backoff(delay = 2000L, multiplier = 2.5))
     public int minGoodsnum(int num) throws Exception {
         logger.info("减库存开始" + LocalTime.now());
         try {
