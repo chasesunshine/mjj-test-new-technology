@@ -8,6 +8,9 @@ import org.wanbang.service.SpringStudyService;
 import org.wanbang.test1.TestSpringContainer;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * (SpringWord)表控制层
@@ -45,6 +48,27 @@ public class SpringStudyController {
 //        String test = testSpringContainer2.test();
 //        return JSON.toJSONString(test);
 //    }
+    public static void main(String[] args) {
+        SpringStudy build = SpringStudy.builder().id((long) 1).age(1).name("2").sex("44").build();
+        SpringStudy build1 = SpringStudy.builder().id((long) 2).age(1).name("2").sex("55").build();
+        SpringStudy build2 = SpringStudy.builder().id((long) 3).age(1).name("2").sex("66").build();
+        SpringStudy build3 = SpringStudy.builder().id((long) 4).age(2).name("2").sex("77").build();
+        SpringStudy build4 = SpringStudy.builder().id((long) 5).age(2).name("3").sex("44").build();
+        SpringStudy build5 = SpringStudy.builder().id((long) 6).age(2).name("3").sex("44").build();
 
+        List<SpringStudy> objects = new ArrayList<>();
+
+        objects.add(build);
+        objects.add(build1);
+        objects.add(build2);
+        objects.add(build3);
+        objects.add(build4);
+        objects.add(build5);
+
+        List<SpringStudy> collect = objects.stream().filter(v -> v.getAge() == 1 && v.getName().equals("2")
+                && v.getSex().equals("44")  )
+                .collect(Collectors.toList());
+        System.out.println(JSON.toJSONString(collect));
+    }
 }
 
