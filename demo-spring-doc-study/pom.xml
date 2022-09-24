@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-spring-doc-study</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+            <version>5.7.5</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
