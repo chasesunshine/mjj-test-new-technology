@@ -31,9 +31,8 @@ public class ApiTest {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         // 2. UserDao 注册
-        beanFactory.registerBeanDefinition("userDao", new BeanDefinition(UserDao.class)
+        beanFactory.registerBeanDefinition( "userDao", new BeanDefinition(UserDao.class) );
 
-        );
         // 3. UserService 设置属性[uId、userDao]
         PropertyValues propertyValues = new PropertyValues();
         propertyValues.addPropertyValue(new PropertyValue("uId", "10001"));
