@@ -9,6 +9,7 @@ import org.wanbang.test1.TestSpringContainer;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,10 +50,16 @@ public class SpringStudyController {
 //        return JSON.toJSONString(test);
 //    }
     public static void main(String[] args) {
-        String lock ="mjj_lock";
-        byte[] a = lock.getBytes();
-        long l = Long.parseLong(new String(a));
-        System.out.println(l);
+        String s = "1";
+        String[] split = s.split(",");
+
+        List<String> strings = Arrays.asList(split);
+        System.out.println(JSON.toJSONString(strings));
+
+//        String lock ="mjj_lock";
+//        byte[] a = lock.getBytes();
+//        long l = Long.parseLong(new String(a));
+//        System.out.println(l);
 
 
 //        SpringStudy build = SpringStudy.builder().id((long) 1).age(1).name("2").sex("44").build();
