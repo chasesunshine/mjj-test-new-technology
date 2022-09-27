@@ -50,11 +50,16 @@ public class SpringStudyController {
 //        return JSON.toJSONString(test);
 //    }
     public static void main(String[] args) {
-        String s = "1";
-        String[] split = s.split(",");
+        long value = (long)3010;
 
-        List<String> strings = Arrays.asList(split);
-        System.out.println(JSON.toJSONString(strings));
+        long a =(value / 1000) + 1;
+        System.out.println(a);
+
+//        String s = "1";
+//        String[] split = s.split(",");
+//
+//        List<String> strings = Arrays.asList(split);
+//        System.out.println(JSON.toJSONString(strings));
 
 //        String lock ="mjj_lock";
 //        byte[] a = lock.getBytes();
