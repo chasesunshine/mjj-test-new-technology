@@ -50,13 +50,15 @@ public class SpringStudyController {
 //        return JSON.toJSONString(test);
 //    }
     public static void main(String[] args) {
-        long value = (long)3010;
+//        long value = (long)3010;
+//
+//        long a =(value / 1000) + 1;
+//        System.out.println(a);
 
-        long a =(value / 1000) + 1;
-        System.out.println(a);
-
-//        String s = "1";
-//        String[] split = s.split(",");
+        String s = "1";
+        String[] split = s.split(",");
+        List<String> strings = Arrays.asList(split);
+        System.out.println(JSON.toJSONString(strings));
 //
 //        List<String> strings = Arrays.asList(split);
 //        System.out.println(JSON.toJSONString(strings));
