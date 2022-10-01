@@ -18,8 +18,7 @@ import org.wanbang.study.ioc.ioc05.entity.PropertyValues;
 
 /**
  *  与直接获取 Bean 对象不同，这次我们还需要先把 userDao 注入到 Bean 容器
- * 中。beanFactory.registerBeanDefinition("userDao", new
- * BeanDefinition(UserDao.class));
+ * 中。beanFactory.registerBeanDefinition("userDao", new BeanDefinition(UserDao.class));
  *  接下来就是属性填充的操作了，一种是普通属性 new
  * PropertyValue("uId", "10001")，另外一种是对象属性 new
  * PropertyValue("userDao",new BeanReference("userDao"))
