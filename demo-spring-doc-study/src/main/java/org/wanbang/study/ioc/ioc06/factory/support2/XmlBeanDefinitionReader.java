@@ -76,6 +76,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         Document doc = XmlUtil.readXML(inputStream);
         Element root = doc.getDocumentElement();
         NodeList childNodes = root.getChildNodes();
+        int length = childNodes.getLength();
         for (int i = 0; i < childNodes.getLength(); i++) {
             // 判断元素
             if (!(childNodes.item(i) instanceof Element)) continue;
@@ -83,6 +84,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             if (!"bean".equals(childNodes.item(i).getNodeName())) continue;
             // 解析标签
             Element bean = (Element) childNodes.item(i);
+            NodeList childNodes1 = bean.getChildNodes();
             String id = bean.getAttribute("id");
             String name = bean.getAttribute("name");
             String className = bean.getAttribute("class");
@@ -96,6 +98,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             // 定义 Bean
             BeanDefinition beanDefinition = new BeanDefinition(clazz);
             // 读取属性并填充
+            int length1 = bean.getChildNodes().getLength();
             for (int j = 0; j < bean.getChildNodes().getLength(); j++) {
                 if (!(bean.getChildNodes().item(j) instanceof Element)) continue;
                 if (!"property".equals(bean.getChildNodes().item(j).getNodeName()))
