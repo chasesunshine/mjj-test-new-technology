@@ -14,5 +14,8 @@ import org.wanbang.study.ioc.ioc06.factory.support2.XmlBeanDefinitionReader;
 
 public class ApiTest {
     public static void main(String[] args) throws BeansException {
+
+        // 详见  org.wanbang.study.ioc.ioc06.ApiSpringTest
+
     }
 }
