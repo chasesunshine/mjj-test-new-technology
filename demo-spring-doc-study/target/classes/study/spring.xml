@@ -2,7 +2,7 @@
 <beans>
     <bean id="userDao" class="org.wanbang.study.ioc.ioc06.bean.UserDao"/>
     <bean id="userService" class="org.wanbang.study.ioc.ioc06.bean.UserService">
-        <property name="uId" value="10001"/>
+        <property name="uId" value="10002"/>
         <property name="userDao" ref="userDao"/>
     </bean>
 </beans>
