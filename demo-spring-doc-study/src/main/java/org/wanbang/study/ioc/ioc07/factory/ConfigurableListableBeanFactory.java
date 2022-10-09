@@ -1,8 +1,8 @@
 package org.wanbang.study.ioc.ioc07.factory;
 
 import org.wanbang.study.ioc.ioc07.context.ApplicationContext;
-import org.wanbang.study.ioc.ioc07.factory.config.BeanFactoryPostProcessor;
-import org.wanbang.study.ioc.ioc07.factory.config.BeanPostProcessor;
+import org.wanbang.study.ioc.ioc07.exception.BeansException;
+import org.wanbang.study.ioc.ioc07.factory.config.*;
 
 import java.util.Map;
 
@@ -13,8 +13,10 @@ import java.util.Map;
 * @version 1.0
 */
 
-public interface ConfigurableListableBeanFactory extends ApplicationContext {
+public interface ConfigurableListableBeanFactory extends ListableBeanFactory, AutowireCapableBeanFactory, ConfigurableBeanFactory {
     void preInstantiateSingletons() ;
 
     void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
+
+    BeanDefinition getBeanDefinition(String beanName) throws BeansException;
 }

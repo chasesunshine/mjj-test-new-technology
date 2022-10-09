@@ -1,6 +1,7 @@
 package org.wanbang.study.ioc.ioc07.factory;
 
 import org.wanbang.study.ioc.ioc07.exception.BeansException;
+import org.wanbang.study.ioc.ioc07.factory.config.BeanPostProcessor;
 /**
 * @description: TODO
 * @author majiajian
@@ -18,4 +19,5 @@ public interface BeanFactory {
 
     Object getBean(String name, Object... args) throws BeansException;
 
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
 }

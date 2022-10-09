@@ -6,5 +6,5 @@ package org.wanbang.study.ioc.ioc07.factory.config;
 * @version 1.0
 */
 
-public class AutowireCapableBeanFactory {
+public interface AutowireCapableBeanFactory {
 }
