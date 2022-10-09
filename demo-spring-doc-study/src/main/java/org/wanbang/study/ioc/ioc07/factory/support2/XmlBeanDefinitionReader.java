@@ -17,8 +17,8 @@ import org.wanbang.study.ioc.ioc07.factory.config.BeanDefinition;
 import org.wanbang.study.ioc.ioc07.factory.config.BeanReference;
 import org.wanbang.study.ioc.ioc07.factory.support.AbstractBeanDefinitionReader;
 import org.wanbang.study.ioc.ioc07.factory.support.BeanDefinitionRegistry;
-import org.wanbang.study.ioc.ioc07.io.Resource;
-import org.wanbang.study.ioc.ioc07.io.ResourceLoader;
+import org.wanbang.study.ioc.ioc07.core.io.Resource;
+import org.wanbang.study.ioc.ioc07.core.io.ResourceLoader;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -70,6 +70,13 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         ResourceLoader resourceLoader = getResourceLoader();
         Resource resource = resourceLoader.getResource(location);
         loadBeanDefinitions(resource);
+    }
+
+    @Override
+    public void loadBeanDefinitions(String[] locations) throws BeansException {
+        for (String location : locations) {
+            loadBeanDefinitions(location);
+        }
     }
 
     protected void doLoadBeanDefinitions(InputStream inputStream) throws ClassNotFoundException, BeansException {

@@ -1,4 +1,9 @@
 package org.wanbang.study.ioc.ioc07.factory;
+
+import org.wanbang.study.ioc.ioc07.factory.config.BeanFactoryPostProcessor;
+
+import java.util.Map;
+
 /**
 * @description: TODO
 * @author majiajian
@@ -6,5 +11,6 @@ package org.wanbang.study.ioc.ioc07.factory;
 * @version 1.0
 */
 
-public class ListableBeanFactory {
+public interface ListableBeanFactory {
+    Map<String, BeanFactoryPostProcessor> getBeansOfType(Class<BeanFactoryPostProcessor> beanFactoryPostProcessorClass);
 }

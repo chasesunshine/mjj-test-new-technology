@@ -1,8 +1,8 @@
 package org.wanbang.study.ioc.ioc07.factory.support;
 
 import org.wanbang.study.ioc.ioc07.exception.BeansException;
-import org.wanbang.study.ioc.ioc07.io.Resource;
-import org.wanbang.study.ioc.ioc07.io.ResourceLoader;
+import org.wanbang.study.ioc.ioc07.core.io.Resource;
+import org.wanbang.study.ioc.ioc07.core.io.ResourceLoader;
 
 /**
 * @description: TODO
@@ -26,4 +26,5 @@ public interface BeanDefinitionReader {
     void loadBeanDefinitions(Resource... resources) throws BeansException;
     void loadBeanDefinitions(String location) throws BeansException;
 
+    void loadBeanDefinitions(String[] location) throws BeansException;
 }

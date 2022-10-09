@@ -1,4 +1,11 @@
 package org.wanbang.study.ioc.ioc07.factory;
+
+import org.wanbang.study.ioc.ioc07.context.ApplicationContext;
+import org.wanbang.study.ioc.ioc07.factory.config.BeanFactoryPostProcessor;
+import org.wanbang.study.ioc.ioc07.factory.config.BeanPostProcessor;
+
+import java.util.Map;
+
 /**
 * @description: TODO
 * @author majiajian
@@ -6,5 +13,8 @@ package org.wanbang.study.ioc.ioc07.factory;
 * @version 1.0
 */
 
-public class ConfigurableListableBeanFactory {
+public interface ConfigurableListableBeanFactory extends ApplicationContext {
+    void preInstantiateSingletons() ;
+
+    void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
 }

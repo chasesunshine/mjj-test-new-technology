@@ -4,6 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.wanbang.study.ioc.ioc07.exception.BeansException;
 import org.wanbang.study.ioc.ioc07.factory.BeanFactory;
 import org.wanbang.study.ioc.ioc07.factory.config.BeanDefinition;
+import org.wanbang.study.ioc.ioc07.factory.config.BeanPostProcessor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
 * @description: TODO
@@ -26,6 +30,7 @@ import org.wanbang.study.ioc.ioc07.factory.config.BeanDefinition;
  */
 @Slf4j
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
+    private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<BeanPostProcessor>();
 
     @Override
     public Object getBean(String name) throws BeansException {
@@ -55,6 +60,13 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 
     protected abstract Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException;
 
+    public abstract Object applyBeanPostProcessorsBeforeInitialization(Object existingBean,String beanName) throws BeansException;
+
+    public abstract Object applyBeanPostProcessorsAfterInitialization(Object existingBean, String beanName) throws BeansException;
+
+    public List<BeanPostProcessor> getBeanPostProcessors() {
+        return this.beanPostProcessors;
+    }
 }
 
 
