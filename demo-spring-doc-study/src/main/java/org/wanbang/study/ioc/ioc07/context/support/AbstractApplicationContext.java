@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  *
  *  AbstractApplicationContext 继承 DefaultResourceLoader 是为了处理
- * spring.xml 配置资源的加载。
+ * spring07.xml 配置资源的加载。
  *  之后是在 refresh() 定义实现过程，包括：
  * 
  * 1. 创建 BeanFactory，并加载 BeanDefinition
