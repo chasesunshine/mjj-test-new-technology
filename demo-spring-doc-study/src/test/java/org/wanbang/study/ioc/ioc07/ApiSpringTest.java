@@ -19,18 +19,23 @@ public class ApiSpringTest {
     public void test_BeanFactoryPostProcessorAndBeanPostProcessor() throws BeansException {
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+
         // 2. 读取配置文件&注册 Bean
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         reader.loadBeanDefinitions("classpath:spring.xml");
+
         // 3. BeanDefinition 加载完成 & Bean 实例化之前，修改 BeanDefinition 的属性值
         MyBeanFactoryPostProcessor beanFactoryPostProcessor = new MyBeanFactoryPostProcessor();
         beanFactoryPostProcessor.postProcessBeanFactory((ConfigurableListableBeanFactory) beanFactory);
+
         // 4. Bean 实例化之后，修改 Bean 属性信息
         MyBeanPostProcessor beanPostProcessor = new MyBeanPostProcessor();
         beanFactory.addBeanPostProcessor(beanPostProcessor);
+
         // 5. 获取 Bean 对象调用方法
         UserService userService = (UserService) beanFactory.getBean("userService", UserService.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
+
     }
 }
