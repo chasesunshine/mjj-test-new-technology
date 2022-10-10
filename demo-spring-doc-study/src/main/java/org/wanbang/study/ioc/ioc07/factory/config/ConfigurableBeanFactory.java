@@ -1,4 +1,7 @@
 package org.wanbang.study.ioc.ioc07.factory.config;
+
+import org.wanbang.study.ioc.ioc07.factory.HierarchicalBeanFactory;
+
 /**
 * @description: TODO
 * @author majiajian
@@ -6,5 +9,13 @@ package org.wanbang.study.ioc.ioc07.factory.config;
 * @version 1.0
 */
 
-public interface ConfigurableBeanFactory {
+public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry {
+
+    String SCOPE_SINGLETON = "singleton";
+
+    String SCOPE_PROTOTYPE = "prototype";
+
+    void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
+
 }
+

@@ -17,10 +17,13 @@ import org.wanbang.study.ioc.ioc07.exception.BeansException;
  *
  */
 public interface ConfigurableApplicationContext extends ApplicationContext {
+
     /**
      * 刷新容器
      *
      * @throws BeansException
      */
     void refresh() throws BeansException;
+
 }
+

@@ -1,9 +1,12 @@
 package org.wanbang.study.ioc.ioc07.factory.support;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.wanbang.study.ioc.ioc07.exception.BeansException;
 import org.wanbang.study.ioc.ioc07.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
 * @description: DefaultSingletonBeanRegistry
@@ -18,6 +21,7 @@ import java.util.Map;
  * AbstractBeanFactory 以及继承的 DefaultListableBeanFactory 调用。
  */
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
+
     private Map<String, Object> singletonObjects = new HashMap<>();
 
     @Override

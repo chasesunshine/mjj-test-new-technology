@@ -6,14 +6,14 @@ package org.wanbang.study.ioc.ioc07.exception;
 * @version 1.0
 */
 
-public class BeansException extends Throwable{
+public class BeansException extends RuntimeException {
 
-    public BeansException(String message, Exception e) {
-        System.out.println("错误信息 :"+message);
+    public BeansException(String msg) {
+        super(msg);
     }
 
-    public BeansException(String message) {
-        System.out.println("错误信息 :"+message);
+    public BeansException(String msg, Throwable cause) {
+        super(msg, cause);
     }
 
 }

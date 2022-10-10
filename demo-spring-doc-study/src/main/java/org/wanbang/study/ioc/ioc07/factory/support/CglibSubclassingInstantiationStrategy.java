@@ -36,4 +36,3 @@ public class CglibSubclassingInstantiationStrategy implements InstantiationStrat
     }
 
 }
-

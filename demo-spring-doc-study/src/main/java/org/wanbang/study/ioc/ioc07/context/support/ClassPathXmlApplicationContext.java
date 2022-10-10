@@ -26,19 +26,23 @@ import org.wanbang.study.ioc.ioc07.exception.BeansException;
  * 中方法的调用和提供了配置文件地址信息。
  *
  */
-public abstract class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext {
+public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext {
+
     private String[] configLocations;
+
     public ClassPathXmlApplicationContext() {
     }
-/**
- * 从 XML 中加载 BeanDefinition，并刷新上下文
- *
- * @param configLocations
- * @throws BeansException
- */
-public ClassPathXmlApplicationContext(String configLocations) throws BeansException {
+
+    /**
+     * 从 XML 中加载 BeanDefinition，并刷新上下文
+     *
+     * @param configLocations
+     * @throws BeansException
+     */
+    public ClassPathXmlApplicationContext(String configLocations) throws BeansException {
         this(new String[]{configLocations});
     }
+
     /**
      * 从 XML 中加载 BeanDefinition，并刷新上下文
      * @param configLocations
@@ -48,9 +52,10 @@ public ClassPathXmlApplicationContext(String configLocations) throws BeansExcept
         this.configLocations = configLocations;
         refresh();
     }
+
     @Override
     protected String[] getConfigLocations() {
         return configLocations;
     }
-}
 
+}

@@ -19,12 +19,15 @@ import java.io.InputStream;
  * 具体的读取过程主要是：classLoader.getResourceAsStream(path)
  */
 public class ClassPathResource implements Resource {
+
     private final String path;
+
     private ClassLoader classLoader;
 
     public ClassPathResource(String path) {
         this(path, (ClassLoader) null);
     }
+
     public ClassPathResource(String path, ClassLoader classLoader) {
         Assert.notNull(path, "Path must not be null");
         this.path = path;
@@ -40,6 +43,4 @@ public class ClassPathResource implements Resource {
         }
         return is;
     }
-
 }
-

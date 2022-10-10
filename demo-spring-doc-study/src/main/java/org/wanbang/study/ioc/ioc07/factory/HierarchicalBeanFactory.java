@@ -6,5 +6,5 @@ package org.wanbang.study.ioc.ioc07.factory;
 * @version 1.0
 */
 
-public class HierarchicalBeanFactory {
+public interface HierarchicalBeanFactory extends BeanFactory {
 }

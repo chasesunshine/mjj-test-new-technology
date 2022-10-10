@@ -14,9 +14,12 @@ import java.util.Map;
 */
 
 public interface ConfigurableListableBeanFactory extends ListableBeanFactory, AutowireCapableBeanFactory, ConfigurableBeanFactory {
-    void preInstantiateSingletons() ;
+
+    BeanDefinition getBeanDefinition(String beanName) throws BeansException;
+
+    void preInstantiateSingletons() throws BeansException;
 
     void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
 
-    BeanDefinition getBeanDefinition(String beanName) throws BeansException;
 }
+

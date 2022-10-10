@@ -9,11 +9,16 @@ import lombok.Data;
 * @version 1.0
 */
 
-@Data
 public class BeanReference {
-    private String beanName;
 
-    public BeanReference(String userDao) {
-        this.beanName = userDao;
+    private final String beanName;
+
+    public BeanReference(String beanName) {
+        this.beanName = beanName;
     }
+
+    public String getBeanName() {
+        return beanName;
+    }
+
 }

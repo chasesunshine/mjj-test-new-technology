@@ -22,6 +22,7 @@ import org.wanbang.study.ioc.ioc07.exception.BeansException;
  *
  */
 public interface BeanPostProcessor {
+
     /**
      * 在 Bean 对象执行初始化方法之前，执行此方法
      *
@@ -41,4 +42,5 @@ public interface BeanPostProcessor {
      * @throws BeansException
      */
     Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException;
+
 }

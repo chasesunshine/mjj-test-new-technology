@@ -17,7 +17,9 @@ import java.io.InputStream;
  * 读取一些 txt、excel 文件输出到控制台。
  */
 public class FileSystemResource implements Resource {
+
     private final File file;
+
     private final String path;
 
     public FileSystemResource(File file) {
@@ -34,6 +36,7 @@ public class FileSystemResource implements Resource {
     public InputStream getInputStream() throws IOException {
         return new FileInputStream(this.file);
     }
+
     public final String getPath() {
         return this.path;
     }
