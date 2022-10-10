@@ -34,7 +34,7 @@ public class ApiSpringTest {
         beanFactory.addBeanPostProcessor(beanPostProcessor);
 
         // 5. 获取Bean对象调用方法
-        UserService userService = (UserService) beanFactory.getBean("userService");
+        UserService userService = beanFactory.getBean("userService", UserService.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }
