@@ -14,5 +14,4 @@ import java.util.Map;
 */
 
 public interface ApplicationContext extends ListableBeanFactory {
-    Map<String, BeanPostProcessor> getBeansOfType(Class<BeanPostProcessor> beanFactoryPostProcessorClass);
 }
