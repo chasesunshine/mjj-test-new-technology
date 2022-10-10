@@ -23,7 +23,7 @@ public class ApiSpringTest {
 
         // 2. 读取配置文件&注册Bean
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-        reader.loadBeanDefinitions("classpath:spring.xml");
+        reader.loadBeanDefinitions("classpath:study/spring.xml");
 
         // 3. BeanDefinition 加载完成 & Bean实例化之前，修改 BeanDefinition 的属性值
         MyBeanFactoryPostProcessor beanFactoryPostProcessor = new MyBeanFactoryPostProcessor();
@@ -34,7 +34,7 @@ public class ApiSpringTest {
         beanFactory.addBeanPostProcessor(beanPostProcessor);
 
         // 5. 获取Bean对象调用方法
-        UserService userService = beanFactory.getBean("userService", UserService.class);
+        UserService userService = (UserService) beanFactory.getBean("userService");
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }

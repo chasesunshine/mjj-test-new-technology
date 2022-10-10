@@ -69,7 +69,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     /**
      * Bean 属性填充
      */
-    protected void applyPropertyValues(String beanName, Object bean, BeanDefinition beanDefinition) throws BeansException {
+    protected void applyPropertyValues(String beanName, Object bean, BeanDefinition beanDefinition) {
         try {
             PropertyValues propertyValues = beanDefinition.getPropertyValues();
             for (PropertyValue propertyValue : propertyValues.getPropertyValues()) {
@@ -85,7 +85,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
                 // 属性填充
                 BeanUtil.setFieldValue(bean, name, value);
             }
-        } catch (Exception | BeansException e) {
+        } catch (Exception e) {
             throw new BeansException("Error setting property values：" + beanName);
         }
     }
@@ -98,7 +98,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         this.instantiationStrategy = instantiationStrategy;
     }
 
-    private Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) throws BeansException {
+    private Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) {
         // 1. 执行 BeanPostProcessor Before 处理
         Object wrappedBean = applyBeanPostProcessorsBeforeInitialization(bean, beanName);
 

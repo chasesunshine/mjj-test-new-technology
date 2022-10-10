@@ -12,7 +12,7 @@
         <property name="userDao" ref="userDao"/>
     </bean>
 
-    <bean class="org.wanbang.study.ioc.ioc07.test.MyBeanPostProcessor"/>
-    <bean class="org.wanbang.study.ioc.ioc07.test.MyBeanFactoryPostProcessor"/>
+<!--    <bean class="org.wanbang.study.ioc.ioc07.test.MyBeanPostProcessor"/>-->
+<!--    <bean class="org.wanbang.study.ioc.ioc07.test.MyBeanFactoryPostProcessor"/>-->
     
 </beans>
