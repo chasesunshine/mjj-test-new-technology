@@ -9,7 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 这里是打包的 版本-->
+    <groupId>org.wanbang</groupId>
     <artifactId>demo-mybatis-plus4</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

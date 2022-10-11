@@ -1,0 +1,17 @@
+org\wanbang\Application_Mybatis3.class
+org\wanbang\service\TestUser2Service.class
+org\wanbang\service\TestUser1Service.class
+org\wanbang\controller\TestUser2Controller.class
+org\wanbang\entity\TestUser1$TestUser1Builder.class
+org\wanbang\entity\TestUser2$TestUser2Builder.class
+META-INF\spring-configuration-metadata.json
+org\wanbang\service\impl\TestUser1ServiceImpl.class
+org\wanbang\service\impl\TestUser2ServiceImpl.class
+org\wanbang\dao\source1dao\TestUser1Dao.class
+org\wanbang\config\Source1Config.class
+org\wanbang\controller\TestController.class
+org\wanbang\config\Source2Config.class
+org\wanbang\dao\source2dao\TestUser2Dao.class
+org\wanbang\controller\TestUser1Controller.class
+org\wanbang\entity\TestUser2.class
+org\wanbang\entity\TestUser1.class

@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class TestUser1 implements Serializable {
     private static final long serialVersionUID = -83513220652821879L;
     
-    private Long id;
+    private Long id = (long)99991;
     
     private Integer age;
     
