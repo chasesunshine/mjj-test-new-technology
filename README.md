@@ -45,6 +45,7 @@
               `id` bigint(20) NOT NULL AUTO_INCREMENT,
               `age` int(11) DEFAULT NULL,
               `name` varchar(255) DEFAULT NULL,
+              `sex` varchar(255) DEFAULT NULL,
               PRIMARY KEY (`id`) USING BTREE
             ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
          （ 注 ： 只能 记录 mybqtis 手写的sql，不支持 mybatisplus的自动生成语句的sql（也就是快捷sql） ）

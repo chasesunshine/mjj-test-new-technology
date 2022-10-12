@@ -31,6 +31,7 @@ public class BizService {
     public String getCheckResultComX(String order, int level) {
         //写一段生成key的逻辑：
         String ley = getDispatcherComXKey(order, level);
+        System.out.println(ley);
 
         Function<Object, Object> result = checkResultDispatcherComX.get(ley);
         if (result != null) {
