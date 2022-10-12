@@ -2,8 +2,11 @@ package org.wanbang.study.allDesignMode.behaviorMode.strategyMode.mjjTest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.wanbang.entity.WorldUser;
+import org.wanbang.mapper.WorldUserMapper;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
@@ -15,6 +18,8 @@ import java.util.function.Function;
 public class BizService {
     @Autowired
     private BizUnitService bizUnitService;
+    @Resource
+    private WorldUserMapper userMapper;
 
     private Map<String, Function<Object, Object>> checkResultDispatcherComX = new HashMap<>();
 
@@ -23,7 +28,7 @@ public class BizService {
      */
     @PostConstruct
     public void checkResultDispatcherComXInit() {
-        checkResultDispatcherComX.put("key_订单1", order -> bizUnitService.bizOne(order));
+        checkResultDispatcherComX.put("key_订单1", order -> this.bizOne(order));
         checkResultDispatcherComX.put("key_订单1_订单2", order -> bizUnitService.bizTwo(order));
         checkResultDispatcherComX.put("key_订单1_订单2_订单3", order -> bizUnitService.bizThree(order));
     }
@@ -51,5 +56,11 @@ public class BizService {
             key.append("_" + order + i);
         }
         return key.toString();
+    }
+
+    public Object bizOne(Object order) {
+        WorldUser build1 = WorldUser.builder().name("mjj1").age(1).sex("男").build();
+        userMapper.insert(build1);
+        return order + "各种花式操作1";
     }
 }
