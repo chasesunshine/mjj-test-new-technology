@@ -4,10 +4,11 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
- // 四种增强：前置增强，后置增强，返回增强，异常增强
+// 四种增强：前置增强，后置增强，返回增强，异常增强
 @Order(1)//切片执行顺序，默认为字典顺序
 @Aspect
 @Component
@@ -20,6 +21,10 @@ public class CalculatorAspect {
     //前置增强：目标方法执行之前先调用增强方法
     @Before("pointCut()")
     public void before(JoinPoint jp){
+        // 下面两个数组中，参数值和参数名的个数和位置是一一对应的。
+//        Object[] args = joinPoint.getArgs(); // 参数值
+//        String[] argNames = ((MethodSignature)joinPoint.getSignature()).getParameterNames(); // 参数名
+
         //获取参数
         Object [] args = jp.getArgs();
         //获取方法名
@@ -58,31 +63,31 @@ public class CalculatorAspect {
     }
 
 
-     //环绕增强
-     @Around(value="pointCut()")
-     public Object around(ProceedingJoinPoint joinPoint){
-         Object result = null;
-         Object target = joinPoint.getTarget();//目标对象
-         String methodName = joinPoint.getSignature().getName();
-         Object[] params = joinPoint.getArgs();
+    //环绕增强
+    @Around(value="pointCut()")
+    public Object around(ProceedingJoinPoint joinPoint){
+        Object result = null;
+        Object target = joinPoint.getTarget();//目标对象
+        String methodName = joinPoint.getSignature().getName();
+        Object[] params = joinPoint.getArgs();
 
-         try{
-             try{
-                 //前置增强
-                 System.out.println(target.getClass().getName()+": The "+methodName+" method begins.");
-                 System.out.println(target.getClass().getName()+": Parameters of the "+methodName+"method: ["+params[0]+","+params[1]+"]");
-                 //执行目标对象内的方法
-                 result = joinPoint.proceed();
-             }finally{
-                 //后置增强
-                 System.out.println(target.getClass().getName()+"：The "+methodName+" method ends.");
-             }
-             //返回增强
-             System.out.println(target.getClass().getName()+"：Result of the "+methodName+" method："+result);
-         }catch (Throwable e) {
-             System.out.println(target.getClass().getName()+"：Exception of the method "+methodName+": "+e);
-         }
-         return result;
-     }
+        try{
+            try{
+                //前置增强
+                System.out.println(target.getClass().getName()+": The "+methodName+" method begins.");
+                System.out.println(target.getClass().getName()+": Parameters of the "+methodName+"method: ["+params[0]+","+params[1]+"]");
+                //执行目标对象内的方法
+                result = joinPoint.proceed();
+            }finally{
+                //后置增强
+                System.out.println(target.getClass().getName()+"：The "+methodName+" method ends.");
+            }
+            //返回增强
+            System.out.println(target.getClass().getName()+"：Result of the "+methodName+" method："+result);
+        }catch (Throwable e) {
+            System.out.println(target.getClass().getName()+"：Exception of the method "+methodName+": "+e);
+        }
+        return result;
+    }
 
 }
