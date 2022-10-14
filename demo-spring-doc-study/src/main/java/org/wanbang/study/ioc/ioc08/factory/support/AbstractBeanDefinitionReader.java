@@ -6,8 +6,8 @@ package org.wanbang.study.ioc.ioc08.factory.support;
 * @version 1.0
 */
 
-import org.wanbang.study.ioc.ioc08.io.DefaultResourceLoader;
-import org.wanbang.study.ioc.ioc08.io.ResourceLoader;
+import org.wanbang.study.ioc.ioc08.core.io.DefaultResourceLoader;
+import org.wanbang.study.ioc.ioc08.core.io.ResourceLoader;
 
 /**
  *  抽象类把 BeanDefinitionReader 接口的前两个方法全部实现完了，并提供了构造

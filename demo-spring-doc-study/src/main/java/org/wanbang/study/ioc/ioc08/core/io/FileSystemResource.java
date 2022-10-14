@@ -1,4 +1,4 @@
-package org.wanbang.study.ioc.ioc08.io;
+package org.wanbang.study.ioc.ioc08.core.io;
 
 import java.io.File;
 import java.io.FileInputStream;

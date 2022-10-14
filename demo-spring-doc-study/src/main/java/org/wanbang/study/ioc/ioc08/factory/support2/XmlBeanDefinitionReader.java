@@ -17,8 +17,8 @@ import org.wanbang.study.ioc.ioc08.factory.config.BeanDefinition;
 import org.wanbang.study.ioc.ioc08.factory.config.BeanReference;
 import org.wanbang.study.ioc.ioc08.factory.support.AbstractBeanDefinitionReader;
 import org.wanbang.study.ioc.ioc08.factory.support.BeanDefinitionRegistry;
-import org.wanbang.study.ioc.ioc08.io.Resource;
-import org.wanbang.study.ioc.ioc08.io.ResourceLoader;
+import org.wanbang.study.ioc.ioc08.core.io.Resource;
+import org.wanbang.study.ioc.ioc08.core.io.ResourceLoader;
 
 import java.io.IOException;
 import java.io.InputStream;

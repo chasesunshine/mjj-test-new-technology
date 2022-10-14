@@ -11,7 +11,7 @@ import org.wanbang.study.ioc.ioc08.exception.BeansException;
 import org.wanbang.study.ioc.ioc08.factory.ConfigurableListableBeanFactory;
 import org.wanbang.study.ioc.ioc08.factory.config.BeanFactoryPostProcessor;
 import org.wanbang.study.ioc.ioc08.factory.config.BeanPostProcessor;
-import org.wanbang.study.ioc.ioc08.io.DefaultResourceLoader;
+import org.wanbang.study.ioc.ioc08.core.io.DefaultResourceLoader;
 
 import java.util.Map;
 
@@ -34,6 +34,10 @@ import java.util.Map;
  * 5. 提前实例化单例 Bean 对象
  *  另外把定义出来的抽象方法，refreshBeanFactory()、getBeanFactory() 由后面的继
  * 承此抽象类的其他抽象类实现。
+ *
+ *  这里主要体现了关于注册钩子和关闭的方法实现，上文提到过的
+ * Runtime.getRuntime().addShutdownHook，可以尝试验证。在一些中间
+ * 件和监控系统的设计中也可以用得到，比如监测服务器宕机，执行备机启动操作。
  */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
@@ -96,6 +100,15 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
     @Override
     public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
         return getBeanFactory().getBean(name, requiredType);
+    }
+
+    @Override
+    public void registerShutdownHook() {
+        Runtime.getRuntime().addShutdownHook(new Thread(this::close));
+    }
+    @Override
+    public void close() {
+        getBeanFactory().destroySingletons();
     }
 
 }

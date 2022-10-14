@@ -1,18 +1,22 @@
 package org.wanbang.study.ioc.ioc08.factory.support;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
 import org.wanbang.study.ioc.ioc08.entity.PropertyValue;
 import org.wanbang.study.ioc.ioc08.entity.PropertyValues;
 import org.wanbang.study.ioc.ioc08.exception.BeansException;
+import org.wanbang.study.ioc.ioc08.factory.DisposableBean;
+import org.wanbang.study.ioc.ioc08.factory.InitializingBean;
 import org.wanbang.study.ioc.ioc08.factory.config.AutowireCapableBeanFactory;
 import org.wanbang.study.ioc.ioc08.factory.config.BeanDefinition;
 import org.wanbang.study.ioc.ioc08.factory.config.BeanPostProcessor;
 import org.wanbang.study.ioc.ioc08.factory.config.BeanReference;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
 /**
- * @description: TODO
+ * @description: 创建 Bean 时注册销毁方法对象
  * @author majiajian
  * @date 2022/9/7 18:15
  * @version 1.0
@@ -29,6 +33,26 @@ import java.lang.reflect.Constructor;
  * 并没有去处理循环依赖的问题，这部分内容较大，后续补充。
  * BeanUtil.setFieldValue(bean, name, value) 是 hutool-all 工具类中的方法，你也可
  * 以自己实现
+ *
+ *  抽象类 AbstractAutowireCapableBeanFactory 中的 createBean 是用来创建 Bean
+ * 对象的方法，在这个方法中我们之前已经扩展了 BeanFactoryPostProcessor、
+ * BeanPostProcessor 操作，这里我们继续完善执行 Bean 对象的初始化方法的处理
+ * 动作。
+ *  在方法 invokeInitMethods 中，主要分为两块来执行实现了 InitializingBean 接口
+ * 的操作，处理 afterPropertiesSet 方法。另外一个是判断配置信息 init-method 是
+ * 否存在，执行反射调用 initMethod.invoke(bean)。这两种方式都可以在 Bean 对象
+ * 初始化过程中进行处理加载 Bean 对象中的初始化操作，让使用者可以额外新增加
+ * 自己想要的动作。
+ *
+ *  在创建 Bean 对象的实例的时候，需要把销毁方法保存起来，方便后续执行销毁动
+ * 作进行调用。
+ *  那么这个销毁方法的具体方法信息，会被注册到 DefaultSingletonBeanRegistry 中
+ * 新增加的 Map<String, DisposableBean> disposableBeans 属性中
+ * 去，因为这个接口的方法最终可以被类 AbstractApplicationContext 的 close 方法
+ * 通过 getBeanFactory().destroySingletons() 调用。
+ *  在注册销毁方法的时候，会根据是接口类型和配置类型统一交给
+ * DisposableBeanAdapter 销毁适配器类来做统一处理。实现了某个接口的类可以被
+ * instanceof 判断或者强转后调用接口方法
  */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
 
@@ -47,8 +71,17 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
             throw new BeansException("Instantiation of bean failed", e);
         }
 
+        // 注册实现了 DisposableBean 接口的 Bean 对象
+        registerDisposableBeanIfNecessary(beanName, bean, beanDefinition);
+
         addSingleton(beanName, bean);
         return bean;
+    }
+
+    protected void registerDisposableBeanIfNecessary(String beanName, Object bean, BeanDefinition beanDefinition) {
+        if (bean instanceof DisposableBean || StrUtil.isNotEmpty(beanDefinition.getDestroyMethodName())) {
+            registerDisposableBean(beanName, new DisposableBeanAdapter(bean, beanName, beanDefinition));
+        }
     }
 
     protected Object createBeanInstance(BeanDefinition beanDefinition, String beanName, Object[] args) throws BeansException {
@@ -100,17 +133,35 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         // 1. 执行 BeanPostProcessor Before 处理
         Object wrappedBean = applyBeanPostProcessorsBeforeInitialization(bean, beanName);
 
-        // 待完成内容：invokeInitMethods(beanName, wrappedBean, beanDefinition);
-        invokeInitMethods(beanName, wrappedBean, beanDefinition);
+        // 执行 Bean 对象的初始化方法
+        try {
+            invokeInitMethods(beanName, wrappedBean, beanDefinition);
+        } catch (Exception e) {
+            throw new BeansException("Invocation of init method of bean[" + beanName + "] failed", e);
+        }
 
         // 2. 执行 BeanPostProcessor After 处理
         wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
         return wrappedBean;
     }
 
-    private void invokeInitMethods(String beanName, Object wrappedBean, BeanDefinition beanDefinition) {
-
+    private void invokeInitMethods(String beanName, Object bean, BeanDefinition beanDefinition) throws Exception {
+        // 1. 实现接口 InitializingBean
+        if (bean instanceof InitializingBean) {
+            ((InitializingBean) bean).afterPropertiesSet();
+        }
+        // 2. 配置信息 init-method {判断是为了避免二次执行销毁}
+        String initMethodName = beanDefinition.getInitMethodName();
+        if (StrUtil.isNotEmpty(initMethodName)) {
+            Method initMethod = beanDefinition.getBeanClass().getMethod(initMethodName);
+            if (null == initMethod) {
+                throw new BeansException("Could not find an init method named '" +
+                        initMethodName + "' on bean with name '" + beanName + "'");
+            }
+            initMethod.invoke(bean);
+        }
     }
+
 
     @Override
     public Object applyBeanPostProcessorsBeforeInitialization(Object existingBean, String beanName) throws BeansException {

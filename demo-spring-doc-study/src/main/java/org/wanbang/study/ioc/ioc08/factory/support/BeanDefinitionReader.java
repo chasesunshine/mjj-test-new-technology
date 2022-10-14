@@ -1,8 +1,8 @@
 package org.wanbang.study.ioc.ioc08.factory.support;
 
 import org.wanbang.study.ioc.ioc08.exception.BeansException;
-import org.wanbang.study.ioc.ioc08.io.Resource;
-import org.wanbang.study.ioc.ioc08.io.ResourceLoader;
+import org.wanbang.study.ioc.ioc08.core.io.Resource;
+import org.wanbang.study.ioc.ioc08.core.io.ResourceLoader;
 
 /**
 * @description: TODO
