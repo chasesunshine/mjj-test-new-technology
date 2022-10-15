@@ -11,9 +11,10 @@ import org.wanbang.study.ioc.ioc08.context.support.ClassPathXmlApplicationContex
 @SpringBootTest
 public class ApiSpringTest {
     @Test
-    public void test_xml2() {
+    public void test_ioc08() {
         // 1.初始化 BeanFactory
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:study/spring08.xml");
+        ClassPathXmlApplicationContext applicationContext =
+                new ClassPathXmlApplicationContext("classpath:study/spring08.xml");
         applicationContext.registerShutdownHook();
 
         // 2. 获取 Bean 对象调用方法

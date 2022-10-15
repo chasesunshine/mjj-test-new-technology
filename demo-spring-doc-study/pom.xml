@@ -18,11 +18,11 @@
             <scope>compile</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.wanbang</groupId>
-            <artifactId>demo-mybatis-plus4</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.wanbang</groupId>-->
+<!--            <artifactId>demo-mybatis-plus4</artifactId>-->
+<!--            <version>1.0.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 
