@@ -3,7 +3,9 @@ package org.wanbang.controller;
 import com.alibaba.fastjson.JSON;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
 * @description: TODO
@@ -13,24 +15,35 @@ import java.util.List;
 */
 
 public class TestController {
+//    public static void main(String[] args) {
+//        List<String> listAll= new ArrayList<>();
+//
+//        List<String> list1= new ArrayList<>();
+//        List<String> list2= new ArrayList<>();
+//
+//        list1.add("1");
+//        list1.add("2");
+//        list1.add("3");
+//
+//        listAll.addAll(list1);
+//
+//        list2.add("4");
+//        list2.add("5");
+//        list2.add("6");
+//
+//        listAll.addAll(list2);
+//
+//        System.out.println(JSON.toJSONString(listAll));
+//    }
+
     public static void main(String[] args) {
-        List<String> listAll= new ArrayList<>();
+        Map<Integer, Long> map = new HashMap<>();
+        map.put(0, 0L);
+        map.put(1, 1L);
 
-        List<String> list1= new ArrayList<>();
-        List<String> list2= new ArrayList<>();
+        String a = JSON.toJSONString(map);
 
-        list1.add("1");
-        list1.add("2");
-        list1.add("3");
-
-        listAll.addAll(list1);
-
-        list2.add("4");
-        list2.add("5");
-        list2.add("6");
-
-        listAll.addAll(list2);
-
-        System.out.println(JSON.toJSONString(listAll));
+        map = JSON.parseObject(a, Map.class);
+        Long b = map.get(1);
     }
 }
