@@ -24,4 +24,8 @@ public class ApiSpringTest {
         System.out.println("测试结果：" + result);
     }
 
+    @Test
+    public void test_hook() {
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> System.out.println("close！")));
+    }
 }

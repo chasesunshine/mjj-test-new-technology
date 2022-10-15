@@ -84,7 +84,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         }
     }
 
-    protected Object createBeanInstance(BeanDefinition beanDefinition, String beanName, Object[] args) throws BeansException {
+    protected Object createBeanInstance(BeanDefinition beanDefinition, String beanName, Object[] args) {
         Constructor constructorToUse = null;
         Class<?> beanClass = beanDefinition.getBeanClass();
         Constructor<?>[] declaredConstructors = beanClass.getDeclaredConstructors();
@@ -150,13 +150,12 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         if (bean instanceof InitializingBean) {
             ((InitializingBean) bean).afterPropertiesSet();
         }
-        // 2. 配置信息 init-method {判断是为了避免二次执行销毁}
+        // 2. 注解配置 init-method {判断是为了避免二次执行初始化}
         String initMethodName = beanDefinition.getInitMethodName();
-        if (StrUtil.isNotEmpty(initMethodName)) {
+        if (StrUtil.isNotEmpty(initMethodName) && !(bean instanceof InitializingBean)) {
             Method initMethod = beanDefinition.getBeanClass().getMethod(initMethodName);
             if (null == initMethod) {
-                throw new BeansException("Could not find an init method named '" +
-                        initMethodName + "' on bean with name '" + beanName + "'");
+                throw new BeansException("Could not find an init method named '" + initMethodName + "' on bean with name '" + beanName + "'");
             }
             initMethod.invoke(bean);
         }

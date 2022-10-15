@@ -49,7 +49,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
         return (T) getBean(name);
     }
 
-    protected <T> T doGetBean(final String name, final Object[] args) throws BeansException {
+    protected <T> T doGetBean(final String name, final Object[] args) {
         Object bean = getSingleton(name);
         if (bean != null) {
             return (T) bean;

@@ -13,7 +13,6 @@ import lombok.Data;
  *  这两个类的作用就是创建出一个用于传递类中属性信息的类，因为属性可能会有很
  * 多，所以还需要定义一个集合包装下。
  */
-@Data
 public class PropertyValue {
     private final String name;
     private final Object value;
@@ -21,5 +20,13 @@ public class PropertyValue {
         this.name = name;
         this.value = value;
     }
-// ...get/set
+
+    public String getName() {
+        return name;
+    }
+
+    public Object getValue() {
+        return value;
+    }
+
 }
