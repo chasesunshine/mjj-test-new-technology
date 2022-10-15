@@ -1,6 +1,8 @@
 package org.wanbang.controller;
 
 import com.alibaba.fastjson.JSON;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,8 +15,19 @@ import java.util.Map;
 * @date 2022/8/27 11:06
 * @version 1.0
 */
-
+@RestController
+@RequestMapping("/test")
 public class TestController {
+
+    //2)全局捕获异常
+    @RequestMapping("/test-error")
+    public String testError(int a) {
+        int b = 1/a;
+        return "success"+b;
+
+    }
+
+
 //    public static void main(String[] args) {
 //        List<String> listAll= new ArrayList<>();
 //
