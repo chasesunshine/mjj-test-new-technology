@@ -20,6 +20,7 @@ import org.wanbang.service.TestService;
 import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -45,7 +46,10 @@ public class TestController {
     @Resource
     private TestService testService;
 
-
+    @RequestMapping("/test-error1")
+    public Result testError1(@RequestBody @Valid SpringWorld testUser1) {
+        return Result.error("1111");
+    }
 
     /**
      * 批量导入 企业培训价格

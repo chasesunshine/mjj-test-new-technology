@@ -2,6 +2,8 @@ package org.wanbang.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
+
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
@@ -22,7 +24,8 @@ public class TestUser1 implements Serializable {
     private Long id = (long)99991;
     
     private Integer age;
-    
+
+    @NotBlank(message = "名字不能为空")
     private String name;
     
     private String sex;

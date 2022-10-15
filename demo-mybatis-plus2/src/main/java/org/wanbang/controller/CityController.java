@@ -1,6 +1,8 @@
 package org.wanbang.controller;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.wanbang.common.enums.CacheNameEnum;
+import org.wanbang.entity.City;
 import org.wanbang.service.CityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.wanbang.service.CityServiceTestAop;
 import org.wanbang.study.redisLock.LockExecutor;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 @Slf4j
 @RestController
@@ -24,6 +27,12 @@ public class CityController {
 
     @Resource
     LockExecutor lockExecutor;
+
+    @RequestMapping("/test-error1")
+    public String testError1(@RequestBody @Valid City city) {
+        return "success" + 1;
+    }
+
 
     @GetMapping("/selectOne")
     public String  selectOne(){

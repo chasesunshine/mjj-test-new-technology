@@ -10,6 +10,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 @Accessors(chain=true)	//链式设置属性
 @TableName(value="city")
@@ -22,6 +24,7 @@ public class City {
 	@TableField(value = "ID")
 	private Integer id;
 
+	@NotBlank(message = "名字不能为空")
 	@TableField(value = "Name")
 	private String name;
 

@@ -3,6 +3,7 @@ package org.wanbang.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
@@ -23,7 +24,8 @@ public class SpringWorld implements Serializable {
     private Long id;
     
     private Integer age;
-    
+
+    @NotBlank(message = "名字不能为空")
     private String name;
     
     private String sex;
