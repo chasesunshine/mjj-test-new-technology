@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.TestUser1Dao">
+<mapper namespace="org.wanbang.dao.SpringWorldDao">
 
-    <resultMap id="BaseResultMap" type="org.TestUser1">
+    <resultMap id="BaseResultMap" type="org.wanbang.entity.SpringWorld">
         <!--@Table spring_world-->
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="age" column="age" jdbcType="INTEGER"/>

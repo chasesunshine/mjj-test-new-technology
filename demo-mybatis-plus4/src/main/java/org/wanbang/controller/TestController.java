@@ -36,14 +36,14 @@ public class TestController {
 //        System.out.println(JSON.toJSONString(listAll));
 //    }
 
-    public static void main(String[] args) {
-        Map<Integer, Long> map = new HashMap<>();
-        map.put(0, 0L);
-        map.put(1, 1L);
-
-        String a = JSON.toJSONString(map);
-
-        map = JSON.parseObject(a, Map.class);
-        Long b = map.get(1);
-    }
+//    public static void main(String[] args) {
+//        Map<Integer, Long> map = new HashMap<>();
+//        map.put(0, 0L);
+//        map.put(1, 1L);
+//
+//        String a = JSON.toJSONString(map);
+//
+//        map = JSON.parseObject(a, Map.class);
+//        Long b = map.get(1);
+//    }
 }

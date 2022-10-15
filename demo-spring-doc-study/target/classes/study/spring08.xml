@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <!--
+     配置文件中主要是新增了，init-method="initDataMethod" destroymethod="destroyDataMethod"，这样两个配置。从源码的学习中可以知
+    道，这两个配置是为了加入到 BeanDefinition 定义类之后写入到类
+    DefaultListableBeanFactory 中的 beanDefinitionMap 属性中去。
+    -->
+    <bean id="userDao" class="org.wanbang.study.ioc.ioc08.bean.UserDao"
+          init-method="initDataMethod" destroy-method="destroyDataMethod"/>
+
+    <bean id="userService" class="org.wanbang.study.ioc.ioc08.bean.UserService">
+        <property name="uId" value="10001"/>
+        <property name="company" value="腾讯"/>
+        <property name="location" value="深圳"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>

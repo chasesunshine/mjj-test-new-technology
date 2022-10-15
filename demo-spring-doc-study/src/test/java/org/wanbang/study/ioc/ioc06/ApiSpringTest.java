@@ -33,7 +33,7 @@ public class ApiSpringTest {
 
         // 2. 读取配置文件&注册 Bean
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-        reader.loadBeanDefinitions("classpath:study/spring07.xml");
+        reader.loadBeanDefinitions("classpath:study/spring06.xml");
 
         // 3. 获取 Bean 对象调用方法
         UserService userService = (UserService) beanFactory.getBean("userService");

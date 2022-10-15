@@ -1,5 +1,8 @@
 package org.wanbang.study.ioc.ioc08.bean;
 
+import org.wanbang.study.ioc.ioc08.factory.DisposableBean;
+import org.wanbang.study.ioc.ioc08.factory.InitializingBean;
+
 /**
  * @description: TODO
  * @author majiajian
@@ -7,11 +10,28 @@ package org.wanbang.study.ioc.ioc08.bean;
  * @version 1.0
  */
 
-public class UserService {
+/**
+ *
+ *  UserService，以实现接口 InitializingBean, DisposableBean 的两个方法 destroy()、
+ * afterPropertiesSet()，处理相应的初始化和销毁方法的动作。afterPropertiesSet，方
+ * 法名字很好，在属性设置后执行
+ *
+ */
+public class UserService implements InitializingBean, DisposableBean {
     private String uId;
     private String company;
     private String location;
     private UserDao userDao;
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("执行：UserService.destroy");
+    }
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("执行：UserService.afterPropertiesSet");
+    }
+
 
     public String queryUserInfo() {
         return userDao.queryUserName(uId) + "," + company + "," + location;
