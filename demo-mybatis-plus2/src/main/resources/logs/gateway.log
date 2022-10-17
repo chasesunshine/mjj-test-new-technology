@@ -239,3 +239,11 @@
 2022-10-15 17:16:24.202 [http-nio-8091-exec-2] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
 2022-10-15 17:16:24.305 [http-nio-8091-exec-2] INFO  o.w.s.f.paramFilter.LogRequestBodyAdvice:  CityController.testError1:{"countryCode":"demoData","district":"demoData","id":0,"name":"","population":0}
 2022-10-15 17:16:24.401 [http-nio-8091-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:  Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String org.wanbang.controller.CityController.testError1(org.wanbang.entity.City): [Field error in object 'city' on field 'name': rejected value []; codes [NotBlank.city.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [city.name,name]; arguments []; default message [name]]; default message [名字不能为空]] ]
+2022-10-15 17:37:43.925 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-10-15 17:37:43.926 [Thread-16] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-10-15 17:37:43.927 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-10-15 17:37:43.927 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-10-15 17:37:43.927 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-10-15 17:37:43.928 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-15 17:37:43.930 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-10-15 17:37:43.933 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
