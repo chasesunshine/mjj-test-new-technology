@@ -1,4 +1,4 @@
-package org.wanbang.study.leetcode.codeAbality;
+package org.wanbang.study.leetcode.codeAbality.easy;
 /**
 * @description: https://leetcode.cn/problems/two-sum/
 * @author majiajian
