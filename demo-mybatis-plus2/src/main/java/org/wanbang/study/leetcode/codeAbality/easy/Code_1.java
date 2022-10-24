@@ -45,7 +45,7 @@ import java.util.Map;
  *
  */
 
-public class Code1 {
+public class Code_1 {
     public static void main(String[] args) {
         int[] ints = new int[]{1,2,7,2,5};
         int target = 6;

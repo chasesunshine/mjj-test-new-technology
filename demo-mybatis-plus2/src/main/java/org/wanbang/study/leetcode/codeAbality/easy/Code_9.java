@@ -35,13 +35,35 @@ import com.alibaba.schedulerx.shade.scala.Int;
  */
 public class Code_9 {
     public static void main(String[] args) {
-        Integer value = 1;
+        Integer value = 121;
         boolean palindrome = isPalindrome(value);
 
         System.out.println(palindrome);
     }
 
     public static boolean isPalindrome(int x) {
-        return true;
+        // 0 是回文数
+        if (x == 0) return true;
+        // 负数和除 0 以外以 0 结尾的数都不是回文数
+        if (x < 0 || x % 10 == 0) return false;
+        // 记录 x 后一半的翻转，如 x = 4334，reversed = 43；x = 54345，reversed = 54
+        int reversed = 0;
+        while (x > reversed) {
+            reversed = reversed * 10 + x % 10;
+            x /= 10;
+        }
+        // x有偶数位和奇数位两种情况
+        return reversed == x || reversed / 10 == x;
+    }
+
+    public boolean isPalindrome1(int x) {
+        if(x<0)return false;
+        int a=x;
+        int sum=0;
+        while(x!=0){
+            sum=sum*10+x%10;
+            x/=10;
+        }
+        return sum==a;
     }
 }
