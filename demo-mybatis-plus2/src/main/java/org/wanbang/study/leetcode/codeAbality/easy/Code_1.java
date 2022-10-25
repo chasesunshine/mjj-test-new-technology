@@ -46,6 +46,13 @@ import java.util.Map;
  */
 
 public class Code_1 {
+
+    /**
+     * 思路：
+     * 把 补值和遍历的下标放到 放到 hashmap
+     * 然后遍历 num 的时候 找到补值，然后取出对应的 下标和存到map里面的下标
+     *
+     */
     public static void main(String[] args) {
         int[] ints = new int[]{1,2,7,2,5};
         int target = 6;

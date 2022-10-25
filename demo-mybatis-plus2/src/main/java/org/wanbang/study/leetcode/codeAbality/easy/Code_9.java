@@ -34,13 +34,26 @@ import com.alibaba.schedulerx.shade.scala.Int;
  *
  */
 public class Code_9 {
+
+    /**
+     *
+     * 思路：
+     * 0 是回文数
+     * 负数和除 0 以外以 0 结尾的数都不是回文数
+     * 记录 x 后一半的翻转，如 x = 4334，reversed = 43；x = 54345，reversed = 54
+     * x有偶数位和奇数位两种情况
+     *
+     */
     public static void main(String[] args) {
-        Integer value = 121;
+        Integer value = 53488435;
         boolean palindrome = isPalindrome(value);
+        boolean palindrome1 = isPalindrome1(value);
 
         System.out.println(palindrome);
+        System.out.println(palindrome1);
     }
 
+    // 这个还是好理解的
     public static boolean isPalindrome(int x) {
         // 0 是回文数
         if (x == 0) return true;
@@ -56,7 +69,7 @@ public class Code_9 {
         return reversed == x || reversed / 10 == x;
     }
 
-    public boolean isPalindrome1(int x) {
+    public static boolean isPalindrome1(int x) {
         if(x<0)return false;
         int a=x;
         int sum=0;
