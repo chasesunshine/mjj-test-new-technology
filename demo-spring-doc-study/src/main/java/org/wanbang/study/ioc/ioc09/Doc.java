@@ -6,6 +6,23 @@ package org.wanbang.study.ioc.ioc09;
 * @version 1.0
 */
 
+/**
+ *  定义接口 Aware，在 Spring 框架中它是一种感知标记性接口，具体的子类定义和
+ * 实现能感知容器中的相关对象。也就是通过这个桥梁，向具体的实现类中提供容器
+ * 服务
+ *  继承 Aware 的接口包括：BeanFactoryAware、BeanClassLoaderAware、
+ * BeanNameAware 和 ApplicationContextAware，当然在 Spring 源码中还有一些其
+ * 他关于注解的，不过目前我们还是用不到。
+ *  在具体的接口实现过程中你可以看到，一部分(BeanFactoryAware、
+ * BeanClassLoaderAware、BeanNameAware)在 factory 的 support 文件夹下，另外
+ * ApplicationContextAware 是在 context 的 support 中，这是因为不同的内容获取
+ * 需要在不同的包下提供。所以，在 AbstractApplicationContext 的具体实现中会用
+ * 到向 beanFactory 添加 BeanPostProcessor 内容的
+ * ApplicationContextAwareProcessor 操作，最后由
+ * AbstractAutowireCapableBeanFactory 创建 createBean 时处理相应的调用操作。
+ * 关于 applyBeanPostProcessorsBeforeInitialization 已经在前面章节中实现过，如果
+ * 忘记可以往前翻翻
+ */
 public class Doc {
     /**
      *  测试方法中主要是添加了一写关于新增 Aware 实现的调用，其他不需要调用的也
