@@ -1,7 +1,9 @@
 package org.wanbang.study.ioc.ioc09.bean;
 
-import org.wanbang.study.ioc.ioc09.factory.DisposableBean;
-import org.wanbang.study.ioc.ioc09.factory.InitializingBean;
+import org.wanbang.study.ioc.ioc09.context.ApplicationContext;
+import org.wanbang.study.ioc.ioc09.context.ApplicationContextAware;
+import org.wanbang.study.ioc.ioc09.exception.BeansException;
+import org.wanbang.study.ioc.ioc09.factory.*;
 
 /**
  * @description: TODO
@@ -17,21 +19,35 @@ import org.wanbang.study.ioc.ioc09.factory.InitializingBean;
  * 法名字很好，在属性设置后执行
  *
  */
-public class UserService implements InitializingBean, DisposableBean {
+public class UserService implements BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware {
+
+    private ApplicationContext applicationContext;
+    private BeanFactory beanFactory;
+
     private String uId;
     private String company;
     private String location;
     private UserDao userDao;
 
     @Override
-    public void destroy() throws Exception {
-        System.out.println("执行：UserService.destroy");
-    }
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("执行：UserService.afterPropertiesSet");
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("Bean Name is：" + name);
+    }
+
+    @Override
+    public void setBeanClassLoader(ClassLoader classLoader) {
+        System.out.println("ClassLoader：" + classLoader);
+    }
 
     public String queryUserInfo() {
         return userDao.queryUserName(uId) + "," + company + "," + location;
@@ -68,4 +84,14 @@ public class UserService implements InitializingBean, DisposableBean {
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
+
+
+    public ApplicationContext getApplicationContext() {
+        return applicationContext;
+    }
+
+    public BeanFactory getBeanFactory() {
+        return beanFactory;
+    }
+
 }

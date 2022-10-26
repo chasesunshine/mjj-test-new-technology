@@ -38,6 +38,11 @@ import java.util.Map;
  *  这里主要体现了关于注册钩子和关闭的方法实现，上文提到过的
  * Runtime.getRuntime().addShutdownHook，可以尝试验证。在一些中间
  * 件和监控系统的设计中也可以用得到，比如监测服务器宕机，执行备机启动操作。
+ *
+ *  refresh() 方法就是整个 Spring 容器的操作过程，与上一章节对比，本次新增加了
+ * 关于 addBeanPostProcessor 的操作。
+ *  添加 ApplicationContextAwareProcessor，让继承自 ApplicationContextAware 的
+ * Bean 对象都能感知所属的 ApplicationContext。
  */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
@@ -49,14 +54,18 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         // 2. 获取 BeanFactory
         ConfigurableListableBeanFactory beanFactory = getBeanFactory();
 
-        // 3. 在 Bean 实例化之前，执行 BeanFactoryPostProcessor (Invoke factory processors registered as beans in the context.)
+        // 3. 添加 ApplicationContextAwareProcessor，让继承自 ApplicationContextAware 的 Bean 对象都能感知所属的 ApplicationContext
+        beanFactory.addBeanPostProcessor(new ApplicationContextAwareProcessor(this));
+
+        // 4. 在 Bean 实例化之前，执行 BeanFactoryPostProcessor (Invoke factory processors registered as beans in the context.)
         invokeBeanFactoryPostProcessors(beanFactory);
 
-        // 4. BeanPostProcessor 需要提前于其他 Bean 对象实例化之前执行注册操作
+        // 5. BeanPostProcessor 需要提前于其他 Bean 对象实例化之前执行注册操作
         registerBeanPostProcessors(beanFactory);
 
-        // 5. 提前实例化单例Bean对象
+        // 6. 提前实例化单例Bean对象
         beanFactory.preInstantiateSingletons();
+
     }
 
     protected abstract void refreshBeanFactory() throws BeansException;
