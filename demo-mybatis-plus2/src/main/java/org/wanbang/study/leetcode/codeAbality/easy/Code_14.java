@@ -23,7 +23,8 @@ package org.wanbang.study.leetcode.codeAbality.easy;
 public class Code_14 {
     /**
      * 思路：
-     *
+     * 共前缀比所有字符串都短，随便选一个先
+     * 公共前缀不匹配就让它变短！
      */
     public static void main(String[] args) {
         String[] strs = new String[]{"flower","flow","flight"};
