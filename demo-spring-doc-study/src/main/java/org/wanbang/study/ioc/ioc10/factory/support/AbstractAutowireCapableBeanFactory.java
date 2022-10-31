@@ -52,6 +52,13 @@ import java.lang.reflect.Method;
  *  在注册销毁方法的时候，会根据是接口类型和配置类型统一交给
  * DisposableBeanAdapter 销毁适配器类来做统一处理。实现了某个接口的类可以被
  * instanceof 判断或者强转后调用接口方法
+ *
+ *  单例模式和原型模式的区别就在于是否存放到内存中，如果是原型模式那么就不会
+ * 存放到内存中，每次获取都重新创建对象，另外非 Singleton 类型的 Bean 不需
+ * 要执行销毁方法。
+ *  所以这里的代码会有两处修改，一处是 createBean 中判断是否添加到
+ * addSingleton(beanName, bean);，另外一处是 registerDisposableBeanIfNecessary
+ * 销毁注册中的判断 if (!beanDefinition.isSingleton()) return;。
  */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
 
@@ -72,15 +79,20 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
         // 注册实现了 DisposableBean 接口的 Bean 对象
         registerDisposableBeanIfNecessary(beanName, bean, beanDefinition);
+        if (beanDefinition.isSingleton()) {
+            addSingleton(beanName, bean);
+        }
 
-        addSingleton(beanName, bean);
         return bean;
     }
 
     protected void registerDisposableBeanIfNecessary(String beanName, Object bean, BeanDefinition beanDefinition) {
+        // 非 Singleton 类型的 Bean 不执行销毁方法
+        if (!beanDefinition.isSingleton()) return;
         if (bean instanceof DisposableBean || StrUtil.isNotEmpty(beanDefinition.getDestroyMethodName())) {
             registerDisposableBean(beanName, new DisposableBeanAdapter(bean, beanName, beanDefinition));
         }
+
     }
 
     protected Object createBeanInstance(BeanDefinition beanDefinition, String beanName, Object[] args) {

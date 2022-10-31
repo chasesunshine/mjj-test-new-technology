@@ -21,37 +21,16 @@ import org.wanbang.study.ioc.ioc10.factory.BeanNameAware;
  * afterPropertiesSet()，处理相应的初始化和销毁方法的动作。afterPropertiesSet，方
  * 法名字很好，在属性设置后执行
  *
+ *  在 UserService 新修改了一个原有 UserDao 属性为 IUserDao，后面我们会给这个
+ * 属性注入代理对象。
+ *
  */
-public class UserService implements BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware {
-
-    private ApplicationContext applicationContext;
-    private BeanFactory beanFactory;
+public class UserService{
 
     private String uId;
     private String company;
     private String location;
-    private UserDao userDao;
-
-    @Override
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        this.beanFactory = beanFactory;
-    }
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
-
-    @Override
-    public void setBeanName(String name) {
-        System.out.println("Bean Name is：" + name);
-    }
-
-    @Override
-    public void setBeanClassLoader(ClassLoader classLoader) {
-        System.out.println("ClassLoader：" + classLoader);
-    }
-
+    private IUserDao userDao;
     public String queryUserInfo() {
         return userDao.queryUserName(uId) + "," + company + "," + location;
     }
@@ -80,21 +59,11 @@ public class UserService implements BeanNameAware, BeanClassLoaderAware, Applica
         this.location = location;
     }
 
-    public UserDao getUserDao() {
+    public IUserDao getUserDao() {
         return userDao;
     }
 
-    public void setUserDao(UserDao userDao) {
+    public void setUserDao(IUserDao userDao) {
         this.userDao = userDao;
     }
-
-
-    public ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }
-
-    public BeanFactory getBeanFactory() {
-        return beanFactory;
-    }
-
 }

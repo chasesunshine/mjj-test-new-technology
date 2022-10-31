@@ -18,6 +18,12 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-cli</artifactId>
+            <version>0.14</version>
+        </dependency>
+
 <!--        <dependency>-->
 <!--            <groupId>org.wanbang</groupId>-->
 <!--            <artifactId>demo-mybatis-plus4</artifactId>-->

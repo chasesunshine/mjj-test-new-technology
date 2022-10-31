@@ -38,6 +38,10 @@ import java.io.InputStream;
  * getRegistry().registerBeanDefinition(beanName,
  * beanDefinition)
  *
+ *  在解析 XML 处理类 XmlBeanDefinitionReader 中，新增加了关于 Bean 对象配置
+ * 中 scope 的解析，并把这个属性信息填充到 Bean 定义中。
+ * beanDefinition.setScope(beanScope)
+ *
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
@@ -102,6 +106,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             String initMethod = bean.getAttribute("init-method");
             String destroyMethodName = bean.getAttribute("destroy-method");
 
+            String beanScope = bean.getAttribute("scope");
+
             // 获取 Class，方便获取类中的名称
             Class<?> clazz = Class.forName(className);
             // 优先级 id > name
@@ -116,6 +122,10 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             // ioc08 新增的两行 - 初始化方法和销毁方法
             beanDefinition.setInitMethodName(initMethod);
             beanDefinition.setDestroyMethodName(destroyMethodName);
+
+            if (StrUtil.isNotEmpty(beanScope)) {
+                beanDefinition.setScope(beanScope);
+            }
 
             // 读取属性并填充
             for (int j = 0; j < bean.getChildNodes().getLength(); j++) {
