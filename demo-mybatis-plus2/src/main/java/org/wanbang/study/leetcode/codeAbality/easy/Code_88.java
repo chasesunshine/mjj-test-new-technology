@@ -45,7 +45,10 @@ import java.util.Arrays;
 public class Code_88 {
     /**
      * 思路：
-     *
+     * 用的 System.arraycopy(nums2, 0, bs2, 0, n);
+     * public static native void arraycopy(Object src,  int  srcPos,
+     *                                         Object dest, int destPos,
+     *                                         int length);
      */
     public static void main(String[] args) {
         int[] nums1 = new int[]{1,2,3,0,0,0};
@@ -59,7 +62,10 @@ public class Code_88 {
 
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
-
+        int[] bs2 = new int[n];
+        System.arraycopy(nums2, 0, bs2, 0, n);
+        System.arraycopy(bs2, 0, nums1, m, bs2.length);
+        Arrays.sort(nums1);
     }
 
 }
