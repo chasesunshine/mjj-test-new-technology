@@ -22,6 +22,11 @@ import lombok.experimental.Accessors;
  */
 
 public class Code_101 {
+
+    /**
+     * 思路：
+     * 递归解法
+     */
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode().setVal(1).
                 setLeft(new TreeNode().setVal(2)
