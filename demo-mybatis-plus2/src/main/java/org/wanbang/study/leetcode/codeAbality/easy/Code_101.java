@@ -28,8 +28,8 @@ public class Code_101 {
      * 递归解法
      */
     public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode().setVal(1).
-                setLeft(new TreeNode().setVal(2)
+        TreeNode treeNode = new TreeNode().setVal(1)
+                .setLeft(new TreeNode().setVal(2)
                         .setLeft(new TreeNode().setVal(3).setLeft(null).setRight(null))
                         .setRight(new TreeNode().setVal(4).setLeft(null).setRight(null)))
                 .setRight(new TreeNode().setVal(2)
