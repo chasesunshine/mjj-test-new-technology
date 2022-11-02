@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
 public class Code_104 {
     /**
      * 思路：
-     *
+     * 递归
      */
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode().setVal(3)
@@ -37,16 +37,12 @@ public class Code_104 {
     }
 
     public static int maxDepth(TreeNode root) {
-        if(root == null ) return 0;
-        int i = 0;
-        i = caculate(root,i);
-        return 1;
-    }
-
-    private static int caculate(TreeNode root, int i) {
-//        if(root.left == null && root.right == null) i++;
-//        if(root.left == null)
-        return 0;
+        if (root == null) {
+            return 0;
+        }
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return Math.max(left, right) + 1;
     }
 
     @Data
