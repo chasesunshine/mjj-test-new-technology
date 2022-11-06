@@ -23,19 +23,43 @@ import java.util.List;
  */
 
 public class Code_118 {
+
+    /**
+     * 思路：
+     * 个人做出来了（但是太耗费空间和时间复杂度）
+     * list最后一个和第一个元素都是 1
+     * 其余的 用上一个临时 list 把他的 i-1 和i+1个元素加起来
+     *
+     */
     public static void main(String[] args) {
-        List<List<Integer>> generate = generate(5);
+        List<List<Integer>> generate = generate(3);
         System.out.println(JSON.toJSONString(generate));
     }
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> lists = new ArrayList<>();
+        lists.add(Arrays.asList(1));
         if(numRows == 1){
-            lists.add(Arrays.asList(1));
             return lists;
         }
-        int count = 1 ;
 
+        int index = 1;
+        List<Integer> objects = new ArrayList<>();
+        while (index < numRows){
+            index ++ ;
+            List<Integer> objects2 = new ArrayList();
+            for (int i = 0; i < index; i++) {
+                if(i == 0 || i == index - 1){
+                    objects2.add(i,1);
+                }else {
+                    Integer integer = objects.get(i-1);
+                    Integer integer1 = objects.get(i);
+                    objects2.add(integer+integer1);
+                }
+            }
+            objects = objects2;
+            lists.add(objects2);
+        }
 
-        return null;
+        return lists;
     }
 }
