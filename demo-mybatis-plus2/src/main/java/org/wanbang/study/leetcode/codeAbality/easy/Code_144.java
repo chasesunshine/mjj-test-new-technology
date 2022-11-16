@@ -42,10 +42,20 @@ public class Code_144 {
      * 用栈的思路
      */
     public static void main(String[] args) {
+        //                  1
+        //          2       |      2
+        //      3   |   4        4  |  3
+        //    5  6  | 7
+
+        //  [1, 2, 3, 5, 6, 4, 7, 2, 4, 3]
         TreeNode treeNode = new TreeNode().setVal(1)
                 .setLeft(new TreeNode().setVal(2)
-                        .setLeft(new TreeNode().setVal(3).setLeft(null).setRight(null))
-                        .setRight(new TreeNode().setVal(4).setLeft(null).setRight(null)))
+                        .setLeft(new TreeNode().setVal(3)
+                                .setLeft(new TreeNode().setVal(5))
+                                .setRight(new TreeNode().setVal(6)))
+                        .setRight(new TreeNode().setVal(4)
+                                .setLeft(new TreeNode().setVal(7))
+                                .setRight(null)))
                 .setRight(new TreeNode().setVal(2)
                         .setLeft(new TreeNode().setVal(4).setLeft(null).setRight(null))
                         .setRight(new TreeNode().setVal(3).setLeft(null).setRight(null)));
@@ -55,28 +65,15 @@ public class Code_144 {
     }
 
     public static List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        pre(root, res);
-        return res;
-    }
-
-    private static void pre(TreeNode root, List<Integer> res) {
-        Stack<TreeNode> stack = new Stack<>();
-        while (root != null || !stack.isEmpty()) {
-            while (root != null) {
-                res.add(root.val);
-                stack.add(root);
-                root = root.left;
-            }
-            root = stack.pop().right;
-        }
+        List<Integer> integers = preOrder(root);
+        return integers;
     }
 
     //前序
-    public static List<Integer> preOrder(Code_145.TreeNode root){
+    public static List<Integer> preOrder(TreeNode root){
         List<Integer> list = new ArrayList();
-        Stack<Code_145.TreeNode> stack = new Stack();
-        Code_145.TreeNode cur = root;
+        Stack<TreeNode> stack = new Stack();
+        TreeNode cur = root;
         while(cur!=null || !stack.isEmpty()){
             //一直往左压入栈
             while(cur!=null){
