@@ -72,6 +72,24 @@ public class Code_144 {
         }
     }
 
+    //前序
+    public static List<Integer> preOrder(Code_145.TreeNode root){
+        List<Integer> list = new ArrayList();
+        Stack<Code_145.TreeNode> stack = new Stack();
+        Code_145.TreeNode cur = root;
+        while(cur!=null || !stack.isEmpty()){
+            //一直往左压入栈
+            while(cur!=null){
+                list.add(cur.val);
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            cur = cur.right;
+        }
+        return list;
+    }
+
     @Data
     @Accessors(chain = true)
     static class TreeNode {
