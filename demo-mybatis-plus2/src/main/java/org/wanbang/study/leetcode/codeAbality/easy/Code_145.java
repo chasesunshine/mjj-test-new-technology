@@ -56,7 +56,7 @@ public class Code_145 {
     }
 
     public static List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> integers = preOrder(root);
+        List<Integer> integers = postOrder(root);
         return integers;
     }
 
