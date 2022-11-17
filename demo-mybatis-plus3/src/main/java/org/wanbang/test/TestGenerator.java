@@ -1,4 +1,4 @@
-package org.wanbang.service;
+package org.wanbang.test;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
