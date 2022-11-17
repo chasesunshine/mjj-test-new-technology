@@ -1,0 +1,6 @@
+2022-11-17 22:54:16.012 [main] INFO  org.wanbang.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 15048 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
+2022-11-17 22:54:16.014 [main] INFO  org.wanbang.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
+2022-11-17 22:54:21.384 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-17 22:54:22.149 [main] INFO  org.wanbang.test1.TestPostConstruct - Started TestPostConstruct in 7.449 seconds (JVM running for 9.274)
+2022-11-17 22:54:22.544 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-17 22:54:22.547 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
