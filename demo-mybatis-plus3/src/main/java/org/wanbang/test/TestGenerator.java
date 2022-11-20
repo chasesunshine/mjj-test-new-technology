@@ -101,6 +101,8 @@ public class TestGenerator {
 //如果数据库有前缀，生成文件时是否要前缀acl_
 //      strategy.setTablePrefix("bus_");
 //      strategy.setTablePrefix("sys_");
+        strategy.setChainModel(true);
+        strategy.setEntityTableFieldAnnotationEnable(true);
         strategy.setControllerMappingHyphenStyle(true);	    //驼峰转连字符
         strategy.setTablePrefix(pc.getModuleName() + "_");	//是否生成实体时，生成字段注解
         mpg.setStrategy(strategy);
