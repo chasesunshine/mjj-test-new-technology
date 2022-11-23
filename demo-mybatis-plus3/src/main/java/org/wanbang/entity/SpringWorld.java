@@ -1,5 +1,6 @@
 package org.wanbang.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
@@ -35,5 +36,8 @@ public class SpringWorld implements Serializable {
     public SpringWorldTest getTest(){
         return SpringWorldTest.builder().id((long) 2).age(5).build();
     }
+
+    @TableField(exist = false)
+    private User user;
 }
 

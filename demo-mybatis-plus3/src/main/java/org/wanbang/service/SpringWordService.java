@@ -1,5 +1,6 @@
 package org.wanbang.service;
 
+import org.wanbang.common.dto.UserResp;
 import org.wanbang.entity.SpringWorld;
 
 /**
@@ -17,6 +18,8 @@ public interface SpringWordService {
      * @return 实例对象
      */
     SpringWorld queryById(Long id);
+
+    UserResp queryById1(Long id);
 
     SpringWorld updateOne(long l);
 

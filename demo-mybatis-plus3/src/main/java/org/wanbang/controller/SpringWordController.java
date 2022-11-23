@@ -3,6 +3,7 @@ package org.wanbang.controller;
 import com.alibaba.fastjson.JSON;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.*;
+import org.wanbang.common.dto.UserResp;
 import org.wanbang.entity.SpringWorld;
 import org.wanbang.service.SpringWordService;
 
@@ -30,6 +31,13 @@ public class SpringWordController {
         SpringWorld springWorld = springWordService.queryById((long) 1);
         return JSON.toJSONString(springWorld);
     }
+
+    @GetMapping("/selectOne1")
+    public String selectOne1() {
+        UserResp userResp = springWordService.queryById1((long) 1);
+        return JSON.toJSONString(userResp);
+    }
+
 
 
     public static void main(String[] args) {

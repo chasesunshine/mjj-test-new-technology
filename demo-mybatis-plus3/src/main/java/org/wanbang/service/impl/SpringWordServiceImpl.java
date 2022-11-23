@@ -2,8 +2,11 @@ package org.wanbang.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;
+import org.wanbang.common.convert.UserConvert;
+import org.wanbang.common.dto.UserResp;
 import org.wanbang.entity.SpringWorld;
 import org.wanbang.dao.SpringWorldDao;
+import org.wanbang.entity.User;
 import org.wanbang.service.SpringWordService;
 import org.springframework.stereotype.Service;
 import org.wanbang.util.proxy.CurrentProxy;
@@ -21,6 +24,8 @@ import javax.annotation.Resource;
 public class SpringWordServiceImpl implements SpringWordService {
     @Resource
     private SpringWorldDao springWorldDao;
+    @Resource
+    private UserConvert userConvert;
 
     /**
      * 通过ID查询单条数据
@@ -35,7 +40,22 @@ public class SpringWordServiceImpl implements SpringWordService {
         return this.springWorldDao.queryById(id);
     }
 
+    /**
+     * 通过ID查询单条数据
+     *
+     * @param id 主键
+     * @return 实例对象
+     */
+    @Override
+    public UserResp queryById1(Long id) {
+        log.info("通过ID查询单条数据");
 
+        SpringWorld springWorld = this.springWorldDao.queryById(id);
+        springWorld.setUser(new User().setName("mjj"));
+
+        UserResp userResp = userConvert.convertToResp(springWorld);
+        return userResp;
+    }
 
 
     @Override
