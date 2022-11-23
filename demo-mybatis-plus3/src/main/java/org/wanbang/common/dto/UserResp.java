@@ -1,6 +1,9 @@
 package org.wanbang.common.dto;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.wanbang.entity.SpringWorldTest;
 import org.wanbang.entity.User;
 
@@ -13,6 +16,9 @@ import javax.validation.constraints.NotBlank;
 * @version 1.0
 */
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class UserResp {
     private static final long serialVersionUID = -83513220652821879L;
 

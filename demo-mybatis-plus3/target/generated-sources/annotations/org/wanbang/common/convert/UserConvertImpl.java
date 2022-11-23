@@ -7,7 +7,7 @@ import org.wanbang.entity.SpringWorld;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-23T14:37:20+0800",
+    date = "2022-11-23T14:47:59+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_221 (Oracle Corporation)"
 )
 @Component
@@ -20,6 +20,13 @@ public class UserConvertImpl implements UserConvert {
         }
 
         UserResp userResp = new UserResp();
+
+        userResp.setId( springWorld.getId() );
+        userResp.setAge( springWorld.getAge() );
+        userResp.setName( springWorld.getName() );
+        userResp.setSex( springWorld.getSex() );
+        userResp.setValue( springWorld.getValue() );
+        userResp.setUser( springWorld.getUser() );
 
         return userResp;
     }
