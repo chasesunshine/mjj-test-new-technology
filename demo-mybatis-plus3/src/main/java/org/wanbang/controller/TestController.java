@@ -27,10 +27,8 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @description: TODO
@@ -73,19 +71,31 @@ public class TestController {
         return testService.importFile1(file);
     }
 
-//    public static void main(String[] args) {
-////        Short a = 1;
-////        if(!ObjectUtils.isEmpty(a)){
-////            boolean b = a == Constant.INDEX;
-////            String s = String.valueOf(b);
-////            System.out.printf(s);
-////
-////        }
+    public static void main(String[] args) {
+//        Short a = 1;
+//        if(!ObjectUtils.isEmpty(a)){
+//            boolean b = a == Constant.INDEX;
+//            String s = String.valueOf(b);
+//            System.out.printf(s);
 //
+//        }
+
 //        HashMap<Integer , SpringWorld> objectObjectHashMap = new HashMap<>();
-//        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
-//        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
-//        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
+        List<SpringWorld> SpringWorldTest = new ArrayList<>();
+        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
+        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
+        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
+        SpringWorld build3 = SpringWorld.builder().id((long) 3).age(6).build();
+        SpringWorld build4 = SpringWorld.builder().id((long) 3).age(6).build();
+
+        SpringWorldTest.add(build);
+        SpringWorldTest.add(build1);
+        SpringWorldTest.add(build2);
+        SpringWorldTest.add(build3);
+        SpringWorldTest.add(build4);
+
+        List<Integer> collect = SpringWorldTest.stream().map(SpringWorld::getAge).distinct().collect(Collectors.toList());
+        System.out.println(JSON.toJSONString(collect));
 //        objectObjectHashMap.put(1,build);
 //        objectObjectHashMap.put(2,build1);
 //        objectObjectHashMap.put(3,build2);
@@ -94,14 +104,14 @@ public class TestController {
 //        springWorld.setAge(8);
 //
 //        System.out.printf(objectObjectHashMap.get(1).getAge().toString());
-//    }
-
-    public static void main(String[] args) {
-        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
-        String s = JSON.toJSONString(build);
-        System.out.println(s);
-
     }
+
+//    public static void main(String[] args) {
+//        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
+//        String s = JSON.toJSONString(build);
+//        System.out.println(s);
+//
+//    }
 
     @GetMapping("/import/file2")
     public void exportTemplate(HttpServletResponse response) {
