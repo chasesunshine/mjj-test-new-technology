@@ -68,4 +68,12 @@ public class TestController {
 //        map = JSON.parseObject(a, Map.class);
 //        Long b = map.get(1);
 //    }
+
+    public static void main(String[] args) {
+        String s = "123,xxx,wwww";
+        String[] split = s.split(",");
+        String[] split1 = s.split(split[0]+",");
+        System.out.println(split[0] + " - " + split1[1]);
+
+    }
 }
