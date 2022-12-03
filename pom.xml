@@ -21,6 +21,7 @@
         <module>demo-spring-doc-study</module>
         <module>rocketmq-demo</module>
         <module>mjj-rocketmq-demo</module>
+        <module>mjj_test_rocketmq_demo</module>
     </modules>
 
     <parent>
