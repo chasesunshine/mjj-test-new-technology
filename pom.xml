@@ -19,6 +19,7 @@
         <module>demo-mybatis-plus3</module>
         <module>demo-mybatis-plus4</module>
         <module>demo-spring-doc-study</module>
+        <module>rocketmq-demo</module>
     </modules>
 
     <parent>
