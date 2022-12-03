@@ -1,0 +1,11 @@
+SpringBoot2.0 整合 RocketMQ 生产者和消费者示例
+    https://liuyanzhao.com/1306573350105124865.html
+
+完整代码地址：
+    https://github.com/saysky/rocketmq-demo
+
+windows安装RocketMQ
+    https://www.cnblogs.com/1906859953Lucas/p/15941265.html
+    1、下载RocketMQ的二进制安装包
+    https://rocketmq.apache.org/dowloading/releases/
+    注：下载  4.9.4	Release Notes	2022.6.27	download .zip	download .zip	2024/01 这个包
