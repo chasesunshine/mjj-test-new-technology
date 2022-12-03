@@ -7,5 +7,10 @@ SpringBoot2.0 整合 RocketMQ 生产者和消费者示例
 windows安装RocketMQ
     https://www.cnblogs.com/1906859953Lucas/p/15941265.html
     1、下载RocketMQ的二进制安装包
-    https://rocketmq.apache.org/dowloading/releases/
-    注：下载  4.9.4	Release Notes	2022.6.27	download .zip	download .zip	2024/01 这个包
+        https://rocketmq.apache.org/dowloading/releases/
+        注：下载  4.9.4	Release Notes	2022.6.27	download .zip	download .zip	2024/01 这个包
+    3、启动命名服务
+        进入到rocketmq的安装目录，运行
+        .\bin\mqnamesrv.cmd
+    4、启动交易者服务
+        .\bin\mqbroker.cmd -n localhost:9876 autoCreateTopicEnable=true
