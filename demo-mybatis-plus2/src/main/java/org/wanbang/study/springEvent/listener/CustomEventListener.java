@@ -15,9 +15,15 @@ import org.wanbang.study.springEvent.event.CustomEvent;
 public class CustomEventListener {
 
     @EventListener(CustomEvent.class)
-    public void onApplicationEvent(CustomEvent customEvent){
-        System.out.println("监听器接受消息："+System.currentTimeMillis());
-        System.out.println("接收到的消息为："+customEvent.getMessage());
+    public void onApplicationEvent1(CustomEvent customEvent){
+        System.out.println("监听器接受消息1："+System.currentTimeMillis());
+        System.out.println("接收到的消息1为："+customEvent.getMessage());
+    }
+
+    @EventListener(CustomEvent.class)
+    public void onApplicationEvent2(CustomEvent customEvent){
+        System.out.println("监听器接受消息2："+System.currentTimeMillis());
+        System.out.println("接收到的消息2为："+customEvent.getMessage());
     }
 
 }
