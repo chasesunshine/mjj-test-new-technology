@@ -1,4 +1,4 @@
-package org.wanbang.study.springEvent.event;
+package org.wanbang.study.springEvent.simple.event;
 
 import org.springframework.context.ApplicationEvent;
 

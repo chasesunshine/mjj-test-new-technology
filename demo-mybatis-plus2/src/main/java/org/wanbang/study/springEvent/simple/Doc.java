@@ -1,4 +1,4 @@
-package org.wanbang.study.springEvent;
+package org.wanbang.study.springEvent.simple;
 /**
 * @description: springboot 事件监听（@EventListener实现）
 * @author majiajian

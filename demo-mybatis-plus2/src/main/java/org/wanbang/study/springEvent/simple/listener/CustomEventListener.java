@@ -1,8 +1,8 @@
-package org.wanbang.study.springEvent.listener;
+package org.wanbang.study.springEvent.simple.listener;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-import org.wanbang.study.springEvent.event.CustomEvent;
+import org.wanbang.study.springEvent.simple.event.CustomEvent;
 
 /**
 * @description: 事件监听类

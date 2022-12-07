@@ -1,9 +1,9 @@
-package org.wanbang.study.springEvent.controller;
+package org.wanbang.study.springEvent.simple.controller;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.wanbang.study.springEvent.event.CustomEvent;
+import org.wanbang.study.springEvent.simple.event.CustomEvent;
 
 import javax.annotation.Resource;
 
