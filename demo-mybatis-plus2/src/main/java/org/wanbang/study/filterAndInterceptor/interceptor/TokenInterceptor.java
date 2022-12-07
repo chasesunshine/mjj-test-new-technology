@@ -25,6 +25,7 @@ public class TokenInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("进入到 implements HandlerInterceptor 的拦截器");
+        log.info("Controller方法处理之前");
         // 设置返回为json格式，使用UTF-8
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
@@ -57,11 +58,11 @@ public class TokenInterceptor implements HandlerInterceptor {
         return true;
     }
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
-        System.out.println("1");
+        System.out.println("Controller方法处理完之后，DispatcherServlet进行视图的渲染之前，也就是说在这个方法中你可以对ModelAndView进行操作");
     }
 
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable Exception ex) throws Exception {
-
+        log.info("DispatcherServlet进行视图的渲染之后");
     }
 
 
