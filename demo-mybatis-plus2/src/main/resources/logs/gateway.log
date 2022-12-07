@@ -315,3 +315,60 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2022-12-07 14:55:56.522 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-12-07 14:55:56.523 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-12-07 14:55:56.526 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2022-12-07 14:56:00.548 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 23572 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-12-07 14:56:00.551 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-12-07 14:56:00.591 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-07 14:56:00.592 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-07 14:56:01.336 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-12-07 14:56:01.337 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-12-07 14:56:01.407 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 59ms. Found 0 repository interfaces.
+2022-12-07 14:56:01.512 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2022-12-07 14:56:01.512 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2022-12-07 14:56:01.512 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2022-12-07 14:56:01.512 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-12-07 14:56:01.513 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2022-12-07 14:56:01.513 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-12-07 14:56:01.513 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2022-12-07 14:56:01.513 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-12-07 14:56:01.513 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2022-12-07 14:56:01.727 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eec4d5f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-07 14:56:02.208 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2022-12-07 14:56:02.219 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2022-12-07 14:56:02.225 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2022-12-07 14:56:02.225 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2022-12-07 14:56:02.231 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\AllSoftware\WorkSoftware\GitInstallPackage\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2022-12-07 14:56:02.318 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2022-12-07 14:56:02.318 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1726 ms
+2022-12-07 14:56:03.442 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2022-12-07 14:56:03.828 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2022-12-07 14:56:03.924 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2022-12-07 14:56:03.932 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-12-07 14:56:03.932 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2022-12-07 14:56:03.933 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2022-12-07 14:56:03.933 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-12-07 14:56:03.933 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-12-07 14:56:03.933 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2022-12-07 14:56:03.934 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@56792bb2
+2022-12-07 14:56:04.036 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2022-12-07 14:56:04.062 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2022-12-07 14:56:04.062 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-12-07 14:56:04.070 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2022-12-07 14:56:04.079 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2022-12-07 14:56:04.091 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2022-12-07 14:56:04.094 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 4.195 seconds (JVM running for 5.304)
+2022-12-07 14:56:17.064 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-07 14:56:17.064 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
+2022-12-07 14:56:17.071 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 7 ms
+2022-12-07 14:56:17.083 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-12-07 14:56:17.084 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  Controller方法处理之前
+2022-12-07 14:56:17.116 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  DispatcherServlet进行视图的渲染之后
+2022-12-07 15:04:33.995 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
+2022-12-07 15:04:33.995 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  Controller方法处理之前
+2022-12-07 15:06:05.799 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  DispatcherServlet进行视图的渲染之后
