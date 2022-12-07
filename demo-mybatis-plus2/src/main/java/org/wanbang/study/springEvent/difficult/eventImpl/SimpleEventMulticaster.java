@@ -1,4 +1,4 @@
-package org.wanbang.study.springEvent.difficult.impl;
+package org.wanbang.study.springEvent.difficult.eventImpl;
 /**
 * @description: 事件广播默认实现
 * @author majiajian
