@@ -372,3 +372,11 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2022-12-07 15:04:33.995 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
 2022-12-07 15:04:33.995 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  Controller方法处理之前
 2022-12-07 15:06:05.799 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  DispatcherServlet进行视图的渲染之后
+2022-12-07 16:03:19.092 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-12-07 16:03:19.093 [Thread-16] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2022-12-07 16:03:19.094 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-12-07 16:03:19.094 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-12-07 16:03:19.094 [Thread-16] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-12-07 16:03:19.095 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2022-12-07 16:03:19.096 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2022-12-07 16:03:19.097 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed

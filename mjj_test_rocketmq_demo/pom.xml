@@ -18,6 +18,7 @@
     <modules>
         <module>rocketmq-consumer-demo</module>
         <module>rocketmq-producer-demo</module>
+        <module>rocketmq-console</module>
     </modules>
 
 </project>
