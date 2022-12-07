@@ -30,3 +30,6 @@ windows 启动 RocketMQ-Console 控制台 （rocketmq-console项目）
 
     注： 需要修改 application.properties 里面的参数赋值
     执行成功后。访问： http://localhost:8080/rocketmq
+
+
+以上个人已作测试，别忘了修改 application.properties 里面的参数赋值
