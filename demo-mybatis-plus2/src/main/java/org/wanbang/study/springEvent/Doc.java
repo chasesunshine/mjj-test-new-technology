@@ -11,6 +11,15 @@ public class Doc {
     //【Java基础系列2】事件注解@EventListener使用姿势
     // https://zhuanlan.zhihu.com/p/387937470
 
+    /**
+     * spring中@EventListener 的详解和使用 (这篇案例讲的很好)
+     * https://blog.csdn.net/flymoringbird/article/details/120481883
+     * 事件模式中的几个概念
+     * 事件源：事件的触发者，比如上面的注册器就是事件源。
+     * 事件：描述发生了什么事情的对象，比如上面的：xxx注册成功的事件
+     * 事件监听器：监听到事件发生的时候，做一些处理，比如上面的：路人A、路人B
+     */
+
     // 个人用的这篇
     // springboot 事件监听（@EventListener实现
     // https://www.cnblogs.com/ryelqy/p/14616037.html?ivk_sa=1024320u
