@@ -14,3 +14,15 @@ windows安装RocketMQ
         .\bin\mqnamesrv.cmd
     4、启动交易者服务
         .\bin\mqbroker.cmd -n localhost:9876 autoCreateTopicEnable=true
+
+windows 启动 RocketMQ-Console 控制台 （rocketmq-console项目）
+    rocketMQ学习笔记二：RocketMQ-Console安装、使用详解
+    https://blog.csdn.net/so_geili/article/details/90142461
+    # 不要 git clone 直接 Download Zip
+    git下载地址： https://github.com/apache/rocketmq-externals/tree/release-rocketmq-console-1.0.0
+    将项目打成jar包，并运行jar文件
+    mvn clean package -Dmaven.test.skip=true
+    #因为本文在打包时配置了namesrvAddr，故而执行如下命令
+    $ java -jar target/rocketmq-console-ng-1.0.0.jar
+    注： 需要修改 application.properties 里面的参数赋值
+    执行成功后。访问： http://localhost:8080/rocketmq
