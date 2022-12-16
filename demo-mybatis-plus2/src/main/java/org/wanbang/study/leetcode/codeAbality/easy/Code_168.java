@@ -37,7 +37,6 @@ public class Code_168 {
         convertToTitle(1);
     }
 
-
     public static String convertToTitle(int columnNumber) {
         StringBuffer sb = new StringBuffer();
         while (columnNumber > 0) {
