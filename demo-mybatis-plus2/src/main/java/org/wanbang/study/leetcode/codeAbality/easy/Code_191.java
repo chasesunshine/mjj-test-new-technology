@@ -1,4 +1,4 @@
-package org.wanbang.study.leetcode.codeAbality;
+package org.wanbang.study.leetcode.codeAbality.easy;
 
 // https://leetcode-cn.com/problems/number-of-1-bits/
 
@@ -33,7 +33,7 @@ import lombok.extern.slf4j.Slf4j;
  * 解释：输入的二进制串 11111111111111111111111111111101 中，共有 31 位为 '1'。
  */
 @Slf4j
-public class Code191 {
+public class Code_191 {
     public static void main(String[] args) {
         int i = hammingWeight(00000000000000000000000000001011);
         int i1 = hammingWeight1(00000000000000000000000000001011);
