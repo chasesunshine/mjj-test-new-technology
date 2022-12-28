@@ -2,6 +2,8 @@ package org.wanbang.study.leetcode.codeAbality.easy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 给你一个整数数组 nums 和一个整数 k ，判断数组中是否存在两个 不同的索引 i 和 j ，
@@ -30,9 +32,13 @@ public class Code_219 {
     public static void main(String[] args) {
         int[] nums = new int[]{1,0,1,1};
         int k = 1;
+//        int[] nums = new int[]{1,2,3,1};
+//        int k = 3;
         boolean b = containsNearbyDuplicate(nums, k);
+        boolean b1 = containsNearbyDuplicate1(nums, k);
 
         System.out.println(b);
+        System.out.println(b1);
     }
 
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -55,4 +61,19 @@ public class Code_219 {
 
         return false;
     }
+
+    public static boolean containsNearbyDuplicate1(int[] nums, int k) {
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i < nums.length; i++) {
+            if(set.add(nums[i])) {
+                if(set.size() > k) {
+                    set.remove(nums[i - k]);
+                }
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
