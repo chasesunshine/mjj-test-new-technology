@@ -38,6 +38,7 @@ public class Code_232 {
         Code_232 myQueue = new Code_232();
         myQueue.push(1); // queue is: [1]
         myQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)
+        myQueue.push(3); // queue is: [1, 2 , 3] (leftmost is front of the queue)
         int peek = myQueue.peek();// return 1
         int pop = myQueue.pop();// return 1, queue is [2]
         boolean empty = myQueue.empty();// return false
