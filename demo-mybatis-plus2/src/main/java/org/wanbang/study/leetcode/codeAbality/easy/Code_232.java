@@ -59,6 +59,7 @@ public class Code_232 {
         stackInput.push(x);
     }
 
+    // Stack的pop方法是会移除的
     public int pop() {
         // 如果 输出栈 为空，则将 输入栈 全部弹出并压入 输出栈 中，然后 输出栈.pop()
         if(stackOutput.isEmpty()){
@@ -69,6 +70,7 @@ public class Code_232 {
         return stackOutput.pop();
     }
 
+    // 返回栈顶的元素但不移除它
     public int peek() {
         if(stackOutput.isEmpty()){
             while(!stackInput.isEmpty()){
