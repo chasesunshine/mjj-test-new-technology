@@ -35,6 +35,18 @@ import java.util.Stack;
 
 public class Code_232 {
     public static void main(String[] args) {
+        Stack<Integer> integers = new Stack<>();
+        integers.push(1);
+        integers.push(2);
+        integers.push(3);
+        Integer peek1 = integers.peek();
+        Integer pop1 = integers.pop();
+        boolean empty1 = integers.empty();
+        System.out.println(peek1);
+        System.out.println(pop1);
+        System.out.println(empty1);
+
+
         Code_232 myQueue = new Code_232();
         myQueue.push(1); // queue is: [1]
         myQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)
