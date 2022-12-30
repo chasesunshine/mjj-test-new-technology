@@ -13,10 +13,26 @@ package org.wanbang.study.leetcode.codeAbality.easy;
  * 示例 2:
  * 输入: num = 0
  * 输出: 0
-*/
+ */
 
 public class Code_258 {
     public static void main(String[] args) {
+        int value = 123456;
+        int i = addDigits(value);
 
+        System.out.println(i);
+    }
+
+    public static int addDigits(int num) {
+        int sum = 0;
+        while (num / 10 > 0 ){
+            sum = sum + num % 10;
+            num = num /10;
+        }
+        sum = sum + num;
+        if(sum < 10){
+            return sum;
+        }
+        return addDigits(sum);
     }
 }
