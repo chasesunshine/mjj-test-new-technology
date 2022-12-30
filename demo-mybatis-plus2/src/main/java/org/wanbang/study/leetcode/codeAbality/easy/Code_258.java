@@ -16,6 +16,10 @@ package org.wanbang.study.leetcode.codeAbality.easy;
  */
 
 public class Code_258 {
+    /**
+     * 思路：
+     * 递归 - 个人做出来了
+     */
     public static void main(String[] args) {
         int value = 123456;
         int i = addDigits(value);
