@@ -2,11 +2,9 @@ package org.wanbang.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.wanbang.common.Result;
+import org.wanbang.entity.WorldUser;
 import org.wanbang.service.WorldUserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -47,6 +45,12 @@ public class WorldUserController {
     @GetMapping("/selectTwo")
     public String  selectTwo(){
         String s = worldUserService.selectTwo();
+        return s;
+    }
+
+    @PostMapping("/insetData")
+    public String insetData(@RequestBody WorldUser worldUser){
+        String s = worldUserService.insetData(worldUser);
         return s;
     }
 }
