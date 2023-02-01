@@ -94,4 +94,8 @@ public class WorldUserService {
         userMapper.insert(build2);
     }
 
+    public String insetData(WorldUser worldUser) {
+        int insert = userMapper.insert(worldUser);
+        return String.valueOf(insert);
+    }
 }
