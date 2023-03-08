@@ -1,4 +1,4 @@
-package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service;
+package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service;
 
 import java.util.Date;
 import java.util.Map;

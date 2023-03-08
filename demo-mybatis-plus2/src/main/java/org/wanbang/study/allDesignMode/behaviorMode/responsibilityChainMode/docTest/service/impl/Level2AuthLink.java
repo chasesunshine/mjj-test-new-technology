@@ -1,8 +1,8 @@
-package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service.impl;
+package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service.impl;
 
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.entity.AuthInfo;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.entity.AuthLink;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service.AuthService;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.entity.AuthInfo;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.entity.AuthLink;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service.AuthService;
 
 import java.text.ParseException;
 import java.util.Date;

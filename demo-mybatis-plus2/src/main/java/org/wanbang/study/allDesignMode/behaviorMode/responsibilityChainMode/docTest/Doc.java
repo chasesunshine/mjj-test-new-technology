@@ -1,4 +1,4 @@
-package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode;
+package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest;
 /**
 * @description: 责任链模式
 * @author majiajian

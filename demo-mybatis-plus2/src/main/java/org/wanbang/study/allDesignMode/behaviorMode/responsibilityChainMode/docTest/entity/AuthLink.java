@@ -1,4 +1,4 @@
-package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.entity;
+package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.entity;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

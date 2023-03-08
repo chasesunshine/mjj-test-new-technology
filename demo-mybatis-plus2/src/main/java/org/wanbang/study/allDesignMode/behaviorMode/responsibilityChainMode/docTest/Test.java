@@ -1,14 +1,14 @@
-package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode;
+package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.entity.AuthLink;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service.AuthService;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service.impl.Level1AuthLink;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service.impl.Level2AuthLink;
-import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.service.impl.Level3AuthLink;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.entity.AuthLink;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service.AuthService;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service.impl.Level1AuthLink;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service.impl.Level2AuthLink;
+import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.docTest.service.impl.Level3AuthLink;
 
 import java.text.ParseException;
 import java.util.Date;
