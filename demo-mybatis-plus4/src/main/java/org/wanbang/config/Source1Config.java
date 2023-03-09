@@ -53,6 +53,7 @@ public class Source1Config {
         return new MybatisConfiguration();
     }
 
+    @Primary
     @Bean("source1TransactionManager")
     public DataSourceTransactionManager transactionManager(@Qualifier("source1DataSource") DataSource dataSource){
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);

@@ -12,4 +12,5 @@ public interface TestUser2Service {
 
     TestUser2 queryById(Long id);
 
+    Integer insertOne();
 }

@@ -25,5 +25,11 @@ public class TestUser2Controller {
         TestUser2 testUser2 = testUser2Service.queryById((long) 11);
         return JSON.toJSONString(testUser2);
     }
+
+    @GetMapping("/insertOne")
+    public String insertOne() {
+        Integer insertOne = testUser2Service.insertOne();
+        return JSON.toJSONString(insertOne);
+    }
 }
 
