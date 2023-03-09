@@ -4,18 +4,18 @@ import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.ownT
 import org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.ownTest.entity.LeaveInfo;
 
 /**
-* @description: 经理类
+* @description: 总经理类
 * @author majiajian
-* @date 2023/3/8 19:45
+* @date 2023/3/9 13:07
 * @version 1.0
 */
+public class GeneralManager extends Leader {
 
-public class Manager extends Leader {
 
     /**
      * 初始化父类(传入姓名)
      */
-    public Manager(String name) {
+    public GeneralManager(String name) {
         super(name);
     }
 
@@ -25,13 +25,11 @@ public class Manager extends Leader {
      */
     @Override
     public void handleLeave(LeaveInfo request) {
-        if (request.getLeaveDays() < 10) {
+        if (request.getLeaveDays() < 30) {
             System.out.println("员工: " + request.getEmpName() + "请假,天数: " + request.getLeaveDays() + ",理由: " + request.getReason());
-            System.out.println("经理: " + this.name + ",审批通过!");
+            System.out.println("总经理: " + this.name + ",审批通过!");
         }else {
-            if (this.nextLeader!=null) {//如果有后继对象, 让后继对象继续处理
-                this.nextLeader.handleLeave(request);
-            }
+            System.out.println("莫非" + request.getEmpName() + "想辞职,居然请假" + request.getLeaveDays() + "天!");
         }
     }
 
