@@ -36,6 +36,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.aggressive-lazy-loading",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.auto-mapping-behavior",
+      "type": "org.apache.ibatis.session.AutoMappingBehavior",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.auto-mapping-behavior",
       "type": "org.apache.ibatis.session.AutoMappingBehavior",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -48,6 +58,11 @@
     {
       "name": "mybatis-plus.configuration.auto-mapping-behavior",
       "type": "org.apache.ibatis.session.AutoMappingBehavior",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.auto-mapping-unknown-column-behavior",
+      "type": "org.apache.ibatis.session.AutoMappingUnknownColumnBehavior",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -81,6 +96,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.cache-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.cache-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.cache-names",
       "type": "java.util.Collection<java.lang.String>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -93,6 +118,11 @@
     {
       "name": "mybatis-plus.configuration.cache-names",
       "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.caches",
+      "type": "java.util.Collection<org.apache.ibatis.cache.Cache>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -126,6 +156,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.call-setters-on-nulls",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.configuration-factory",
+      "type": "java.lang.Class<?>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.configuration-factory",
       "type": "java.lang.Class<?>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -138,6 +178,11 @@
     {
       "name": "mybatis-plus.configuration.configuration-factory",
       "type": "java.lang.Class<?>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.database-id",
+      "type": "java.lang.String",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -171,6 +216,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.default-executor-type",
+      "type": "org.apache.ibatis.session.ExecutorType",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.default-fetch-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.default-fetch-size",
       "type": "java.lang.Integer",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -183,6 +238,11 @@
     {
       "name": "mybatis-plus.configuration.default-fetch-size",
       "type": "java.lang.Integer",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.default-result-set-type",
+      "type": "org.apache.ibatis.mapping.ResultSetType",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -216,6 +276,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.default-statement-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.environment",
+      "type": "org.apache.ibatis.mapping.Environment",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.environment",
       "type": "org.apache.ibatis.mapping.Environment",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -228,6 +298,11 @@
     {
       "name": "mybatis-plus.configuration.environment",
       "type": "org.apache.ibatis.mapping.Environment",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.global-config",
+      "type": "com.baomidou.mybatisplus.core.config.GlobalConfig",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -261,6 +336,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.incomplete-cache-refs",
+      "type": "java.util.Collection<org.apache.ibatis.builder.CacheRefResolver>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.incomplete-methods",
+      "type": "java.util.Collection<org.apache.ibatis.builder.annotation.MethodResolver>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.incomplete-methods",
       "type": "java.util.Collection<org.apache.ibatis.builder.annotation.MethodResolver>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -273,6 +358,11 @@
     {
       "name": "mybatis-plus.configuration.incomplete-methods",
       "type": "java.util.Collection<org.apache.ibatis.builder.annotation.MethodResolver>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.incomplete-result-maps",
+      "type": "java.util.Collection<org.apache.ibatis.builder.ResultMapResolver>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -306,6 +396,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.incomplete-statements",
+      "type": "java.util.Collection<org.apache.ibatis.builder.xml.XMLStatementBuilder>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.interceptors",
+      "type": "java.util.List<org.apache.ibatis.plugin.Interceptor>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.interceptors",
       "type": "java.util.List<org.apache.ibatis.plugin.Interceptor>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -318,6 +418,11 @@
     {
       "name": "mybatis-plus.configuration.interceptors",
       "type": "java.util.List<org.apache.ibatis.plugin.Interceptor>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.jdbc-type-for-null",
+      "type": "org.apache.ibatis.type.JdbcType",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -351,6 +456,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.key-generator-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.key-generators",
+      "type": "java.util.Collection<org.apache.ibatis.executor.keygen.KeyGenerator>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.key-generators",
       "type": "java.util.Collection<org.apache.ibatis.executor.keygen.KeyGenerator>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -363,6 +478,11 @@
     {
       "name": "mybatis-plus.configuration.key-generators",
       "type": "java.util.Collection<org.apache.ibatis.executor.keygen.KeyGenerator>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.lazy-load-trigger-methods",
+      "type": "java.util.Set<java.lang.String>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -396,6 +516,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.lazy-loading-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.local-cache-scope",
+      "type": "org.apache.ibatis.session.LocalCacheScope",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.local-cache-scope",
       "type": "org.apache.ibatis.session.LocalCacheScope",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -408,6 +538,11 @@
     {
       "name": "mybatis-plus.configuration.local-cache-scope",
       "type": "org.apache.ibatis.session.LocalCacheScope",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.log-impl",
+      "type": "java.lang.Class<? extends org.apache.ibatis.logging.Log>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -441,6 +576,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.log-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.map-underscore-to-camel-case",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.map-underscore-to-camel-case",
       "type": "java.lang.Boolean",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -453,6 +598,11 @@
     {
       "name": "mybatis-plus.configuration.map-underscore-to-camel-case",
       "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.mapped-statement-names",
+      "type": "java.util.Collection<java.lang.String>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -486,6 +636,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.mapped-statements",
+      "type": "java.util.Collection<org.apache.ibatis.mapping.MappedStatement>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.multiple-result-sets-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.multiple-result-sets-enabled",
       "type": "java.lang.Boolean",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -498,6 +658,11 @@
     {
       "name": "mybatis-plus.configuration.multiple-result-sets-enabled",
       "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.object-factory",
+      "type": "org.apache.ibatis.reflection.factory.ObjectFactory",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -531,6 +696,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.object-wrapper-factory",
+      "type": "org.apache.ibatis.reflection.wrapper.ObjectWrapperFactory",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.parameter-map-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.parameter-map-names",
       "type": "java.util.Collection<java.lang.String>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -543,6 +718,11 @@
     {
       "name": "mybatis-plus.configuration.parameter-map-names",
       "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.parameter-maps",
+      "type": "java.util.Collection<org.apache.ibatis.mapping.ParameterMap>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -576,6 +756,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.proxy-factory",
+      "type": "org.apache.ibatis.executor.loader.ProxyFactory",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.reflector-factory",
+      "type": "org.apache.ibatis.reflection.ReflectorFactory",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.reflector-factory",
       "type": "org.apache.ibatis.reflection.ReflectorFactory",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -603,6 +793,16 @@
     {
       "name": "mybatis-plus.configuration.result-map-names",
       "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.result-map-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.result-maps",
+      "type": "java.util.Collection<org.apache.ibatis.mapping.ResultMap>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
@@ -632,6 +832,16 @@
     },
     {
       "name": "mybatis-plus.configuration.return-instance-for-empty-row",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.return-instance-for-empty-row",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.safe-result-handler-enabled",
       "type": "java.lang.Boolean",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
@@ -666,6 +876,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.safe-row-bounds-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.sql-fragments",
+      "type": "java.util.Map<java.lang.String,org.apache.ibatis.parsing.XNode>",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.sql-fragments",
       "type": "java.util.Map<java.lang.String,org.apache.ibatis.parsing.XNode>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -692,6 +912,16 @@
     },
     {
       "name": "mybatis-plus.configuration.use-actual-param-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.use-actual-param-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.use-column-label",
       "type": "java.lang.Boolean",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
@@ -726,6 +956,16 @@
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
+      "name": "mybatis-plus.configuration.use-generated-keys",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.variables",
+      "type": "java.util.Properties",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
       "name": "mybatis-plus.configuration.variables",
       "type": "java.util.Properties",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
@@ -738,6 +978,11 @@
     {
       "name": "mybatis-plus.configuration.variables",
       "type": "java.util.Properties",
+      "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
+    },
+    {
+      "name": "mybatis-plus.configuration.vfs-impl",
+      "type": "java.lang.Class<? extends org.apache.ibatis.io.VFS>",
       "sourceType": "com.baomidou.mybatisplus.core.MybatisConfiguration"
     },
     {
