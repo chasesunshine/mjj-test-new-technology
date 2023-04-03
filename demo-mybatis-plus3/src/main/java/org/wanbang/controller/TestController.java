@@ -81,21 +81,21 @@ public class TestController {
 //        }
 
 //        HashMap<Integer , SpringWorld> objectObjectHashMap = new HashMap<>();
-        List<SpringWorld> SpringWorldTest = new ArrayList<>();
-        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
-        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
-        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
-        SpringWorld build3 = SpringWorld.builder().id((long) 3).age(6).build();
-        SpringWorld build4 = SpringWorld.builder().id((long) 3).age(6).build();
-
-        SpringWorldTest.add(build);
-        SpringWorldTest.add(build1);
-        SpringWorldTest.add(build2);
-        SpringWorldTest.add(build3);
-        SpringWorldTest.add(build4);
-
-        List<Integer> collect = SpringWorldTest.stream().map(SpringWorld::getAge).distinct().collect(Collectors.toList());
-        System.out.println(JSON.toJSONString(collect));
+//        List<SpringWorld> SpringWorldTest = new ArrayList<>();
+//        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
+//        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
+//        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
+//        SpringWorld build3 = SpringWorld.builder().id((long) 3).age(6).build();
+//        SpringWorld build4 = SpringWorld.builder().id((long) 3).age(6).build();
+//
+//        SpringWorldTest.add(build);
+//        SpringWorldTest.add(build1);
+//        SpringWorldTest.add(build2);
+//        SpringWorldTest.add(build3);
+//        SpringWorldTest.add(build4);
+//
+//        List<Integer> collect = SpringWorldTest.stream().map(SpringWorld::getAge).distinct().collect(Collectors.toList());
+//        System.out.println(JSON.toJSONString(collect));
 //        objectObjectHashMap.put(1,build);
 //        objectObjectHashMap.put(2,build1);
 //        objectObjectHashMap.put(3,build2);
@@ -104,6 +104,25 @@ public class TestController {
 //        springWorld.setAge(8);
 //
 //        System.out.printf(objectObjectHashMap.get(1).getAge().toString());
+
+
+
+        Map<Long, List<SpringWorld>> skuNameMap = null;
+        SpringWorld build = SpringWorld.builder().id((long) 1).age(4).build();
+        SpringWorld build1 = SpringWorld.builder().id((long) 2).age(5).build();
+        SpringWorld build2 = SpringWorld.builder().id((long) 3).age(6).build();
+        SpringWorld build3 = SpringWorld.builder().id((long) 3).age(6).build();
+        SpringWorld build4 = SpringWorld.builder().id((long) 3).age(6).build();
+        List<SpringWorld> objects = new ArrayList<>();
+        objects.add(build);
+        objects.add(build1);
+        objects.add(build2);
+        objects.add(build3);
+        objects.add(build4);
+
+        skuNameMap = objects.stream().collect(Collectors.groupingBy(SpringWorld::getId));
+
+        System.out.println(JSON.toJSONString(skuNameMap));
     }
 
 //    public static void main(String[] args) {
