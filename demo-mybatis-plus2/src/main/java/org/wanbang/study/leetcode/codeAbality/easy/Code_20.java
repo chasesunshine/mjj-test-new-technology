@@ -66,11 +66,13 @@ public class Code_20 {
             else if(c=='[')stack.push(']');
             else if(c=='{')stack.push('}');
             else {
+                boolean b2 = stack.isEmpty();
+                if(b2){
+                    return false;
+                }
                 Character pop = stack.pop();
                 boolean b1 = c != pop;
-                boolean b2 = stack.isEmpty();
-                boolean b = b2 || b1;
-                if(b){
+                if(b1){
                     return false;
                 }
             }
