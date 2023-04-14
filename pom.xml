@@ -19,8 +19,6 @@
         <module>demo-mybatis-plus3</module>
         <module>demo-mybatis-plus4</module>
         <module>demo-spring-doc-study</module>
-        <module>rocketmq-demo</module>
-        <module>mjj-rocketmq-demo</module>
         <module>mjj_test_rocketmq_demo</module>
     </modules>
 
@@ -108,6 +106,16 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>1.2.0.Final</version>
             <scope>provided</scope>
+        </dependency>
+
+
+        <!-- 导入Spring Cloud的依赖管理 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Finchley.SR1</version>
+            <type>pom</type>
+            <scope>import</scope>
         </dependency>
 
     </dependencies>
