@@ -6,11 +6,10 @@ package org.dongfu.feign;
 * @version 1.0
 */
 
+import org.dongfu.exception.SysEx;
 import org.dongfu.rpc.entity.Item;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 申明这是一个Feign客户端，并且指明服务id
@@ -47,4 +46,12 @@ public interface ItemFeignClient {
     @RequestMapping(value = "/item/{id}", method = RequestMethod.GET)
     Item queryItemById(@PathVariable("id") Long id);
 
+
+
+
+    @GetMapping("/no-throws-ex")
+    String noThrowsEx();
+
+    @GetMapping("/has-throws-ex")
+    String hasThrowsEx(@RequestParam("code") Integer code) throws SysEx;
 }
