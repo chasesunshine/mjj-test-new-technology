@@ -1,7 +1,7 @@
-package com.dongfu.dao;
+package org.dongfu.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.dongfu.entity.CanalMysqlListener;
+import org.dongfu.entity.CanalMysqlListener;
 
 /**
  * <p>

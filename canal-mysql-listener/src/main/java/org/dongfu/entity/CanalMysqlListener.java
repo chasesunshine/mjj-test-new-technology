@@ -1,4 +1,4 @@
-package com.dongfu.entity;
+package org.dongfu.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

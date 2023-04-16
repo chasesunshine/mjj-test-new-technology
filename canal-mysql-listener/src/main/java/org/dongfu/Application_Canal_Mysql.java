@@ -1,4 +1,4 @@
-package com.dongfu;
+package org.dongfu;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
