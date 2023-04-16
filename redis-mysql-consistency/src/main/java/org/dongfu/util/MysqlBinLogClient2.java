@@ -7,16 +7,20 @@ package org.dongfu.util;
  */
 //为什么甚至路径都一样，还是com.github.shyiko.***，
 // 因为com.zendesk这个包，里面包了个com.github.shyiko.***这玩意，我怀疑是收购关系
+
 import com.github.shyiko.mysql.binlog.BinaryLogClient;
 import com.github.shyiko.mysql.binlog.event.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 //此类可以监控MySQL库数据的增删改
@@ -24,7 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j  //用于打印日志
 //在SpringBoot中，提供了一个接口：ApplicationRunner。
 //该接口中，只有一个run方法，他执行的时机是：spring容器启动完成之后，就会紧接着执行这个接口实现类的run方法。
-public class MysqlBinLogClient implements ApplicationRunner {
+public class MysqlBinLogClient2 implements ApplicationRunner {
     private static ConcurrentHashMap<Long,String> tableIdMap = new ConcurrentHashMap<>();
 
     @Override
@@ -86,10 +90,19 @@ public class MysqlBinLogClient implements ApplicationRunner {
 
                         //表数据发生插入时触发
                     } else if (data instanceof WriteRowsEventData) {
-                        String table = tableIdMap.get(((WriteRowsEventData) data).getTableId());
-                        if(table.equals("redis_mysql_consistency")){
-                            System.out.println("Insert:");
-                            System.out.println(data.toString());
+//                        String table = tableIdMap.get(((WriteRowsEventData) data).getTableId());
+//                        if(table.equals("redis_mysql_consistency")){
+//                            System.out.println("Insert:");
+//                            System.out.println(data.toString());
+//                        }
+                        System.out.println("Insert:");
+                        System.out.println(data.toString());
+                        WriteRowsEventData writeRowsEventData =(WriteRowsEventData) data;
+                        List<Serializable[]> rows = writeRowsEventData.getRows();
+                        for (Serializable[] row : rows) {
+                            List<Serializable> entries = Arrays.asList(row);
+                            String dataObject = getDataObject(entries);
+                            System.out.println(dataObject);
                         }
 
                         //表数据发生删除后触发
@@ -109,6 +122,21 @@ public class MysqlBinLogClient implements ApplicationRunner {
             e.printStackTrace();
         }
 
+    }
+
+    private static String getDataObject(List message) {
+        Map<Object,Object> resultObject = new HashMap<>();
+        String format = "{\"id\":\"0\",\"name\":\"1\",\"age\":\"2\",\"email\":\"3\"}";
+        //JSONObject json = JSON.parseObject(format);
+        Map json = JsonUtils.jsonToPojo(format, Map.class);
+        System.out.println("message");
+        System.out.println(message);
+
+        for (Object key : json.keySet()) {
+            int i = Integer.parseInt(json.get(key).toString());
+            resultObject.put(key, message.get(i));
+        }
+        return JsonUtils.objectToJson(resultObject);
     }
 
 }
