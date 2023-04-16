@@ -21,6 +21,7 @@
         <module>demo-spring-doc-study</module>
         <module>mjj_test_rocketmq_demo</module>
         <module>redis-mysql-consistency</module>
+        <module>canal-mysql-listener</module>
     </modules>
 
     <parent>
