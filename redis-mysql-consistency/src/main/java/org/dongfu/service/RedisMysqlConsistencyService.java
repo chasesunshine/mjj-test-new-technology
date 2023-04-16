@@ -13,4 +13,6 @@ import org.dongfu.entity.RedisMysqlConsistency;
 public interface RedisMysqlConsistencyService {
 
     RedisMysqlConsistency queryById(long l);
+
+    Integer insertData();
 }

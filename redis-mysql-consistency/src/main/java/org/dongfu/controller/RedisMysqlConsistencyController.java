@@ -31,4 +31,10 @@ public class RedisMysqlConsistencyController {
         return JSON.toJSONString(redisMysqlConsistency);
     }
 
+    @GetMapping("/insertOne")
+    public String insertOne() {
+        Integer rows = redisMysqlConsistencyService.insertData();
+        return JSON.toJSONString(rows);
+    }
+
 }

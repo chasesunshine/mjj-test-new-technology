@@ -25,4 +25,11 @@ public class RedisMysqlConsistencyServiceImpl implements RedisMysqlConsistencySe
         RedisMysqlConsistency redisMysqlConsistency = redisMysqlConsistencyDao.selectById(l);
         return redisMysqlConsistency;
     }
+
+    @Override
+    public Integer insertData() {
+        RedisMysqlConsistency build = RedisMysqlConsistency.builder().age(2).email("123").name("测试").build();
+        int insert = redisMysqlConsistencyDao.insert(build);
+        return insert;
+    }
 }
