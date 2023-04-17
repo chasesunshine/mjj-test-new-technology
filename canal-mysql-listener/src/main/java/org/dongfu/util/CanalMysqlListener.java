@@ -92,6 +92,7 @@ public class CanalMysqlListener implements ApplicationRunner {
                         //如果希望监听多种事件，可以手动增加case
                         case INSERT:
                             String tableName = entry.getHeader().getTableName();
+                            log.info("表名{}",tableName);
                             //测试users表进行映射处
                             List<CanalEntry.Column> afterColumnsList = rowData.getAfterColumnsList();
                             System.out.println(afterColumnsList);
