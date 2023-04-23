@@ -22,6 +22,7 @@
         <module>mjj_test_rocketmq_demo</module>
         <module>redis-mysql-consistency</module>
         <module>canal-mysql-listener</module>
+        <module>demo-mybatis-plus5</module>
     </modules>
 
     <parent>
