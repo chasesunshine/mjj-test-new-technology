@@ -23,8 +23,8 @@ public class TestJob {
 
     @Scheduled(fixedRate = 2000)
     public void execute() {
-        List<String> result = demoApiClient.getlist2();
-        log.info("定时任务执行 打印获取数据结果 {} ", result);
+//        List<String> result = demoApiClient.getlist2();
+//        log.info("定时任务执行 打印获取数据结果 {} ", result);
 
     }
 

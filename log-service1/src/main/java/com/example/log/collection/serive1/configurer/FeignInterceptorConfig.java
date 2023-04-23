@@ -16,6 +16,8 @@ public class FeignInterceptorConfig extends LogFeignInterceptorConfig implements
 
     @Override
     public void apply(RequestTemplate requestTemplate) {
-        requestTemplate.header(LogCollectionConstants.traceId, super.getTraceId());
+        String traceId = super.getTraceId();
+        requestTemplate.header(LogCollectionConstants.traceId, traceId);
+        System.out.println("123");
     }
 }

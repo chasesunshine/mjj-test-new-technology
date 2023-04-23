@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 /**
  * @author :XXX
  * @date :2021-02-07 17:52
- * @description :
+ * @description :注册过滤器 ，将上游请求中traceId值取出。使用MDC类将内容记录到日志中
  */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurationSupport {

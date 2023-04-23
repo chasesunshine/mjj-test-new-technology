@@ -13,7 +13,7 @@ import java.util.UUID;
 /**
  * @author :XXX
  * @date :2021-02-07 15:55
- * @description :
+ * @description : 生成traceId，将traceId加入到RequestHeader中，带入到下游请求中。
  */
 @Component
 public class TracePreFilter extends ZuulFilter {
