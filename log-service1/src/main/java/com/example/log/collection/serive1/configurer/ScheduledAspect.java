@@ -23,13 +23,13 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class ScheduledAspect {
 
-    @Pointcut("@annotation(org.springframework.scheduling.annotation.Scheduled)")
-    public void proxyAspect() {
-    }
-
-    @Before("proxyAspect()")
-    public void before(JoinPoint joinPoint) throws Throwable {
-        String traceId= LogHelper.getTraceId();
-        MDC.put(LogCollectionConstants.traceId, traceId);
-    }
+//    @Pointcut("@annotation(org.springframework.scheduling.annotation.Scheduled)")
+//    public void proxyAspect() {
+//    }
+//
+//    @Before("proxyAspect()")
+//    public void before(JoinPoint joinPoint) throws Throwable {
+//        String traceId= LogHelper.getTraceId();
+//        MDC.put(LogCollectionConstants.traceId, traceId);
+//    }
 }
