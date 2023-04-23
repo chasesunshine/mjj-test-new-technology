@@ -14,6 +14,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FeignInterceptorConfig extends LogFeignInterceptorConfig implements RequestInterceptor {
 
+    /**
+     * 个人理解 ： 这是feign 接口透传
+     * @param requestTemplate
+     */
     @Override
     public void apply(RequestTemplate requestTemplate) {
         String traceId = super.getTraceId();
