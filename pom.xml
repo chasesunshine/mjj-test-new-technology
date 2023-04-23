@@ -23,6 +23,11 @@
         <module>redis-mysql-consistency</module>
         <module>canal-mysql-listener</module>
         <module>demo-mybatis-plus5</module>
+        <module>log-eureka</module>
+        <module>log-zuul</module>
+        <module>log-core</module>
+        <module>log-service1</module>
+        <module>log-service2</module>
     </modules>
 
     <parent>
