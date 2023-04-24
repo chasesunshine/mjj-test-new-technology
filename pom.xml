@@ -28,6 +28,7 @@
         <module>log-core</module>
         <module>log-service1</module>
         <module>log-service2</module>
+        <module>demo-mybatis-plus6</module>
     </modules>
 
     <parent>
