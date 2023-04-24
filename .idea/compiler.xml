@@ -7,17 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-core" />
+        <module name="rocketmq" />
+        <module name="demo-mybatis-plus5" />
+        <module name="serive1" />
+        <module name="demo" />
+        <module name="rocketmq-producer-demo" />
+        <module name="demo-spring-doc-study" />
         <module name="demo-mybatis-plus4" />
         <module name="demo-mybatis-plus3" />
         <module name="demo-mybatis-plus2" />
-        <module name="rocketmq-consumer-demo" />
-        <module name="rocketmq" />
+        <module name="canal-mysql-listener" />
+        <module name="log-eureka" />
+        <module name="redis-mysql-consistency" />
         <module name="springbootDemo-mybatis-plus" />
+        <module name="log-zuul" />
         <module name="spring-bilibili-study" />
-        <module name="rocketmq-producer-demo" />
+        <module name="rocketmq-consumer-demo" />
         <module name="demo-job" />
-        <module name="demo-spring-doc-study" />
-        <module name="springboot-core" />
         <module name="test-nacos" />
       </profile>
     </annotationProcessing>
@@ -27,14 +34,21 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="canal-mysql-listener" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="demo-job" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />
+      <module name="demo-mybatis-plus5" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
+      <module name="log-eureka" options="-parameters" />
+      <module name="log-zuul" options="-parameters" />
+      <module name="redis-mysql-consistency" options="-parameters" />
       <module name="rocketmq" options="-parameters" />
       <module name="rocketmq-consumer-demo" options="-parameters" />
       <module name="rocketmq-producer-demo" options="-parameters" />
+      <module name="serive1" options="-parameters" />
       <module name="spring-bilibili-study" options="-parameters" />
       <module name="spring-study" options="-parameters" />
       <module name="springboot-core" options="-parameters" />
