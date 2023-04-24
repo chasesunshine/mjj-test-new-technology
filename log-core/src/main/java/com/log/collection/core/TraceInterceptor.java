@@ -33,6 +33,10 @@ public class TraceInterceptor implements HandlerInterceptor {
             MDC.put(LogCollectionConstants.traceId, traceIdVal);
         }
         else {
+            // mjj个人理解，这才是正确写法
+//            MDC.put(LogCollectionConstants.traceId, LogHelper.getTraceId());
+
+            //mjj个人理解，这地方写错了吧
             MDC.remove(LogCollectionConstants.traceId);
         }
         return true;
