@@ -18,7 +18,7 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @RestController
-@RequestMapping("springWordTest5")
+@RequestMapping("springWordTest6")
 public class SpringWordController {
     @Resource
     private SpringWordService springWordService;
