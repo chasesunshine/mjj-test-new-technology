@@ -7,6 +7,9 @@ package org.wanbang.study.singletonMode;
  *
  */
 // 饿汉式：类加载的时候就实例化，并且创建单例对象。
+
+
+//线程安全：饿汉式在线程还没出现之前就已经实例化了，所以饿汉式一定是线程安全的。
 public class Hungry{
     private Hungry(){}
     // 类加载的时候就实例化，并且创建单例对象
