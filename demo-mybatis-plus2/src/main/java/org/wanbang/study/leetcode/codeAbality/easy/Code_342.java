@@ -21,10 +21,13 @@ package org.wanbang.study.leetcode.codeAbality.easy;
  */
 public class Code_342 {
     public static void main(String[] args) {
-
+        boolean powerOfFour = isPowerOfFour(16);
+        System.out.println(powerOfFour);
     }
     public static boolean isPowerOfFour(int n) {
-
-        return false;
+        while (n != 0 && n % 4 == 0){
+            n = n /4;
+        }
+        return n == 1;
     }
 }
