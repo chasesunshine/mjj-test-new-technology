@@ -1,5 +1,8 @@
 package org.wanbang.study.linkedAndLinkedList.LinkedList;
 
+/**
+ * 注意，个人分析下来这是1.6的双向循环列表的源码写法
+ */
 public class MyLinkedList{
 
     private class Node{
