@@ -6,6 +6,9 @@ import org.wanbang.entity.TestUser1;
 import org.wanbang.service.TestUser1Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * (SpringWord)表控制层
@@ -23,6 +26,15 @@ public class TestUser1Controller {
     public String selectOne() {
         TestUser1 testUser1 = testUser1Service.queryById((long) 1);
         return JSON.toJSONString(testUser1);
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = new LinkedList<>();
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
     }
 }
 
