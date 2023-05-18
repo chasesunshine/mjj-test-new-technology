@@ -12,6 +12,7 @@
         <module name="serive1" />
         <module name="demo" />
         <module name="demo-spring-doc-study" />
+        <module name="demo-mybatis-plus7" />
         <module name="demo-mybatis-plus6" />
         <module name="demo-mybatis-plus5" />
         <module name="demo-mybatis-plus4" />
@@ -43,6 +44,7 @@
       <module name="demo-mybatis-plus4" options="-parameters" />
       <module name="demo-mybatis-plus5" options="-parameters" />
       <module name="demo-mybatis-plus6" options="-parameters" />
+      <module name="demo-mybatis-plus7" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-zuul" options="-parameters" />
