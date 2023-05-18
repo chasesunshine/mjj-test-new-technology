@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("spring_world")
+@TableName("user")
 @Builder
 public class User implements Serializable {
     private static final long serialVersionUID = -83513220652821879L;
@@ -25,7 +25,6 @@ public class User implements Serializable {
     
     private Integer age;
 
-    @NotBlank(message = "名字不能为空")
     private String name;
 
     private String password;

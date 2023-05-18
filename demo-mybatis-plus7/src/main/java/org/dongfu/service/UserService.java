@@ -18,4 +18,5 @@ public interface UserService {
      */
     User queryById(Long id);
 
+    User login(User user);
 }

@@ -8,9 +8,33 @@
       PRIMARY KEY (`id`) USING BTREE
     ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
     
-    
+# 一篇搞懂拦截器（HandlerInterceptor）的用法
+    https://blog.csdn.net/qq_50652600/article/details/127250413
+    # HandlerInterceptor
+        作用：自定义拦截器
+        preHandle：此方法的作用是在请求进入到Controller进行拦截，有返回值。（返回true则将请求放行进入Controller控制层，false则请求结束返回错误信息）
+        用法：登录验证（判断用户是否登录）权限验证：判断用户是否有权访问资源（校验token）
+        
+        postHandle：该方法是在Controller控制器执行完成但是还没有返回模板进行渲染拦截。没有返回值。就是Controller----->拦截------>ModelAndView。
+        用法：因此我们可以将Controller层返回来的参数进行一些修改，它就包含在ModelAndView中，所以该方法多了一个ModelAndView参数。
+        
+        afterCompletion：该方法是在ModelAndView返回给前端渲染后执行。
+        用法：例如登录的时候，我们经常把用户信息放到ThreadLocal中，为了防止内存泄漏，就需要将其remove掉，该操作就是在这里执行的。
+        
+    # WebMvcConfigurer
+      作用：添加拦截规则
+        根据源码发现，这里面有很多方法，但是通常我们只用到了里面的两种方法如下：
+        
+        addInterceptors：添加拦截器，拦截器需要拦截的路径和需要排除拦截的路径都需要在其中配置
+        
+        addResourceHandlers：配置静态资源路径，即某些请求需要读取某个路径下的静态资源内容，需要配置该静态资源的路径，通过该方法可以统一给这些请求配置指定静态资源路径
+        
+        
 # JWT的基本使用
     https://blog.csdn.net/weixin_45081813/article/details/114321013
+    
+    url: http://localhost:8555/springWordTest7/user/login?name=mjj&password=qwer
+    
     一.什么是JWT
         首先jwt其实是三个英语单词JSON Web Token的缩写。通过全名你可能就有一个基本的认知了。token一般都是用来认证的，比如我们系统中常用的用户登录token可以用来认证该用户是否登录。jwt也是经常作为一种安全的token使用。
     

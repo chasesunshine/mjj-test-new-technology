@@ -2,6 +2,7 @@ package org.dongfu.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
+import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.stereotype.Component;
@@ -34,8 +35,10 @@ public class JwtUtil {
      * 验签并返回DecodedJWT
      * @param token  令牌
      */
-    public  static DecodedJWT getTokenInfo(String token){
-        return JWT.require(Algorithm.HMAC256(SING)).build().verify(token);
+    public static DecodedJWT getTokenInfo(String token){
+        JWTVerifier build = JWT.require(Algorithm.HMAC256(SING)).build();
+        DecodedJWT verify = build.verify(token);
+        return verify;
     }
 
 }

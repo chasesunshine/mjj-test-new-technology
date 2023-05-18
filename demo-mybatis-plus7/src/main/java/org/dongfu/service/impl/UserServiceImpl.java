@@ -32,4 +32,17 @@ public class UserServiceImpl implements UserService {
 
         return this.userDao.selectById(id);
     }
+
+
+    @Override
+    public User login(User user) {
+        //接受用户查询数据库
+        User userDB = userDao.login(user);
+        //查询到这个用户就返回，没有则抛出错误
+        if (userDB != null) {
+            return userDB;
+        }else{
+            throw new RuntimeException("登录失败！");
+        }
+    }
 }
