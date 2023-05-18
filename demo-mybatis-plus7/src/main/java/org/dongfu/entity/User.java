@@ -18,7 +18,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @TableName("spring_world")
 @Builder
-public class SpringWorld implements Serializable {
+public class User implements Serializable {
     private static final long serialVersionUID = -83513220652821879L;
     
     private Long id;

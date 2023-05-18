@@ -1,9 +1,9 @@
 package org.dongfu.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import org.dongfu.dao.SpringWorldDao;
-import org.dongfu.entity.SpringWorld;
-import org.dongfu.service.SpringWordService;
+import org.dongfu.dao.UserDao;
+import org.dongfu.entity.User;
+import org.dongfu.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,9 +16,9 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @Service
-public class SpringWordServiceImpl implements SpringWordService {
+public class UserServiceImpl implements UserService {
     @Resource
-    private SpringWorldDao springWorldDao;
+    private UserDao userDao;
 
     /**
      * 通过ID查询单条数据
@@ -27,9 +27,9 @@ public class SpringWordServiceImpl implements SpringWordService {
      * @return 实例对象
      */
     @Override
-    public SpringWorld queryById(Long id) {
+    public User queryById(Long id) {
         log.info("通过ID查询单条数据");
 
-        return this.springWorldDao.selectById(id);
+        return this.userDao.selectById(id);
     }
 }

@@ -1,5 +1,5 @@
 # sql:
-    CREATE TABLE `spring_world` (
+    CREATE TABLE `user` (
       `id` bigint(20) NOT NULL AUTO_INCREMENT,
       `age` int(5) DEFAULT NULL,
       `name` varchar(255) DEFAULT NULL,
