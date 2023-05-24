@@ -122,6 +122,9 @@ public class UserController {
 
 
     public static void main(String[] args) {
+        int[] ints = new int[10];
+        System.out.println(ints[9]);
+
         Segment<String,String>[] segments = (Segment<String,String>[]) new Segment<?,?>[10];
         Segment<String, String> segment = segments[0];
     }
