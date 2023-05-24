@@ -16,8 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.text.Segment;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * (SpringWord)表控制层
@@ -117,5 +121,15 @@ public class UserController {
     }
 
 
+    public static void main(String[] args) {
+        Segment<String,String>[] segments = (Segment<String,String>[]) new Segment<?,?>[10];
+        Segment<String, String> segment = segments[0];
+    }
+
+    public static class Segment<K,V> extends ReentrantLock implements Serializable {
+        private static final long serialVersionUID = 2249069246763182397L;
+        final float loadFactor;
+        Segment(float lf) { this.loadFactor = lf; }
+    }
 }
 
