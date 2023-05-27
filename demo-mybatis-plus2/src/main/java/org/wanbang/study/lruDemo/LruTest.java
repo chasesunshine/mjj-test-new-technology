@@ -26,6 +26,7 @@ public class LruTest<K,V> extends LinkedHashMap<K,V> {
 
 
     public static void main(String[] args) {
+        // 从下面源码中，我们可以看到，通过accessOrder如果为true，则按照访问顺序进行排序，将访问到的数据放置链表尾部，如果为false，则按插入顺序进行排序
         LruTest<String,String> linkedHashMap = new LruTest<>(5,0.75f,true);
 
         linkedHashMap.put("3","3");
