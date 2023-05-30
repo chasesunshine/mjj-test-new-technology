@@ -83,12 +83,14 @@ public class UserService {
         //redis - Hashmap
         redisTemplate.opsForHash().put("Person","name","ligang");
         redisTemplate.opsForHash().put("Person","age","31");
-        redisTemplate.opsForHash().put("Person","slary",10000);
+        Person.opsForHash().put("Person","slary",10000);
         redisTemplate.opsForHash().put("Person1","name1","ligang1");
         redisTemplate.opsForHash().put("Person1","age1","311");
         redisTemplate.opsForHash().put("Person1","slary1",100001);
         Object mapValue = redisTemplate.opsForHash().get("Person","age");  //31
         List person = redisTemplate.opsForHash().values("Person");
+        // hash类型设置过期时间
+        boolean b = redisTemplate.expire("Person", 30, TimeUnit.SECONDS);
         System.out.println("redis - hashmap - allValue : " + person.toString());
         System.out.println("通过get(H key, Object hashKey)方法获取map键的值:" + mapValue);
 
