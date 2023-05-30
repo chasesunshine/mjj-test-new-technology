@@ -20,7 +20,7 @@ public class Producer {
         producer.setTransactionListener(new TransactionListener(){
 
             /**
-             * 在改方法中执行本地事务
+             * 在该方法中执行本地事务
              * @param msg
              * @param o
              * @return
