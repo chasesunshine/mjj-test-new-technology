@@ -83,7 +83,7 @@ public class UserService {
         //redis - Hashmap
         redisTemplate.opsForHash().put("Person","name","ligang");
         redisTemplate.opsForHash().put("Person","age","31");
-        Person.opsForHash().put("Person","slary",10000);
+        redisTemplate.opsForHash().put("Person","slary",10000);
         redisTemplate.opsForHash().put("Person1","name1","ligang1");
         redisTemplate.opsForHash().put("Person1","age1","311");
         redisTemplate.opsForHash().put("Person1","slary1",100001);
