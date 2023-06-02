@@ -10,8 +10,6 @@
         <module name="demo-eureka" />
         <module name="springboot-core" />
         <module name="rocketmq" />
-        <module name="serive1" />
-        <module name="demo" />
         <module name="demo-spring-doc-study" />
         <module name="demo-mybatis-plus7" />
         <module name="demo-mybatis-plus6" />
@@ -22,8 +20,10 @@
         <module name="redis-mysql-consistency" />
         <module name="log-eureka" />
         <module name="rocketmq-producer-demo" />
+        <module name="log-service2" />
         <module name="springbootDemo-mybatis-plus" />
         <module name="log-zuul" />
+        <module name="log-service1" />
         <module name="spring-bilibili-study" />
         <module name="demo-eureka-order" />
         <module name="demo-eureka-item" />
@@ -40,7 +40,6 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="canal-mysql-listener" options="-parameters" />
-      <module name="demo" options="-parameters" />
       <module name="demo-eureka" options="-parameters" />
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
@@ -53,12 +52,13 @@
       <module name="demo-mybatis-plus7" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
+      <module name="log-service1" options="-parameters" />
+      <module name="log-service2" options="-parameters" />
       <module name="log-zuul" options="-parameters" />
       <module name="redis-mysql-consistency" options="-parameters" />
       <module name="rocketmq" options="-parameters" />
       <module name="rocketmq-consumer-demo" options="-parameters" />
       <module name="rocketmq-producer-demo" options="-parameters" />
-      <module name="serive1" options="-parameters" />
       <module name="spring-bilibili-study" options="-parameters" />
       <module name="spring-study" options="-parameters" />
       <module name="springboot-core" options="-parameters" />
