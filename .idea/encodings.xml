@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/canal-mysql-listener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-eureka-item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-eureka-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-job/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus3/src/main/java" charset="UTF-8" />

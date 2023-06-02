@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo-eureka" />
         <module name="springboot-core" />
         <module name="rocketmq" />
         <module name="serive1" />
@@ -24,6 +25,8 @@
         <module name="springbootDemo-mybatis-plus" />
         <module name="log-zuul" />
         <module name="spring-bilibili-study" />
+        <module name="demo-eureka-order" />
+        <module name="demo-eureka-item" />
         <module name="rocketmq-consumer-demo" />
         <module name="demo-job" />
         <module name="canal-mysql-listener" />
@@ -38,6 +41,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="canal-mysql-listener" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="demo-eureka" options="-parameters" />
+      <module name="demo-eureka-item" options="-parameters" />
+      <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
