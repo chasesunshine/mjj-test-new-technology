@@ -30,11 +30,11 @@ public class CountDownLaunchTest {
         for(int i = 1; i<=100; i++){
             list.add(i);
         }
-        Long start = System.currentTimeMillis();
-        for(int i = 0; i<list.size(); i++){
-            Thread.sleep(100);
-        }
-        System.out.println("=====同步执行：耗时"+(System.currentTimeMillis()-start)+"毫秒======");
+//        Long start = System.currentTimeMillis();
+//        for(int i = 0; i<list.size(); i++){
+//            Thread.sleep(100);
+//        }
+//        System.out.println("=====同步执行：耗时"+(System.currentTimeMillis()-start)+"毫秒======");
 
 
 
