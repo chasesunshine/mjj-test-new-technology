@@ -22,11 +22,12 @@ public class MapCache {
             while (!Thread.currentThread().isInterrupted()) {
                 try {
                     Thread.sleep(CLEAN_TIME_PARAMETER * 1000);
-                    cache.entrySet().removeIf(entry ->
-                            Optional.ofNullable(entry.getValue())
+                    cache.entrySet().removeIf(
+                            entry -> Optional.ofNullable(entry.getValue())
                                     .map(SoftReference::get)
                                     .map(CacheObject::isExpired)
-                                    .orElse(false));
+                                    .orElse(false)
+                    );
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
