@@ -20,9 +20,9 @@
         <module name="demo-mybatis-plus2" />
         <module name="redis-mysql-consistency" />
         <module name="rocketmq-producer-demo" />
-        <module name="log-service2" />
-        <module name="springbootDemo-mybatis-plus" />
         <module name="log-zuul" />
+        <module name="springbootDemo-mybatis-plus" />
+        <module name="log-service2" />
         <module name="log-service1" />
         <module name="spring-bilibili-study" />
         <module name="demo-eureka-order" />
