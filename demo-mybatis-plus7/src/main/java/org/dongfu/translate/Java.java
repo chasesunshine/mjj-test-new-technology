@@ -1,5 +1,7 @@
 package org.dongfu.translate;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.*;
 
 /**
@@ -16,13 +18,29 @@ public class Java {
             FileReader fr = new FileReader(file);   //创建输入流
             int n;
             StringBuffer stringBuffer = new StringBuffer("");
+//            StringBuffer stringBufferFinal = new StringBuffer("");
 
             while((n=fr.read())!=-1){   //循环读取数据
                 char n1 = (char) n;
+//                if('\r' == n1){
+//                    if("\n" .equals(stringBuffer.toString())){
+//                        stringBufferFinal.append(stringBuffer.toString());
+//                    }else {
+//                        String translate = main.translate(stringBuffer.toString(), "jp", "zh");
+//
+//                        stringBufferFinal.append(translate);
+//                        stringBufferFinal.append(n1);
+//                    }
+//
+//                    stringBuffer.delete(0, stringBuffer.length());
+//                }else{
+//                    stringBuffer.append(n1);
+//                }
+
                 if(' ' == n1 || '\r' == n1 || '\n' == n1){
                     stringBuffer.append(n1);
                 }else {
-                    String translate = main.translate(n1, "jp", "zh");
+                    String translate = main.translate(String.valueOf(n1), "jp", "zh");
                     stringBuffer.append(translate);
                 }
             }
