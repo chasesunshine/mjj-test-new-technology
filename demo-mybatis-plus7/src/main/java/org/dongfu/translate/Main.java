@@ -3,8 +3,8 @@ package org.dongfu.translate;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.commons.lang3.StringUtils;
 import org.dongfu.translate.util.TransApi;
+import org.springframework.util.StringUtils;
 
 public class Main {
 
