@@ -1,4 +1,4 @@
-package org.dongfu.translate;
+package org.dongfu.translate.util;
 
 
 import com.alibaba.fastjson.JSONArray;
@@ -13,23 +13,24 @@ public class Main {
     private static final String SECURITY_KEY = "ouTBvSgyIelixsDS7nYx";
     private static TransApi api = new TransApi(APP_ID, SECURITY_KEY);
 
-    //    public static void main(String[] args) {
-//
-//        String query = "苹果";
-//        String transResult = api.getTransResult(query, "zh", "en");
-//        JSONObject jsonObject = JSONObject.parseObject(transResult);
-//        JSONArray trans_result = jsonObject.getJSONArray("trans_result");
-//        Object dst = trans_result.get(0);
-//        JSONObject jsonObjectDst = JSONObject.parseObject(dst.toString());
-//        Object dstFinal = jsonObjectDst.get("dst");
-//        System.out.println(dstFinal.toString());
-//    }
     public static void main(String[] args) {
-        StringBuffer stringBuffer = new StringBuffer("");
-        stringBuffer.append("\n").append("\n").append("\n").append("\n").append("\n").append("\n");
-        stringBuffer.trimToSize();
-        System.out.println(StringUtils.isEmpty(stringBuffer.toString()));
+
+        String query = "苹果";
+        String transResult = api.getTransResult(query, "zh", "en");
+        JSONObject jsonObject = JSONObject.parseObject(transResult);
+        JSONArray trans_result = jsonObject.getJSONArray("trans_result");
+        Object dst = trans_result.get(0);
+        JSONObject jsonObjectDst = JSONObject.parseObject(dst.toString());
+        Object dstFinal = jsonObjectDst.get("dst");
+        System.out.println(dstFinal.toString());
     }
+
+//    public static void main(String[] args) {
+//        StringBuffer stringBuffer = new StringBuffer("");
+//        stringBuffer.append("\n").append("\n").append("\n").append("\n").append("\n").append("\n");
+//        stringBuffer.trimToSize();
+//        System.out.println(StringUtils.isEmpty(stringBuffer.toString()));
+//    }
 
     public String translate(String s,String srcLanguage,String destLanguage){
         String transResult = api.getTransResult(s, srcLanguage, destLanguage);
