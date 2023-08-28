@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "test")
 public class TestProperties {
 
-    private String namesrvAddr;
-    private String group;
+    private String namesrvAddr = "123";
+    private String group = "456";
 
     public String getNamesrvAddr() {
         return namesrvAddr;
