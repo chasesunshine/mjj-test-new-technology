@@ -21,7 +21,8 @@ public class ThreadTest {
             s5.unsafeMethod();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-        thread7.setName("庚线程");
+//        thread7.setName("庚线程");
+        thread7.setName("X线程");
         thread7.start();
 
         Thread thread8 = new Thread(() -> {
@@ -30,7 +31,8 @@ public class ThreadTest {
             s5.synchronizedMethod1();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-        thread8.setName("辛线程");
+//        thread8.setName("辛线程");
+        thread8.setName("Y线程");
         thread8.start();
 
         Thread thread9 = new Thread(() -> {
@@ -38,7 +40,8 @@ public class ThreadTest {
             s6.synchronizedMethod1();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-        thread9.setName("壬线程");
+//        thread9.setName("壬线程");
+        thread9.setName("Z线程");
         thread9.start();
     }
 
