@@ -30,6 +30,7 @@
         <module>log-service2</module>
         <module>demo-mybatis-plus6</module>
         <module>demo-mybatis-plus7</module>
+        <module>demo-mybatis-plus8</module>
     </modules>
 
     <parent>

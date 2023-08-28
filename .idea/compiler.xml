@@ -7,31 +7,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-eureka" />
-        <module name="springboot-core" />
-        <module name="rocketmq" />
-        <module name="demo-mybatis-plus5" />
-        <module name="demo-mybatis-plus6" />
-        <module name="log-eureka" />
-        <module name="demo-mybatis-plus7" />
-        <module name="rocketmq-producer-demo" />
-        <module name="demo-spring-doc-study" />
-        <module name="demo-job" />
-        <module name="demo-mybatis-plus3" />
-        <module name="demo-mybatis-plus2" />
-        <module name="redis-mysql-consistency" />
-        <module name="canal-mysql-listener" />
-        <module name="demo-mybatis-plus4" />
-        <module name="log-zuul" />
-        <module name="springbootDemo-mybatis-plus" />
-        <module name="log-service2" />
-        <module name="log-service1" />
-        <module name="spring-bilibili-study" />
-        <module name="demo-eureka-order" />
-        <module name="demo-eureka-item" />
         <module name="rocketmq-consumer-demo" />
+        <module name="spring-bilibili-study" />
+        <module name="springboot-core" />
+        <module name="springbootDemo-mybatis-plus" />
+        <module name="demo-spring-doc-study" />
+        <module name="log-eureka" />
         <module name="log-serive2" />
         <module name="log-serive1" />
+        <module name="redis-mysql-consistency" />
+        <module name="log-service1" />
+        <module name="log-service2" />
+        <module name="rocketmq" />
+        <module name="rocketmq-producer-demo" />
+        <module name="demo-eureka" />
+        <module name="demo-job" />
+        <module name="demo-eureka-order" />
+        <module name="demo-eureka-item" />
+        <module name="log-zuul" />
+        <module name="demo-mybatis-plus8" />
+        <module name="demo-mybatis-plus6" />
+        <module name="demo-mybatis-plus7" />
+        <module name="canal-mysql-listener" />
+        <module name="demo-mybatis-plus4" />
+        <module name="demo-mybatis-plus5" />
+        <module name="demo-mybatis-plus2" />
+        <module name="demo-mybatis-plus3" />
         <module name="test-nacos" />
       </profile>
     </annotationProcessing>
@@ -52,6 +53,7 @@
       <module name="demo-mybatis-plus5" options="-parameters" />
       <module name="demo-mybatis-plus6" options="-parameters" />
       <module name="demo-mybatis-plus7" options="-parameters" />
+      <module name="demo-mybatis-plus8" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-serive1" options="-parameters" />

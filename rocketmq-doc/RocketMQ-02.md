@@ -140,7 +140,7 @@ public class ProducerTest {
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
 
-    @Test
+    @TestConfigration
     public void test1(){
         rocketMQTemplate.convertAndSend("springboot-mq","hello springboot rocketmq");
     }
@@ -1431,7 +1431,7 @@ public class OrderTest {
 ###2）测试下单成功流程
 
 ```java
-@Test    
+@TestConfigration    
 public void add(){
     Long goodsId=XXXL;
     Long userId=XXXL;
@@ -1771,7 +1771,7 @@ public class OrderTest {
    /**
      * 下单
      */
-    @Test
+    @TestConfigration
     public void confirmOrder(){
         Long goodsId=XXXL;
         Long userId=XXXL;
@@ -1821,7 +1821,7 @@ public class PayTest {
    /**
      * 创建支付订单
      */
-    @Test
+    @TestConfigration
     public void createPayment(){
 
         Long orderId = 346321587315814400L;
@@ -1836,7 +1836,7 @@ public class PayTest {
     /**
      * 支付回调
      */
-    @Test
+    @TestConfigration
     public void callbackPayment(){
         Long payId = 346321891507720192L;
         TradePay pay = new TradePay();
