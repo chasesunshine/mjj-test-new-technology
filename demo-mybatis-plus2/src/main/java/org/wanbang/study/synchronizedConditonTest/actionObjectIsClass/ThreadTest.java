@@ -30,8 +30,8 @@ public class ThreadTest {
             s2.synchronizedCodelockClass();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
+//        thread2.setName("乙线程");
         thread2.setName("B线程");
-        thread2.setName("乙线程");
         thread2.start();
     }
 
