@@ -21,7 +21,8 @@ public class ThreadTest {
             s1.synchronizedCodelockClass();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-        thread1.setName("甲线程");
+//        thread1.setName("甲线程");
+        thread1.setName("A线程");
         thread1.start();
 
         Thread thread2 = new Thread(() -> {
@@ -29,6 +30,7 @@ public class ThreadTest {
             s2.synchronizedCodelockClass();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
+        thread2.setName("B线程");
         thread2.setName("乙线程");
         thread2.start();
     }
