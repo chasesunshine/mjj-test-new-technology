@@ -30,7 +30,7 @@ public class SynchronizedUsage {
         }
     }
 
-    public synchronized void unsafeMethod() {
+    public void unsafeMethod() {
         for (int i = 0; i < 3; i++) {
             try {
                 System.out.println(Thread.currentThread().getName() + "普通方法");

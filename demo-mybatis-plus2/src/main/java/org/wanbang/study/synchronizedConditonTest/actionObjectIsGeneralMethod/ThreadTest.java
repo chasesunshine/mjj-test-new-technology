@@ -14,15 +14,15 @@ public class ThreadTest {
     public void testSynchronizedMethod() {
         SynchronizedUsage s5 = new SynchronizedUsage();
         SynchronizedUsage s6 = new SynchronizedUsage();
+
         Thread thread7 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "启动");
+            s5.unsafeMethod();
             s5.synchronizedMethod1();
             s5.synchronizedMethod2();
-            s5.unsafeMethod();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-//        thread7.setName("庚线程");
-        thread7.setName("X线程");
+        thread7.setName("庚线程");
         thread7.start();
 
         Thread thread8 = new Thread(() -> {
@@ -31,8 +31,7 @@ public class ThreadTest {
             s5.synchronizedMethod1();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-//        thread8.setName("辛线程");
-        thread8.setName("Y线程");
+        thread8.setName("辛线程");
         thread8.start();
 
         Thread thread9 = new Thread(() -> {
@@ -40,8 +39,7 @@ public class ThreadTest {
             s6.synchronizedMethod1();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
-//        thread9.setName("壬线程");
-        thread9.setName("Z线程");
+        thread9.setName("壬线程");
         thread9.start();
     }
 
@@ -50,10 +48,20 @@ public class ThreadTest {
         test.testSynchronizedMethod();
     }
 
+    /**
+     * mjj总结：
+     *      一个线程访问 同一个对象 两个加锁的同步方法 锁的是一个对象，先后顺序无所谓的
+     *      两个线程访问 同一个对象 同一个 加锁的 同步方法，锁的是同一个对象，要等其中一个线程执行完之后 释放对象的锁，另一个才能执行
+     *      两个线程访问 同一个对象 不同的 加锁的 同步方法，锁的是同一个对象，要等其中一个线程执行完之后 释放对象的锁，另一个才能执行
+     *      普通方法任何时候都不受影响
+     *      两个线程访问 不同对象 同一个 加锁的 同步方法，锁的是不同对象，不受影响
+     *      两个线程访问 不同对象 不同的 加锁的 同步方法，锁的是不同对象，不受影响
+     */
+
 
     /**
      * 结论:
-     *      一个线程访问同一个对象的两个不同的同步方法，因为是同一个对象，synchronize方法加锁指向的this也是指向同一个（当前对象），所以会导致程序串行的执行（庚线程方法1、方法2串行执行）；
+     *      一个线程访问同一个对象的两个不同的同步方法，因为是同一个对象，synchronize 方法加锁指向的this也是指向同一个（当前对象），所以会导致程序串行的执行（庚线程方法1、方法2串行执行）；
      *       两个线程访问同一个对象的同步方法，争抢同一把锁，只有一个线程能拿到锁去执行，所以辛线程只能等到庚线程执行完方法1把锁释放之后，才能执行方法1；
      *       两个线程访问两个对象的同步方法，synchronize锁的是不同的对象实例，所以两个线程不会产生互斥，并行的执行代码；
      *       同时访问同步方法和非同步方法，非同步方法不会受到影响。
