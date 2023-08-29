@@ -12,6 +12,8 @@ package org.wanbang.study.synchronizedConditonTest.actionObjectIsStaticMethod;
 public class ThreadTest {
 
     public void testSynchronizedStaticMethod() {
+        SynchronizedUsage su = new SynchronizedUsage();
+
         Thread thread10 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "启动");
             SynchronizedUsage.synchronizedStaticmethod();
