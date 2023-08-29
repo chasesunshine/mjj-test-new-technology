@@ -23,6 +23,7 @@ public class ThreadTest {
         thread3.setName("丙线程");
         thread3.start();
 
+
         Thread thread4 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "启动");
             s3.synchronizedCodelockObjct();
@@ -32,8 +33,6 @@ public class ThreadTest {
         thread4.start();
 
 
-
-
         Thread thread5 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "启动");
             s4.synchronizedCodelockObjct();
@@ -41,7 +40,6 @@ public class ThreadTest {
         });
         thread5.setName("戊线程");
         thread5.start();
-
 
 
         Thread thread6 = new Thread(() -> {
@@ -59,6 +57,11 @@ public class ThreadTest {
         //test.testSynchronizedCodelockClass();
         test.testSynchronizedCodelockObjct();
     }
+
+    /**
+     * mjj总结：
+     *      要分清 锁方法是给当前对象加锁， 锁代码块是给指定对象加锁
+     */
 
     /**
      * 结论：
