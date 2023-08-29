@@ -27,7 +27,7 @@ public class ThreadTest {
 
         Thread thread2 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "启动");
-            s2.synchronizedCodelockClass();
+            s2.synchronizedCodelockClass2();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
 //        thread2.setName("乙线程");
@@ -39,6 +39,11 @@ public class ThreadTest {
         ThreadTest test = new ThreadTest();
         test.testSynchronizedCodelockClass();
     }
+    /**
+     * mjj结论：
+     *      锁住的是类的时候，访问这个类里面所有 synchronized 修饰的加锁方法都需等
+     *      正在对这个类加锁的线程 使用完释放锁之后 其他线程才可以使用
+     */
 
     /**
      * 结论:
