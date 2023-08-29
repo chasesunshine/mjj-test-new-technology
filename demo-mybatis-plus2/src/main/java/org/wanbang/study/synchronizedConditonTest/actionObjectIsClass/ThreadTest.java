@@ -19,6 +19,7 @@ public class ThreadTest {
         Thread thread1 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "启动");
             s1.synchronizedCodelockClass();
+//            s1.synchronizedCodelockClass2();
             System.out.println(Thread.currentThread().getName() + "结束");
         });
 //        thread1.setName("甲线程");
