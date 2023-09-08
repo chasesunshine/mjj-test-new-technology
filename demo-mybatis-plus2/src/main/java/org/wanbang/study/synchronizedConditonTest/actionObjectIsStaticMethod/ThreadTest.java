@@ -29,6 +29,14 @@ public class ThreadTest {
         });
         thread11.setName("子线程");
         thread11.start();
+
+        Thread thread12 = new Thread(() -> {
+            System.out.println(Thread.currentThread().getName() + "启动");
+            SynchronizedUsage.synchronizedStaticmethod();
+            System.out.println(Thread.currentThread().getName() + "结束");
+        });
+        thread12.setName("马线程");
+        thread12.start();
     }
 
 
