@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.wanbang.mapper.WorldUserMapper">
+<mapper namespace="org.dongfu.mapper.WorldUserMapper">
 
-    <insert id="insertOneData" parameterType="org.wanbang.entity.WorldUser">
+    <insert id="insertOneData" parameterType="org.dongfu.entity.WorldUser">
          insert into world_user(name, age) values(#{name}, #{age})
     </insert>
 </mapper>

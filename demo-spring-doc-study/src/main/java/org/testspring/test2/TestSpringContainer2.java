@@ -1,7 +1,7 @@
 package org.testspring.test2;
 
 import org.springframework.stereotype.Component;
-import org.wanbang.dao.SpringStudyDao;
+import org.dongfu.dao.SpringStudyDao;
 
 import javax.annotation.Resource;
 

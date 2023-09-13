@@ -1,16 +1,16 @@
-2022-10-08 12:00:28.932 [main] INFO  org.wanbang.test1.TestPostConstruct:  Starting TestPostConstruct on DFSH2617 with PID 12540 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-10-08 12:00:28.938 [main] INFO  org.wanbang.test1.TestPostConstruct:  No active profile set, falling back to default profiles: default
+2022-10-08 12:00:28.932 [main] INFO  org.dongfu.test1.TestPostConstruct:  Starting TestPostConstruct on DFSH2617 with PID 12540 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-10-08 12:00:28.938 [main] INFO  org.dongfu.test1.TestPostConstruct:  No active profile set, falling back to default profiles: default
 2022-10-08 12:00:30.065 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-10-08 12:00:30.068 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-10-08 12:00:30.156 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
 2022-10-08 12:00:30.278 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
 2022-10-08 12:00:30.278 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
 2022-10-08 12:00:30.278 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
 2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
 2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
 2022-10-08 12:00:30.279 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-10-08 12:00:30.586 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c21db9fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-10-08 12:00:32.656 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
@@ -32,7 +32,7 @@
 2022-10-08 12:00:33.432 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@648c5fb3
 2022-10-08 12:00:33.533 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-10-08 12:00:33.533 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-10-08 12:00:33.543 [main] INFO  org.wanbang.test1.TestPostConstruct:  Started TestPostConstruct in 5.219 seconds (JVM running for 6.437)
+2022-10-08 12:00:33.543 [main] INFO  org.dongfu.test1.TestPostConstruct:  Started TestPostConstruct in 5.219 seconds (JVM running for 6.437)
 2022-10-08 12:00:33.777 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-10-08 12:00:33.779 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-10-08 12:00:33.779 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -41,19 +41,19 @@
 2022-10-08 12:00:33.780 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-10-08 12:00:33.781 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-10-08 12:00:33.785 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-10-08 12:04:59.810 [main] INFO  org.wanbang.test1.TestPostConstruct:  Starting TestPostConstruct on DFSH2617 with PID 18788 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
-2022-10-08 12:04:59.811 [main] INFO  org.wanbang.test1.TestPostConstruct:  No active profile set, falling back to default profiles: default
+2022-10-08 12:04:59.810 [main] INFO  org.dongfu.test1.TestPostConstruct:  Starting TestPostConstruct on DFSH2617 with PID 18788 (started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2)
+2022-10-08 12:04:59.811 [main] INFO  org.dongfu.test1.TestPostConstruct:  No active profile set, falling back to default profiles: default
 2022-10-08 12:05:00.776 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-10-08 12:05:00.779 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
 2022-10-08 12:05:00.873 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 79ms. Found 0 repository interfaces.
 2022-10-08 12:05:01.013 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
 2022-10-08 12:05:01.013 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
 2022-10-08 12:05:01.013 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-10-08 12:05:01.014 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2022-10-08 12:05:01.014 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
 2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
 2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
 2022-10-08 12:05:01.015 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-10-08 12:05:01.446 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f69f3b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-10-08 12:05:03.561 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
@@ -75,7 +75,7 @@
 2022-10-08 12:05:04.502 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@d7055be
 2022-10-08 12:05:04.631 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
 2022-10-08 12:05:04.632 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-10-08 12:05:04.640 [main] INFO  org.wanbang.test1.TestPostConstruct:  Started TestPostConstruct in 5.657 seconds (JVM running for 7.006)
+2022-10-08 12:05:04.640 [main] INFO  org.dongfu.test1.TestPostConstruct:  Started TestPostConstruct in 5.657 seconds (JVM running for 7.006)
 2022-10-08 12:05:04.843 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-10-08 12:05:04.845 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-10-08 12:05:04.845 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.

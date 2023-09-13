@@ -6,7 +6,7 @@
 
 
     <groupId>org.wanbang</groupId>
-    <artifactId>mjj-test-new-technology</artifactId>
+    <artifactId>test-new-technology</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -31,6 +31,7 @@
         <module>demo-mybatis-plus6</module>
         <module>demo-mybatis-plus7</module>
         <module>demo-mybatis-plus8</module>
+        <module>demo-mybatis-plus9</module>
     </modules>
 
     <parent>

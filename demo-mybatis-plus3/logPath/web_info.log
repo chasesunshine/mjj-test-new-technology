@@ -1,18 +1,18 @@
-2022-11-17 22:54:16.012 [main] INFO  org.wanbang.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 15048 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
-2022-11-17 22:54:16.014 [main] INFO  org.wanbang.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
+2022-11-17 22:54:16.012 [main] INFO  org.dongfu.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 15048 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
+2022-11-17 22:54:16.014 [main] INFO  org.dongfu.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
 2022-11-17 22:54:21.384 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2022-11-17 22:54:22.149 [main] INFO  org.wanbang.test1.TestPostConstruct - Started TestPostConstruct in 7.449 seconds (JVM running for 9.274)
+2022-11-17 22:54:22.149 [main] INFO  org.dongfu.test1.TestPostConstruct - Started TestPostConstruct in 7.449 seconds (JVM running for 9.274)
 2022-11-17 22:54:22.544 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-11-17 22:54:22.547 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
-2022-11-17 23:00:14.199 [main] INFO  org.wanbang.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 15496 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
-2022-11-17 23:00:14.202 [main] INFO  org.wanbang.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
+2022-11-17 23:00:14.199 [main] INFO  org.dongfu.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 15496 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
+2022-11-17 23:00:14.202 [main] INFO  org.dongfu.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
 2022-11-17 23:00:19.521 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2022-11-17 23:00:20.195 [main] INFO  org.wanbang.test1.TestPostConstruct - Started TestPostConstruct in 6.939 seconds (JVM running for 8.334)
+2022-11-17 23:00:20.195 [main] INFO  org.dongfu.test1.TestPostConstruct - Started TestPostConstruct in 6.939 seconds (JVM running for 8.334)
 2022-11-17 23:01:17.729 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-11-17 23:01:17.731 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
-2022-11-17 23:01:27.189 [main] INFO  org.wanbang.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 4928 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
-2022-11-17 23:01:27.192 [main] INFO  org.wanbang.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
+2022-11-17 23:01:27.189 [main] INFO  org.dongfu.test1.TestPostConstruct - Starting TestPostConstruct on DESKTOP-RIVUA3L with PID 4928 (started by 10619 in C:\AllJavaWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus3)
+2022-11-17 23:01:27.192 [main] INFO  org.dongfu.test1.TestPostConstruct - No active profile set, falling back to default profiles: default
 2022-11-17 23:01:31.506 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2022-11-17 23:01:32.102 [main] INFO  org.wanbang.test1.TestPostConstruct - Started TestPostConstruct in 5.81 seconds (JVM running for 7.151)
+2022-11-17 23:01:32.102 [main] INFO  org.dongfu.test1.TestPostConstruct - Started TestPostConstruct in 5.81 seconds (JVM running for 7.151)
 2022-11-17 23:01:36.024 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-11-17 23:01:36.026 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...

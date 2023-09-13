@@ -58,7 +58,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>org.wanbang.Application_Mybatis</mainClass>
+                    <mainClass>org.dongfu.Application_Mybatis</mainClass>
                 </configuration>
             </plugin>
             <plugin>

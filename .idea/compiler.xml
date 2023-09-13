@@ -26,6 +26,7 @@
         <module name="demo-eureka-item" />
         <module name="log-zuul" />
         <module name="demo-mybatis-plus8" />
+        <module name="demo-mybatis-plus9" />
         <module name="demo-mybatis-plus6" />
         <module name="demo-mybatis-plus7" />
         <module name="canal-mysql-listener" />
@@ -42,34 +43,35 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="canal-mysql-listener" options="" />
+      <module name="canal-mysql-listener" options="-parameters" />
       <module name="demo-eureka" options="-parameters" />
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
-      <module name="demo-job" options="" />
-      <module name="demo-mybatis-plus2" options="" />
-      <module name="demo-mybatis-plus3" options="" />
-      <module name="demo-mybatis-plus4" options="" />
-      <module name="demo-mybatis-plus5" options="" />
-      <module name="demo-mybatis-plus6" options="" />
-      <module name="demo-mybatis-plus7" options="" />
+      <module name="demo-job" options="-parameters" />
+      <module name="demo-mybatis-plus2" options="-parameters" />
+      <module name="demo-mybatis-plus3" options="-parameters" />
+      <module name="demo-mybatis-plus4" options="-parameters" />
+      <module name="demo-mybatis-plus5" options="-parameters" />
+      <module name="demo-mybatis-plus6" options="-parameters" />
+      <module name="demo-mybatis-plus7" options="-parameters" />
       <module name="demo-mybatis-plus8" options="-parameters" />
-      <module name="demo-spring-doc-study" options="" />
+      <module name="demo-mybatis-plus9" options="-parameters" />
+      <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-serive1" options="-parameters" />
       <module name="log-serive2" options="-parameters" />
       <module name="log-service1" options="-parameters" />
       <module name="log-service2" options="-parameters" />
       <module name="log-zuul" options="-parameters" />
-      <module name="redis-mysql-consistency" options="" />
-      <module name="rocketmq" options="" />
+      <module name="redis-mysql-consistency" options="-parameters" />
+      <module name="rocketmq" options="-parameters" />
       <module name="rocketmq-consumer-demo" options="-parameters" />
       <module name="rocketmq-producer-demo" options="-parameters" />
-      <module name="spring-bilibili-study" options="" />
+      <module name="spring-bilibili-study" options="-parameters" />
       <module name="spring-study" options="-parameters" />
-      <module name="springboot-core" options="" />
-      <module name="springbootDemo-mybatis-plus" options="" />
-      <module name="test-nacos" options="" />
+      <module name="springboot-core" options="-parameters" />
+      <module name="springbootDemo-mybatis-plus" options="-parameters" />
+      <module name="test-nacos" options="-parameters" />
     </option>
   </component>
 </project>
