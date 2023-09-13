@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "person",
-      "type": "org.wanbang.config.Person",
-      "sourceType": "org.wanbang.config.Person"
+      "type": "org.dongfu.config.Person",
+      "sourceType": "org.dongfu.config.Person"
     }
   ],
   "properties": [],
