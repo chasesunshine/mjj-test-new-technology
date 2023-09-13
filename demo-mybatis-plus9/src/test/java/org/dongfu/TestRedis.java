@@ -20,6 +20,9 @@ public class TestRedis {
     public void testRedis(){
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
         ops.set("xiaoming","xiaoming");
+
+        String xiaoming = ops.get("xiaoming");
+        System.out.println(xiaoming);
     }
 
 
