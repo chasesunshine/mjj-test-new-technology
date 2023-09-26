@@ -1,62 +1,316 @@
-2023-04-23 10:41:31.271 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 21376 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2023-04-23 10:41:31.278 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
-2023-04-23 10:41:31.331 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-04-23 10:41:31.331 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-04-23 10:41:32.248 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-04-23 10:41:32.252 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
-2023-04-23 10:41:32.329 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 63ms. Found 0 repository interfaces.
-2023-04-23 10:41:32.430 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
-2023-04-23 10:41:32.430 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
-2023-04-23 10:41:32.431 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
-2023-04-23 10:41:32.664 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$29925ac0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-23 10:41:33.163 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
-2023-04-23 10:41:33.181 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
-2023-04-23 10:41:33.187 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
-2023-04-23 10:41:33.188 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
-2023-04-23 10:41:33.193 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\AllSoftware\WorkSoftware\GitInstallPackage\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\AllSoftware\WorkSoftware\JDK1.8.221InstallPackage\bin;D:\AllSoftware\WorkSoftware\mavenInstallPackage\apache-maven-3.5.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
-2023-04-23 10:41:33.270 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
-2023-04-23 10:41:33.271 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1939 ms
-2023-04-23 10:41:34.539 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
-2023-04-23 10:41:34.916 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
-2023-04-23 10:41:35.021 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
-2023-04-23 10:41:35.030 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2023-04-23 10:41:35.030 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
-2023-04-23 10:41:35.031 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
-2023-04-23 10:41:35.031 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+2023-09-26 11:20:04.370 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 23904 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2023-09-26 11:20:04.380 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2023-09-26 11:20:04.413 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 11:20:04.414 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 11:20:05.135 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-09-26 11:20:05.137 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-09-26 11:20:05.197 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2023-09-26 11:20:05.278 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  No MyBatis mapper was found in '[org.wanbang.mapper]' package. Please check your configuration.
+2023-09-26 11:20:05.437 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86a3227c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-26 11:20:05.482 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+2023-09-26 11:20:05.485 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:  
 
-2023-04-23 10:41:35.031 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2023-04-23 10:41:35.031 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
-2023-04-23 10:41:35.031 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3402139f
-2023-04-23 10:41:35.149 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
-2023-04-23 10:41:35.176 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
-2023-04-23 10:41:35.177 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2023-04-23 10:41:35.200 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
-2023-04-23 10:41:35.208 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
-2023-04-23 10:41:35.221 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2023-04-23 10:41:35.223 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 4.653 seconds (JVM running for 5.736)
-2023-04-23 10:42:44.258 [http-nio-8091-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-23 10:42:44.258 [http-nio-8091-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
-2023-04-23 10:42:44.267 [http-nio-8091-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 9 ms
-2023-04-23 10:42:44.280 [http-nio-8091-exec-2] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2023-04-23 10:42:44.280 [http-nio-8091-exec-2] INFO  o.w.s.f.interceptor.TokenInterceptor:  Controller方法处理之前
-2023-04-23 10:42:45.250 [http-nio-8091-exec-2] INFO  o.w.s.f.interceptor.TokenInterceptor:  DispatcherServlet进行视图的渲染之后
-2023-04-23 10:44:03.457 [Thread-18] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2023-04-23 10:44:03.460 [Thread-18] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
-2023-04-23 10:44:03.460 [Thread-18] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2023-04-23 10:44:03.460 [Thread-18] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2023-04-23 10:44:03.461 [Thread-18] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2023-04-23 10:44:03.462 [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
-2023-04-23 10:44:03.463 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
-2023-04-23 10:44:03.475 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-26 11:20:05.492 [restartedMain] ERROR org.springframework.boot.SpringApplication:  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:493)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:240)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at org.wanbang.Application_Mybatis2.main(Application_Mybatis2.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1064)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:487)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 41 common frames omitted
+2023-09-26 11:21:52.620 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 19472 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2023-09-26 11:21:52.623 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2023-09-26 11:21:52.657 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 11:21:52.657 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 11:21:53.223 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-09-26 11:21:53.225 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-09-26 11:21:53.280 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2023-09-26 11:21:53.354 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  No MyBatis mapper was found in '[org.wanbang.mapper]' package. Please check your configuration.
+2023-09-26 11:21:53.503 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c91f0cb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-26 11:21:53.538 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+2023-09-26 11:21:53.543 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-26 11:21:53.548 [restartedMain] ERROR org.springframework.boot.SpringApplication:  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:493)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:240)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at org.wanbang.Application_Mybatis2.main(Application_Mybatis2.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1064)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:487)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 41 common frames omitted
+2023-09-26 11:29:55.371 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 14044 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2023-09-26 11:29:55.373 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2023-09-26 11:29:55.400 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 11:29:55.401 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 11:29:55.916 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-09-26 11:29:55.918 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-09-26 11:29:55.970 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
+2023-09-26 11:29:56.043 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  No MyBatis mapper was found in '[org.wanbang.mapper]' package. Please check your configuration.
+2023-09-26 11:29:56.192 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$33ddf798] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-26 11:30:02.823 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+2023-09-26 11:30:02.835 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-26 11:30:02.843 [restartedMain] ERROR org.springframework.boot.SpringApplication:  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:493)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:240)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at org.wanbang.Application_Mybatis2.main(Application_Mybatis2.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1064)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:487)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 41 common frames omitted
+2023-09-26 11:30:53.138 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 7876 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2023-09-26 11:30:53.140 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2023-09-26 11:30:53.167 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 11:30:53.167 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 11:30:53.671 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-09-26 11:30:53.672 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-09-26 11:30:53.724 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\dongfu\mapper\CityMapper.class]
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\dongfu\mapper\SysLogMapper.class]
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\dongfu\mapper\WorldUserMapper.class]
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2023-09-26 11:30:53.797 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2023-09-26 11:30:53.798 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2023-09-26 11:30:53.959 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$452818ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-26 11:30:53.996 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+2023-09-26 11:30:54.001 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-26 11:30:54.007 [restartedMain] ERROR org.springframework.boot.SpringApplication:  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:493)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:240)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at org.wanbang.Application_Mybatis2.main(Application_Mybatis2.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1064)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:487)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: org$wanbang$study$allDesignMode$constructMode$appearanceMode$annotation$DoDoor
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 41 common frames omitted

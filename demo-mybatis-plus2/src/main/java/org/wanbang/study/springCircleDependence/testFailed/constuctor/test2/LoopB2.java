@@ -1,0 +1,14 @@
+package org.wanbang.study.springCircleDependence.testFailed.constuctor.test2;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class LoopB2 {
+//    @Autowired
+//    LoopA2 loopA2;
+
+    public LoopB2() {
+    }
+
+}
+

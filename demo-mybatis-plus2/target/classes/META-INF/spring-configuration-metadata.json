@@ -2,58 +2,58 @@
   "groups": [
     {
       "name": "auth",
-      "type": "org.dongfu.config.properties.AuthProperties",
-      "sourceType": "org.dongfu.config.SpringConfig",
+      "type": "org.wanbang.config.properties.AuthProperties",
+      "sourceType": "org.wanbang.config.SpringConfig",
       "sourceMethod": "authProperties()"
     },
     {
       "name": "itstack.door",
-      "type": "org.dongfu.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties",
-      "sourceType": "org.dongfu.config.SpringConfig",
+      "type": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties",
+      "sourceType": "org.wanbang.config.SpringConfig",
       "sourceMethod": "starterServiceProperties()"
     },
     {
       "name": "template",
-      "type": "org.dongfu.config.properties.TemplateProperties",
-      "sourceType": "org.dongfu.config.SpringConfig",
+      "type": "org.wanbang.config.properties.TemplateProperties",
+      "sourceType": "org.wanbang.config.SpringConfig",
       "sourceMethod": "templateProperties()"
     }
   ],
   "properties": [
     {
       "name": "auth.auth-list",
-      "type": "java.util.List<org.dongfu.config.properties.AuthDto>",
+      "type": "java.util.List<org.wanbang.config.properties.AuthDto>",
       "description": "认证信息",
-      "sourceType": "org.dongfu.config.properties.AuthProperties"
+      "sourceType": "org.wanbang.config.properties.AuthProperties"
     },
     {
       "name": "auth.paths",
       "type": "java.util.List<java.lang.String>",
       "description": "需要认证的路径",
-      "sourceType": "org.dongfu.config.properties.AuthProperties"
+      "sourceType": "org.wanbang.config.properties.AuthProperties"
     },
     {
       "name": "itstack.door.user-str",
       "type": "java.lang.String",
-      "sourceType": "org.dongfu.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties"
+      "sourceType": "org.wanbang.study.allDesignMode.constructMode.appearanceMode.config.StarterServiceProperties"
     },
     {
       "name": "template.material-excel",
       "type": "java.lang.String",
       "description": "批量导入物料模板",
-      "sourceType": "org.dongfu.config.properties.TemplateProperties"
+      "sourceType": "org.wanbang.config.properties.TemplateProperties"
     },
     {
       "name": "template.purchase-detail-excel",
       "type": "java.lang.String",
       "description": "采购明细_批量导入物料",
-      "sourceType": "org.dongfu.config.properties.TemplateProperties"
+      "sourceType": "org.wanbang.config.properties.TemplateProperties"
     },
     {
       "name": "template.purchase-order-deliver-goods-excel",
       "type": "java.lang.String",
       "description": "采购订单批量导入发货模板",
-      "sourceType": "org.dongfu.config.properties.TemplateProperties"
+      "sourceType": "org.wanbang.config.properties.TemplateProperties"
     }
   ],
   "hints": []
