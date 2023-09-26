@@ -1,5 +1,5 @@
-2022-06-15 15:53:07.151 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 15032 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-06-15 15:53:07.154 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-06-15 15:53:07.151 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 15032 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 15:53:07.154 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
 2022-06-15 15:53:07.218 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-06-15 15:53:07.219 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-06-15 15:53:07.903 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -36,14 +36,14 @@
 2022-06-15 15:53:10.460 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
 2022-06-15 15:53:10.468 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-06-15 15:53:10.481 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-06-15 15:53:10.484 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 4.278 seconds (JVM running for 6.103)
+2022-06-15 15:53:10.484 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 4.278 seconds (JVM running for 6.103)
 2022-06-15 15:53:37.266 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-15 15:53:37.266 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
 2022-06-15 15:53:37.277 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 11 ms
 2022-06-15 15:53:37.291 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 15:53:37.389 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 15:53:37.390 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 15:53:37.400 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 15:53:37.389 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 15:53:37.390 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 15:53:37.400 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 15:55:21.761 [Thread-17] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-15 15:55:21.762 [Thread-17] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-15 15:55:21.763 [Thread-17] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -52,8 +52,8 @@
 2022-06-15 15:55:21.764 [Thread-17] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-15 15:55:21.764 [Thread-17] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-15 15:55:21.767 [Thread-17] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-15 15:56:03.920 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 16412 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-06-15 15:56:03.924 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-06-15 15:56:03.920 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 16412 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 15:56:03.924 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
 2022-06-15 15:56:04.013 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-06-15 15:56:04.013 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-06-15 15:56:04.671 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -90,20 +90,20 @@
 2022-06-15 15:56:07.028 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
 2022-06-15 15:56:07.035 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-06-15 15:56:07.048 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-06-15 15:56:07.050 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 3.599 seconds (JVM running for 4.597)
+2022-06-15 15:56:07.050 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.599 seconds (JVM running for 4.597)
 2022-06-15 15:56:21.790 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-15 15:56:21.790 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
 2022-06-15 15:56:21.797 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 7 ms
 2022-06-15 15:56:21.809 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 15:56:21.820 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  测试数据库
-2022-06-15 15:56:21.890 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 15:56:21.891 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 15:56:21.893 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 15:56:21.820 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  测试数据库
+2022-06-15 15:56:21.890 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 15:56:21.891 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 15:56:21.893 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 15:57:15.534 [http-nio-8091-exec-3] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 15:57:15.535 [http-nio-8091-exec-3] INFO  org.dongfu.service.WorldUserService:  测试数据库
-2022-06-15 15:57:15.537 [http-nio-8091-exec-3] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 15:57:15.539 [http-nio-8091-exec-3] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 15:57:15.541 [http-nio-8091-exec-3] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 15:57:15.535 [http-nio-8091-exec-3] INFO  org.wanbang.service.WorldUserService:  测试数据库
+2022-06-15 15:57:15.537 [http-nio-8091-exec-3] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 15:57:15.539 [http-nio-8091-exec-3] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 15:57:15.541 [http-nio-8091-exec-3] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 16:03:59.802 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-15 16:03:59.803 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-15 16:03:59.803 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -112,8 +112,8 @@
 2022-06-15 16:03:59.804 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-15 16:03:59.805 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-15 16:03:59.807 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-15 16:04:04.619 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 6336 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-06-15 16:04:04.626 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-06-15 16:04:04.619 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 6336 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 16:04:04.626 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
 2022-06-15 16:04:04.708 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-06-15 16:04:04.709 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-06-15 16:04:05.343 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -122,11 +122,11 @@
 2022-06-15 16:04:05.495 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
 2022-06-15 16:04:05.495 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
 2022-06-15 16:04:05.495 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-06-15 16:04:05.495 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
+2022-06-15 16:04:05.495 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
 2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
+2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
 2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
+2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
 2022-06-15 16:04:05.496 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-06-15 16:04:05.692 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d7671f7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-06-15 16:04:06.098 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
@@ -159,15 +159,15 @@
 2022-06-15 16:04:07.808 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
 2022-06-15 16:04:07.816 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-06-15 16:04:07.828 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-06-15 16:04:07.831 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 3.772 seconds (JVM running for 4.659)
+2022-06-15 16:04:07.831 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.772 seconds (JVM running for 4.659)
 2022-06-15 16:04:31.244 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-15 16:04:31.245 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
 2022-06-15 16:04:31.251 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 6 ms
 2022-06-15 16:04:31.264 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 16:04:31.274 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  测试数据库
-2022-06-15 16:04:31.343 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:04:31.344 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:04:31.346 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 16:04:31.274 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  测试数据库
+2022-06-15 16:04:31.343 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:04:31.344 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:04:31.346 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 16:05:05.526 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-15 16:05:05.527 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-15 16:05:05.527 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -176,8 +176,8 @@
 2022-06-15 16:05:05.528 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-15 16:05:05.529 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-15 16:05:05.531 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-15 16:06:38.960 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 17636 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-06-15 16:06:38.963 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-06-15 16:06:38.960 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 17636 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 16:06:38.963 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
 2022-06-15 16:06:39.035 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-06-15 16:06:39.035 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-06-15 16:06:39.631 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -186,11 +186,11 @@
 2022-06-15 16:06:39.771 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
 2022-06-15 16:06:39.771 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
 2022-06-15 16:06:39.771 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-06-15 16:06:39.771 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
+2022-06-15 16:06:39.771 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
 2022-06-15 16:06:39.771 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-06-15 16:06:39.772 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
+2022-06-15 16:06:39.772 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
 2022-06-15 16:06:39.772 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-06-15 16:06:39.772 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
+2022-06-15 16:06:39.772 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
 2022-06-15 16:06:39.772 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-06-15 16:06:39.974 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8eeaeafd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-06-15 16:06:40.349 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
@@ -223,15 +223,15 @@
 2022-06-15 16:06:41.917 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
 2022-06-15 16:06:41.924 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-06-15 16:06:41.937 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-06-15 16:06:41.939 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 3.497 seconds (JVM running for 4.411)
+2022-06-15 16:06:41.939 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.497 seconds (JVM running for 4.411)
 2022-06-15 16:06:52.463 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-15 16:06:52.463 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
 2022-06-15 16:06:52.468 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 5 ms
 2022-06-15 16:06:52.480 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 16:06:52.491 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  测试数据库
-2022-06-15 16:06:52.560 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:06:52.561 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:06:52.563 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 16:06:52.491 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  测试数据库
+2022-06-15 16:06:52.560 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:06:52.561 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:06:52.563 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 16:07:45.594 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-15 16:07:45.595 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-15 16:07:45.595 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -240,8 +240,8 @@
 2022-06-15 16:07:45.596 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-15 16:07:45.597 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-15 16:07:45.599 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-15 16:07:48.968 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 15512 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-06-15 16:07:48.973 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-06-15 16:07:48.968 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 15512 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 16:07:48.973 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
 2022-06-15 16:07:49.040 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-06-15 16:07:49.041 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-06-15 16:07:49.637 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -250,11 +250,11 @@
 2022-06-15 16:07:49.802 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
 2022-06-15 16:07:49.802 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
 2022-06-15 16:07:49.802 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
+2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
 2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
+2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
 2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
+2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
 2022-06-15 16:07:49.803 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-06-15 16:07:50.012 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ffb3566] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-06-15 16:07:50.386 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
@@ -287,15 +287,15 @@
 2022-06-15 16:07:51.982 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
 2022-06-15 16:07:51.990 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-06-15 16:07:52.001 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-06-15 16:07:52.004 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 3.538 seconds (JVM running for 4.483)
+2022-06-15 16:07:52.004 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.538 seconds (JVM running for 4.483)
 2022-06-15 16:08:03.116 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-15 16:08:03.116 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
 2022-06-15 16:08:03.122 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 6 ms
 2022-06-15 16:08:03.135 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 16:08:03.146 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  测试数据库
-2022-06-15 16:08:03.214 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:08:03.216 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:08:03.217 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 16:08:03.146 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  测试数据库
+2022-06-15 16:08:03.214 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:08:03.216 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:08:03.217 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 16:09:10.240 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-15 16:09:10.242 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-15 16:09:10.242 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
@@ -304,8 +304,8 @@
 2022-06-15 16:09:10.243 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2022-06-15 16:09:10.244 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2022-06-15 16:09:10.246 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
-2022-06-15 16:09:48.352 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 10156 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
-2022-06-15 16:09:48.355 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2022-06-15 16:09:48.352 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on DFSH2617 with PID 10156 (D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by majiajian in D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology)
+2022-06-15 16:09:48.355 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
 2022-06-15 16:09:48.419 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-06-15 16:09:48.419 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-06-15 16:09:49.008 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -314,11 +314,11 @@
 2022-06-15 16:09:49.154 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
 2022-06-15 16:09:49.155 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
 2022-06-15 16:09:49.155 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\AllWorkSpace\IdeaWorkSpace\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
-2022-06-15 16:09:49.156 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.dongfu.mapper.CityMapper' mapperInterface
+2022-06-15 16:09:49.156 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
 2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
-2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.dongfu.mapper.SysLogMapper' mapperInterface
+2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
 2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
-2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.dongfu.mapper.WorldUserMapper' mapperInterface
+2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
 2022-06-15 16:09:49.157 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
 2022-06-15 16:09:49.376 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1abcbe8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-06-15 16:09:49.761 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
@@ -351,15 +351,15 @@
 2022-06-15 16:09:51.343 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
 2022-06-15 16:09:51.350 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
 2022-06-15 16:09:51.362 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
-2022-06-15 16:09:51.365 [restartedMain] INFO  org.dongfu.Application_Mybatis2:  Started Application_Mybatis2 in 3.519 seconds (JVM running for 4.429)
+2022-06-15 16:09:51.365 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.519 seconds (JVM running for 4.429)
 2022-06-15 16:09:57.264 [http-nio-8091-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-15 16:09:57.264 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Initializing Servlet 'dispatcherServlet'
 2022-06-15 16:09:57.272 [http-nio-8091-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:  Completed initialization in 8 ms
 2022-06-15 16:09:57.286 [http-nio-8091-exec-1] INFO  o.w.s.f.interceptor.TokenInterceptor:  进入到 implements HandlerInterceptor 的拦截器
-2022-06-15 16:09:57.297 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  测试数据库
-2022-06-15 16:09:57.366 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:09:57.369 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
-2022-06-15 16:09:57.370 [http-nio-8091-exec-1] INFO  org.dongfu.service.WorldUserService:  错误
+2022-06-15 16:09:57.297 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  测试数据库
+2022-06-15 16:09:57.366 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:09:57.369 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
+2022-06-15 16:09:57.370 [http-nio-8091-exec-1] INFO  org.wanbang.service.WorldUserService:  错误
 2022-06-15 16:12:20.180 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-06-15 16:12:20.182 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
 2022-06-15 16:12:20.182 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.

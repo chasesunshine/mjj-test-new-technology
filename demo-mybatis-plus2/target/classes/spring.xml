@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="orderService" class="org.dongfu.study.xml.OrderServiceImpl"/>
+    <bean id="orderService" class="org.wanbang.study.xml.OrderServiceImpl"/>
 
     <!--使用自定义注解方式，扫包范围-->
-    <context:component-scan base-package="org.dongfu.study.ioc"/>
+    <context:component-scan base-package="org.wanbang.study.ioc"/>
 </beans>
