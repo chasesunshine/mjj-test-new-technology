@@ -1,5 +1,6 @@
 package org.wanbang.study.springCircleDependence.testFailed.constuctor.test1;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
