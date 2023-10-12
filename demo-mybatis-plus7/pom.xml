@@ -71,5 +71,11 @@
             <artifactId>bosscloud-mall-common-third-bridge</artifactId>
             <version>1.2.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>3.5.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>
