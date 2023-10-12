@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableAsync
 @SpringBootApplication
-@MapperScan("org.dongfu.dao")	//程序会自动为mybatis创建代理对象
+@MapperScan("org.wanbang.dao")	//程序会自动为mybatis创建代理对象
 public class Application_Mybatis7 {
 	
 	//定义主启动类

@@ -1,14 +1,14 @@
 package org.wanbang.convert;
 
 import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
 import org.wanbang.entity.User;
 import org.wanbang.entity.common.UserVo;
 import org.wanbang.entity.common.UserVo1;
-import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-09-13T16:55:08+0800",
+    date = "2023-10-12T08:38:16+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_282 (Azul Systems, Inc.)"
 )
 @Component

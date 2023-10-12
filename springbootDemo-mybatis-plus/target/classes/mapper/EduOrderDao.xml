@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.dongfu.test1.eduorder.dao.EduOrderDao">
+<mapper namespace="org.wanbang.test1.eduorder.dao.EduOrderDao">
 
-    <resultMap id="BaseResultMap" type="org.dongfu.test1.eduorder.entity.EduOrder">
+    <resultMap id="BaseResultMap" type="org.wanbang.test1.eduorder.entity.EduOrder">
         <!--@Table edu_order-->
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="platformId" column="platform_id" jdbcType="VARCHAR"/>
