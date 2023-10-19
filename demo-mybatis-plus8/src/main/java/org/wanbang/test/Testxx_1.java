@@ -1,7 +1,7 @@
 package org.wanbang.test;
 
-public abstract class Testxx{
-    public Testxx(){
+public abstract class Testxx_1 extends Testxx{
+    public Testxx_1(){
         System.out.println("son constructor");
     }
     protected void execute(){
