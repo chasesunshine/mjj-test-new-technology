@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 注册userService -->
+    <bean id="userService" class="org.wanbang.springthreeInjectmethod.setter.service.impl.UserServiceSetter">
+        <!-- 写法一 -->
+        <!-- <property name="UserDao" ref="userDaoMyBatis"></property> -->
+        <!-- 写法二 -->
+        <property name="userDao" ref="userDaoMyBatis"></property>
+    </bean>
+
+    <!-- 注册mybatis实现的dao -->
+    <bean id="userDaoMyBatis" class="org.wanbang.springthreeInjectmethod.setter.dao.impl.UserDaoJdbc"></bean>
+
+</beans>

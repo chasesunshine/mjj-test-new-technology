@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 注册userService -->
+    <bean id="userService" class="org.wanbang.springthreeInjectmethod.constructor.service.impl.UserServiceConstructor">
+        <constructor-arg ref="userDaoJdbc"></constructor-arg>
+    </bean>
+    <!-- 注册jdbc实现的dao -->
+    <bean id="userDaoJdbc" class="org.wanbang.springthreeInjectmethod.constructor.dao.impl.UserDaoJdbc"></bean>
+
+</beans>
