@@ -1,4 +1,4 @@
-package org.wanbang.study.autowireDoc;
+package org.wanbang.study.autowireDoc.test1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -7,6 +7,7 @@ public class Peopel {
     private Cat cat;
     @Autowired
     private Dog dog;
+
     private String name;
 
     public Cat getCat() {

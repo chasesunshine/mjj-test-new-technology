@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.wanbang.study.autowireDoc.Peopel;
+import org.wanbang.study.autowireDoc.test1.Peopel;
 
 @RunWith(SpringRunner.class)	//注意测试文件的位置 必须在主文件加载包路径下
 @SpringBootTest
@@ -18,9 +18,9 @@ public class TestMjj {
      * 手动装配
      *
      * applicationContext.xml 这样的时候
-     *     <bean id="cat" class="org.wanbang.study.autowireDoc.Cat"/>
-     *     <bean id="dog" class="org.wanbang.study.autowireDoc.Dog"/>
-     *     <bean id="people" class="org.wanbang.study.autowireDoc.Peopel">
+     *     <bean id="cat" class="org.wanbang.study.autowireDoc.test1.Cat"/>
+     *     <bean id="dog" class="org.wanbang.study.autowireDoc.test1.Dog"/>
+     *     <bean id="people" class="org.wanbang.study.autowireDoc.test1.Peopel">
      *         <property name="name" value="张三"/>
      *         <property name="cat" ref="cat"/>
      *         <property name="dog" ref="dog"/>
@@ -29,7 +29,7 @@ public class TestMjj {
      *
      *
      * applicationContext.xml 这样的时候
-     *    <bean id="people" class="org.wanbang.study.autowireDoc.Peopel">
+     *    <bean id="people" class="org.wanbang.study.autowireDoc.test1.Peopel">
      *         <property name="name" value="张三"/>
      *     </bean>
      *
@@ -46,9 +46,9 @@ public class TestMjj {
 
     /**
      * 通过xml文件实现自动装配 (1.byName)
-     *     <bean id="cat" class="org.wanbang.study.autowireDoc.Cat"/>
-     *     <bean id="dog" class="org.wanbang.study.autowireDoc.Dog"/>
-     *     <bean id="people" class="org.wanbang.study.autowireDoc.Peopel" autowire="byName">
+     *     <bean id="cat" class="org.wanbang.study.autowireDoc.test1.Cat"/>
+     *     <bean id="dog" class="org.wanbang.study.autowireDoc.test1.Dog"/>
+     *     <bean id="people" class="org.wanbang.study.autowireDoc.test1.Peopel" autowire="byName">
      *         <property name="name" value="张三"/>
      *     </bean>
      *
@@ -56,9 +56,9 @@ public class TestMjj {
      *
      *
      * 通过xml文件实现自动装配 (1.byName)
-     *     <bean id="cat" class="org.wanbang.study.autowireDoc.Cat"/>
-     *     <bean id="dog" class="org.wanbang.study.autowireDoc.Dog"/>
-     *     <bean id="people" class="org.wanbang.study.autowireDoc.Peopel" autowire="byType">
+     *     <bean id="cat" class="org.wanbang.study.autowireDoc.test1.Cat"/>
+     *     <bean id="dog" class="org.wanbang.study.autowireDoc.test1.Dog"/>
+     *     <bean id="people" class="org.wanbang.study.autowireDoc.test1.Peopel" autowire="byType">
      *         <property name="name" value="张三"/>
      *     </bean>
      *
@@ -74,9 +74,9 @@ public class TestMjj {
 
     /**
      * 通过注解实现自动装配 Autowired注解【常用】
-     *     <bean id="cat" class="org.wanbang.study.autowireDoc.Cat"/>
-     *     <bean id="dog" class="org.wanbang.study.autowireDoc.Dog"/>
-     *     <bean id="people" class="org.wanbang.study.autowireDoc.Peopel">
+     *     <bean id="cat" class="org.wanbang.study.autowireDoc.test1.Cat"/>
+     *     <bean id="dog" class="org.wanbang.study.autowireDoc.test1.Dog"/>
+     *     <bean id="people" class="org.wanbang.study.autowireDoc.test1.Peopel">
      *         <property name="name" value="张三"/>
      *     </bean>
      *

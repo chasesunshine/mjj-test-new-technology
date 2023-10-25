@@ -1,4 +1,4 @@
-package org.wanbang.study.autowireDoc;
+package org.wanbang.study.autowireDoc.test1;
 
 /**
  * spring——自动装配【非常详细】
