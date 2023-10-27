@@ -256,3 +256,46 @@
 2023-10-27 12:02:26.802 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2023-10-27 12:02:26.803 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2023-10-27 12:02:26.808 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2023-10-27 17:07:49.209 [main] INFO  org.wanbang.testAutoWired.TestMjj:  Starting TestMjj on RD-500-789 with PID 14580 (started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2)
+2023-10-27 17:07:49.210 [main] INFO  org.wanbang.testAutoWired.TestMjj:  No active profile set, falling back to default profiles: default
+2023-10-27 17:07:49.930 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-10-27 17:07:49.935 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-10-27 17:07:50.020 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
+2023-10-27 17:07:50.150 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2023-10-27 17:07:50.150 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2023-10-27 17:07:50.151 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2023-10-27 17:07:50.490 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bef134ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-27 17:07:52.085 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-27 17:07:52.778 [main] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2023-10-27 17:07:53.193 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2023-10-27 17:07:53.224 [main] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-10-27 17:07:53.224 [main] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2023-10-27 17:07:53.226 [main] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2023-10-27 17:07:53.227 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-10-27 17:07:53.227 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-10-27 17:07:53.227 [main] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2023-10-27 17:07:53.227 [main] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@36c7cbe1
+2023-10-27 17:07:53.333 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2023-10-27 17:07:53.334 [main] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-10-27 17:07:53.342 [main] INFO  org.wanbang.testAutoWired.TestMjj:  Started TestMjj in 4.528 seconds (JVM running for 5.396)
+2023-10-27 17:07:54.775 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-10-27 17:07:54.776 [Thread-3] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2023-10-27 17:07:54.776 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-10-27 17:07:54.776 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-10-27 17:07:54.777 [Thread-3] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-10-27 17:07:54.777 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-27 17:07:54.778 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2023-10-27 17:07:54.784 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
