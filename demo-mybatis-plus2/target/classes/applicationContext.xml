@@ -35,9 +35,9 @@
     <!-- 通过注解实现自动装配 Autowired注解【常用】-->
 <!--    <context:annotation-config/>-->
 
-<!--    <bean id="cat" class="org.wanbang.study.autowireDoc.test1.Cat">-->
-<!--        <property name="name" value="123"></property>-->
-<!--    </bean>-->
+    <bean id="cat" class="org.wanbang.study.autowireDoc.test1.Cat">
+        <property name="name" value="123"></property>
+    </bean>
 <!--    <bean id="dog" class="org.wanbang.study.autowireDoc.test1.Dog"/>-->
     <bean id="people" class="org.wanbang.study.autowireDoc.test1.Peopel">
         <property name="name" value="张三"/>
