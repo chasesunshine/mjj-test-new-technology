@@ -87,5 +87,7 @@ public class TestMjj {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         Peopel people = (Peopel)applicationContext.getBean("people");
         System.out.println(JSON.toJSONString(people));
+        System.out.println(JSON.toJSONString(people.getCat()));
+        System.out.println(JSON.toJSONString(people.getDog()));
     }
 }
