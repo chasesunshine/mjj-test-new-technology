@@ -344,3 +344,7 @@
 2023-11-16 10:33:42.836 [Thread-14] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
 2023-11-16 10:33:42.836 [Thread-14] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
 2023-11-16 10:33:42.842 [Thread-14] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
+2023-11-16 10:36:16.787 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 22660 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2023-11-16 10:36:16.789 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2023-11-16 10:36:16.830 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-16 10:36:16.830 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
