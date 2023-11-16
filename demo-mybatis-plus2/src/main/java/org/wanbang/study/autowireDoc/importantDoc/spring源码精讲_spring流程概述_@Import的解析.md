@@ -265,3 +265,5 @@
 
 16-2-11. SpringFactoriesLoader 类 （ 这里就是加载 META-INF/spring.factories ）
     Enumeration<URL> urls = classLoader != null ? classLoader.getResources("META-INF/spring.factories") : ClassLoader.getSystemResources("META-INF/spring.factories");
+## 测试
+    详见 src/main/java/org/wanbang/study/autowireDoc/importantDoc/spring源码精讲_spring流程概述_@Import的解析_测试.png
