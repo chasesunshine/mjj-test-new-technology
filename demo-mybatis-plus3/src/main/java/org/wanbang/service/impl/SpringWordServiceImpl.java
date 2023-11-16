@@ -1,6 +1,7 @@
 package org.wanbang.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.wanbang.common.convert.UserConvert;
 import org.wanbang.common.dto.UserResp;
@@ -105,6 +106,26 @@ public class SpringWordServiceImpl implements SpringWordService {
             throw new RuntimeException("13");
         }
         return update;
+    }
+
+
+
+    public void update(){
+        TransactionalB();
+        try{
+            TransactionalA();
+        }catch (Exception e ){
+            // 这里回滚 B 的数据
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class,propagation = Propagation.REQUIRES_NEW)
+    public void TransactionalA() {
+
+    }
+
+    @Transactional(rollbackFor = Exception.class,propagation = Propagation.REQUIRES_NEW)
+    public void TransactionalB() {
     }
 
 }
