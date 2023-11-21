@@ -7,7 +7,7 @@ import org.wanbang.entity.SpringWorld;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-10-12T08:38:28+0800",
+    date = "2023-11-17T15:03:18+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_282 (Azul Systems, Inc.)"
 )
 @Component
