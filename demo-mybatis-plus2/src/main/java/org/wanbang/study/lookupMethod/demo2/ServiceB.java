@@ -1,9 +1,9 @@
 package org.wanbang.study.lookupMethod.demo2;
 
 public class ServiceB {
-
+    private ServiceA serviceA;
     public void say() {
-        ServiceA serviceA = this.getServiceA();
+        serviceA = this.getServiceA();
         System.out.println("this:" + this + ",serviceA:" + serviceA);
     }
 
