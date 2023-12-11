@@ -25,7 +25,14 @@
     <bean id="userService1" class="org.wanbang.study.autoWiredByNameOrByType.test.UserService">
         <property name="userDAO" ref="userDAO"/>
     </bean>
-
+    <bean id="userService2" class="org.wanbang.study.autoWiredByNameOrByType.test.UserService">
+        <property name="id" value="1"></property>
+        <property name="name" value="1"></property>
+    </bean>
+    <bean id="userService3" class="org.wanbang.study.autoWiredByNameOrByType.test.UserService" autowire="byName">
+        <property name="id" value="1"></property>
+        <property name="name" value="1"></property>
+    </bean>
 
     <!--需要注意的是在UserService类中，一定要有一个名为setUserDao的构造方法，其中setter
      方法名要与bean的id对应set+name，name首字母大写，否则无法成功注入-->

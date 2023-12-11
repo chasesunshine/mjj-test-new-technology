@@ -15,6 +15,7 @@ public class TestDemo {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname1.xml");
         UserService service = (UserService)ctx.getBean("userService");
         System.out.println(service.getUserDAO());
+        System.out.println(service);
         //打印出来是1 说明默认注入的是UserDAO
     }
     @Test
@@ -22,13 +23,32 @@ public class TestDemo {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname1.xml");
         UserService service = (UserService)ctx.getBean("userService1");
         System.out.println(service.getUserDAO());
+        System.out.println(service);
         //打印出来是1 说明默认注入的是UserDAO
     }
+    @Test
+    public void test1_3(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname1.xml");
+        UserService service = (UserService)ctx.getBean("userService2");
+        System.out.println(service.getUserDAO());
+        System.out.println(service);
+        //打印出来是1 说明默认注入的是UserDAO
+    }
+    @Test
+    public void test1_4(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname1.xml");
+        UserService service = (UserService)ctx.getBean("userService3");
+        System.out.println(service.getUserDAO());
+        System.out.println(service);
+        //打印出来是1 说明默认注入的是UserDAO
+    }
+
     @Test
     public void test2_1(){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname2.xml");
         UserService service = (UserService)ctx.getBean("userService");
         System.out.println(service.getUserDAO());
+        System.out.println(service);
         //打印出来是1 说明默认注入的是UserDAO
     }
     @Test
@@ -36,6 +56,23 @@ public class TestDemo {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname2.xml");
         UserService service = (UserService)ctx.getBean("userService1");
         System.out.println(service.getUserDAO());
+        System.out.println(service);
+        //打印出来是1 说明默认注入的是UserDAO
+    }
+    @Test
+    public void test2_3(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname2.xml");
+        UserService service = (UserService)ctx.getBean("userService2");
+        System.out.println(service.getUserDAO());
+        System.out.println(service);
+        //打印出来是1 说明默认注入的是UserDAO
+    }
+    @Test
+    public void test2_4(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans_byname2.xml");
+        UserService service = (UserService)ctx.getBean("userService3");
+        System.out.println(service.getUserDAO());
+        System.out.println(service);
         //打印出来是1 说明默认注入的是UserDAO
     }
 
