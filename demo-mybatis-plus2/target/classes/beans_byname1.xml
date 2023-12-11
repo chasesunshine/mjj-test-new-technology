@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <!--第一个UserDAO bean-->
+    <!--第一个UserDAO bean ,这个 name="userDAO" 可以改成 id="userDAO"-->
     <bean name="userDAO" class="org.wanbang.study.autoWiredByNameOrByType.test.UserDAOImpl">
         <property name="daoId" value="1"></property>
     </bean>
@@ -19,8 +19,13 @@
     相当于在bean中添加<property name="userDAO" ref="userDAO"/> 一样
     -->
 
-    <bean id="userService" class="org.wanbang.study.autoWiredByNameOrByType.test.UserService"  autowire="byName">
+    <!-- 以下两种方式都是一样的  -->
+    <bean id="userService" class="org.wanbang.study.autoWiredByNameOrByType.test.UserService"  autowire="byName"></bean>
+
+    <bean id="userService1" class="org.wanbang.study.autoWiredByNameOrByType.test.UserService">
+        <property name="userDAO" ref="userDAO"/>
     </bean>
+
 
     <!--需要注意的是在UserService类中，一定要有一个名为setUserDao的构造方法，其中setter
      方法名要与bean的id对应set+name，name首字母大写，否则无法成功注入-->
