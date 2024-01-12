@@ -1,13 +1,14 @@
 package org.wanbang.aop;
 /**
-* @description: TODO
-* @author majiajian
-* @date 2023/4/23 11:33
-* @version 1.0
-*/
+ * @description: TODO
+ * @author majiajian
+ * @date 2023/4/23 11:33
+ * @version 1.0
+ */
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -15,6 +16,7 @@ import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.wanbang.dto.response.ResponseCode;
 import org.wanbang.dto.response.ResponseData;
@@ -26,6 +28,7 @@ import java.util.*;
 @Component
 @Slf4j
 @Aspect
+@Order(2)
 public class ControllerHandler {
 
     private final static String TRACE_ID = "TRACE_ID";
@@ -46,7 +49,7 @@ public class ControllerHandler {
         }
     }
 
-    @Around("recordLog()")
+    /*@Around("recordLog()")
     public Object record(ProceedingJoinPoint joinPoint) throws Throwable {
 
         setTraceId();
@@ -96,6 +99,18 @@ public class ControllerHandler {
         log.info("{}#{} response:{}", clazzSimpleName, methodName, resultJsonString);
 
         return response;
-    }
+    }*/
 
+    @SneakyThrows
+    @Around("recordLog()")
+    public Object record(ProceedingJoinPoint joinPoint){
+        Object response;
+        try {
+            response = joinPoint.proceed(joinPoint.getArgs());
+        } catch (Exception e) {
+            System.out.println("测试1");
+            throw new RuntimeException(e);
+        }
+        return response + "111111";
+    }
 }
