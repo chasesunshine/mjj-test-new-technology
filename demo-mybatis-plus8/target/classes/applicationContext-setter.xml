@@ -10,7 +10,7 @@
         <!-- 写法一 -->
         <!-- <property name="UserDao" ref="userDaoMyBatis"></property> -->
         <!-- 写法二 -->
-        <property name="userDao" ref="userDaoMyBatis"></property>
+        <property name="userDao1" ref="userDaoMyBatis"></property>
     </bean>
 
     <!-- 注册mybatis实现的dao -->
