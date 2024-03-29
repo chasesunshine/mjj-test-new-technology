@@ -8,8 +8,8 @@ import org.wanbang.entity.common.UserVo1;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-10-13T08:59:41+0800",
-    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_282 (Azul Systems, Inc.)"
+    date = "2024-03-29T14:29:58+0800",
+    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11.0.22 (Oracle Corporation)"
 )
 @Component
 public class UserConverImpl implements UserConver {
