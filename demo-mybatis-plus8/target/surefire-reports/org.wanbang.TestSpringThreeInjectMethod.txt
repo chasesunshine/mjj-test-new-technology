@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.wanbang.TestSpringThreeInjectMethod
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s - in org.wanbang.TestSpringThreeInjectMethod
