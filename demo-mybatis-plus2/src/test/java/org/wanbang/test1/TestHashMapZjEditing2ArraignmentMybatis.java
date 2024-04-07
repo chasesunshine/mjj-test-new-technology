@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.lmax.disruptor.EventTranslatorOneArg;
 import com.lmax.disruptor.RingBuffer;
-import com.sun.xml.internal.ws.util.UtilException;
+//import com.sun.xml.internal.ws.util.UtilException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -43,7 +43,7 @@ public class TestHashMapZjEditing2ArraignmentMybatis {
 		try {
 			MESSAGE = MessageDigest.getInstance("MD5");
 		} catch (NoSuchAlgorithmException e) {
-			throw new UtilException("获取MD5 对象失败", e);
+			throw new RuntimeException("获取MD5 对象失败", e);
 		}
 	}
 
@@ -159,7 +159,7 @@ public class TestHashMapZjEditing2ArraignmentMybatis {
 			String s = digestHexStr.toString();
 			System.out.println("数据 ："+ s);
 		} catch (Exception e) {
-			throw new UtilException("Md5加密失败", e);
+			throw new RuntimeException("Md5加密失败", e);
 		}
 	}
 
