@@ -1,4 +1,4 @@
-package org.wanbang;
+package org.wanbang.testtdengine;
 
 import com.taosdata.jdbc.TSDBDriver;
 
@@ -7,10 +7,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class JNIConnectRestExample {
+public class JNIConnectRestBatchExample {
     public static void main(String[] args) throws SQLException {
         String jdbcUrl = "jdbc:TAOS-RS://HaoD:6041?user=root&password=taosdata";
-        Connection conn = DriverManager.getConnection(jdbcUrl);
+        Properties connProps = new Properties();
+        connProps.setProperty(TSDBDriver.PROPERTY_KEY_BATCH_LOAD, "true");
+        Connection conn = DriverManager.getConnection(jdbcUrl, connProps);
         System.out.println("Connected");
         conn.close();
     }

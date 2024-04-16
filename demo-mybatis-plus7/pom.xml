@@ -61,16 +61,16 @@
             <artifactId>bosscloud-mall-common-third-bridge</artifactId>
             <version>1.2.0-SNAPSHOT</version>
         </dependency>-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.wbcloudhealth.biz</groupId>
             <artifactId>bosscloud-mall-common-third-bridge</artifactId>
             <version>1.2.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.wbcloudhealth.biz</groupId>
-            <artifactId>bosscloud-mall-common-third-bridge</artifactId>
-            <version>1.2.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.wbcloudhealth.biz</groupId>-->
+<!--            <artifactId>bosscloud-mall-common-third-bridge</artifactId>-->
+<!--            <version>1.2.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-extension</artifactId>
