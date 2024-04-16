@@ -32,6 +32,7 @@
         <module>demo-mybatis-plus7</module>
         <module>demo-mybatis-plus8</module>
         <module>demo-mybatis-plus9</module>
+        <module>demo-mybatis-plus-edengine</module>
     </modules>
 
     <parent>

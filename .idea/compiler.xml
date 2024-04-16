@@ -11,6 +11,7 @@
         <module name="spring-bilibili-study" />
         <module name="springboot-core" />
         <module name="springbootDemo-mybatis-plus" />
+        <module name="demo-mybatis-plus-edengine" />
         <module name="demo-spring-doc-study" />
         <module name="log-eureka" />
         <module name="log-serive2" />
@@ -48,6 +49,7 @@
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
+      <module name="demo-mybatis-plus-edengine" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />
