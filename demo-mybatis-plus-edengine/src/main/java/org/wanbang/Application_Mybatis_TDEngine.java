@@ -2,8 +2,10 @@ package org.wanbang;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootConfiguration
 @SpringBootApplication
 @MapperScan("org.wanbang.dao")	//程序会自动为mybatis创建代理对象
 public class Application_Mybatis_TDEngine {

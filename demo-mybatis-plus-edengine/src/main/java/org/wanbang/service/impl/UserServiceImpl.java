@@ -2,7 +2,9 @@ package org.wanbang.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.wanbang.dao.TestDataDao;
 import org.wanbang.dao.UserDao;
+import org.wanbang.entity.TestData;
 import org.wanbang.entity.User;
 import org.wanbang.service.UserService;
 
@@ -20,6 +22,9 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserDao userDao;
 
+    @Resource
+    private TestDataDao testDao;
+
     /**
      * 通过ID查询单条数据
      *
@@ -29,6 +34,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User queryById(Long id) {
         log.info("通过ID查询单条数据");
+        TestData test = testDao.selectData();
 
         return this.userDao.selectById(id);
     }
