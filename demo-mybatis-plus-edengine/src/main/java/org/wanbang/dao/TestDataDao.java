@@ -6,6 +6,10 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import org.wanbang.entity.TestData;
 
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.Map;
+
 /**
  * (SpringWord)表数据库访问层
  *
@@ -16,5 +20,7 @@ import org.wanbang.entity.TestData;
 @Repository
 public interface TestDataDao extends BaseMapper<TestData> {
     TestData selectData();
+
+    List<Map<String, Object>> selectData1();
 }
 

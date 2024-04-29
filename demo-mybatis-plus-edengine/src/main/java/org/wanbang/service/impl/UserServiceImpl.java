@@ -15,6 +15,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -43,6 +44,7 @@ public class UserServiceImpl implements UserService {
     public User queryById(Long id) {
         log.info("通过ID查询单条数据");
         TestData test = testDao.selectData();
+        List<Map<String, Object>> value = testDao.selectData1();
 
 
         try {
@@ -51,6 +53,8 @@ public class UserServiceImpl implements UserService {
             DataSource tDengine = dataSources.get("tdengine");
             Connection connection = tDengine.getConnection();
             Statement stmt = connection.createStatement();
+
+
 
 //            stmt.execute("CREATE TABLE IF NOT EXISTS sys_device_log_test1 (\n" +
 //                    "    time TIMESTAMP,\n" +
@@ -72,7 +76,9 @@ public class UserServiceImpl implements UserService {
 
 //            stmt.execute("CREATE STABLE meters (ts timestamp, current float, voltage int, phase float) TAGS (location binary(64), groupId int);");
 //            stmt.execute("CREATE TABLE d1001 USING meters TAGS (\"California.SanFrancisco\", 2);");
-//            stmt.execute("INSERT INTO d1001 USING meters TAGS (\"California.SanFrancisco\", 2) VALUES (NOW, 10.2, 219, 0.32);");
+//            stmt.execute("INSERT INTO d1001 USING meters TAGS (\"California.SanFrancisco\", 2) VALUES ('2024-04-25 14:39:26.106', 10.2, 219, 0.32,'1234');");
+//            stmt.execute("INSERT INTO d1002 USING meters TAGS (\"California.SanFrancisco\", 3) VALUES (NOW, 10.2, 219, 0.32);");
+//            stmt.execute("INSERT INTO d1002 USING meters TAGS (\"California.SanFrancisco\", 3) VALUES (NOW, 10, 21, 0.3);");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
