@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
     public User queryById(Long id) {
         log.info("通过ID查询单条数据");
         TestData test = testDao.selectData();
-        List<Map<String, Object>> value = testDao.selectData1();
+        List<Map<String, Object>> value = testDao.selectData1("d1001");
 
 
         try {

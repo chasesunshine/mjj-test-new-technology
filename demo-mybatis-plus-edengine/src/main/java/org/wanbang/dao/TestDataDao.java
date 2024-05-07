@@ -3,6 +3,7 @@ package org.wanbang.dao;
 import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import org.wanbang.entity.TestData;
 
@@ -21,6 +22,6 @@ import java.util.Map;
 public interface TestDataDao extends BaseMapper<TestData> {
     TestData selectData();
 
-    List<Map<String, Object>> selectData1();
+    List<Map<String, Object>> selectData1(@Param("table") String table);
 }
 

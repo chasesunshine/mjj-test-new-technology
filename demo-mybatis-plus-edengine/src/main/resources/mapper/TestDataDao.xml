@@ -8,6 +8,6 @@
         select * from test_data where speed = 10 ;
     </select>
     <select id="selectData1" resultType="java.util.Map">
-        select * from d1001
+        select * from #{table}
     </select>
 </mapper>
