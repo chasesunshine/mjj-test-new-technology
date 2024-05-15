@@ -21,8 +21,13 @@ spring:
           username: root
           password: root
           driver-class-name: com.mysql.cj.jdbc.Driver
-        tdengine:
+        tdengine1:
           url: jdbc:TAOS://HaoD:6030/demo?charset=utf-8
+          driver-class-name: com.taosdata.jdbc.TSDBDriver
+          username: root
+          password: taosdata
+        tdengine2:
+          url: jdbc:TAOS://HaoD:6030/demo2?charset=utf-8
           driver-class-name: com.taosdata.jdbc.TSDBDriver
           username: root
           password: taosdata

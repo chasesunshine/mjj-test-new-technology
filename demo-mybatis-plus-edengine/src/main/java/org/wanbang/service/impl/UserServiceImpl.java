@@ -5,11 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.wanbang.config.spring.SpringContextUtil;
 import org.wanbang.dao.TestDataDao;
+import org.wanbang.dao.TestDataSecondDao;
 import org.wanbang.dao.UserDao;
 import org.wanbang.entity.TestData;
+import org.wanbang.entity.TestDataSecond;
 import org.wanbang.entity.User;
 import org.wanbang.service.UserService;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -34,6 +37,14 @@ public class UserServiceImpl implements UserService {
     @Resource
     private TestDataDao testDao;
 
+    @Resource
+    private TestDataSecondDao testDataSecondDao;
+
+    @PostConstruct
+    public void test1(){
+        log.info("@PostConstruct 第一次加载");
+    }
+
     /**
      * 通过ID查询单条数据
      *
@@ -44,7 +55,12 @@ public class UserServiceImpl implements UserService {
     public User queryById(Long id) {
         log.info("通过ID查询单条数据");
         TestData test = testDao.selectData();
+
+        TestDataSecond test2 = testDataSecondDao.selectData2();
+
         List<Map<String, Object>> value = testDao.selectData1("d1001");
+
+        List<Map<String, Object>> value1 = testDataSecondDao.selectData("test_data_second");
 
 
         try {
@@ -87,5 +103,8 @@ public class UserServiceImpl implements UserService {
         return this.userDao.selectById(id);
     }
 
-
+    @PostConstruct
+    public void test2(){
+        log.info("@PostConstruct 第二次加载");
+    }
 }
