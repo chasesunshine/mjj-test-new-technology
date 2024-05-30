@@ -2,8 +2,10 @@ package org.wanbang.service.impl;
 
 import com.baomidou.dynamic.datasource.DynamicRoutingDataSource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.wanbang.config.spring.SpringContextUtil;
+import org.wanbang.dao.TemperatureDao;
 import org.wanbang.dao.TestDataDao;
 import org.wanbang.dao.TestDataSecondDao;
 import org.wanbang.dao.UserDao;
@@ -40,6 +42,9 @@ public class UserServiceImpl implements UserService {
     @Resource
     private TestDataSecondDao testDataSecondDao;
 
+    @Autowired
+    private TemperatureDao mapper;
+
     @PostConstruct
     public void test1(){
         log.info("@PostConstruct 第一次加载");
@@ -54,6 +59,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User queryById(Long id) {
         log.info("通过ID查询单条数据");
+
+        mapper.createSuperTable();
+
+
+
         TestData test = testDao.selectData();
 
         TestDataSecond test2 = testDataSecondDao.selectData2();
