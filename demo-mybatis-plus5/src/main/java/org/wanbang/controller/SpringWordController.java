@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.wanbang.dto.User;
 import org.wanbang.dto.UserDTO;
 import org.wanbang.dto.response.ResponseData;
 import org.wanbang.entity.SpringWorld;
@@ -57,19 +58,32 @@ public class SpringWordController {
         return JSON.toJSONString(name);
     }
 
-    @InitBinder
-    public void initBinder(WebDataBinder binder) {
-        // 注册一个自定义的编辑器，将所有传入的字符串转换为大写
-        binder.registerCustomEditor(String.class, new PropertyEditorSupport() {
-            @Override
-            public void setAsText(String text) {
-                setValue(text.toUpperCase());
-            }
-        });
+//    @InitBinder
+//    public void initBinder(WebDataBinder binder) {
+//        // 注册一个自定义的编辑器，将所有传入的字符串转换为大写
+//        binder.registerCustomEditor(String.class, new PropertyEditorSupport() {
+//            @Override
+//            public void setAsText(String text) {
+//                setValue(text.toUpperCase());
+//            }
+//        });
+//
+//        // 注册一个自定义的编辑器，将所有传入的日期格式化为 yyyy/MM/dd 格式
+//        binder.registerCustomEditor(Date.class, new CustomDateEditor(
+//                new SimpleDateFormat("yyyy/MM/dd"), true));
+//    }
 
-        // 注册一个自定义的编辑器，将所有传入的日期格式化为 yyyy/MM/dd 格式
-        binder.registerCustomEditor(Date.class, new CustomDateEditor(
-                new SimpleDateFormat("yyyy/MM/dd"), true));
+
+    @PostMapping("/selectThree")
+    public String selectThree(@ModelAttribute("user") User user) {
+        System.out.println(user);
+//        SpringWorld springWorld = springWordService.queryById((long) 1);
+        return JSON.toJSONString(user);
+    }
+
+    @InitBinder("user")
+    public void initBinderUser(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("user.");
     }
 
 }
