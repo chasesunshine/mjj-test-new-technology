@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.wanbang.dto.Addr;
 import org.wanbang.dto.User;
 import org.wanbang.dto.UserDTO;
 import org.wanbang.dto.response.ResponseData;
@@ -75,8 +76,9 @@ public class SpringWordController {
 
 
     @PostMapping("/selectThree")
-    public String selectThree(@ModelAttribute("user") User user) {
+    public String selectThree(@ModelAttribute("user") User user,@ModelAttribute("addr") Addr addr) {
         System.out.println(user);
+        System.out.println(addr);
 //        SpringWorld springWorld = springWordService.queryById((long) 1);
         return JSON.toJSONString(user);
     }
@@ -84,6 +86,11 @@ public class SpringWordController {
     @InitBinder("user")
     public void initBinderUser(WebDataBinder binder) {
         binder.setFieldDefaultPrefix("user.");
+    }
+
+    @InitBinder("addr")
+    public void initBinderAddr(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("addr.");
     }
 
 }

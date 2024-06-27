@@ -51,4 +51,5 @@
 # @InitBinder处理指定前缀参数
     https://blog.csdn.net/qq_44930716/article/details/123825194
 
-    入参需要带上 前缀
+    表单提交 ： 入参需要带上 前缀
+    详见：demo-mybatis-plus5/doc/img.png
