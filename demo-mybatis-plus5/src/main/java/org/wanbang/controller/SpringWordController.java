@@ -3,6 +3,8 @@ package org.wanbang.controller;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Preconditions;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.wanbang.dto.UserDTO;
 import org.wanbang.dto.response.ResponseData;
@@ -10,6 +12,9 @@ import org.wanbang.entity.SpringWorld;
 import org.wanbang.service.SpringWordService;
 
 import javax.annotation.Resource;
+import java.beans.PropertyEditorSupport;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * (SpringWord)表控制层
@@ -42,6 +47,29 @@ public class SpringWordController {
         userDTO.setUsername("加班写Bug");
 
         return ResponseData.success(userDTO);
+    }
+
+
+    @GetMapping("/selectTwo")
+    public String selectTwo(@RequestParam("name") String name) {
+        log.info("name {}", name);
+//        SpringWorld springWorld = springWordService.queryById((long) 1);
+        return JSON.toJSONString(name);
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        // 注册一个自定义的编辑器，将所有传入的字符串转换为大写
+        binder.registerCustomEditor(String.class, new PropertyEditorSupport() {
+            @Override
+            public void setAsText(String text) {
+                setValue(text.toUpperCase());
+            }
+        });
+
+        // 注册一个自定义的编辑器，将所有传入的日期格式化为 yyyy/MM/dd 格式
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(
+                new SimpleDateFormat("yyyy/MM/dd"), true));
     }
 
 }
