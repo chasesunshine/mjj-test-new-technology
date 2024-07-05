@@ -34,8 +34,6 @@
         <module>demo-mybatis-plus9</module>
         <module>demo-mybatis-plus-edengine</module>
         <module>demo-mybatis-plus10</module>
-        <module>spring-boot-starter-mqtt-provider</module>
-        <module>spring-boot-starter-mqtt-consumer</module>
     </modules>
 
     <parent>

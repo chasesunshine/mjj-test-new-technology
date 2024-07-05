@@ -43,6 +43,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mqtt-server" target="1.8" />
+      <module name="spring-boot-starter-mqtt-consumer" target="1.8" />
+      <module name="spring-boot-starter-mqtt-provider" target="1.8" />
       <module name="spring-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>

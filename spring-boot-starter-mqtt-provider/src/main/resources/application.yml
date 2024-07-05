@@ -12,6 +12,24 @@ spring:
     username: root
     password: root
 
+    application:
+      name: provider
+      #MQTT配置信息
+
+user:
+  #MQTT服务地址，端口号默认11883，如果有多个，用逗号隔开
+  url: tcp://127.0.0.1:18083
+  #用户名
+  username: admin
+  #密码
+  password: Mjj75467!
+  #客户端id(不能重复)
+  client:
+    id: provider-id
+  #MQTT默认的消息推送主题，实际可在调用接口是指定
+  default:
+    topic: topic
+
 #mybatis-plush配置
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Dao.xml
