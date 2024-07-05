@@ -14,6 +14,7 @@
         <module name="demo-mybatis-plus-edengine" />
         <module name="demo-spring-doc-study" />
         <module name="log-eureka" />
+        <module name="demo-mybatis-plus10" />
         <module name="log-serive2" />
         <module name="log-serive1" />
         <module name="redis-mysql-consistency" />
@@ -50,6 +51,7 @@
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
       <module name="demo-mybatis-plus-edengine" options="-parameters" />
+      <module name="demo-mybatis-plus10" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />
