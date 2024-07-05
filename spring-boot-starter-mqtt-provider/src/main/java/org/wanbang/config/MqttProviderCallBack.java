@@ -12,15 +12,15 @@ import org.springframework.stereotype.Component;
 @Configuration
 public class MqttProviderCallBack implements MqttCallback {
 
-//    @Value("${mqtt.client.id}")
-//    private String clientId;
+    @Value("${mqtt.client.id}")
+    private String clientId;
 
     /**
      * 与服务器断开连接的回调
      */
     @Override
     public void connectionLost(Throwable throwable) {
-//        System.out.println(clientId + "与服务器断开连接");
+        System.out.println(clientId + "与服务器断开连接");
     }
 
     /**

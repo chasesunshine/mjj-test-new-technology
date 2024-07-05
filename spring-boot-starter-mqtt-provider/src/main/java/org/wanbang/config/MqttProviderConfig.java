@@ -10,20 +10,18 @@ import javax.annotation.PostConstruct;
 @Configuration
 @Slf4j
 public class MqttProviderConfig {
-    @Value("${user.username}")
+    @Value("${mqtt.username}")
     private String username;
-    @Value("${user.password}")
+    @Value("${mqtt.password}")
     private String password;
-    @Value("${user.url}")
+    @Value("${mqtt.url}")
     private String hostUrl;
-    @Value("${user.client.id}")
+    @Value("${mqtt.client.id}")
     private String clientId;
-    @Value("${user.default.topic}")
+    @Value("${mqtt.default.topic}")
     private String defaultTopic;
 
 
-    @Value("${test.user}")
-    private String username1;
 
     /**
      * 客户端对象
@@ -34,7 +32,6 @@ public class MqttProviderConfig {
      */
     @PostConstruct
     public void init(){
-        System.out.println(username1);
         connect();
     }
     /**
