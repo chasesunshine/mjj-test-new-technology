@@ -20,6 +20,11 @@ public class MqttProviderConfig {
     private String clientId;
     @Value("${user.default.topic}")
     private String defaultTopic;
+
+
+    @Value("${test.user}")
+    private String username1;
+
     /**
      * 客户端对象
      */
@@ -29,6 +34,7 @@ public class MqttProviderConfig {
      */
     @PostConstruct
     public void init(){
+        System.out.println(username1);
         connect();
     }
     /**

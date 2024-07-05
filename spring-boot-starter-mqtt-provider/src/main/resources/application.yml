@@ -30,6 +30,9 @@ user:
   default:
     topic: topic
 
+test:
+  user: 2
+
 #mybatis-plush配置
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Dao.xml
