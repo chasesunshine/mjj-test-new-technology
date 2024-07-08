@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-mqtt-provider</artifactId>
+    <artifactId>demo-mqtt-consumer</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -32,4 +32,5 @@
             <artifactId>spring-integration-mqtt</artifactId>
         </dependency>
     </dependencies>
+
 </project>

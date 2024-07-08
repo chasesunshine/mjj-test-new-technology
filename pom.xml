@@ -35,6 +35,7 @@
         <module>demo-mybatis-plus-edengine</module>
         <module>demo-mybatis-plus10</module>
         <module>demo-mqtt-provider</module>
+        <module>demo-mqtt-consumer</module>
     </modules>
 
     <parent>
