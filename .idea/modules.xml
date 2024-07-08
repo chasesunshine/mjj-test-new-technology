@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-test/dubbo-zookeeper-test.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-test/dubbo-zookeeper-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-starter-mqtt-consumer.iml" filepath="$PROJECT_DIR$/spring-boot-starter-mqtt-consumer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-starter-mqtt-provider.iml" filepath="$PROJECT_DIR$/spring-boot-starter-mqtt-provider.iml" />
     </modules>
   </component>
 </project>

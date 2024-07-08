@@ -1,4 +1,4 @@
-package wanbang;
+package org.wanbang;
 
 
 import com.alibaba.fastjson.JSON;

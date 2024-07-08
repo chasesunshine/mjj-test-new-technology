@@ -10,6 +10,7 @@
         <module name="rocketmq-consumer-demo" />
         <module name="spring-bilibili-study" />
         <module name="springboot-core" />
+        <module name="demo-mqtt-provider" />
         <module name="springbootDemo-mybatis-plus" />
         <module name="demo-mybatis-plus-edengine" />
         <module name="demo-spring-doc-study" />
@@ -22,8 +23,6 @@
         <module name="log-service2" />
         <module name="rocketmq" />
         <module name="rocketmq-producer-demo" />
-        <module name="spring-boot-starter-mqtt-consumer" />
-        <module name="spring-boot-starter-mqtt-provider" />
         <module name="demo-eureka" />
         <module name="demo-job" />
         <module name="demo-eureka-order" />
@@ -55,6 +54,7 @@
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
+      <module name="demo-mqtt-provider" options="-parameters" />
       <module name="demo-mybatis-plus-edengine" options="-parameters" />
       <module name="demo-mybatis-plus10" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
