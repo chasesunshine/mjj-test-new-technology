@@ -21,8 +21,6 @@ public class MqttProviderConfig {
     @Value("${mqtt.default.topic}")
     private String defaultTopic;
 
-
-
     /**
      * 客户端对象
      */
