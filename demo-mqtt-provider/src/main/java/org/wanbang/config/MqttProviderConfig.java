@@ -70,8 +70,20 @@ public class MqttProviderConfig {
     }
     public void publish(int qos,boolean retained,String topic,String message){
         MqttMessage mqttMessage = new MqttMessage();
+//        ① QoS 0 至多一次
+//        这一级别会发生消息丢失或重复，消息发布依赖于底层TCP/IP网络。即：<=1
+//        ② QoS 1 最少一次
+//        QoS 1 承诺消息将至少传送一次给订阅者。
+//        ③ QoS 2 只有一次
+//        使用 QoS 2，我们保证消息仅传送到目的地一次。为此，带有唯一消息 ID 的消息会存储两次，首先来自发送者，然后是接收者。
+//        QoS 级别 2 在网络中具有最高的开销，因为在发送方和接收方之间需要两个流。
         mqttMessage.setQos(qos);
+//        消息传递引擎是否应保留发布消息。发送一条消息，
+//        将 retained 设置为 <code>true<code>，并使用空字节数组作为有效负载，
+//        例如 <code>new byte[0]<code>，将从服务器中清除保留的消息。
+//        无论<code><code>消息传递引擎是否应保留消息，@param保留的默认值为 false。 @throws IllegalStateException（如果无法编辑此消息）
         mqttMessage.setRetained(retained);
+//        将此消息的有效负载设置为指定的字节数组。
         mqttMessage.setPayload(message.getBytes());
         //主题的目的地，用于发布/订阅信息
         MqttTopic mqttTopic = client.getTopic(topic);
@@ -82,7 +94,7 @@ public class MqttProviderConfig {
             //将指定消息发布到主题，但不等待消息传递完成，返回的token可用于跟踪消息的传递状态
             //一旦此方法干净地返回，消息就已被客户端接受发布，当连接可用，将在后台完成消息传递。
             token = mqttTopic.publish(mqttMessage);
-            token.waitForCompletion();
+//            token.waitForCompletion();
         } catch (MqttException e) {
             e.printStackTrace();
         }
