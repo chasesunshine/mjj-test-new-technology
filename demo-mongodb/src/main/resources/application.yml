@@ -1,0 +1,22 @@
+server:
+  port: 8103
+  servlet:
+    context-path: /
+
+spring:
+  data:
+    mongodb:
+      # MongoDB的uri连接
+      # 集群可以配置为mongodb://username:password@ip:port,ip:port,ip:port
+      uri: mongodb://rwuser:Daikin%40123@124.70.193.56:27017/admin
+      # 数据库
+      database: device_snapshot_dev
+
+# 输出nosql日志
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core: debug
