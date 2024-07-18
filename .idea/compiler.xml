@@ -17,7 +17,6 @@
         <module name="demo-spring-doc-study" />
         <module name="log-eureka" />
         <module name="demo-mybatis-plus10" />
-        <module name="demo-mongodb" />
         <module name="log-serive2" />
         <module name="log-serive1" />
         <module name="redis-mysql-consistency" />
@@ -43,6 +42,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo-mongodb" target="1.8" />
       <module name="mqtt-server" target="1.8" />
       <module name="spring-boot-starter-mqtt-consumer" target="1.8" />
       <module name="spring-boot-starter-mqtt-provider" target="1.8" />

@@ -74,6 +74,10 @@ public class SpringWordController {
                 new SimpleDateFormat("yyyy/MM/dd"), true));
     }
 
+//    @ModelAttribute("user")
+//    public User addAccount() {
+//        return new User(3L,"jz",18);
+//    }
 
     @PostMapping("/selectThree")
     public String selectThree(@ModelAttribute("user") User user,@ModelAttribute("addr") Addr addr) {
@@ -93,12 +97,12 @@ public class SpringWordController {
 
     @InitBinder("user")
     public void initBinderUser(WebDataBinder binder) {
-        binder.setFieldDefaultPrefix("user.");
+        binder.setFieldDefaultPrefix("userBinder.");
     }
 
     @InitBinder("addr")
     public void initBinderAddr(WebDataBinder binder) {
-        binder.setFieldDefaultPrefix("addr.");
+        binder.setFieldDefaultPrefix("addrBinder.");
     }
 
 }
