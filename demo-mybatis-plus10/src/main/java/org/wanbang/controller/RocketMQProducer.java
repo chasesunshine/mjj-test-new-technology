@@ -1,10 +1,14 @@
 package org.wanbang.controller;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.rocketmq.acl.common.AclClientRPCHook;
 import org.apache.rocketmq.acl.common.SessionCredentials;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  * @author ZhangYu
@@ -22,8 +26,9 @@ public class RocketMQProducer {
         producer.start();
 
         try {
+            String encrypt = Encrypt("-------Hello rain-----", "pms654321;++==--");
             // 创建消息实例，指定主题、标签和消息体
-            Message message = new Message("device_data_push", "*", "-------Hello rain-----".getBytes());
+            Message message = new Message("device_data_push", "*", encrypt.getBytes());
             // 发送消息
             SendResult send = producer.send(message, 10000);
             System.out.println("Message sent successfully.");
@@ -31,5 +36,24 @@ public class RocketMQProducer {
             // 关闭生产者
             producer.shutdown();
         }
+    }
+
+    public static String Encrypt(String sSrc, String sKey) throws Exception {
+        if (sKey == null) {
+            System.out.print("Key为空null");
+            return null;
+        }
+        // 判断Key是否为16位
+        if (sKey.length() != 16) {
+            System.out.print("Key长度不是16位");
+            return null;
+        }
+        byte[] raw = sKey.getBytes("utf-8");
+        SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
+        Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");//"算法/模式/补码方式"
+        cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
+        byte[] encrypted = cipher.doFinal(sSrc.getBytes("utf-8"));
+
+        return new Base64().encodeToString(encrypted);//此处使用BASE64做转码功能，同时能起到2次加密的作用。
     }
 }
