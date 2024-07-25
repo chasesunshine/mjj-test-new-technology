@@ -1,7 +1,7 @@
 # @ModelAttribute
     https://www.cnblogs.com/wangbiaohistory/p/13151932.html
 
-    @ModelAttribute 注解 Mod lAttribut 通常作用在 Controller 的某个方法上，此方法会首先被调用，
+    @ModelAttribute 注解 ModelAttribut 通常作用在 Controller 的某个方法上，此方法会首先被调用，
     井将方法 结果作为 Model 的属性 然后再调用对应的 Controller 处理方法。
 
 # ＠InitBinder
