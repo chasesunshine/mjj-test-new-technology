@@ -1,8 +1,13 @@
 # @ModelAttribute
-    https://www.cnblogs.com/wangbiaohistory/p/13151932.html
+    https://blog.csdn.net/abc997995674/article/details/80464023?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-80464023-blog-80334027.235%5Ev43%5Econtrol&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-80464023-blog-80334027.235%5Ev43%5Econtrol&utm_relevant_index=2
 
-    @ModelAttribute 注解 ModelAttribut 通常作用在 Controller 的某个方法上，此方法会首先被调用，
-    井将方法 结果作为 Model 的属性 然后再调用对应的 Controller 处理方法。
+    查看 @ModelAttribute注解定义可以看到这个注解可以用在方法和参数中。
+    在 SpringMVC 的 Controller 中使用 @ModelAttribute 时，应用情况包括下面几种：
+    1、应用在方法上。
+    2、应用在方法的参数上。
+    3、应用在方法上，并且方法也使用了@RequestMapping
+
+原文链接：https://blog.csdn.net/abc997995674/article/details/80464023
 
 # ＠InitBinder
     https://blog.csdn.net/weixin_43888891/article/details/127348918?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-127348918-blog-121334254.235%5Ev43%5Econtrol&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-127348918-blog-121334254.235%5Ev43%5Econtrol&utm_relevant_index=2
