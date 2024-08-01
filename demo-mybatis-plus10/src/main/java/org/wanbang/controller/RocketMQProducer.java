@@ -30,6 +30,7 @@ public class RocketMQProducer {
             // 创建消息实例，指定主题、标签和消息体
             Message message = new Message("device_data_push", "*", encrypt.getBytes());
             // 发送消息
+            System.out.println(encrypt);
             SendResult send = producer.send(message, 10000);
             System.out.println("Message sent successfully.");
         } finally {
