@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/demo-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/demo-eureka-item/pom.xml" />
         <option value="$PROJECT_DIR$/demo-eureka-order/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-mybatis-plus11/pom.xml" />
       </list>
     </option>
   </component>
