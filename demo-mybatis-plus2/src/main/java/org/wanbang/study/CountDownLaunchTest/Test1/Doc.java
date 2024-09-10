@@ -1,4 +1,4 @@
-package org.wanbang.study.CountDownLaunchTest;
+package org.wanbang.study.CountDownLaunchTest.Test1;
 
 /**
  * CountDownLatch详解以及用法示例
