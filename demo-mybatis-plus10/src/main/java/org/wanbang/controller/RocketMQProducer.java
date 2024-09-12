@@ -22,7 +22,7 @@ public class RocketMQProducer {
 
     public static void main(String[] args) throws Exception {
         extracted();
-//        extracted1();
+        extracted1();
 //        extracted2();
     }
 
