@@ -6,13 +6,16 @@ import org.apache.rocketmq.acl.common.SessionCredentials;
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
+import org.apache.rocketmq.client.producer.MessageQueueSelector;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.common.message.MessageQueue;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.wanbang.dto.MQMessageContentDTO;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
+import java.util.List;
 
 /**
  * @author ZhangYu
@@ -21,9 +24,34 @@ import javax.crypto.spec.SecretKeySpec;
 public class RocketMQProducer {
 
     public static void main(String[] args) throws Exception {
-        extracted();
-        extracted1();
+//        extracted();
+//        extracted1();
 //        extracted2();
+        extracted4();
+    }
+
+    private static void extracted4() throws MQClientException, RemotingException, MQBrokerException, InterruptedException {
+        AclClientRPCHook auth = new AclClientRPCHook(new SessionCredentials("IotAdmin", "Daikin@iot"));
+        // 设置生产者组名
+        DefaultMQProducer producer = new DefaultMQProducer("iot_device_room_group",auth);
+        // 指定NameServer地址，多个地址用分号分隔
+        producer.setNamesrvAddr("124.71.159.144:8200");
+        // 启动生产者
+        producer.start();
+
+        Message msg = new Message("topic_ctc_sync_room", "*", "-------Hello rain-----".getBytes());
+
+        SendResult sendResult = producer.send(msg, new MessageQueueSelector() {
+            @Override
+            public MessageQueue select(List<MessageQueue> mqs, Message msg, Object arg) {
+                String orderId = (String) arg;
+                int index = Math.abs(orderId.hashCode() % mqs.size());
+                return mqs.get(index);
+            }
+        }, 2);
+        System.out.printf("%s%n", sendResult);
+        producer.shutdown();
+
     }
 
     private static void extracted1() throws MQClientException, RemotingException, MQBrokerException, InterruptedException {
