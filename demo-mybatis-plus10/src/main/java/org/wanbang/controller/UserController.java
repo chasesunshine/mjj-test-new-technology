@@ -2,12 +2,10 @@ package org.wanbang.controller;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
+import org.wanbang.entity.TestValue;
 import org.wanbang.entity.User;
 import org.wanbang.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -34,5 +32,24 @@ public class UserController {
         User user = userService.queryById((long) 1);
         return JSON.toJSONString(user);
     }
+
+//    @GetMapping("/selectTwo")
+//    public String selectTwo(@RequestBody TestValue test) {
+//        User user = userService.queryById((long) 1);
+//        return JSON.toJSONString(user);
+//    }
+
+//    @GetMapping("/selectTwo")
+//    public String selectTwo() {
+//        User user = userService.queryById((long) 1);
+//        return JSON.toJSONString(user);
+//    }
+
+    @PostMapping("/selectTwo")
+    public String selectTwo(@RequestBody TestValue test) {
+        User user = userService.queryById((long) 1);
+        return JSON.toJSONString(user);
+    }
+
 }
 
