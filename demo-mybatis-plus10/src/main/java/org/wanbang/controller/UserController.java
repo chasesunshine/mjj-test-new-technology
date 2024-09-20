@@ -33,11 +33,11 @@ public class UserController {
         return JSON.toJSONString(user);
     }
 
-//    @GetMapping("/selectTwo")
-//    public String selectTwo(@RequestBody TestValue test) {
-//        User user = userService.queryById((long) 1);
-//        return JSON.toJSONString(user);
-//    }
+    @GetMapping("/selectTwo")
+    public String selectTwo(@RequestBody TestValue test) {
+        User user = userService.queryById((long) 1);
+        return JSON.toJSONString(user);
+    }
 
 //    @GetMapping("/selectTwo")
 //    public String selectTwo() {
@@ -45,11 +45,11 @@ public class UserController {
 //        return JSON.toJSONString(user);
 //    }
 
-    @PostMapping("/selectTwo")
-    public String selectTwo(@RequestBody TestValue test) {
-        User user = userService.queryById((long) 1);
-        return JSON.toJSONString(user);
-    }
+//    @PostMapping("/selectTwo")
+//    public String selectTwo(@RequestBody TestValue test) {
+//        User user = userService.queryById((long) 1);
+//        return JSON.toJSONString(user);
+//    }
 
 }
 
