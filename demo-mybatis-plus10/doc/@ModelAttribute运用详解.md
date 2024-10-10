@@ -20,4 +20,4 @@
 　　此时如果方法体没有标注@SessionAttributes("user")，那么scope为request，如果标注了，那么scope为session
     
     ## 个人操作案例
-        org.wanbang.controller.SpringWordTestController
+        controller.org.wanbang.SpringWordTestController
