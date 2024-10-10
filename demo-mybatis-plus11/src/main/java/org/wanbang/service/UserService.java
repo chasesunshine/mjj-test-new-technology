@@ -18,4 +18,12 @@ public interface UserService {
      */
     User queryById(Long id);
 
+    User getUserById(Long userId);
+
+    public User updateUser(User user);
+
+    public void deleteUser(Long userId);
+
+    String getAllCaffeineCache();
+
 }

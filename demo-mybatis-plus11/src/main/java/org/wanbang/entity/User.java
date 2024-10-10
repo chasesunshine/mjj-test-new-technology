@@ -29,5 +29,10 @@ public class User implements Serializable {
     private String password;
     
     private String sex;
+
+    public User(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
 

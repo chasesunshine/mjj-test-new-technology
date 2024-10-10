@@ -26,5 +26,26 @@ public class UserController {
         User user = userService.queryById((long) 1);
         return JSON.toJSONString(user);
     }
+
+    @GetMapping("/get/cache")
+    public String getAllCaffeineCache() {
+        return userService.getAllCaffeineCache();
+    }
+
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable Long id) {
+        return userService.getUserById(id);
+    }
+
+    @PostMapping
+    public User createUser(@RequestBody User user) {
+        return userService.updateUser(user);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+    }
+
 }
 
