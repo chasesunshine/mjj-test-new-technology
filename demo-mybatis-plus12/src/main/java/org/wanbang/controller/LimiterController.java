@@ -8,7 +8,7 @@ import org.wanbang.constant.LimitType;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Author: fu
+ * @Author: majiajian
  * @Description:
  *  我们将@Limit注解作用在需要进行限流的接口方法上，下边我们给方法设置@Limit注解，在10秒内只允许放行3个请求，这里为直观一点用AtomicInteger计数。
  */
@@ -20,7 +20,7 @@ public class LimiterController {
     private static final AtomicInteger ATOMIC_INTEGER_3 = new AtomicInteger();
 
     /**
-     * @author fu
+     * @author majiajian
      * @description
      * @date 2020/4/8 13:42
      */
@@ -32,7 +32,7 @@ public class LimiterController {
     }
 
     /**
-     * @author fu
+     * @author majiajian
      * @description
      * @date 2020/4/8 13:42
      */
@@ -44,7 +44,7 @@ public class LimiterController {
     }
 
     /**
-     * @author fu
+     * @author majiajian
      * @description
      * @date 2020/4/8 13:42
      */
