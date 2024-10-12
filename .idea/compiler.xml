@@ -16,6 +16,7 @@
         <module name="demo-mybatis-plus-edengine" />
         <module name="demo-spring-doc-study" />
         <module name="demo-mybatis-plus11" />
+        <module name="demo-mybatis-plus12" />
         <module name="log-eureka" />
         <module name="demo-mybatis-plus10" />
         <module name="log-serive2" />
@@ -63,6 +64,7 @@
       <module name="demo-mybatis-plus-edengine" options="-parameters" />
       <module name="demo-mybatis-plus10" options="-parameters" />
       <module name="demo-mybatis-plus11" options="-parameters" />
+      <module name="demo-mybatis-plus12" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />
