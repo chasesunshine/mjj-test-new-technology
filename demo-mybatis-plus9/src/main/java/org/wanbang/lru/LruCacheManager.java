@@ -20,7 +20,7 @@ public class LruCacheManager {
         long currentTime = System.currentTimeMillis();
         redisTemplate.opsForValue().set(key, value, 1, TimeUnit.DAYS); // 设置过期时间为1天
         redisTemplate.opsForZSet().add(CACHE_KEY, key, currentTime);
-        cleanup();
+//        cleanup();
     }
 
     public String get(String key) {
@@ -31,6 +31,12 @@ public class LruCacheManager {
         }
         return null;
     }
+
+    public Set<String> getValue() {
+        Set<String> keysToRemove = redisTemplate.opsForZSet().range(CACHE_KEY, 0, -100-1);
+        return keysToRemove;
+    }
+
 
     private void cleanup() {
         Set<String> keysToRemove = redisTemplate.opsForZSet().range(CACHE_KEY, 0, -MAX_CACHE_SIZE - 1);

@@ -1,11 +1,14 @@
 package org.wanbang;
 
+import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.wanbang.lru.LruCacheManager;
+
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -38,5 +41,15 @@ public class LruCacheManagerTest {
         assertEquals("value2", lruCacheManager.get("key2"));
         assertEquals("value3", lruCacheManager.get("key3"));
         assertEquals("value105", lruCacheManager.get("key105"));
+    }
+
+    @Test
+    public void testLruCache1(){
+        // 插入新的键值对，触发LRU清理
+        for (int i = 0; i <= 105; i++) {
+            lruCacheManager.put("key" + i, "value" + i);
+        }
+        Set<String> value = lruCacheManager.getValue();
+        System.out.println(JSON.toJSONString(value));
     }
 }
