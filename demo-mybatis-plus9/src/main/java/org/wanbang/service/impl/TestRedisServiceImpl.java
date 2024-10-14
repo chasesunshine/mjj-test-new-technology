@@ -1,6 +1,7 @@
 package org.wanbang.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.core.RedisCallback;
 import org.wanbang.service.TestRedisService;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -29,4 +30,28 @@ public class TestRedisServiceImpl implements TestRedisService {
         ops.set(key,value);
 
     }
+
+    public void executeTransaction() {
+        redisTemplate.execute((RedisCallback<Object>) connection -> {
+            connection.multi();
+            connection.set("key1".getBytes(), "value1".getBytes());
+            connection.set("key2".getBytes(), "value2".getBytes());
+            connection.incr("counter".getBytes());
+            connection.exec();
+            return null;
+        });
+    }
+
+    public void rollbackTransaction() {
+        redisTemplate.execute((RedisCallback<Object>) connection -> {
+            connection.multi();
+            connection.set("key1".getBytes(), "value1".getBytes());
+            connection.set("key2".getBytes(), "value2".getBytes());
+            connection.incr("counter".getBytes());
+            // 这地方直接放弃设置
+            connection.discard();
+            return null;
+        });
+    }
+
 }

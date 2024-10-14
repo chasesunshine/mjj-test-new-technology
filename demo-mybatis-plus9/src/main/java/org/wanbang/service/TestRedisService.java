@@ -8,4 +8,8 @@ package org.wanbang.service;
 public interface TestRedisService {
 
     void testRedisInsert(String key, String value);
+
+    void executeTransaction();
+
+    void rollbackTransaction();
 }
