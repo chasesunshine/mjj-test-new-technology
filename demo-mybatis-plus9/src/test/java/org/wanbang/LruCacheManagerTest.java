@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisCallback;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.wanbang.lru.LruCacheManager;
 import org.wanbang.redisapi.RedisUtil;
@@ -24,6 +26,10 @@ public class LruCacheManagerTest {
 
     @Resource
     private RedisUtil redisUtil;
+
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
+
 
     @Test
     public void testLruCache() throws InterruptedException {
