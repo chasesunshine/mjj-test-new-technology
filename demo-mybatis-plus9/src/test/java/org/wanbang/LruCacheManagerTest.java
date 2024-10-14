@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.wanbang.lru.LruCacheManager;
+import org.wanbang.redisapi.RedisUtil;
 
+import javax.annotation.Resource;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
@@ -19,6 +21,9 @@ public class LruCacheManagerTest {
 
     @Autowired
     private LruCacheManager lruCacheManager;
+
+    @Resource
+    private RedisUtil redisUtil;
 
     @Test
     public void testLruCache() throws InterruptedException {
@@ -51,5 +56,13 @@ public class LruCacheManagerTest {
         }
         Set<String> value = lruCacheManager.getValue();
         System.out.println(JSON.toJSONString(value));
+    }
+
+    @Test
+    public void testExpireTime(){
+        long keyTTL = redisUtil.getKeyTTL("key0");
+        long keyTTL1 = redisUtil.getKeyTTL("LRU_CACHE");
+        System.out.println(keyTTL);
+        System.out.println(keyTTL1);
     }
 }
