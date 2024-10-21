@@ -12,6 +12,7 @@
         <module name="spring-bilibili-study" />
         <module name="springboot-core" />
         <module name="demo-mqtt-consumer" />
+        <module name="springboot-demo" />
         <module name="demo-mqtt-provider" />
         <module name="springbootDemo-mybatis-plus" />
         <module name="demo-mybatis-plus-edengine" />
@@ -56,7 +57,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="canal-mysql-listener" options="-parameters" />
-      <module name="demo-eureka" options="" />
+      <module name="demo-eureka" options="-parameters" />
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
@@ -93,6 +94,7 @@
       <module name="spring-gateway" options="-parameters" />
       <module name="spring-study" options="-parameters" />
       <module name="springboot-core" options="-parameters" />
+      <module name="springboot-demo" options="-parameters" />
       <module name="springbootDemo-mybatis-plus" options="-parameters" />
       <module name="springcloud-gateway" options="-parameters" />
       <module name="test-nacos" options="-parameters" />
