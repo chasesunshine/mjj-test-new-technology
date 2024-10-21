@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rocketmq-consumer-demo" />
+        <module name="springcloud-gateway" />
         <module name="spring-bilibili-study" />
         <module name="springboot-core" />
         <module name="demo-mqtt-consumer" />
@@ -48,13 +49,14 @@
       <module name="mqtt-server" target="1.8" />
       <module name="spring-boot-starter-mqtt-consumer" target="1.8" />
       <module name="spring-boot-starter-mqtt-provider" target="1.8" />
+      <module name="spring-gateway" target="1.8" />
       <module name="spring-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="canal-mysql-listener" options="-parameters" />
-      <module name="demo-eureka" options="-parameters" />
+      <module name="demo-eureka" options="" />
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
@@ -88,9 +90,11 @@
       <module name="spring-bilibili-study" options="-parameters" />
       <module name="spring-boot-starter-mqtt-consumer" options="-parameters" />
       <module name="spring-boot-starter-mqtt-provider" options="-parameters" />
+      <module name="spring-gateway" options="-parameters" />
       <module name="spring-study" options="-parameters" />
       <module name="springboot-core" options="-parameters" />
       <module name="springbootDemo-mybatis-plus" options="-parameters" />
+      <module name="springcloud-gateway" options="-parameters" />
       <module name="test-nacos" options="-parameters" />
     </option>
   </component>
