@@ -8,7 +8,7 @@ spring:
     gateway:
       routes:
         #netty 路由过滤器，http或https开头
-        - id: springboot-demo
+        - id: 随便填
           uri: http://localhost:8555
           predicates:
             - Path=/app1/**
