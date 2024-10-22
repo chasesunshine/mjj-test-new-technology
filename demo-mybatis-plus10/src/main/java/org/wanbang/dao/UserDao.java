@@ -1,6 +1,7 @@
 package org.wanbang.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.mapstruct.Mapper;
 import org.wanbang.entity.User;
 
 /**
