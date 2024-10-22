@@ -28,6 +28,7 @@
         <module name="log-service2" />
         <module name="rocketmq" />
         <module name="rocketmq-producer-demo" />
+        <module name="demo-mybatis-plus13" />
         <module name="demo-eureka" />
         <module name="demo-job" />
         <module name="demo-eureka-order" />
@@ -68,6 +69,7 @@
       <module name="demo-mybatis-plus10" options="-parameters" />
       <module name="demo-mybatis-plus11" options="-parameters" />
       <module name="demo-mybatis-plus12" options="-parameters" />
+      <module name="demo-mybatis-plus13" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />
