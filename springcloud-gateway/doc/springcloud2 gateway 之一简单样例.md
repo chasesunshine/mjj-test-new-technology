@@ -26,6 +26,11 @@ https://blog.csdn.net/haveqing/article/details/88424598?spm=1001.2101.3001.6650.
         ****
         原文链接：https://blog.csdn.net/haveqing/article/details/88424598
 
+
+
+
+
+
 # springboot项目配置只能通过gateway访问其他服务  通义千问
     在Spring Boot微服务架构中，通常会使用API Gateway（如Spring Cloud Gateway）作为系统的入口，以实现请求路由、负载均衡、安全认证等功能。这样做的好处包括但不限于提高系统的可维护性、安全性以及解耦各个微服务之间的直接依赖。
 
