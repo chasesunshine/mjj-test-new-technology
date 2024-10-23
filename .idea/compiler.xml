@@ -45,6 +45,12 @@
         <module name="demo-mybatis-plus3" />
         <module name="test-nacos" />
       </profile>
+      <profile name="Annotation profile for test-new-technology" enabled="true">
+        <sourceOutputDir name="../demo-mybatisplus14/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../demo-mybatisplus14/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo-mybatisplus14" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-mongodb" target="1.8" />
@@ -78,6 +84,7 @@
       <module name="demo-mybatis-plus7" options="-parameters" />
       <module name="demo-mybatis-plus8" options="-parameters" />
       <module name="demo-mybatis-plus9" options="-parameters" />
+      <module name="demo-mybatisplus14" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-serive1" options="-parameters" />
