@@ -31,6 +31,9 @@ public class Code_389 {
         String t = "y";
         char theDifference = findTheDifference(s, t);
         System.out.println(theDifference);
+
+        char theDifference1 = findTheDifference1(s, t);
+        System.out.println(theDifference1);
     }
 
     /**
@@ -57,4 +60,36 @@ public class Code_389 {
             return c;
         }
     }
+
+    /**
+     * java:将所给的字符串转换为字符数组，求字符数组的int和，作差，再转回char，返回（3ms，击败100%）
+     *
+     * @param s
+     * @param t
+     * @return
+     */
+    static char findTheDifference1(String s, String t) {
+        char[] tChars = t.toCharArray();
+        char[] sChars = s.toCharArray();
+        int tSum = calculateAsciiSum(tChars);
+        int sSum = calculateAsciiSum(sChars);
+        int value = tSum - sSum;
+        char value1 = (char) value;
+        return value1;
+    }
+
+    /**
+     * 计算字符数组的 ASCII 值总和
+     *
+     * @param charArray 字符数组
+     * @return ASCII 值总和
+     */
+    public static int calculateAsciiSum(char[] charArray) {
+        int sum = 0;
+        for (char c : charArray) {
+            sum += (int) c;
+        }
+        return sum;
+    }
+
 }
