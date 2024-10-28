@@ -21,7 +21,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
-            <version>2.4.5</version>
+            <version>2.3.0.RELEASE</version> <!-- 请根据你的Spring Boot版本选择合适的版本 -->
+        </dependency>
+
+        <!-- MongoDB Driver Sync -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.0.0</version> <!-- 请根据你的MongoDB版本选择合适的版本 -->
         </dependency>
 
         <!--添加web支持 -->

@@ -15,6 +15,10 @@ public class MongoDBMysqlController {
     @Resource
     private MongoDBMysqlService mongoDBMysqlService;
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("/insertData")
     public Integer insertData() {
         Integer count = mongoDBMysqlService.insertData();
