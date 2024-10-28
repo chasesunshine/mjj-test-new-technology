@@ -19,7 +19,7 @@ public class MongoDBMysqlServiceImpl implements MongoDBMysqlService {
     @Autowired
     private MyDocumentRepository repository;
 
-    @Transactional(value = "transactionManager",rollbackFor = Exception.class)
+//    @Transactional(value = "transactionManager",rollbackFor = Exception.class)
     @Override
     public Integer insertData() {
         User build = User.builder().id(111L).age(18).name("mjj").password("123").sex("男").build();

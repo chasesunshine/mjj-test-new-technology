@@ -11,27 +11,27 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class TransactionConfig {
 
-    @Autowired
-    private DataSource dataSource;
+//    @Autowired
+//    private DataSource dataSource;
+//
+//    @Autowired
+//    private MongoDatabaseFactory mongoDbFactory;
 
-    @Autowired
-    private MongoDatabaseFactory mongoDbFactory;
-
-    @Bean
-    public PlatformTransactionManager mysqlTransactionManager() {
-        return new DataSourceTransactionManager(dataSource);
-    }
-
-    @Bean
-    public PlatformTransactionManager mongoTransactionManager() {
-        return new MongoTransactionManager(mongoDbFactory);
-    }
-
-    @Bean
-    public ChainedTransactionManager transactionManager() {
-        return new ChainedTransactionManager(mysqlTransactionManager(), mongoTransactionManager());
-    }
+//    @Bean
+//    public PlatformTransactionManager mysqlTransactionManager() {
+//        return new DataSourceTransactionManager(dataSource);
+//    }
+//
+//    @Bean
+//    public PlatformTransactionManager mongoTransactionManager() {
+//        return new MongoTransactionManager(mongoDbFactory);
+//    }
+//
+//    @Bean
+//    public ChainedTransactionManager transactionManager() {
+//        return new ChainedTransactionManager(mysqlTransactionManager(), mongoTransactionManager());
+//    }
 }
