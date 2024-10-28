@@ -18,4 +18,5 @@ public interface UserService {
      */
     User queryById(Long id);
 
+    Integer insertData();
 }

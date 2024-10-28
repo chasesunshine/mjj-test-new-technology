@@ -13,9 +13,7 @@ spring:
     password: root
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: test
+      uri: mongodb://localhost:27017/test
 
 #mybatis-plush配置
 mybatis-plus:

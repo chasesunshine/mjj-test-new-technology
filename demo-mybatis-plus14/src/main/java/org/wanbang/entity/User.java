@@ -11,8 +11,7 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-06-16 10:17:38
  */
-@Setter
-@Getter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName("user")

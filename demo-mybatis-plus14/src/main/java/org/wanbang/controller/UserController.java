@@ -29,5 +29,11 @@ public class UserController {
         return JSON.toJSONString(user);
     }
 
+    @GetMapping("/insetOne")
+    public Integer insetOne() {
+        Integer count = userService.insertData();
+        return count;
+    }
+
 }
 

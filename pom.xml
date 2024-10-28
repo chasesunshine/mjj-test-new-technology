@@ -38,7 +38,6 @@
         <module>demo-mqtt-consumer</module>
         <module>demo-mybatis-plus11</module>
         <module>demo-mybatis-plus12</module>
-        <module>demo-mybatis-plus14</module>
     </modules>
 
     <parent>
@@ -125,16 +124,6 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>1.2.0.Final</version>
             <scope>provided</scope>
-        </dependency>
-
-
-        <!-- 导入Spring Cloud的依赖管理 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <version>Finchley.SR1</version>
-            <type>pom</type>
-            <scope>import</scope>
         </dependency>
 
     </dependencies>

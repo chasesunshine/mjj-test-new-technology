@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-demo/pom.xml" />
         <option value="$PROJECT_DIR$/demo-mybatis-plus13/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-mybatis-plus14/pom.xml" />
       </list>
     </option>
   </component>
