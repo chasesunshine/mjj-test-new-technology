@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public Integer insertData() {
-        User build = User.builder().age(18).name("mjj").password("123").sex("男").build();
+        User build = User.builder().id(111L).age(18).name("mjj").password("123").sex("男").build();
         int insert = userDao.insert(build);
         return insert;
     }
