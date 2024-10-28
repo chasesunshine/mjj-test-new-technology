@@ -1,0 +1,22 @@
+# Windows安装MongoDB
+    https://blog.csdn.net/LoveTalk/article/details/142316349
+
+# windows下启动mongodb
+    dos -> 命令提示符 -> 以管理员身份运行
+
+    作为Windows服务启动
+    如果您希望MongoDB在系统启动时自动运行，可以将MongoDB设置为Windows服务。首先，确保MongoDB没有在运行，然后使用管理员权限打开命令提示符，执行以下命令：
+
+    bash
+    深色版本
+    mongod --install --config "C:\Program Files\MongoDB\Server\<version>\bin\mongod.cfg" --logpath "C:\Program Files\MongoDB\Server\<version>\log\mongod.log"
+    这里<version>需要替换为您安装的MongoDB版本号。--config参数指定了配置文件的路径，而--logpath参数指定了日志文件的保存路径。安装完成后，您可以使用以下命令启动服务：
+
+    bash
+    深色版本
+    net start MongoDB
+    要停止服务，可以使用：
+
+    bash
+    深色版本
+    net stop MongoDB
