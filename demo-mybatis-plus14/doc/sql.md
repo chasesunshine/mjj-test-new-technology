@@ -1,0 +1,19 @@
+CREATE TABLE `user` (
+`id` int NOT NULL AUTO_INCREMENT,
+`name` varchar(255) DEFAULT NULL,
+`age` int DEFAULT NULL,
+`password` varchar(255) DEFAULT NULL,
+`sex` varchar(255) DEFAULT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb3;
+
+
+CREATE TABLE `book` (
+`id` int NOT NULL AUTO_INCREMENT,
+`name` varchar(255) DEFAULT NULL,
+`age` int DEFAULT NULL,
+`password` varchar(255) DEFAULT NULL,
+`sex` varchar(255) DEFAULT NULL,
+`deleted` int NOT NULL DEFAULT 0,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb3;
