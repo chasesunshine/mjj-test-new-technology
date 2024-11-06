@@ -10,6 +10,7 @@
         <module name="rocketmq-consumer-demo" />
         <module name="springcloud-gateway" />
         <module name="spring-bilibili-study" />
+        <module name="threadpool-spring-boot-starter" />
         <module name="springboot-core" />
         <module name="springboot-demo" />
         <module name="demo-mqtt-consumer" />
@@ -102,6 +103,7 @@
       <module name="springbootDemo-mybatis-plus" options="-parameters" />
       <module name="springcloud-gateway" options="-parameters" />
       <module name="test-nacos" options="-parameters" />
+      <module name="threadpool-spring-boot-starter" options="-parameters" />
     </option>
   </component>
 </project>
