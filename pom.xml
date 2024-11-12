@@ -38,7 +38,6 @@
         <module>demo-mqtt-consumer</module>
         <module>demo-mybatis-plus11</module>
         <module>demo-mybatis-plus12</module>
-        <module>demo-mybatis-plus15</module>
     </modules>
 
     <parent>

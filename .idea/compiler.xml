@@ -28,7 +28,6 @@
         <module name="log-service1" />
         <module name="log-service2" />
         <module name="rocketmq" />
-        <module name="demo-mybatis-plus15" />
         <module name="demo-mybatis-plus13" />
         <module name="rocketmq-producer-demo" />
         <module name="demo-mybatis-plus14" />
@@ -51,6 +50,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-mongodb" target="1.8" />
+      <module name="demo-mybatis-plus15" target="1.8" />
       <module name="mqtt-server" target="1.8" />
       <module name="spring-boot-starter-mqtt-consumer" target="1.8" />
       <module name="spring-boot-starter-mqtt-provider" target="1.8" />
