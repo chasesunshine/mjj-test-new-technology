@@ -1,9 +1,7 @@
 package org.wanbang.study.allDesignMode.behaviorMode.responsibilityChainMode.owntest2;
 
 public class Test {
-
-    private static AbstractLogger getChainOfLoggers(){
-
+    public static void main(String[] args) {
         AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
         AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
         AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
@@ -11,16 +9,10 @@ public class Test {
         errorLogger.setNextLogger(fileLogger);
         fileLogger.setNextLogger(consoleLogger);
 
-        return errorLogger;
-    }
+        errorLogger.logMessage(AbstractLogger.INFO, "This is an information.");
 
-    public static void main(String[] args) {
-        AbstractLogger loggerChain = getChainOfLoggers();
+        errorLogger.logMessage(AbstractLogger.DEBUG, "This is a debug level information.");
 
-        loggerChain.logMessage(AbstractLogger.INFO, "This is an information.");
-
-        loggerChain.logMessage(AbstractLogger.DEBUG, "This is a debug level information.");
-
-        loggerChain.logMessage(AbstractLogger.ERROR, "This is an error information.");
+        errorLogger.logMessage(AbstractLogger.ERROR, "This is an error information.");
     }
 }
