@@ -11,6 +11,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/demo_mybatis_plus5?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: root
+#  AopAutoConfiguration可以通过spring.aop.auto属性控制
+  aop:
+    auto: false
 
 #mybatis-plush配置
 mybatis-plus:
