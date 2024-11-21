@@ -1,0 +1,86 @@
+# @TransactionalEventListener (通义千问)
+@TransactionalEventListener 是 Spring Framework 提供的一个注解，用于监听事务事件并在事务的不同阶段执行相应的处理逻辑。这个注解通常与 ApplicationEvent 和 ApplicationListener 一起使用，以实现基于事件的编程模型，同时确保事件处理代码在事务上下文中执行。
+
+基本概念
+1。 ApplicationEvent:
+    这是 Spring 中事件的基础类。任何自定义事件都应继承自 ApplicationEvent。
+2. ApplicationListener:
+    这是一个接口，用于监听特定类型的 ApplicationEvent。实现该接口的类会在事件发生时被调用。
+3. @TransactionalEventListener:
+    这个注解用于标记方法，使其成为一个事务事件监听器。当指定的事件发生时，该方法会被调用，并且在事务的不同阶段执行。
+使用示例
+假设我们有一个简单的应用程序，需要在用户注册成功后发送一封欢迎邮件。我们希望这个邮件发送操作在一个事务中进行，以确保如果事务回滚，邮件不会被发送。
+
+1. 定义事件
+首先，定义一个事件类：
+    import org.springframework.context.ApplicationEvent;
+
+    public class UserRegisteredEvent extends ApplicationEvent {
+        private final String email;
+
+        public UserRegisteredEvent(Object source, String email) {
+            super(source);
+            this.email = email;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+    }
+2. 发布事件
+在用户注册的服务中发布事件：
+    import org.springframework.context.ApplicationEventPublisher;
+    import org.springframework.stereotype.Service;
+    import org.springframework.transaction.annotation.Transactional;
+
+    @Service
+    public class UserService {
+
+        private final ApplicationEventPublisher eventPublisher;
+
+        public UserService(ApplicationEventPublisher eventPublisher) {
+            this.eventPublisher = eventPublisher;
+        }
+
+        @Transactional
+        public void registerUser(String email) {
+            // 执行用户注册逻辑
+            // ...
+
+            // 发布事件
+            eventPublisher.publishEvent(new UserRegisteredEvent(this, email));
+        }
+    }
+3. 监听事件
+定义一个监听器类，并使用 @TransactionalEventListener 注解来监听 UserRegisteredEvent 事件：
+    import org.springframework.context.event.EventListener;
+    import org.springframework.stereotype.Component;
+    import org.springframework.transaction.annotation.Transactional;
+    import org.springframework.transaction.event.TransactionPhase;
+    import org.springframework.transaction.event.TransactionalEventListener;
+
+    @Component
+    public class UserRegistrationListener {
+
+        @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+        public void handleUserRegisteredEvent(UserRegisteredEvent event) {
+            String email = event.getEmail();
+            // 发送欢迎邮件
+            sendWelcomeEmail(email);
+        }
+
+        private void sendWelcomeEmail(String email) {
+            // 实现发送邮件的逻辑
+            System.out.println("Sending welcome email to " + email);
+        }
+    }
+关键参数
+phase: 指定事件处理的事务阶段。常见的值有：
+    TransactionPhase.BEFORE_COMMIT: 在事务提交之前处理事件。
+    TransactionPhase.AFTER_COMMIT: 在事务提交之后处理事件。
+    TransactionPhase.AFTER_COMPLETION: 在事务完成（无论是提交还是回滚）之后处理事件。
+事务管理
+    @TransactionalEventListener 确保事件处理代码在事务上下文中执行。这意味着如果事务回滚，事件处理代码也不会被执行（例如，邮件不会被发送）。这有助于保持数据的一致性和完整性。
+
+总结
+    @TransactionalEventListener 是一个强大的工具，用于在事务的不同阶段执行事件处理逻辑。通过这种方式，可以确保事件处理与事务管理紧密结合，提高应用程序的可靠性和一致性。

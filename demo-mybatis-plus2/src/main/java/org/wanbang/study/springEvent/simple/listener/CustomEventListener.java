@@ -1,6 +1,7 @@
 package org.wanbang.study.springEvent.simple.listener;
 
 import org.springframework.context.event.EventListener;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.wanbang.study.springEvent.simple.event.CustomEvent;
 
@@ -14,12 +15,14 @@ import org.wanbang.study.springEvent.simple.event.CustomEvent;
 @Component
 public class CustomEventListener {
 
+    @Order(value = 2)
     @EventListener(CustomEvent.class)
     public void onApplicationEvent1(CustomEvent customEvent){
         System.out.println("监听器接受消息1："+System.currentTimeMillis());
         System.out.println("接收到的消息1为："+customEvent.getMessage());
     }
 
+    @Order(value = 1)
     @EventListener(CustomEvent.class)
     public void onApplicationEvent2(CustomEvent customEvent){
         System.out.println("监听器接受消息2："+System.currentTimeMillis());

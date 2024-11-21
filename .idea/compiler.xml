@@ -7,44 +7,46 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-mybatis-plus13" />
-        <module name="demo-mybatis-plus12" />
-        <module name="demo-mybatis-plus11" />
-        <module name="demo-mybatis-plus10" />
-        <module name="demo-mqtt-provider" />
-        <module name="demo-mybatis-plus14" />
         <module name="rocketmq-consumer-demo" />
-        <module name="springboot-core" />
-        <module name="demo-eureka-order" />
-        <module name="log-service2" />
-        <module name="demo-spring-doc-study" />
-        <module name="rocketmq" />
-        <module name="demo-eureka-item" />
         <module name="springcloud-gateway" />
-        <module name="canal-mysql-listener" />
         <module name="spring-bilibili-study" />
-        <module name="test-nacos" />
-        <module name="rocketmq-producer-demo" />
-        <module name="demo-mybatis-plus-edengine" />
+        <module name="threadpool-spring-boot-starter" />
+        <module name="springboot-core" />
         <module name="springboot-demo" />
-        <module name="redis-mysql-consistency" />
-        <module name="log-zuul" />
-        <module name="log-service1" />
-        <module name="log-serive1" />
-        <module name="log-eureka" />
-        <module name="demo-mybatis-plus5" />
-        <module name="demo-mybatis-plus9" />
-        <module name="demo-mybatis-plus8" />
-        <module name="demo-mybatis-plus7" />
-        <module name="demo-mybatis-plus6" />
         <module name="demo-mqtt-consumer" />
-        <module name="demo-mybatis-plus4" />
-        <module name="demo-mybatis-plus3" />
-        <module name="demo-mybatis-plus2" />
+        <module name="demo-mqtt-provider" />
+        <module name="springbootDemo-mybatis-plus" />
+        <module name="demo-mybatis-plus-edengine" />
+        <module name="demo-mybatis-plus11" />
+        <module name="demo-spring-doc-study" />
+        <module name="demo-mybatis-plus12" />
+        <module name="log-eureka" />
+        <module name="demo-mybatis-plus10" />
+        <module name="log-serive2" />
+        <module name="log-serive1" />
+        <module name="redis-mysql-consistency" />
+        <module name="log-service1" />
+        <module name="log-service2" />
+        <module name="rocketmq" />
+        <module name="demo-mybatis-plus15" />
+        <module name="demo-mybatis-plus13" />
+        <module name="rocketmq-producer-demo" />
+        <module name="demo-mybatis-plus14" />
         <module name="demo-eureka" />
         <module name="demo-job" />
-        <module name="springbootDemo-mybatis-plus" />
-        <module name="log-serive2" />
+        <module name="demo-eureka-order" />
+        <module name="demo-eureka-item" />
+        <module name="log-zuul" />
+        <module name="demo-mybatis-plus8" />
+        <module name="demo-mybatis-plus9" />
+        <module name="demo-mybatis-plus6" />
+        <module name="demo-mybatis-plus7" />
+        <module name="canal-mysql-listener" />
+        <module name="demo-mybatis-plus4" />
+        <module name="demo-mybatis-plus5" />
+        <module name="demo-mybatis-plus2" />
+        <module name="demo-mybatis-plus3" />
+        <module name="test-nacos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -72,6 +74,7 @@
       <module name="demo-mybatis-plus12" options="-parameters" />
       <module name="demo-mybatis-plus13" options="-parameters" />
       <module name="demo-mybatis-plus14" options="-parameters" />
+      <module name="demo-mybatis-plus15" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />
@@ -102,6 +105,7 @@
       <module name="springbootDemo-mybatis-plus" options="-parameters" />
       <module name="springcloud-gateway" options="-parameters" />
       <module name="test-nacos" options="-parameters" />
+      <module name="threadpool-spring-boot-starter" options="-parameters" />
     </option>
   </component>
 </project>
