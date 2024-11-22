@@ -1,3 +1,255 @@
-Spring ��ܡ���@Retryable ע���� @Recover ע��
+Spring 框架——@Retryable 注解与 @Recover 注解
 https://blog.csdn.net/weixin_43004044/article/details/141996443
+
+1.@Retryable 注解介绍
+（1）@Retryable 注解用于实现方法的重试机制，通常用于处理暂时性的失败，确保在特定条件下自动重试方法调用。它常用于微服务和分布式系统中，特别是在处理网络请求或外部服务时。@Retryable 注解的代码如下所示：
+package org.springframework.retry.annotation;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.core.annotation.AliasFor;
+
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Retryable {
+    String recover() default "";
+
+    String interceptor() default "";
+
+    /** @deprecated */
+    @Deprecated
+    Class<? extends Throwable>[] value() default {};
+
+    /** @deprecated */
+    @AliasFor("retryFor")
+    @Deprecated
+    Class<? extends Throwable>[] include() default {};
+
+    @AliasFor("include")
+    Class<? extends Throwable>[] retryFor() default {};
+
+    /** @deprecated */
+    @Deprecated
+    @AliasFor("noRetryFor")
+    Class<? extends Throwable>[] exclude() default {};
+
+    @AliasFor("exclude")
+    Class<? extends Throwable>[] noRetryFor() default {};
+
+    Class<? extends Throwable>[] notRecoverable() default {};
+
+    String label() default "";
+
+    boolean stateful() default false;
+
+    int maxAttempts() default 3;
+
+    String maxAttemptsExpression() default "";
+
+    Backoff backoff() default @Backoff;
+
+    String exceptionExpression() default "";
+
+    String[] listeners() default {};
+}
+（2）@Retryable 注解的常用属性如下：
+
+value：指定要重试的异常类型。可以是多个异常类型，例如 @Retryable(value = {IOException.class, TimeoutException.class})。
+retryFor：另一个方式指定需要重试的异常类型。用法与 value 类似。
+include：指定哪些异常类型应该被包含在重试范围内。与 value 类似，但用于更精确的控制重试条件。
+exclude：指定不需要重试的异常类型。例如，@Retryable(exclude = {NullPointerException.class}) 表示遇到 NullPointerException 时不进行重试。
+maxAttempts：设置最大重试次数。例如，@Retryable(maxAttempts = 5) 表示最多重试 5 次。
+backoff：配置重试间隔和增量。可以使用 Backoff 类中的属性来设定，例如 @Retryable(backoff = @Backoff(delay = 2000, multiplier = 2)) 表示重试延迟初始为 2000 毫秒，每次重试间隔都会是上一次的两倍。
+recover：用于指定在所有重试尝试失败后，调用的恢复方法。这个方法通常用于处理最终失败后的逻辑，例如清理资源或记录错误。具体用法见后续的 @Recover 注解与 @Retryable 注解配合使用。
+2.示例：如何使用 @Retryable 注解
+假设你有一个服务类 PaymentService，其方法 processPayment 可能会因临时网络问题而失败。你希望在遇到网络异常时自动重试几次。
+
+2.1.添加依赖
+首先，确保你的 Spring 项目中包含了 spring-retry 和 spring-boot-starter-aop 依赖。在 pom.xml 中添加如下内容：
+<dependency>
+    <groupId>org.springframework.retry</groupId>
+    <artifactId>spring-retry</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+
+2.2.启用重试功能
+在你的 Spring Boot 应用程序中，使用 @EnableRetry 注解来启用重试功能：
+import org.springframework.retry.annotation.EnableRetry;
+import org.springframework.stereotype.Service;
+
+@EnableRetry
+@SpringBootApplication
+public class MyApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+
+2.3.使用 @Retryable 注解
+在需要进行重试的方法上添加 @Retryable 注解。例如，假设 processPayment 方法需要重试：
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PaymentService {
+
+    @Retryable(
+        value = {PaymentException.class}, // 需要重试的异常类型
+        maxAttempts = 5, 	//最大重试次数为 5
+        backoff = @Backoff(delay = 2000, multiplier = 2, maxDelay = 100000) //重试策略：重试延迟初始为 2000 毫秒，每次重试间隔都会是上一次的两倍，最大重试延迟为 100000 毫秒
+    )
+    public void processPayment() throws PaymentException {
+        //模拟处理支付的逻辑，如果发生 PaymentException 则会进行重试
+        if (someConditionFails()) {
+            throw new PaymentException("Payment processing failed.");
+        }
+        //处理支付成功
+    }
+
+    private boolean someConditionFails() {
+        //模拟条件失败
+        return true;
+    }
+}
+
+2.4.解释
+（1）@Retryable 注解的三个属性解释如下：
+
+value: 指定需要重试的异常类型，这里是 PaymentException。如果方法抛出这种异常，将会触发重试机制。
+maxAttempts: 指定最大重试次数，这里设置为 5 次。
+backoff: 配置重试的间隔和增量。这包括 delay（首次重试的延迟时间），multiplier（每次重试时延迟时间的倍数增长），maxDelay（最大延迟时间）。
+（2）在这个例子中，如果 processPayment 方法抛出 PaymentException，系统将自动重试最多 5 次，每次重试之间的间隔将从 2 秒开始，并且每次重试时延迟时间会加倍，直到达到最大延迟时间。
+
+3.@Recover 注解介绍
+@Recover 注解用于定义当所有重试尝试失败后要执行的恢复逻辑。它通常与 @Retryable 注解配合使用，它所标记的方法会在 @Retryable 注解的方法所有重试失败后被调用，处理最终的错误恢复，例如记录日志、通知用户或执行补救措施。其代码如下所示：
+package org.springframework.retry.annotation;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.context.annotation.Import;
+
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Import({RetryConfiguration.class})
+@Documented
+public @interface Recover {
+
+}
+4.示例：@Recover 注解与 @Retryable 注解配合使用
+4.1.两者配合使用
+（1）添加依赖与启用重试功能（与 2.1 和 2.2 相同）。
+
+（2）示例代码如下：
+package com.example.myexample.service.impl;
+
+import com.example.myexample.service.AnnotationTestService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Recover;
+import org.springframework.retry.annotation.Retryable;
+import org.springframework.stereotype.Service;
+
+import java.io.IOException;
+
+@Slf4j
+@Service
+public class AnnotationTestServiceImpl implements AnnotationTestService {
+    //定义一个需要重试的方法
+    @Override
+    @Retryable(
+            recover = "recover",
+            value = IOException.class,
+            maxAttempts = 3,
+            backoff = @Backoff(delay = 2000))
+    public void performOperation() throws IOException {
+        log.info("Attempting operation...");
+        // 这里抛出一个可能导致重试的异常
+        throw new IOException("Operation failed!");
+    }
+
+    //定义一个 @Recover 方法来处理所有重试失败后的恢复逻辑
+    @Recover
+    public void recover(IOException e) {
+        log.info("All retries failed. Recovering from exception: " + e.getMessage());
+        // 执行恢复逻辑，如记录日志、通知用户、清理资源等
+    }
+}
+（3）解释
+
+performOperation 方法使用了 @Retryable 注解，指定了在遇到 IOException 时会进行最多 3 次重试，每次重试之间间隔 2000 毫秒。
+如果 performOperation 方法在所有重试尝试后仍然抛出 IOException，此时 @Retryable 注解中的 recover 属性指定的方法（即 recover 方法）将被调用。recover 方法处理这些失败后的恢复操作，比如记录错误信息或通知用户。
+（4）输出结果如下：
+2024-09-09 23:23:49.282  INFO 2668 --- [nio-8080-exec-2] c.e.m.s.impl.AnnotationTestServiceImpl   : Attempting operation...
+2024-09-09 23:23:51.292  INFO 2668 --- [nio-8080-exec-2] c.e.m.s.impl.AnnotationTestServiceImpl   : Attempting operation...
+2024-09-09 23:23:53.294  INFO 2668 --- [nio-8080-exec-2] c.e.m.s.impl.AnnotationTestServiceImpl   : Attempting operation...
+2024-09-09 23:23:53.295  INFO 2668 --- [nio-8080-exec-2] c.e.m.s.impl.AnnotationTestServiceImpl   : All retries failed. Recovering from exception: Operation failed!
+
+注：上面只展示了核心代码，并未展示其它代码（例如 Controller 层代码）。
+
+4.2.两者对应关系
+（1）@Retryable 注解与 @Recover 注解的对应关系如下：
+
+异常匹配：@Recover 注解的方法的参数类型必须与 @Retryable 注解的方法抛出的异常类型一致。这样，Spring 能够将最终失败的异常传递到对应的 @Recover 方法中（否则会提示报错）。在上述例子中，performOperation 方法抛出的异常类型与 recover 方法的参数类型均为 IOException。
+方法名和数量：每个 @Retryable 注解的方法通常对应一个 @Recover 方法。如果有多个 @Retryable 方法，则每个方法需要有一个匹配的 @Recover 方法来处理相应的异常。
+（2）recover 属性可省略：以上述例子来说，只要 @Recover 注解的方法的参数类型与 @Retryable 注解的方法抛出的异常类型一致，即使不设置 recover 属性，当 performOperation 方法重试全部失败后，recover 方法也会被执行。
+
+5.其他注意事项
+（1）使用 @Retryable 注解时，需要注意以下几点：
+
+异常类型：确保指定的 value、include 或 retryFor 属性中的异常类型与你的代码实际抛出的异常一致。
+性能影响：频繁重试可能会对系统性能产生影响，因此合理配置 maxAttempts 和 backoff。
+幂等性：确保被重试的方法是幂等的，即多次执行不会引起副作用。
+超时设置：配置合理的重试超时时间和间隔，避免重试导致的长时间等待。
+正确配置 backoff：使用合理的 delay 和 multiplier，以避免过于频繁的重试或间隔过长。
+（2）@Retryable 注解与 @Recover 注解配合使用，需要注意：一般建议一个 @Retryable 注解方法对应一个 @Recover 注解方法，并且通过设置 @Retryable 注解中的 recover 属性来指定对应的恢复方法。因为当多个 @Recover 注解方法的参数类型与一个 @Retryable 注解方法抛出的异常类型相同时，可能难会产生一些不确定的问题。
+
+（3）例如，下面的代码并未设置 @Retryable 注解的 recover 属性，那么按照上面的对应规则，recover1 方法和 recover2 方法均为 performOperation 方法的恢复方法，那么当 performOperation 方法全部重试失败后，到底哪个恢复方法会执行呢？还是都执行呢？
+@Slf4j
+@Service
+public class AnnotationTestServiceImpl implements AnnotationTestService {
+    //定义一个需要重试的方法
+    @Override
+    @Retryable(value = IOException.class, maxAttempts = 3, backoff = @Backoff(delay = 2000))
+    public void performOperation() throws IOException {
+        log.info("Attempting operation...");
+        // 这里抛出一个可能导致重试的异常
+        throw new IOException("Operation failed!");
+    }
+
+    //定义一个 @Recover 方法来处理所有重试失败后的恢复逻辑
+    @Recover
+    public void recover2(IOException e) {
+        log.info("All retries failed. Recovering from exception2: " + e.getMessage());
+        // 执行恢复逻辑，如记录日志、通知用户、清理资源等
+    }
+
+	//定义一个 @Recover 方法来处理所有重试失败后的恢复逻辑
+    @Recover
+    public void recover1(IOException e) {
+        log.info("All retries failed. Recovering from exception1: " + e.getMessage());
+        // 执行恢复逻辑，如记录日志、通知用户、清理资源等
+    }
+}
+
+测试后的结果如下：
+png
+
+显然是 recover1 方法生效了，而 recover2 方法并未生效。具体原因，本人并未深入了解（本人猜测与方法名的字典顺序有关，排在前面的先执行），有明白原因的读者可以在评论区留言。
+那如果在 @Retryable 注解中设置属性 recover = “recover2”，结果则会与上面相反，如下图所示：
+png
+
+（4）所以为了避免出现上述情况，这里建议当 @Retryable 注解与 @Recover 注解配合使用时，最好通过 @Retryable 注解的 recover 属性来设置对应的恢复方法，并且 @Recover 注解的方法的参数类型必须与 @Retryable 注解的方法抛出的异常类型保持一致。
+
+
 
