@@ -3,6 +3,7 @@ package org.wanbang;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.retry.annotation.EnableRetry;
 
 @SpringBootApplication
 @MapperScan("org.wanbang.mapper")	//程序会自动为mybatis创建代理对象
