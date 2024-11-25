@@ -43,12 +43,30 @@ public class Code_392 {
             if(s.charAt(slow) == t.charAt(fast)){
                 slow++;
                 fast++;
-            }
-            else{
+            }else{
                 fast++;
             }
         }
 
+        return slow == s.length();
+    }
+
+    // 双指针思想
+    public static boolean isSubsequence1(String s, String t){
+        if(s.length() > t.length()){
+            return false;
+        }
+        int slow = 0;
+        int fast = 0;
+
+        while (slow < s.length() && fast < t.length()){
+            if(s.charAt(slow) == t.charAt(fast)){
+                slow ++;
+                fast ++;
+            }else {
+                fast++;
+            }
+        }
         return slow == s.length();
     }
 
