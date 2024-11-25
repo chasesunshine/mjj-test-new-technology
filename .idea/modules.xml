@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-test/dubbo-zookeeper-test.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-test/dubbo-zookeeper-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/log-service1/log-serive1.iml" filepath="$PROJECT_DIR$/log-service1/log-serive1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/log-service2/log-serive2.iml" filepath="$PROJECT_DIR$/log-service2/log-serive2.iml" />
       <module fileurl="file://$PROJECT_DIR$/log-service1/log-service1.iml" filepath="$PROJECT_DIR$/log-service1/log-service1.iml" />
       <module fileurl="file://$PROJECT_DIR$/log-service2/log-service2.iml" filepath="$PROJECT_DIR$/log-service2/log-service2.iml" />
     </modules>

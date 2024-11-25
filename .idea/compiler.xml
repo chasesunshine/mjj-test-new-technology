@@ -51,6 +51,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-mongodb" target="1.8" />
+      <module name="log-serive1" target="1.8" />
+      <module name="log-serive2" target="1.8" />
       <module name="log-service1" target="1.8" />
       <module name="log-service2" target="1.8" />
       <module name="mqtt-server" target="1.8" />
