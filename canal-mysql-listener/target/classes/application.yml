@@ -14,7 +14,7 @@ spring:
 
 #mybatis-plush配置
 mybatis-plus:
-  mapper-locations: classpath:/mapper/*/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志

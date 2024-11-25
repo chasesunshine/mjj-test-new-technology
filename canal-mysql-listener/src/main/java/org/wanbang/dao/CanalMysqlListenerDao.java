@@ -1,6 +1,7 @@
 package org.wanbang.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.mapstruct.Mapper;
 import org.wanbang.entity.CanalMysqlListener;
 
 /**
@@ -11,6 +12,7 @@ import org.wanbang.entity.CanalMysqlListener;
  * @author jjh
  * @since 2022-11-18
  */
+//@Mapper
 public interface CanalMysqlListenerDao extends BaseMapper<CanalMysqlListener> {
 
 }

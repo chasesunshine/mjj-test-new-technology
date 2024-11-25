@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("org.dongfu.dao")	//程序会自动为mybatis创建代理对象
+@MapperScan("org.wanbang.dao")	//程序会自动为mybatis创建代理对象
 public class Application_Canal_Mysql {
 	
 	//定义主启动类
