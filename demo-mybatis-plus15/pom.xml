@@ -23,6 +23,14 @@
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
             <version>2.2.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>fastjson</artifactId>
+                    <version>1.2.68</version>
+                    <scope>test</scope>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--xls-->
