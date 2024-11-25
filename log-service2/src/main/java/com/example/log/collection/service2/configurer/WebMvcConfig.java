@@ -14,9 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-
         registry.addInterceptor(new TraceInterceptor()).addPathPatterns("/**");
-
         super.addInterceptors(registry);
     }
 }
