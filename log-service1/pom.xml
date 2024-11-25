@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.example.log.collection</groupId>
-    <artifactId>log-serive1</artifactId>
+    <artifactId>log-service1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
