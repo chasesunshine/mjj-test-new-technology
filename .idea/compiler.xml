@@ -22,6 +22,8 @@
         <module name="demo-mybatis-plus12" />
         <module name="log-eureka" />
         <module name="demo-mybatis-plus10" />
+        <module name="log-serive2" />
+        <module name="log-serive1" />
         <module name="redis-mysql-consistency" />
         <module name="log-service1" />
         <module name="log-service2" />
@@ -85,6 +87,8 @@
       <module name="demo-mybatis-plus9" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
+      <module name="log-serive1" options="-parameters" />
+      <module name="log-serive2" options="-parameters" />
       <module name="log-service1" options="-parameters" />
       <module name="log-service2" options="-parameters" />
       <module name="log-zuul" options="-parameters" />

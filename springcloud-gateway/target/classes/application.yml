@@ -1,0 +1,17 @@
+server:
+  port: 8666
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        #netty 路由过滤器，http或https开头
+        - id: 随便填
+          uri: http://localhost:8555
+          predicates:
+            - Path=/app1/**
+          filters:
+            #转发请求时去掉1级前缀
+            - StripPrefix=1
