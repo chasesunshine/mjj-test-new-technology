@@ -1,0 +1,10 @@
+server:
+  port: 8777
+  servlet:
+    context-path: /
+
+spring:
+  redis:
+    host: 127.0.0.1
+#    host: 10.10.0.132
+    port: 6379
