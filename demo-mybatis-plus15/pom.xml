@@ -27,8 +27,6 @@
                 <exclusion>
                     <groupId>com.alibaba</groupId>
                     <artifactId>fastjson</artifactId>
-                    <version>1.2.68</version>
-                    <scope>test</scope>
                 </exclusion>
             </exclusions>
         </dependency>
