@@ -22,8 +22,6 @@
         <module name="demo-mybatis-plus12" />
         <module name="log-eureka" />
         <module name="demo-mybatis-plus10" />
-        <module name="log-serive2" />
-        <module name="log-serive1" />
         <module name="redis-mysql-consistency" />
         <module name="log-service1" />
         <module name="log-service2" />
@@ -51,6 +49,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-mongodb" target="1.8" />
+      <module name="log-service1" target="1.8" />
+      <module name="log-service2" target="1.8" />
       <module name="mqtt-server" target="1.8" />
       <module name="spring-boot-starter-mqtt-consumer" target="1.8" />
       <module name="spring-boot-starter-mqtt-provider" target="1.8" />
@@ -85,8 +85,6 @@
       <module name="demo-mybatis-plus9" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
-      <module name="log-serive1" options="-parameters" />
-      <module name="log-serive2" options="-parameters" />
       <module name="log-service1" options="-parameters" />
       <module name="log-service2" options="-parameters" />
       <module name="log-zuul" options="-parameters" />
