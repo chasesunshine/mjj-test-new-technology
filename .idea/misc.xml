@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/demo-mybatis-plus13/pom.xml" />
         <option value="$PROJECT_DIR$/demo-mybatis-plus14/pom.xml" />
         <option value="$PROJECT_DIR$/threadpool-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/log-service1/pom.xml" />
+        <option value="$PROJECT_DIR$/log-service2/pom.xml" />
       </list>
     </option>
   </component>
