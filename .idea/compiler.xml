@@ -67,7 +67,7 @@
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
-      <module name="demo-mongodb" options="" />
+      <module name="demo-mongodb" options="-parameters" />
       <module name="demo-mqtt-consumer" options="-parameters" />
       <module name="demo-mqtt-provider" options="-parameters" />
       <module name="demo-mybatis-plus-edengine" options="-parameters" />
