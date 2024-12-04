@@ -19,11 +19,12 @@ public class Test {
         String url = "https://open-cn.aqara.com/v3.0/open/api";
         HashMap<String, String> stringStringHashMap = new HashMap<>();
         String timeStamp = String.valueOf(System.currentTimeMillis());
-        String accesstoken = "4b4721df53c5fcced6d787314f1e2855";
+        String accesstoken = "1eeafecf27caf475a543550681f31612";
         stringStringHashMap.put("Accesstoken",accesstoken);
         stringStringHashMap.put("Appid","12979313793780776965bd52");
         stringStringHashMap.put("Keyid","K.1297931379814285312");
         stringStringHashMap.put("Nonce","C6wuzd0Qguxzelhb");
+//        stringStringHashMap.put("Nonce",TimestampedRandomStringGenerator.generateRandomString());
         stringStringHashMap.put("Time",timeStamp);
         stringStringHashMap.put("Sign",CreateSign.getSign(accesstoken,timeStamp));
         stringStringHashMap.put("Lang","zh");
