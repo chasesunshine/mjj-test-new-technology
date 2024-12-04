@@ -10,13 +10,12 @@ import java.security.NoSuchAlgorithmException;
  */
 public class CreateSign {
 
-    public static String getSign(String accessToken,String time) {
+    public static String getSign(String accessToken,String time,String randomString) {
         String appId = "12979313793780776965bd52";
         String keyId = "K.1297931379814285312";
         String appKey = "lys0sb2ps4xkgnhiuz9w3soz96x85hld";
-        String nonce = "C6wuzd0Qguxzelhb";
 
-        String sign = createSign(accessToken, appId, keyId, nonce, time, appKey);
+        String sign = createSign(accessToken, appId, keyId, randomString, time, appKey);
         return sign;
     }
 

@@ -17,16 +17,16 @@ public class Test {
 
     public static void main(String[] args) {
         String url = "https://open-cn.aqara.com/v3.0/open/api";
+        String randomString = TimestampedRandomStringGenerator.generateRandomString();
         HashMap<String, String> stringStringHashMap = new HashMap<>();
         String timeStamp = String.valueOf(System.currentTimeMillis());
-        String accesstoken = "1eeafecf27caf475a543550681f31612";
+        String accesstoken = "a244f6341a3e713e046960cbbe483a13";
         stringStringHashMap.put("Accesstoken",accesstoken);
         stringStringHashMap.put("Appid","12979313793780776965bd52");
         stringStringHashMap.put("Keyid","K.1297931379814285312");
-        stringStringHashMap.put("Nonce","C6wuzd0Qguxzelhb");
-//        stringStringHashMap.put("Nonce",TimestampedRandomStringGenerator.generateRandomString());
+        stringStringHashMap.put("Nonce",randomString);
         stringStringHashMap.put("Time",timeStamp);
-        stringStringHashMap.put("Sign",CreateSign.getSign(accesstoken,timeStamp));
+        stringStringHashMap.put("Sign",CreateSign.getSign(accesstoken,timeStamp,randomString));
         stringStringHashMap.put("Lang","zh");
 
         DeviceDTO deviceDTO = new DeviceDTO();
@@ -74,6 +74,8 @@ public class Test {
             }
         } catch (IOException e) {
             log.warn("POST JSON ERROR: {}", e.getMessage());
+        }finally {
+            client.connectionPool().evictAll();
         }
         return null;
     }
