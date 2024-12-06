@@ -32,8 +32,8 @@ import java.util.Stack;
  */
 public class Code_496 {
     public static void main(String[] args) {
-        int[] num1 = {2,4};
-        int[] num2 = {1,2,3,4};
+        int[] num1 = {4,1,2};
+        int[] num2 = {1,3,4,2};
         int[] ints = nextGreaterElement(num1, num2);
         System.out.println(Arrays.asList(ints));
     }
@@ -45,7 +45,7 @@ public class Code_496 {
      * @param nums2
      * @return
      */
-    public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+    public static int[] nextGreaterElement1(int[] nums1, int[] nums2) {
         List<Object> objects = Arrays.asList(nums2);
         for (int i = 0; i < nums1.length; i++) {
             int value = nums1[i];
@@ -71,13 +71,16 @@ public class Code_496 {
      * 两个for循环太复杂
      * 一个for循环就够了，太影响空间和时间复杂度
      *
+     * 思想不错
+     *
+     *
      * @param nums1
      * @param nums2
      * @return
      */
-    public int[] nextGreaterElement1(int[] nums1, int[] nums2) {
-        Stack<Integer> stack = new Stack<Integer>();
-        HashMap<Integer, Integer> hasMap = new HashMap<Integer, Integer>();
+    public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Stack<Integer> stack = new Stack<>();
+        HashMap<Integer, Integer> hasMap = new HashMap<>();
 
         int[] result = new int[nums1.length];
 
