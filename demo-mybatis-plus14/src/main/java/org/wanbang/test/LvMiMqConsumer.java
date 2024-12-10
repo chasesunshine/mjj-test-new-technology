@@ -76,7 +76,7 @@ public class LvMiMqConsumer {
 
                         System.out.println(convertUTCToBeijingTime(convertTimestampToUTC(System.currentTimeMillis())));
 
-                        System.out.println("******device info******{}" + msg);
+                        System.out.println("topic: "+topic+"  ******device info******{}" + msg);
 
                         //log.info("******device info******{}", msg);
                     }
