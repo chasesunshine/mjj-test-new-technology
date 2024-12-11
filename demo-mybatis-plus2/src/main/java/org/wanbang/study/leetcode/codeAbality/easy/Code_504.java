@@ -18,8 +18,15 @@ public class Code_504 {
         System.out.println(convert);
     }
 
+    /**
+     * Integer.toString(int i, int radix) 是 Java 中的一个静态方法，
+     * 它将一个整数 i 转换为指定进制（基数）的字符串表示。这个方法对于需要以不同进制格式（如二进制、八进制或十六进制）显示数字的情况非常有用。
+     *
+     * @param num
+     * @return
+     */
     public static String convertToBase7(int num) {
-        return null;
+        return Integer.toString(num, 7);
     }
 
 }
