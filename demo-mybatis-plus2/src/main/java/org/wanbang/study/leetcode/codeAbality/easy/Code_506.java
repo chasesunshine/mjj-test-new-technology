@@ -32,7 +32,7 @@ public class Code_506 {
     }
 
     /**
-     * 个人思路：从大到小进行排序
+     * 个人思路：从大到小进行排序 ： 个人做出来了
      * 然后把这些值放进hashmap中，key为值，value为名次
      *
      * @param score
