@@ -47,6 +47,7 @@ public class LvMiMqConsumer {
 
         AclClientRPCHook acl = new AclClientRPCHook(new SessionCredentials(keyId, appKey));
         //设置消费者组
+        // public DefaultMQPushConsumer(String consumerGroup, RPCHook rpcHook, AllocateMessageQueueStrategy allocateMessageQueueStrategy)
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(appId, acl, new AllocateMessageQueueAveragely());
 
         consumer.setVipChannelEnabled(false);
