@@ -30,6 +30,7 @@
         <module name="log-service2" />
         <module name="rocketmq" />
         <module name="demo-mybatis-plus15" />
+        <module name="demo-mybatis-plus16" />
         <module name="demo-mybatis-plus13" />
         <module name="rocketmq-producer-demo" />
         <module name="demo-mybatis-plus14" />
@@ -77,6 +78,7 @@
       <module name="demo-mybatis-plus13" options="-parameters" />
       <module name="demo-mybatis-plus14" options="-parameters" />
       <module name="demo-mybatis-plus15" options="-parameters" />
+      <module name="demo-mybatis-plus16" options="-parameters" />
       <module name="demo-mybatis-plus2" options="-parameters" />
       <module name="demo-mybatis-plus3" options="-parameters" />
       <module name="demo-mybatis-plus4" options="-parameters" />

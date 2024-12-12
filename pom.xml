@@ -37,6 +37,7 @@
         <module>demo-mybatis-plus11</module>
         <module>demo-mybatis-plus12</module>
         <module>demo-mybatis-plus15</module>
+        <module>demo-mybatis-plus16</module>
     </modules>
 
     <parent>
