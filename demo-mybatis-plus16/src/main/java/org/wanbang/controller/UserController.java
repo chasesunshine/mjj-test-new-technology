@@ -25,7 +25,7 @@ public class UserController {
 
     @GetMapping("/selectOne")
     public String selectOne() {
-        User user = userService.queryById((long) 1);
+        User user = userService.queryById("1");
         return JSON.toJSONString(user);
     }
 

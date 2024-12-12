@@ -16,6 +16,6 @@ public interface UserService {
      * @param id 主键
      * @return 实例对象
      */
-    User queryById(Long id);
+    User queryById(String name);
 
 }

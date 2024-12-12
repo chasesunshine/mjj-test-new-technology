@@ -1,8 +1,9 @@
 package org.wanbang.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.wanbang.dao.UserDao;
+import org.wanbang.dao.UserMapper;
 import org.wanbang.entity.User;
 import org.wanbang.service.UserService;
 
@@ -18,7 +19,7 @@ import javax.annotation.Resource;
 @Service
 public class UserServiceImpl implements UserService {
     @Resource
-    private UserDao userDao;
+    private UserMapper userMapper;
 
     /**
      * 通过ID查询单条数据
@@ -27,9 +28,10 @@ public class UserServiceImpl implements UserService {
      * @return 实例对象
      */
     @Override
-    public User queryById(Long id) {
+    public User queryById(String name) {
         log.info("通过ID查询单条数据");
-        return this.userDao.selectById(id);
+        return this.userMapper.selectOne(new QueryWrapper<User>().lambda().eq(User::getName,name));
     }
+
 
 }
