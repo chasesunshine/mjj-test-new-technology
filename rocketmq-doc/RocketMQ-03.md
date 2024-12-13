@@ -780,13 +780,13 @@ if (nameServerAddressList != null && nameServerAddressList.size() > 0) {
 ```java
 if (oneway) {
     try {
-        this.remotingClient.invokeOneway(namesrvAddr, request, timeoutMills);
+        this.remotingClient.invokeOneway(namesrvAddr, requestParam, timeoutMills);
     } catch (RemotingTooMuchRequestException e) {
         // Ignore
     }
     return null;
 }
-RemotingCommand response = this.remotingClient.invokeSync(namesrvAddr, request, timeoutMills);
+RemotingCommand response = this.remotingClient.invokeSync(namesrvAddr, requestParam, timeoutMills);
 ```
 
 ##### 2）处理心跳包
@@ -800,12 +800,12 @@ RemotingCommand response = this.remotingClient.invokeSync(namesrvAddr, request, 
 ```java
 //判断是注册Broker信息
 case RequestCode.REGISTER_BROKER:
-	Version brokerVersion = MQVersion.value2Version(request.getVersion());
+	Version brokerVersion = MQVersion.value2Version(requestParam.getVersion());
 	if (brokerVersion.ordinal() >= MQVersion.Version.V3_0_11.ordinal()) {
-	    return this.registerBrokerWithFilterServer(ctx, request);
+	    return this.registerBrokerWithFilterServer(ctx, requestParam);
 	} else {
         //注册Broker信息
-	    return this.registerBroker(ctx, request);
+	    return this.registerBroker(ctx, requestParam);
 	}
 ```
 
@@ -1121,10 +1121,10 @@ RocketMQ路由发现是非实时的，当Topic路由出现变化后，NameServer
 
 ```java
 public RemotingCommand getRouteInfoByTopic(ChannelHandlerContext ctx,
-    RemotingCommand request) throws RemotingCommandException {
+    RemotingCommand requestParam) throws RemotingCommandException {
     final RemotingCommand response = RemotingCommand.createResponseCommand(null);
     final GetRouteInfoRequestHeader requestHeader =
-        (GetRouteInfoRequestHeader) request.decodeCommandCustomHeader(GetRouteInfoRequestHeader.class);
+        (GetRouteInfoRequestHeader) requestParam.decodeCommandCustomHeader(GetRouteInfoRequestHeader.class);
 	//调用RouteInfoManager的方法,从路由表topicQueueTable、brokerAddrTable、filterServerTable中分别填充TopicRouteData的List<QueueData>、List<BrokerData>、filterServer
     TopicRouteData topicRouteData = this.namesrvController.getRouteInfoManager().pickupTopicRouteData(requestHeader.getTopic());
 	//如果找到主题对应你的路由信息并且该主题为顺序消息，则从NameServer KVConfig中获取关于顺序消息相关的配置填充路由信息
@@ -2776,13 +2776,13 @@ byte[] bitMap;	//位图
 ```java
 class CommitLogDispatcherBuildConsumeQueue implements CommitLogDispatcher {
     @Override
-    public void dispatch(DispatchRequest request) {
-        final int tranType = MessageSysFlag.getTransactionValue(request.getSysFlag());
+    public void dispatch(DispatchRequest requestParam) {
+        final int tranType = MessageSysFlag.getTransactionValue(requestParam.getSysFlag());
         switch (tranType) {
             case MessageSysFlag.TRANSACTION_NOT_TYPE:
             case MessageSysFlag.TRANSACTION_COMMIT_TYPE:
                 //消息分发
-                DefaultMessageStore.this.putMessagePositionInfo(request);
+                DefaultMessageStore.this.putMessagePositionInfo(requestParam);
                 break;
             case MessageSysFlag.TRANSACTION_PREPARED_TYPE:
             case MessageSysFlag.TRANSACTION_ROLLBACK_TYPE:
@@ -2828,9 +2828,9 @@ if (mappedFile != null) {
 class CommitLogDispatcherBuildIndex implements CommitLogDispatcher {
 
     @Override
-    public void dispatch(DispatchRequest request) {
+    public void dispatch(DispatchRequest requestParam) {
         if (DefaultMessageStore.this.messageStoreConfig.isMessageIndexEnable()) {
-            DefaultMessageStore.this.indexService.buildIndex(request);
+            DefaultMessageStore.this.indexService.buildIndex(requestParam);
         }
     }
 }
@@ -3257,11 +3257,11 @@ RocketMQ的存储是基于JDK NIO的内存映射机制（MappedByteBuffer）的�
 final GroupCommitService service = (GroupCommitService) this.flushCommitLogService;
 if (messageExt.isWaitStoreMsgOK()) {
     //封装刷盘请求
-    GroupCommitRequest request = new GroupCommitRequest(result.getWroteOffset() + result.getWroteBytes());
+    GroupCommitRequest requestParam = new GroupCommitRequest(result.getWroteOffset() + result.getWroteBytes());
     //提交刷盘请求
-    service.putRequest(request);
+    service.putRequest(requestParam);
     //线程阻塞5秒，等待刷盘结束
-    boolean flushOK = request.waitForFlush(this.defaultMessageStore.getMessageStoreConfig().getSyncFlushTimeout());
+    boolean flushOK = requestParam.waitForFlush(this.defaultMessageStore.getMessageStoreConfig().getSyncFlushTimeout());
     if (!flushOK) {
         putMessageResult.setPutMessageStatus(PutMessageStatus.FLUSH_DISK_TIMEOUT);
     }
@@ -3858,7 +3858,7 @@ public void pullMessage(final PullRequest pullRequest) {
     final ProcessQueue processQueue = pullRequest.getProcessQueue();
     //如果处理队列被丢弃,直接返回
     if (processQueue.isDropped()) {
-        log.info("the pull request[{}] is dropped.", pullRequest.toString());
+        log.info("the pull requestParam[{}] is dropped.", pullRequest.toString());
         return;
     }
 	//如果处理队列未被丢弃,更新时间戳
@@ -3873,7 +3873,7 @@ public void pullMessage(final PullRequest pullRequest) {
     }
 	//如果处理队列被挂起,延迟1s后再执行
     if (this.isPause()) {
-        log.warn("consumer was paused, execute pull request later. instanceName={}, group={}", this.defaultMQPushConsumer.getInstanceName(), this.defaultMQPushConsumer.getConsumerGroup());
+        log.warn("consumer was paused, execute pull requestParam later. instanceName={}, group={}", this.defaultMQPushConsumer.getInstanceName(), this.defaultMQPushConsumer.getConsumerGroup());
         this.executePullRequestLater(pullRequest, PULL_TIME_DELAY_MILLS_WHEN_SUSPEND);
         return;
     }
@@ -4045,7 +4045,7 @@ switch (getMessageResult.getStatus()) {
     case OFFSET_OVERFLOW_BADLY:	//offset越界
         response.setCode(ResponseCode.PULL_OFFSET_MOVED);
         // XXX: warn and notify me
-        log.info("the request offset: {} over flow badly, broker max offset: {}, consumer: {}",
+        log.info("the requestParam offset: {} over flow badly, broker max offset: {}, consumer: {}",
                 requestHeader.getQueueOffset(), getMessageResult.getMaxOffset(), channel.remoteAddress());
         break;
     case OFFSET_OVERFLOW_ONE:	//offset在队列中未找到
@@ -4166,7 +4166,7 @@ case ResponseCode.PULL_NOT_FOUND:
         long offset = requestHeader.getQueueOffset();
         int queueId = requestHeader.getQueueId();
         //构建拉取请求对象
-        PullRequest pullRequest = new PullRequest(request, channel, pollingTimeMills,
+        PullRequest pullRequest = new PullRequest(requestParam, channel, pollingTimeMills,
             this.brokerController.getMessageStore().now(), offset, subscriptionData, messageFilter);
         //处理拉取请求
         this.brokerController.getPullRequestHoldService().suspendPullRequest(topic, queueId, pullRequest);
@@ -4215,7 +4215,7 @@ public void run() {
             this.checkHoldRequest();
             long costTime = this.systemClock.now() - beginLockTimestamp;
             if (costTime > 5 * 1000) {
-                log.info("[NOTIFYME] check hold request cost {} ms.", costTime);
+                log.info("[NOTIFYME] check hold requestParam cost {} ms.", costTime);
             }
         } catch (Throwable e) {
             log.warn(this.getServiceName() + " service has exception. ", e);
@@ -4242,7 +4242,7 @@ private void checkHoldRequest() {
                 //通知有消息达到
                 this.notifyMessageArriving(topic, queueId, offset);
             } catch (Throwable e) {
-                log.error("check hold request failed. topic={}, queueId={}", topic, queueId, e);
+                log.error("check hold requestParam failed. topic={}, queueId={}", topic, queueId, e);
             }
         }
     }
@@ -4253,31 +4253,31 @@ private void checkHoldRequest() {
 
 ```java
 //如果拉取消息偏移大于请求偏移量,如果消息匹配调用executeRequestWhenWakeup处理消息
-if (newestOffset > request.getPullFromThisOffset()) {
-    boolean match = request.getMessageFilter().isMatchedByConsumeQueue(tagsCode,
+if (newestOffset > requestParam.getPullFromThisOffset()) {
+    boolean match = requestParam.getMessageFilter().isMatchedByConsumeQueue(tagsCode,
         new ConsumeQueueExt.CqExtUnit(tagsCode, msgStoreTime, filterBitMap));
     // match by bit map, need eval again when properties is not null.
     if (match && properties != null) {
-        match = request.getMessageFilter().isMatchedByCommitLog(null, properties);
+        match = requestParam.getMessageFilter().isMatchedByCommitLog(null, properties);
     }
 
     if (match) {
         try {
-            this.brokerController.getPullMessageProcessor().executeRequestWhenWakeup(request.getClientChannel(),
-                request.getRequestCommand());
+            this.brokerController.getPullMessageProcessor().executeRequestWhenWakeup(requestParam.getClientChannel(),
+                requestParam.getRequestCommand());
         } catch (Throwable e) {
-            log.error("execute request when wakeup failed.", e);
+            log.error("execute requestParam when wakeup failed.", e);
         }
         continue;
     }
 }
 //如果过期时间超时,则不继续等待将直接返回给客户端消息未找到
-if (System.currentTimeMillis() >= (request.getSuspendTimestamp() + request.getTimeoutMillis())) {
+if (System.currentTimeMillis() >= (requestParam.getSuspendTimestamp() + requestParam.getTimeoutMillis())) {
     try {
-        this.brokerController.getPullMessageProcessor().executeRequestWhenWakeup(request.getClientChannel(),
-            request.getRequestCommand());
+        this.brokerController.getPullMessageProcessor().executeRequestWhenWakeup(requestParam.getClientChannel(),
+            requestParam.getRequestCommand());
     } catch (Throwable e) {
-        log.error("execute request when wakeup failed.", e);
+        log.error("execute requestParam when wakeup failed.", e);
     }
     continue;
 }

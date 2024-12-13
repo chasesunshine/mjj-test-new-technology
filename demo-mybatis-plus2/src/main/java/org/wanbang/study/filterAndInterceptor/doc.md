@@ -21,15 +21,15 @@
              }
 
              @Override
-             public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+             public void doFilter(ServletRequest requestParam, ServletResponse response, FilterChain chain) throws IOException, ServletException {
                  // 在请求到达Servlet之前执行的代码
-                 System.out.println("Before request processing");
+                 System.out.println("Before requestParam processing");
 
                  // 将请求传递给下一个过滤器或目标资源
-                 chain.doFilter(request, response);
+                 chain.doFilter(requestParam, response);
 
                  // 在响应返回客户端之前执行的代码
-                 System.out.println("After request processing");
+                 System.out.println("After requestParam processing");
              }
 
              @Override
@@ -68,20 +68,20 @@
          public class MyInterceptor implements HandlerInterceptor {
 
              @Override
-             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+             public boolean preHandle(HttpServletRequest requestParam, HttpServletResponse response, Object handler) throws Exception {
                  // 在控制器方法执行之前执行的代码
                  System.out.println("Before controller method execution");
                  return true; // 返回true表示继续执行后续操作，返回false表示中断请求处理
              }
 
              @Override
-             public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+             public void postHandle(HttpServletRequest requestParam, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
                  // 在控制器方法执行之后，视图渲染之前执行的代码
                  System.out.println("After controller method execution, before view rendering");
              }
 
              @Override
-             public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+             public void afterCompletion(HttpServletRequest requestParam, HttpServletResponse response, Object handler, Exception ex) throws Exception {
                  // 在视图渲染之后执行的代码
                  System.out.println("After view rendering");
              }
@@ -115,7 +115,7 @@
         import org.springframework.core.MethodParameter;
         import org.springframework.http.converter.HttpMessageConverter;
         import org.springframework.web.bind.support.WebDataBinderFactory;
-        import org.springframework.web.context.request.NativeWebRequest;
+        import org.springframework.web.context.requestParam.NativeWebRequest;
         import org.springframework.web.method.support.HandlerMethodArgumentResolver;
         import org.springframework.web.method.support.ModelAndViewContainer;
         import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -177,7 +177,7 @@
             }
 
             @Override
-            public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
+            public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest requestParam, ServerHttpResponse response) {
                 // 在响应体被写回客户端之前执行的代码
                 System.out.println("Before body write: " + body);
                 return body;
@@ -252,8 +252,8 @@
 
 ## 自己创建一个类，实现 HttpServletRequestWrapper 接口
     public class FilterSetRequest extends HttpServletRequestWrapper {
-        public FilterSetRequest(HttpServletRequest request){
-            super(request);
+        public FilterSetRequest(HttpServletRequest requestParam){
+            super(requestParam);
         }
         @Override
         public String getParameter(String name){
@@ -281,15 +281,15 @@
 
         }
 
-        public void doFilter(ServletRequest request,
+        public void doFilter(ServletRequest requestParam,
                 ServletResponse response, FilterChain chain)
                 throws IOException, ServletException {
             //掉包的request
 
-            request.setCharacterEncoding("utf-8");
+            requestParam.setCharacterEncoding("utf-8");
             response.setContentType("text/html;charset=utf-8");
 
-            FilterSetRequest req = new FilterSetRequest((HttpServletRequest)request);
+            FilterSetRequest req = new FilterSetRequest((HttpServletRequest)requestParam);
             chain.doFilter(req, response);
         }
 
