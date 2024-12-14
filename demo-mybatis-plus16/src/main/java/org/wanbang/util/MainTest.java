@@ -1,0 +1,283 @@
+package org.wanbang.util;
+
+import com.alibaba.fastjson.JSON;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MainTest {
+    public static void main(String[] args) {
+        List<String> objects = new ArrayList<>();
+        String s = "\"404cca5c5cc0\",\n" +
+                "\"404cca5c3294\",\n" +
+                "\"404cca5c32f8\",\n" +
+                "\"404cca5c4864\",\n" +
+                "\"404cca5c5ce0\",\n" +
+                "\"404cca5c6250\",\n" +
+                "\"404cca5c516c\",\n" +
+                "\"404cca5c6214\",\n" +
+                "\"404cca5c344c\",\n" +
+                "\"404cca5c3440\",\n" +
+                "\"404cca5c5a90\",\n" +
+                "\"404cca5c428c\",\n" +
+                "\"404cca5c6248\",\n" +
+                "\"404cca5c36a0\",\n" +
+                "\"404cca5c4acc\",\n" +
+                "\"404cca5c5ca8\",\n" +
+                "\"404cca5c3464\",\n" +
+                "\"404cca5c5b44\",\n" +
+                "\"404cca5c5b90\",\n" +
+                "\"404cca5c5a50\",\n" +
+                "\"404cca5c6054\",\n" +
+                "\"404cca5c5a9c\",\n" +
+                "\"404cca5c4464\",\n" +
+                "\"404cca5c5740\",\n" +
+                "\"404cca5c44b4\",\n" +
+                "\"404cca5c34fc\",\n" +
+                "\"404cca5c47e8\",\n" +
+                "\"404cca5c48a0\",\n" +
+                "\"404cca5c5e30\",\n" +
+                "\"404cca5c5a94\",\n" +
+                "\"404cca5c41e0\",\n" +
+                "\"404cca5c5708\",\n" +
+                "\"404cca5c48b8\",\n" +
+                "\"404cca5c62a8\",\n" +
+                "\"404cca5c5fcc\",\n" +
+                "\"404cca5c5dd4\",\n" +
+                "\"404cca5c4188\",\n" +
+                "\"404cca5c339c\",\n" +
+                "\"404cca5c5d38\",\n" +
+                "\"404cca5c5cb4\",\n" +
+                "\"404cca5c41b0\",\n" +
+                "\"404cca5c5a30\",\n" +
+                "\"404cca5c41a0\",\n" +
+                "\"404cca5c572c\",\n" +
+                "\"404cca5c576c\",\n" +
+                "\"404cca5c5cbc\",\n" +
+                "\"404cca5c674c\",\n" +
+                "\"404cca5c5c88\",\n" +
+                "\"404cca5c32f0\",\n" +
+                "\"404cca5c32a0\",\n" +
+                "\"404cca5c54f4\",\n" +
+                "\"404cca5c3424\",\n" +
+                "\"404cca5c4a98\",\n" +
+                "\"404cca5c32a4\",\n" +
+                "\"404cca5c51c4\",\n" +
+                "\"404cca5c4a60\",\n" +
+                "\"404cca5c5fd0\",\n" +
+                "\"404cca5c3874\",\n" +
+                "\"404cca5c3878\",\n" +
+                "\"404cca5c4424\",\n" +
+                "\"404cca5c4e74\",\n" +
+                "\"404cca5c5d14\",\n" +
+                "\"404cca5c4f40\",\n" +
+                "\"404cca5c345c\",\n" +
+                "\"404cca5c5ff8\",\n" +
+                "\"404cca5c418c\",\n" +
+                "\"404cca5c6014\",\n" +
+                "\"404cca5c48bc\",\n" +
+                "\"404cca5c6210\",\n" +
+                "\"404cca5c43e8\",\n" +
+                "\"404cca5c5d28\",\n" +
+                "\"404cca5c5198\",\n" +
+                "\"404cca5c51ec\",\n" +
+                "\"404cca5c4190\",\n" +
+                "\"404cca5c5750\",\n" +
+                "\"404cca5c50c0\",\n" +
+                "\"404cca5c6068\",\n" +
+                "\"404cca5c48c0\",\n" +
+                "\"404cca5c4e60\",\n" +
+                "\"404cca5c5710\",\n" +
+                "\"404cca5c601c\",\n" +
+                "\"404cca5c61d8\",\n" +
+                "\"404cca5c5758\",\n" +
+                "\"404cca5c5c40\",\n" +
+                "\"404cca5c4460\",\n" +
+                "\"404cca5c60b8\",\n" +
+                "\"404cca5c6888\",\n" +
+                "\"404cca5c5e0c\",\n" +
+                "\"404cca5c5c64\",\n" +
+                "\"404cca5c419c\",\n" +
+                "\"404cca5c4e50\",\n" +
+                "\"404cca5c4230\",\n" +
+                "\"404cca5c5078\",\n" +
+                "\"404cca5c32a8\",\n" +
+                "\"404cca5c4200\"";
+        String[] split = s.split(",");
+        List<String> strings = Arrays.asList(split);
+        String value = "\"404cca5c5fcc\",\n" +
+                "\"404cca5c41a0\",\n" +
+                "\"404cca5c41b0\",\n" +
+                "\"404cca5c345c\",\n" +
+                "\"404cca5c4e74\",\n" +
+                "\"404cca5c32a4\",\n" +
+                "\"404cca5c5d14\",\n" +
+                "\"404cca5c5fd0\",\n" +
+                "\"404cca5c5a94\",\n" +
+                "\"404cca5c5cc0\",\n" +
+                "\"404cca5c5d38\",\n" +
+                "\"404cca5c5cbc\",\n" +
+                "\"404cca5c3424\",\n" +
+                "\"404cca5c4a98\",\n" +
+                "\"404cca5c3878\",\n" +
+                "\"404cca5c4424\",\n" +
+                "\"404cca5c51c4\",\n" +
+                "\"404cca5c674c\",\n" +
+                "\"404cca5c5c88\",\n" +
+                "\"404cca5c5cb4\",\n" +
+                "\"404cca5c5a30\",\n" +
+                "\"404cca5c62a8\",\n" +
+                "\"404cca5c41e0\",\n" +
+                "\"404cca5c5dd4\",\n" +
+                "\"404cca5c32f0\",\n" +
+                "\"404cca5c4a60\",\n" +
+                "\"404cca5c48b8\",\n" +
+                "\"404cca5c4188\",\n" +
+                "\"404cca5c339c\",\n" +
+                "\"404cca5c572c\",\n" +
+                "\"404cca5c3874\",\n" +
+                "\"404cca5c54f4\",\n" +
+                "\"404cca5c32a0\",\n" +
+                "\"404cca5c5708\",\n" +
+                "\"404cca5c4f40\",\n" +
+                "\"404cca5c576c\",\n" +
+                "\"404cca5c5e0c\",\n" +
+                "\"404cca5c61d8\",\n" +
+                "\"404cca5c601c\",\n" +
+                "\"404cca5c5c64\",\n" +
+                "\"404cca5c5c40\",\n" +
+                "\"404cca5c5758\",\n" +
+                "\"404cca5c60b8\",\n" +
+                "\"404cca5c51ec\",\n" +
+                "\"404cca5c50c0\",\n" +
+                "\"404cca5c5198\",\n" +
+                "\"404cca5c4460\",\n" +
+                "\"404cca5c5710\",\n" +
+                "\"404cca5c6888\",\n" +
+                "\"404cca5c4e50\",\n" +
+                "\"404cca5c418c\",\n" +
+                "\"404cca5c5ff8\",\n" +
+                "\"404cca5c4200\",\n" +
+                "\"404cca5c48bc\",\n" +
+                "\"404cca5c6068\",\n" +
+                "\"404cca5c5d28\",\n" +
+                "\"404cca5c5078\",\n" +
+                "\"404cca5c4190\",\n" +
+                "\"404cca5c43e8\",\n" +
+                "\"404cca5c5750\",\n" +
+                "\"404cca5c6210\",\n" +
+                "\"404cca5c48c0\",\n" +
+                "\"404cca5c6014\",\n" +
+                "\"404cca5c4e60\",\n" +
+                "\"404cca5c419c\",\n" +
+                "\"404cca5c4230\",\n" +
+                "\"404cca5c47e8\",\n" +
+                "\"404cca5c5e30\",\n" +
+                "\"404cca5c48a0\",\n" +
+                "\"404cca5c34fc\",\n" +
+                "\"404cca5c5a9c\",\n" +
+                "\"404cca5c5740\",\n" +
+                "\"404cca5c6054\",\n" +
+                "\"404cca5c4464\",\n" +
+                "\"404cca5c4acc\",\n" +
+                "\"404cca5c5ca8\",\n" +
+                "\"404cca5c6214\",\n" +
+                "\"404cca5c32f8\",\n" +
+                "\"404cca5c3294\",\n" +
+                "\"404cca5c344c\",\n" +
+                "\"404cca5c5ce0\",\n" +
+                "\"404cca5c4864\",\n" +
+                "\"404cca5c5a90\",\n" +
+                "\"404cca5c516c\",\n" +
+                "\"404cca5c6250\",\n" +
+                "\"404cca5c6248\",\n" +
+                "\"404cca5c428c\",\n" +
+                "\"404cca5c36a0\",\n" +
+                "\"404cca5c5a50\",\n" +
+                "\"404cca5c5b90\",\n" +
+                "\"404cca5c3440\",\n" +
+                "\"404cca5c5b44\",\n" +
+                "\"404cca5c3464\",\n" +
+                "\"404cca5c32a8\",\n" +
+                "\"404cca5c44b4\",\n" +
+                "\"404cca5c57b8\",\n" +
+                "\"404cca5c6204\",\n" +
+                "\"404cca5c48cc\",\n" +
+                "\"404cca5c5cec\",\n" +
+                "\"404cca5c5d20\",\n" +
+                "\"404cca5c489c\",\n" +
+                "\"404cca5c41c0\",\n" +
+                "\"404cca5c3428\",\n" +
+                "\"404cca5c60b0\",\n" +
+                "\"404cca5c32c8\",\n" +
+                "\"404cca5c538c\",\n" +
+                "\"404cca5c5a88\",\n" +
+                "\"404cca5c66e8\",\n" +
+                "\"404cca5c48e8\",\n" +
+                "\"404cca5c5cc4\",\n" +
+                "\"404cca5c6744\",\n" +
+                "\"404cca5c5714\",\n" +
+                "\"404cca5c33bc\",\n" +
+                "\"404cca5c6754\",\n" +
+                "\"404cca5c53fc\",\n" +
+                "\"404cca5c54d8\",\n" +
+                "\"404cca5c5cd0\",\n" +
+                "\"404cca5c54c0\",\n" +
+                "\"404cca5c5488\",\n" +
+                "\"404cca5c6064\",\n" +
+                "\"404cca5c5e1c\",\n" +
+                "\"404cca5c4aa0\",\n" +
+                "\"404cca5c5cd4\",\n" +
+                "\"404cca5c3290\",\n" +
+                "\"404cca5c6238\",\n" +
+                "\"404cca5c5ba8\",\n" +
+                "\"404cca5c6758\",\n" +
+                "\"404cca5c5fec\",\n" +
+                "\"404cca5c3298\",\n" +
+                "\"404cca5c57a4\",\n" +
+                "\"404cca5c6714\",\n" +
+                "\"404cca5c66f4\",\n" +
+                "\"404cca5c66f0\",\n" +
+                "\"404cca5c5cb8\",\n" +
+                "\"404cca5c6738\",\n" +
+                "\"404cca5c4858\",\n" +
+                "\"404cca5c43e0\",\n" +
+                "\"404cca5c486c\",\n" +
+                "\"404cca5c5d04\",\n" +
+                "\"404cca5c6298\",\n" +
+                "\"404cca5c32d8\",\n" +
+                "\"404cca5c5d08\",\n" +
+                "\"404cca5c5e14\",\n" +
+                "\"404cca5c54b0\",\n" +
+                "\"404cca5c3394\",\n" +
+                "\"404cca5c6088\",\n" +
+                "\"404cca5c5df4\",\n" +
+                "\"404cca5c5e04\",\n" +
+                "\"404cca5c41f8\",\n" +
+                "\"404cca5c5744\",\n" +
+                "\"404cca5c4a94\",\n" +
+                "\"404cca5c62bc\",\n" +
+                "\"404cca5c4208\",\n" +
+                "\"404cca5c4184\",\n" +
+                "\"404cca5c6004\",\n" +
+                "\"404cca5c54c8\",\n" +
+                "\"404cca5c48a4\",\n" +
+                "\"404cca5c5b9c\",\n" +
+                "\"404cca5c4174\",\n" +
+                "\"404cca5c41d0\",\n" +
+                "\"404cca5c4198\",\n" +
+                "\"404cca5c5dd8\",\n" +
+                "\"404cca5c4a64\",\n" +
+                "\"404cca5c5a98\"";
+        String[] split1 = value.split(",");
+        List<String> strings1 = Arrays.asList(split1);
+
+        List<String> result = strings1.stream()
+                .filter(e -> !strings.contains(e))
+                .collect(Collectors.toList());
+
+        System.out.println(JSON.toJSONString(result));
+    }
+}
