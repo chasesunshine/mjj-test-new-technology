@@ -614,10 +614,10 @@ shop系统基于Maven进行项目管理
 ![](img/项目初始化.png)
 
 - 父工程：shop-parent
-- 订单系统：shop-order-web
+- 订单系统：shop-userInfo-web
 - 支付系统：shop-pay-web
 - 优惠券服务：shop-coupon-service
-- 订单服务：shop-order-service
+- 订单服务：shop-userInfo-service
 - 支付服务：shop-pay-service
 - 商品服务：shop-goods-service
 - 用户服务：shop-user-service
@@ -677,10 +677,10 @@ shop系统基于Maven进行项目管理
 public interface IOrderService {
     /**
      * 确认订单
-     * @param order
+     * @param userInfo
      * @return Result
      */
-    Result confirmOrder(TradeOrder order);
+    Result confirmOrder(TradeOrder userInfo);
 }
 ```
 
@@ -693,7 +693,7 @@ public interface IOrderService {
 public class OrderServiceImpl implements IOrderService {
 
     @Override
-    public Result confirmOrder(TradeOrder order) {
+    public Result confirmOrder(TradeOrder userInfo) {
         //1.校验订单
        
         //2.生成预订单
@@ -724,27 +724,27 @@ public class OrderServiceImpl implements IOrderService {
 ![](img/校验订单(2).png)
 
 ```java
-private void checkOrder(TradeOrder order) {
+private void checkOrder(TradeOrder userInfo) {
         //1.校验订单是否存在
-        if(order==null){
+        if(userInfo==null){
             CastException.cast(ShopCode.SHOP_ORDER_INVALID);
         }
         //2.校验订单中的商品是否存在
-        TradeGoods goods = goodsService.findOne(order.getGoodsId());
+        TradeGoods goods = goodsService.findOne(userInfo.getGoodsId());
         if(goods==null){
             CastException.cast(ShopCode.SHOP_GOODS_NO_EXIST);
         }
         //3.校验下单用户是否存在
-        TradeUser user = userService.findOne(order.getUserId());
+        TradeUser user = userService.findOne(userInfo.getUserId());
         if(user==null){
             CastException.cast(ShopCode.SHOP_USER_NO_EXIST);
         }
         //4.校验商品单价是否合法
-        if(order.getGoodsPrice().compareTo(goods.getGoodsPrice())!=0){
+        if(userInfo.getGoodsPrice().compareTo(goods.getGoodsPrice())!=0){
             CastException.cast(ShopCode.SHOP_GOODS_PRICE_INVALID);
         }
         //5.校验订单商品数量是否合法
-        if(order.getGoodsNumber()>=goods.getGoodsNumber()){
+        if(userInfo.getGoodsNumber()>=goods.getGoodsNumber()){
             CastException.cast(ShopCode.SHOP_GOODS_NUM_NOT_ENOUGH);
         }
 
@@ -757,25 +757,25 @@ private void checkOrder(TradeOrder order) {
 ![](img/生成预订单.png)
 
 ```java
-private Long savePreOrder(TradeOrder order) {
+private Long savePreOrder(TradeOrder userInfo) {
         //1.设置订单状态为不可见
-        order.setOrderStatus(ShopCode.SHOP_ORDER_NO_CONFIRM.getCode());
+        userInfo.setOrderStatus(ShopCode.SHOP_ORDER_NO_CONFIRM.getCode());
         //2.订单ID
-        order.setOrderId(idWorker.nextId());
+        userInfo.setOrderId(idWorker.nextId());
         //核算运费是否正确
-        BigDecimal shippingFee = calculateShippingFee(order.getOrderAmount());
-        if (order.getShippingFee().compareTo(shippingFee) != 0) {
+        BigDecimal shippingFee = calculateShippingFee(userInfo.getOrderAmount());
+        if (userInfo.getShippingFee().compareTo(shippingFee) != 0) {
             CastException.cast(ShopCode.SHOP_ORDER_SHIPPINGFEE_INVALID);
         }
         //3.计算订单总价格是否正确
-        BigDecimal orderAmount = order.getGoodsPrice().multiply(new BigDecimal(order.getGoodsNumber()));
+        BigDecimal orderAmount = userInfo.getGoodsPrice().multiply(new BigDecimal(userInfo.getGoodsNumber()));
         orderAmount.add(shippingFee);
-        if (orderAmount.compareTo(order.getOrderAmount()) != 0) {
+        if (orderAmount.compareTo(userInfo.getOrderAmount()) != 0) {
             CastException.cast(ShopCode.SHOP_ORDERAMOUNT_INVALID);
         }
 
         //4.判断优惠券信息是否合法
-        Long couponId = order.getCouponId();
+        Long couponId = userInfo.getCouponId();
         if (couponId != null) {
             TradeCoupon coupon = couponService.findOne(couponId);
             //优惠券不存在
@@ -787,16 +787,16 @@ private Long savePreOrder(TradeOrder order) {
                 .equals(coupon.getIsUsed().toString())) {
                 CastException.cast(ShopCode.SHOP_COUPON_INVALIED);
             }
-            order.setCouponPaid(coupon.getCouponPrice());
+            userInfo.setCouponPaid(coupon.getCouponPrice());
         } else {
-            order.setCouponPaid(BigDecimal.ZERO);
+            userInfo.setCouponPaid(BigDecimal.ZERO);
         }
 
         //5.判断余额是否正确
-        BigDecimal moneyPaid = order.getMoneyPaid();
+        BigDecimal moneyPaid = userInfo.getMoneyPaid();
         if (moneyPaid != null) {
             //比较余额是否大于0
-            int r = order.getMoneyPaid().compareTo(BigDecimal.ZERO);
+            int r = userInfo.getMoneyPaid().compareTo(BigDecimal.ZERO);
             //余额小于0
             if (r == -1) {
                 CastException.cast(ShopCode.SHOP_MONEY_PAID_LESS_ZERO);
@@ -804,32 +804,32 @@ private Long savePreOrder(TradeOrder order) {
             //余额大于0
             if (r == 1) {
                 //查询用户信息
-                TradeUser user = userService.findOne(order.getUserId());
+                TradeUser user = userService.findOne(userInfo.getUserId());
                 if (user == null) {
                     CastException.cast(ShopCode.SHOP_USER_NO_EXIST);
                 }
             //比较余额是否大于用户账户余额
-            if (user.getUserMoney().compareTo(order.getMoneyPaid().longValue()) == -1) {
+            if (user.getUserMoney().compareTo(userInfo.getMoneyPaid().longValue()) == -1) {
                 CastException.cast(ShopCode.SHOP_MONEY_PAID_INVALID);
             }
-            order.setMoneyPaid(order.getMoneyPaid());
+            userInfo.setMoneyPaid(userInfo.getMoneyPaid());
         }
     } else {
-        order.setMoneyPaid(BigDecimal.ZERO);
+        userInfo.setMoneyPaid(BigDecimal.ZERO);
     }
     //计算订单支付总价
-    order.setPayAmount(orderAmount.subtract(order.getCouponPaid())
-                       .subtract(order.getMoneyPaid()));
+    userInfo.setPayAmount(orderAmount.subtract(userInfo.getCouponPaid())
+                       .subtract(userInfo.getMoneyPaid()));
     //设置订单添加时间
-    order.setAddTime(new Date());
+    userInfo.setAddTime(new Date());
 
     //保存预订单
-    int r = orderMapper.insert(order);
+    int r = orderMapper.insert(userInfo);
     if (ShopCode.SHOP_SUCCESS.getCode() != r) {
         CastException.cast(ShopCode.SHOP_ORDER_SAVE_ERROR);
     }
-    log.info("订单:["+order.getOrderId()+"]预订单生成成功");
-    return order.getOrderId();
+    log.info("订单:["+userInfo.getOrderId()+"]预订单生成成功");
+    return userInfo.getOrderId();
 }
 ```
 
@@ -838,16 +838,16 @@ private Long savePreOrder(TradeOrder order) {
 * 通过dubbo调用商品服务完成扣减库存
 
 ```java
-private void reduceGoodsNum(TradeOrder order) {
+private void reduceGoodsNum(TradeOrder userInfo) {
         TradeGoodsNumberLog goodsNumberLog = new TradeGoodsNumberLog();
-        goodsNumberLog.setGoodsId(order.getGoodsId());
-        goodsNumberLog.setOrderId(order.getOrderId());
-        goodsNumberLog.setGoodsNumber(order.getGoodsNumber());
+        goodsNumberLog.setGoodsId(userInfo.getGoodsId());
+        goodsNumberLog.setOrderId(userInfo.getOrderId());
+        goodsNumberLog.setGoodsNumber(userInfo.getGoodsNumber());
         Result result = goodsService.reduceGoodsNum(goodsNumberLog);
         if (result.getSuccess().equals(ShopCode.SHOP_FAIL.getSuccess())) {
             CastException.cast(ShopCode.SHOP_REDUCE_GOODS_NUM_FAIL);
         }
-        log.info("订单:["+order.getOrderId()+"]扣减库存["+order.getGoodsNumber()+"个]成功");
+        log.info("订单:["+userInfo.getOrderId()+"]扣减库存["+userInfo.getGoodsNumber()+"个]成功");
     }
 ```
 
@@ -887,21 +887,21 @@ public Result reduceGoodsNum(TradeGoodsNumberLog goodsNumberLog) {
 * 通过dubbo完成扣减优惠券
 
 ```java
-private void changeCoponStatus(TradeOrder order) {
+private void changeCoponStatus(TradeOrder userInfo) {
     //判断用户是否使用优惠券
-    if (!StringUtils.isEmpty(order.getCouponId())) {
+    if (!StringUtils.isEmpty(userInfo.getCouponId())) {
         //封装优惠券对象
-        TradeCoupon coupon = couponService.findOne(order.getCouponId());
+        TradeCoupon coupon = couponService.findOne(userInfo.getCouponId());
         coupon.setIsUsed(ShopCode.SHOP_COUPON_ISUSED.getCode());
         coupon.setUsedTime(new Date());
-        coupon.setOrderId(order.getOrderId());
+        coupon.setOrderId(userInfo.getOrderId());
         Result result = couponService.changeCouponStatus(coupon);
         //判断执行结果
         if (result.getSuccess().equals(ShopCode.SHOP_FAIL.getSuccess())) {
             //优惠券使用失败
             CastException.cast(ShopCode.SHOP_COUPON_USE_FAIL);
         }
-        log.info("订单:["+order.getOrderId()+"]使用扣减优惠券["+coupon.getCouponPrice()+"元]成功");
+        log.info("订单:["+userInfo.getOrderId()+"]使用扣减优惠券["+coupon.getCouponPrice()+"元]成功");
     }
 
 }
@@ -931,20 +931,20 @@ public Result changeCouponStatus(TradeCoupon coupon) {
 * 通过用户服务完成扣减余额
 
 ```java
-private void reduceMoneyPaid(TradeOrder order) {
+private void reduceMoneyPaid(TradeOrder userInfo) {
     //判断订单中使用的余额是否合法
-    if (order.getMoneyPaid() != null && order.getMoneyPaid().compareTo(BigDecimal.ZERO) == 1) {
+    if (userInfo.getMoneyPaid() != null && userInfo.getMoneyPaid().compareTo(BigDecimal.ZERO) == 1) {
         TradeUserMoneyLog userMoneyLog = new TradeUserMoneyLog();
-        userMoneyLog.setOrderId(order.getOrderId());
-        userMoneyLog.setUserId(order.getUserId());
-        userMoneyLog.setUseMoney(order.getMoneyPaid());
+        userMoneyLog.setOrderId(userInfo.getOrderId());
+        userMoneyLog.setUserId(userInfo.getUserId());
+        userMoneyLog.setUseMoney(userInfo.getMoneyPaid());
         userMoneyLog.setMoneyLogType(ShopCode.SHOP_USER_MONEY_PAID.getCode());
         //扣减余额
         Result result = userService.changeUserMoney(userMoneyLog);
         if (result.getSuccess().equals(ShopCode.SHOP_FAIL.getSuccess())) {
             CastException.cast(ShopCode.SHOP_USER_MONEY_REDUCE_FAIL);
         }
-        log.info("订单:["+order.getOrderId()+"扣减余额["+order.getMoneyPaid()+"元]成功]");
+        log.info("订单:["+userInfo.getOrderId()+"扣减余额["+userInfo.getMoneyPaid()+"元]成功]");
     }
 }
 ```
@@ -1015,15 +1015,15 @@ public Result changeUserMoney(TradeUserMoneyLog userMoneyLog) {
 ###8）确认订单 
 
 ```java
-private void updateOrderStatus(TradeOrder order) {
-    order.setOrderStatus(ShopCode.SHOP_ORDER_CONFIRM.getCode());
-    order.setPayStatus(ShopCode.SHOP_ORDER_PAY_STATUS_NO_PAY.getCode());
-    order.setConfirmTime(new Date());
-    int r = orderMapper.updateByPrimaryKey(order);
+private void updateOrderStatus(TradeOrder userInfo) {
+    userInfo.setOrderStatus(ShopCode.SHOP_ORDER_CONFIRM.getCode());
+    userInfo.setPayStatus(ShopCode.SHOP_ORDER_PAY_STATUS_NO_PAY.getCode());
+    userInfo.setConfirmTime(new Date());
+    int r = orderMapper.updateByPrimaryKey(userInfo);
     if (r <= 0) {
         CastException.cast(ShopCode.SHOP_ORDER_CONFIRM_FAIL);
     }
-    log.info("订单:["+order.getOrderId()+"]状态修改成功");
+    log.info("订单:["+userInfo.getOrderId()+"]状态修改成功");
 }
 ```
 
@@ -1031,21 +1031,21 @@ private void updateOrderStatus(TradeOrder order) {
 
 ```java
 @Override
-public Result confirmOrder(TradeOrder order) {
+public Result confirmOrder(TradeOrder userInfo) {
     //1.校验订单
-    checkOrder(order);
+    checkOrder(userInfo);
     //2.生成预订单
-    Long orderId = savePreOrder(order);
-    order.setOrderId(orderId);
+    Long orderId = savePreOrder(userInfo);
+    userInfo.setOrderId(orderId);
     try {
         //3.扣减库存
-        reduceGoodsNum(order);
+        reduceGoodsNum(userInfo);
         //4.扣减优惠券
-        changeCoponStatus(order);
+        changeCoponStatus(userInfo);
         //5.使用余额
-        reduceMoneyPaid(order);
+        reduceMoneyPaid(userInfo);
         //6.确认订单
-        updateOrderStatus(order);
+        updateOrderStatus(userInfo);
         log.info("订单:["+orderId+"]确认成功");
         return new Result(ShopCode.SHOP_SUCCESS.getSuccess(), ShopCode.SHOP_SUCCESS.getMessage());
     } catch (Exception e) {
@@ -1066,10 +1066,10 @@ public Result confirmOrder(TradeOrder order) {
 rocketmq.name-server=192.168.25.135:9876;192.168.25.138:9876
 rocketmq.producer.group=orderProducerGroup
 
-mq.order.consumer.group.name=order_orderTopic_cancel_group
-mq.order.topic=orderTopic
-mq.order.tag.confirm=order_confirm
-mq.order.tag.cancel=order_cancel
+mq.userInfo.consumer.group.name=order_orderTopic_cancel_group
+mq.userInfo.topic=orderTopic
+mq.userInfo.tag.confirm=order_confirm
+mq.userInfo.tag.cancel=order_cancel
 ```
 
 * 注入模板类和属性值信息
@@ -1078,10 +1078,10 @@ mq.order.tag.cancel=order_cancel
  @Autowired
  private RocketMQTemplate rocketMQTemplate;
 
- @Value("${mq.order.topic}")
+ @Value("${mq.userInfo.topic}")
  private String topic;
 
- @Value("${mq.order.tag.cancel}")
+ @Value("${mq.userInfo.tag.cancel}")
  private String cancelTag;
 ```
 
@@ -1089,7 +1089,7 @@ mq.order.tag.cancel=order_cancel
 
 ```java
 @Override
-public Result confirmOrder(TradeOrder order) {
+public Result confirmOrder(TradeOrder userInfo) {
     //1.校验订单
     //2.生成预订
     try {
@@ -1100,12 +1100,12 @@ public Result confirmOrder(TradeOrder order) {
     } catch (Exception e) {
         //确认订单失败,发送消息
         CancelOrderMQ cancelOrderMQ = new CancelOrderMQ();
-        cancelOrderMQ.setOrderId(order.getOrderId());
-        cancelOrderMQ.setCouponId(order.getCouponId());
-        cancelOrderMQ.setGoodsId(order.getGoodsId());
-        cancelOrderMQ.setGoodsNumber(order.getGoodsNumber());
-        cancelOrderMQ.setUserId(order.getUserId());
-        cancelOrderMQ.setUserMoney(order.getMoneyPaid());
+        cancelOrderMQ.setOrderId(userInfo.getOrderId());
+        cancelOrderMQ.setCouponId(userInfo.getCouponId());
+        cancelOrderMQ.setGoodsId(userInfo.getGoodsId());
+        cancelOrderMQ.setGoodsNumber(userInfo.getGoodsNumber());
+        cancelOrderMQ.setUserId(userInfo.getUserId());
+        cancelOrderMQ.setUserMoney(userInfo.getMoneyPaid());
         try {
             sendMessage(topic, 
                         cancelTag, 
@@ -1143,8 +1143,8 @@ private void sendMessage(String topic, String tags, String keys, String body) th
 
 ```properties
 rocketmq.name-server=192.168.25.135:9876;192.168.25.138:9876
-mq.order.consumer.group.name=order_orderTopic_cancel_group
-mq.order.topic=orderTopic
+mq.userInfo.consumer.group.name=order_orderTopic_cancel_group
+mq.userInfo.topic=orderTopic
 ```
 
 * 创建监听类，消费消息
@@ -1152,8 +1152,8 @@ mq.order.topic=orderTopic
 ```java
 @Slf4j
 @Component
-@RocketMQMessageListener(topic = "${mq.order.topic}", 
-                         consumerGroup = "${mq.order.consumer.group.name}",
+@RocketMQMessageListener(topic = "${mq.userInfo.topic}", 
+                         consumerGroup = "${mq.userInfo.consumer.group.name}",
                          messageModel = MessageModel.BROADCASTING)
 public class CancelOrderConsumer implements RocketMQListener<MessageExt>{
 
@@ -1175,11 +1175,11 @@ public class CancelOrderConsumer implements RocketMQListener<MessageExt>{
 ```java
 @Slf4j
 @Component
-@RocketMQMessageListener(topic = "${mq.order.topic}",consumerGroup = "${mq.order.consumer.group.name}",messageModel = MessageModel.BROADCASTING )
+@RocketMQMessageListener(topic = "${mq.userInfo.topic}",consumerGroup = "${mq.userInfo.consumer.group.name}",messageModel = MessageModel.BROADCASTING )
 public class CancelMQListener implements RocketMQListener<MessageExt>{
 
 
-    @Value("${mq.order.consumer.group.name}")
+    @Value("${mq.userInfo.consumer.group.name}")
     private String groupName;
 
     @Autowired
@@ -1318,7 +1318,7 @@ public class CancelMQListener implements RocketMQListener<MessageExt>{
 ```java
 @Slf4j
 @Component
-@RocketMQMessageListener(topic = "${mq.order.topic}",consumerGroup = "${mq.order.consumer.group.name}",messageModel = MessageModel.BROADCASTING )
+@RocketMQMessageListener(topic = "${mq.userInfo.topic}",consumerGroup = "${mq.userInfo.consumer.group.name}",messageModel = MessageModel.BROADCASTING )
 public class CancelMQListener implements RocketMQListener<MessageExt>{
 
 
@@ -1355,7 +1355,7 @@ public class CancelMQListener implements RocketMQListener<MessageExt>{
 ```java
 @Slf4j
 @Component
-@RocketMQMessageListener(topic = "${mq.order.topic}",consumerGroup = "${mq.order.consumer.group.name}",messageModel = MessageModel.BROADCASTING )
+@RocketMQMessageListener(topic = "${mq.userInfo.topic}",consumerGroup = "${mq.userInfo.consumer.group.name}",messageModel = MessageModel.BROADCASTING )
 public class CancelMQListener implements RocketMQListener<MessageExt>{
 
 
@@ -1400,11 +1400,11 @@ public class CancelMQListener implements RocketMQListener<MessageExt>{
         String keys = messageExt.getKeys();
         log.info("CancelOrderProcessor receive message:"+messageExt);
         CancelOrderMQ cancelOrderMQ = JSON.parseObject(body, CancelOrderMQ.class);
-        TradeOrder order = orderService.findOne(cancelOrderMQ.getOrderId());
-		order.setOrderStatus(ShopCode.SHOP_ORDER_CANCEL.getCode());
-        orderService.changeOrderStatus(order);
-        log.info("订单:["+order.getOrderId()+"]状态设置为取消");
-        return order;
+        TradeOrder userInfo = orderService.findOne(cancelOrderMQ.getOrderId());
+		userInfo.setOrderStatus(ShopCode.SHOP_ORDER_CANCEL.getCode());
+        orderService.changeOrderStatus(userInfo);
+        log.info("订单:["+userInfo.getOrderId()+"]状态设置为取消");
+        return userInfo;
     }
 ```
 
@@ -1437,17 +1437,17 @@ public void add(){
     Long userId=XXXL;
     Long couponId=XXXL;
 
-    TradeOrder order = new TradeOrder();
-    order.setGoodsId(goodsId);
-    order.setUserId(userId);
-    order.setGoodsNumber(1);
-    order.setAddress("北京");
-    order.setGoodsPrice(new BigDecimal("5000"));
-    order.setOrderAmount(new BigDecimal("5000"));
-    order.setMoneyPaid(new BigDecimal("100"));
-    order.setCouponId(couponId);
-    order.setShippingFee(new BigDecimal(0));
-    orderService.confirmOrder(order);
+    TradeOrder userInfo = new TradeOrder();
+    userInfo.setGoodsId(goodsId);
+    userInfo.setUserId(userId);
+    userInfo.setGoodsNumber(1);
+    userInfo.setAddress("北京");
+    userInfo.setGoodsPrice(new BigDecimal("5000"));
+    userInfo.setOrderAmount(new BigDecimal("5000"));
+    userInfo.setMoneyPaid(new BigDecimal("100"));
+    userInfo.setCouponId(couponId);
+    userInfo.setShippingFee(new BigDecimal(0));
+    orderService.confirmOrder(userInfo);
 }
 ```
 
@@ -1636,17 +1636,17 @@ public class BaseConsumer {
         OrderMQ orderMq = JSON.parseObject(body, OrderMQ.class);
         
         //查询
-        TradeOrder order = orderService.findOne(orderMq.getOrderId());
+        TradeOrder userInfo = orderService.findOne(orderMq.getOrderId());
 
         if(ShopCode.SHOP_ORDER_MESSAGE_STATUS_CANCEL.getCode().equals(code)){
-            order.setOrderStatus(ShopCode.SHOP_ORDER_CANCEL.getCode());
+            userInfo.setOrderStatus(ShopCode.SHOP_ORDER_CANCEL.getCode());
         }
 
         if(ShopCode.SHOP_ORDER_MESSAGE_STATUS_ISPAID.getCode().equals(code)){
-            order.setPayStatus(ShopCode.SHOP_ORDER_PAY_STATUS_IS_PAY.getCode());
+            userInfo.setPayStatus(ShopCode.SHOP_ORDER_PAY_STATUS_IS_PAY.getCode());
         }
-        orderService.changeOrderStatus(order);
-        return order;
+        orderService.changeOrderStatus(userInfo);
+        return userInfo;
     }
 
 }
@@ -1668,10 +1668,10 @@ public class PayConsumer extends BaseConsumer implements RocketMQListener<Messag
     public void onMessage(MessageExt messageExt) {
         try {
             log.info("CancelOrderProcessor receive message:"+messageExt);
-            TradeOrder order = handleMessage(orderService, 
+            TradeOrder userInfo = handleMessage(orderService, 
                                              messageExt, 
                                              ShopCode.SHOP_ORDER_MESSAGE_STATUS_ISPAID.getCode());
-            log.info("订单:["+order.getOrderId()+"]支付成功");
+            log.info("订单:["+userInfo.getOrderId()+"]支付成功");
         } catch (Exception e) {
             e.printStackTrace();
             log.error("订单支付失败");
@@ -1682,7 +1682,7 @@ public class PayConsumer extends BaseConsumer implements RocketMQListener<Messag
 
 # 6. 整体联调
 
-通过Rest客户端请求shop-order-web和shop-pay-web完成下单和支付操作
+通过Rest客户端请求shop-userInfo-web和shop-pay-web完成下单和支付操作
 
 ## 6.1 准备工作
 
@@ -1731,10 +1731,10 @@ public class RestTemplateConfig {
 
 ```properties
 server.host=http://localhost
-server.servlet.path=/order-web
+server.servlet.path=/userInfo-web
 server.port=8080
-shop.order.baseURI=${server.host}:${server.port}${server.servlet.path}
-shop.order.confirm=/order/confirm
+shop.userInfo.baseURI=${server.host}:${server.port}${server.servlet.path}
+shop.userInfo.confirm=/userInfo/confirm
 ```
 
 * 支付系统
@@ -1759,10 +1759,10 @@ public class OrderTest {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value("${shop.order.baseURI}")
+    @Value("${shop.userInfo.baseURI}")
     private String baseURI;
 
-    @Value("${shop.order.confirm}")
+    @Value("${shop.userInfo.confirm}")
     private String confirmOrderPath;
 
     @Autowired
@@ -1777,18 +1777,18 @@ public class OrderTest {
         Long userId=XXXL;
         Long couponId=XXXL;
 
-        TradeOrder order = new TradeOrder();
-        order.setGoodsId(goodsId);
-        order.setUserId(userId);
-        order.setGoodsNumber(1);
-        order.setAddress("北京");
-        order.setGoodsPrice(new BigDecimal("5000"));
-        order.setOrderAmount(new BigDecimal("5000"));
-        order.setMoneyPaid(new BigDecimal("100"));
-        order.setCouponId(couponId);
-        order.setShippingFee(new BigDecimal(0));
+        TradeOrder userInfo = new TradeOrder();
+        userInfo.setGoodsId(goodsId);
+        userInfo.setUserId(userId);
+        userInfo.setGoodsNumber(1);
+        userInfo.setAddress("北京");
+        userInfo.setGoodsPrice(new BigDecimal("5000"));
+        userInfo.setOrderAmount(new BigDecimal("5000"));
+        userInfo.setMoneyPaid(new BigDecimal("100"));
+        userInfo.setCouponId(couponId);
+        userInfo.setShippingFee(new BigDecimal(0));
 
-        Result result = restTemplate.postForEntity(baseURI + confirmOrderPath, order, Result.class).getBody();
+        Result result = restTemplate.postForEntity(baseURI + confirmOrderPath, userInfo, Result.class).getBody();
         System.out.println(result);
     }
 
