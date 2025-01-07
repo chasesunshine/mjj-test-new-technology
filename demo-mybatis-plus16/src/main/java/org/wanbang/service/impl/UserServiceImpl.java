@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import org.wanbang.dao.UserMapper;
 import org.wanbang.entity.User;
 import org.wanbang.service.UserService;
+import org.wanbang.validationTest.MyService;
+import org.wanbang.validationTest.UserEntity;
 
 import javax.annotation.Resource;
 
@@ -21,6 +23,9 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserMapper userMapper;
 
+    @Resource
+    private MyService myService;
+
     /**
      * 通过ID查询单条数据
      *
@@ -31,6 +36,17 @@ public class UserServiceImpl implements UserService {
     public User queryById(String name) {
         log.info("通过ID查询单条数据");
         return this.userMapper.selectOne(new QueryWrapper<User>().lambda().eq(User::getName,name));
+    }
+
+    @Override
+    public String testValidate() {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setPhoneNum("q");
+        userEntity.setName("fxjk");
+        userEntity.setId("123");
+
+        String s = myService.processOrder(userEntity);
+        return s;
     }
 
 
