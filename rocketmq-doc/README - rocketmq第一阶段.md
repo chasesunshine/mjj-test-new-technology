@@ -169,10 +169,10 @@
                     这种情况发送和消费是不能保证顺序。但是如果控制发送的顺序消息只依次发送到同一个queue中，消费的时候只从这个queue上依次拉取，则就保证了顺序。当发送和消费参与的queue只有一个，则是全局有序；如果多个queue参与，则为分区有序，即相对每个queue，消息都是有序的。
                 下面用订单进行分区有序的示例。一个订单的顺序流程是：创建、付款、推送、完成。订单号相同的消息会被先后发送到同一个队列中，消费时，同一个OrderId获取到的肯定是同一个队列。
         -P25  25.顺序消息发送者
-                com.example.rocketmq.test.order.Producer
-                com.example.rocketmq.test.order.OrderStep
+                com.example.rocketmq.test.userInfo.Producer
+                com.example.rocketmq.test.userInfo.OrderStep
         -P26  26.顺序消息消费者
-                com.example.rocketmq.test.order.ConsumerInOrder
+                com.example.rocketmq.test.userInfo.ConsumerInOrder
         -P27  27.延迟消息
                 com.example.rocketmq.test.delay.Producer
                 com.example.rocketmq.test.delay.Consumer

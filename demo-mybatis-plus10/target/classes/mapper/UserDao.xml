@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.wanbang.dao.UserDao">
+<mapper namespace="org.wanbang.dao.UserMapper">
 
     <select id="login" resultType="org.wanbang.entity.User">
         select id, name, password from user where name=#{name} and password=#{password}

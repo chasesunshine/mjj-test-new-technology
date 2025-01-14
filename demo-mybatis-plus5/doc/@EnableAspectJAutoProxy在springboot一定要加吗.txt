@@ -1,10 +1,10 @@
-# @EnableAspectJAutoProxyÔÚspringbootÒ»¶¨Òª¼ÓÂğ
+# @EnableAspectJAutoProxyï¿½ï¿½springbootÒ»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 https://www.jianshu.com/p/88c98541c957
 
-Ò»¡¢Ğ§¹ûÑİÊ¾
-ÒÔÏÂÃæµÄÀı×ÓÑİÊ¾£¬
+Ò»ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½Ê¾
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
 
-ÒµÎñÀà£¬
+Òµï¿½ï¿½ï¿½à£¬
 
 UserService.java
 
@@ -20,10 +20,10 @@ import org.springframework.stereotype.Service;
 public class UserService implements Us{
     @Override
     public void saveUser(User user){
-        System.out.println("±£´æuser¶ÔÏóµ½Êı¾İ¿â:"+user);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½userï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½:"+user);
     }
 }
-ÇĞÃæÀà£¬
+ï¿½ï¿½ï¿½ï¿½ï¿½à£¬
 
 LogAspect.java
 
@@ -48,15 +48,15 @@ public class LogAspect {
     }
     @Before(value = "pointCut()")
     public void before(JoinPoint joinPoint){
-        System.out.println("·½·¨Ö´ĞĞÇ°-20220816");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½Ç°-20220816");
     }
 
     @AfterReturning(value = "pointCut()")
     public void after(JoinPoint joinPoint){
-        System.out.println("·½·¨Ö´ĞĞºó-20220816");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğºï¿½-20220816");
     }
 }
-²âÊÔµÄcontroller
+ï¿½ï¿½ï¿½Ôµï¿½controller
 
 UserController.java
 
@@ -81,12 +81,12 @@ public class UserController {
 
         User user=new User();
         user.setId("1");
-        user.setName("ÕÅÈı");
+        user.setName("ï¿½ï¿½ï¿½ï¿½");
         us.saveUser(user);
         return "success";
     }
 }
-sprinbootµÄÆô¶¯Àà£¬
+sprinbootï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬
 
 BootServer.java
 
@@ -98,7 +98,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.ImportResource;
 
 /**
- * Æô¶¯Àà
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @date 2022/6/3 21:32
  */
 @SpringBootApplication()
@@ -111,16 +111,16 @@ public class BootServer {
         }
     }
 }
-²âÊÔ½á¹ûÈçÏÂ£¬
+ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
 
 2022-08-16 22:30:44.082  INFO 25716 --- [nio-9099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-·½·¨Ö´ĞĞÇ°-20220816
-±£´æuser¶ÔÏóµ½Êı¾İ¿â:User{name='ÕÅÈı', id='1'}
-·½·¨Ö´ĞĞºó-20220816
-´ÓÉÏÃæµÄ²âÊÔ½á¹ûÀ´¿´£¬Ã»ÓĞ¼Ó@EnableAspectJAutoProxy×¢½â£¬µ«ÊÇAOPÉúĞ§ÁË£¬ÕâÊÇÎªÊ²Ã´£¿
+ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½Ç°-20220816
+ï¿½ï¿½ï¿½ï¿½userï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½:User{name='ï¿½ï¿½ï¿½ï¿½', id='1'}
+ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğºï¿½-20220816
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ğ¼ï¿½@EnableAspectJAutoProxy×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½AOPï¿½ï¿½Ğ§ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÊ²Ã´ï¿½ï¿½
 
-¶ş¡¢ÎªÊ²Ã´²»¼Ó@EnableAspectJAutoProxyÇĞÃæÉúĞ§
-¹ØÓÚÕâ¸öÎÊÌâÎÒÅÅ²éÁËºÜ¾Ã£¬×îºóÔÚÒÀÀµÖĞÕÒµ½ÁËÔ­Òò£¬¿´ÏÂpomÎÄ¼ş
+ï¿½ï¿½ï¿½ï¿½ÎªÊ²Ã´ï¿½ï¿½ï¿½ï¿½@EnableAspectJAutoProxyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½ËºÜ¾Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½Ô­ï¿½ò£¬¿ï¿½ï¿½ï¿½pomï¿½Ä¼ï¿½
 
 pom.xml
 
@@ -139,19 +139,19 @@ pom.xml
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
-        <!--spring-bootµÄwebÒÀÀµ-->
+        <!--spring-bootï¿½ï¿½webï¿½ï¿½ï¿½ï¿½-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>2.3.3.RELEASE</version>
         </dependency>
-        <!--×Ô¶¨ÒåµÄstarter-->
+        <!--ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½starter-->
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>customer-spring-boot-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--Ê¹ÓÃspringAOPĞèÒªÒıÈë¸ÃÒÀÀµ-->
+        <!--Ê¹ï¿½ï¿½springAOPï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -175,16 +175,14 @@ pom.xml
         </plugins>
     </build>
 </project>
-ÔÚÒÀÀµÖĞÓĞspring-boot-starter-webµÄÒÀÀµ£¬¸ÃÒÀÀµÓĞÏÂÃæµÄÒÀÀµ£¬
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½spring-boot-starter-webï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-»áÒıÈëspring-boot-autoconfigureµÄÒÀÀµ£¬ÕâÊÇ×Ô¶¯×°ÅäµÄÒÀÀµ£¬Ò²¾ÍÊÇ»á¶ÁÈ¡ÆäÏÂµÄspring.factoriesÎÄ¼ş£¬ÔÚ¸ÃÎÄ¼şÖĞÓĞÏÂÃæµÄÅäÖÃ£¬
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½spring-boot-autoconfigureï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ç»ï¿½ï¿½È¡ï¿½ï¿½ï¿½Âµï¿½spring.factoriesï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½
 
-Ã»´í¾ÍÊÇÒòÎªAopAutoConfigurationÀàµÄÎÊÌâ¡£ÏÂÃæ¿´¾ßÌåÔ­Òò¡£
+Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªAopAutoConfigurationï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£ï¿½ï¿½ï¿½æ¿´ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
 
-Èı¡¢Ô­Òò·ÖÎö
-Òª¿´¾ßÌåÔ­Òò£¬ÎÒÃÇ¾ÍÒª´ò¿ªAopAutoConfigurationÕâ¸öÀà¿´ÏÂ£¬
-
-
+ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½
+Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½Òªï¿½ï¿½AopAutoConfigurationï¿½ï¿½ï¿½ï¿½à¿´ï¿½Â£ï¿½
 
 
 
@@ -192,7 +190,9 @@ pom.xml
 
 
 
-ÏÈ¿´×¢ÊÍ°É£¬×¢ÊÍÖĞËµAopAutoConfigurationµÈÍ¬ÓÚ@EnableAspectJAutoProxy×¢½â£¬Ò²¾ÍÊÇ¸ÃÀàÆğµÄ×÷ÓÃºÍ@EnableAspectJAutoProxyÊÇÒ»ÑùµÄ£¬ÔÙ¿´¸ÃÀàÉÏµÄ×¢½â£¬ÖØµã¿´@ConditionalOProperty×¢½âÖĞµÄÄÚÈİ£¬ÒâË¼ÊÇÈç¹ûÔÚÅäÖÃÎÄ¼şÖĞÓĞ¡±spring.aop.auto¡°µÄÅäÖÃ£¬Èç¹û²»ÅäÖÃÎªtrue£¬·ñÔò¿ÉÒÔÅäÖÃÎªfalse£¬ÏÖÔÚÎÒµÄÅäÖÃÎÄ¼şÖĞÊÇÃ»ÓĞ¸ÃÅäÖÃÏîµÄ£¬
+
+
+ï¿½È¿ï¿½×¢ï¿½Í°É£ï¿½×¢ï¿½ï¿½ï¿½ï¿½ËµAopAutoConfigurationï¿½ï¿½Í¬ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½â£¬Ò²ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½@EnableAspectJAutoProxyï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ù¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½×¢ï¿½â£¬ï¿½Øµã¿´@ConditionalOProperty×¢ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½spring.aop.autoï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªfalseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ğ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½
 
 server.port=9099
 spring.datasource.type=com.mysql.cj.jdbc.MysqlDataSource
@@ -204,7 +204,7 @@ spring.datasource.url=jdbc:mysql://10.0.0.37:3306/channel_center
 #?????
 my.customer.name=hello
 my.customer.code=autoconfiguration
-ÄÇÃ´ÎÒÏÖÔÚÔö¼Ó¸ÃÅäÖÃ£¬²¢ÉèÖÃÎªfalse£¬
+ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªfalseï¿½ï¿½
 
 server.port=9099
 spring.datasource.type=com.mysql.cj.jdbc.MysqlDataSource
@@ -217,14 +217,14 @@ spring.datasource.url=jdbc:mysql://10.0.0.37:3306/channel_center
 my.customer.name=hello
 my.customer.code=autoconfiguration
 spring.aop.auto=false
-ÖØÆô·şÎñÖ®ºó£¬¿´²âÊÔ½á¹û£¬
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ó£¬¿ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½
 
 
 
 
 
 
-´Ó²âÊÔ½á¹û¿ÉÒÔ¿´µ½springAOPÃ»ÓĞÆğ×÷ÓÃ£¬ÏÖÔÚÔÚÆô¶¯ÀàÉÏ¼ÓÉÏ@EnableAspectJAutoProxy×¢½â£¬¿´ÏÂ²âÊÔ½á¹û
+ï¿½Ó²ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½springAOPÃ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½â£¬ï¿½ï¿½ï¿½Â²ï¿½ï¿½Ô½ï¿½ï¿½
 
 
 
@@ -237,13 +237,13 @@ spring.aop.auto=false
 
 
 
-´ÓÉÏÃæµÄ²âÊÔ½á¹û¿ÉÒÔ¿´µ½£¬Ìí¼ÓÁË@EnableAspectJAutoProxy×¢½âspringAOPÉúĞ§ÁË¡£
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½ï¿½springAOPï¿½ï¿½Ğ§ï¿½Ë¡ï¿½
 
-×ÛÉÏ£¬ÔÚspringboot»·¾³ÏÂ£¬ÓÉÓÚ´æÔÚspring-boot-autoconfigureÒÀÀµ£¬Ä¬ÈÏ»á×¢ÈëAopAutoConfigurationÅäÖÃÀà£¬¸ÃÀàµÄ×÷ÓÃµÈÍ¬ÓÚ@EnableAspectJAutoProxy×¢½â£¬ËùÒÔÔÚÕâÖÖÇé¿öÏÂ¿ÉÒÔ²»¼Ó@EnableAspectJAutoProxy×¢½â£¬AopAutoConfiguration¿ÉÒÔÍ¨¹ıspring.aop.autoÊôĞÔ¿ØÖÆ£»
+ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½springbootï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½spring-boot-autoconfigureï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½Ï»ï¿½×¢ï¿½ï¿½AopAutoConfigurationï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Í¬ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ï¿½Ô²ï¿½ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½â£¬AopAutoConfigurationï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½spring.aop.autoï¿½ï¿½ï¿½Ô¿ï¿½ï¿½Æ£ï¿½
 
-ËÄ¡¢×Ü½á
-±¾ÎÄÖ÷Òª·ÖÎöÁËÔÚspringboot»·¾³ÏÂ£¬²»¼Ó@EnableAspectJAutoProxy×¢½âspringAOPÈÔÈ»ÉúĞ§µÄÎÊÌâ¡£ÎªÁË±£ÏÕÆÚ¼äÇëÒ»ÂÉ¼ÓÉÏ@EnableAspetJAutoProxy×¢½â¡£
+ï¿½Ä¡ï¿½ï¿½Ü½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½springbootï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½ï¿½springAOPï¿½ï¿½È»ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½â¡£Îªï¿½Ë±ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½Ò»ï¿½É¼ï¿½ï¿½ï¿½@EnableAspetJAutoProxy×¢ï¿½â¡£
 
-AopAutoConfigurationÀàµÈÍ¬ÓÚ@EnableAspectJAutoProxy×¢½â£»
-spring.aop.auto=ture/falseÊôĞÔ¿ÉÒÔ¿ØÖÆAopAutoConfigurationÀàÊÇ·ñÉúĞ§£»
-¾²Ì¬·½·¨²»ÄÜÊ¹ÓÃAOP£»
+AopAutoConfigurationï¿½ï¿½ï¿½Í¬ï¿½ï¿½@EnableAspectJAutoProxy×¢ï¿½â£»
+spring.aop.auto=ture/falseï¿½ï¿½ï¿½Ô¿ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½AopAutoConfigurationï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½
+ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½AOPï¿½ï¿½

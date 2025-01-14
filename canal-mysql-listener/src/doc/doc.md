@@ -11,6 +11,11 @@
 # Canal安装和配置，实现监听binlog日志（这篇负责安装 cancal，除了代码其余的都要 跟着做 ）
     https://blog.csdn.net/qq_45932382/article/details/127051444
     启动 ： startup.bat
+
+    canal.developer-1.1.5.tar.gz windows下载(下载canal用这篇)
+    https://www.coder100.com/index/index/content/id/1963945
+    在github链接中下载的
+    链接：https://github.com/alibaba/canal/releases/download/canal-1.1.5/canal.deployer-1.1.5.tar.gz
     
 # Canal学习笔记 | 简单Demo获取更新插入和删除的数据 （这篇的代码比较靠谱）
     https://blog.csdn.net/qq_20051535/article/details/113180211?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-5-113180211-blog-103732526.235%5Ev29%5Epc_relevant_default_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-5-113180211-blog-103732526.235%5Ev29%5Epc_relevant_default_base&utm_relevant_index=5

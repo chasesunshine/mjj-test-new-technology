@@ -47,6 +47,7 @@ public class LvMiMqConsumer {
 
         AclClientRPCHook acl = new AclClientRPCHook(new SessionCredentials(keyId, appKey));
         //设置消费者组
+        // public DefaultMQPushConsumer(String consumerGroup, RPCHook rpcHook, AllocateMessageQueueStrategy allocateMessageQueueStrategy)
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(appId, acl, new AllocateMessageQueueAveragely());
 
         consumer.setVipChannelEnabled(false);
@@ -61,11 +62,11 @@ public class LvMiMqConsumer {
         consumer.setConsumeTimestamp(UtilAll.timeMillisToHumanString3(System.currentTimeMillis() - 1000 * 60 * 10));
 
         //设置消费者拉取消息的策略，*表示消费该topic下的所有消息，也可以指定tag进行消息过滤
+        // public void subscribe(String topic, String subExpression) throws MQClientException
         consumer.subscribe(appId, "*");
 
         //消费者端启动消息监听，一旦生产者发送消息被监听到，就打印消息，和rabbitmq中的handlerDelivery类似
         consumer.registerMessageListener(new MessageListenerConcurrently() {
-
             @Override
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
                 try {
@@ -76,7 +77,7 @@ public class LvMiMqConsumer {
 
                         System.out.println(convertUTCToBeijingTime(convertTimestampToUTC(System.currentTimeMillis())));
 
-                        System.out.println("******device info******{}" + msg);
+                        System.out.println("topic: "+topic+"  ******device info******{}" + msg);
 
                         //log.info("******device info******{}", msg);
                     }

@@ -1,0 +1,466 @@
+package org.wanbang.util;
+
+import com.alibaba.fastjson.JSON;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class MainTest {
+    public static void main(String[] args) {
+        List<String> objects = new ArrayList<>();
+        String s = "\"404cca5c5cc0\",\n" +
+                "\"404cca5c3294\",\n" +
+                "\"404cca5c32f8\",\n" +
+                "\"404cca5c4864\",\n" +
+                "\"404cca5c5ce0\",\n" +
+                "\"404cca5c6250\",\n" +
+                "\"404cca5c516c\",\n" +
+                "\"404cca5c6214\",\n" +
+                "\"404cca5c344c\",\n" +
+                "\"404cca5c3440\",\n" +
+                "\"404cca5c5a90\",\n" +
+                "\"404cca5c428c\",\n" +
+                "\"404cca5c6248\",\n" +
+                "\"404cca5c36a0\",\n" +
+                "\"404cca5c4acc\",\n" +
+                "\"404cca5c5ca8\",\n" +
+                "\"404cca5c3464\",\n" +
+                "\"404cca5c5b44\",\n" +
+                "\"404cca5c5b90\",\n" +
+                "\"404cca5c5a50\",\n" +
+                "\"404cca5c6054\",\n" +
+                "\"404cca5c5a9c\",\n" +
+                "\"404cca5c4464\",\n" +
+                "\"404cca5c5740\",\n" +
+                "\"404cca5c44b4\",\n" +
+                "\"404cca5c34fc\",\n" +
+                "\"404cca5c47e8\",\n" +
+                "\"404cca5c48a0\",\n" +
+                "\"404cca5c5e30\",\n" +
+                "\"404cca5c5a94\",\n" +
+                "\"404cca5c41e0\",\n" +
+                "\"404cca5c5708\",\n" +
+                "\"404cca5c48b8\",\n" +
+                "\"404cca5c62a8\",\n" +
+                "\"404cca5c5fcc\",\n" +
+                "\"404cca5c5dd4\",\n" +
+                "\"404cca5c4188\",\n" +
+                "\"404cca5c339c\",\n" +
+                "\"404cca5c5d38\",\n" +
+                "\"404cca5c5cb4\",\n" +
+                "\"404cca5c41b0\",\n" +
+                "\"404cca5c5a30\",\n" +
+                "\"404cca5c41a0\",\n" +
+                "\"404cca5c572c\",\n" +
+                "\"404cca5c576c\",\n" +
+                "\"404cca5c5cbc\",\n" +
+                "\"404cca5c674c\",\n" +
+                "\"404cca5c5c88\",\n" +
+                "\"404cca5c32f0\",\n" +
+                "\"404cca5c32a0\",\n" +
+                "\"404cca5c54f4\",\n" +
+                "\"404cca5c3424\",\n" +
+                "\"404cca5c4a98\",\n" +
+                "\"404cca5c32a4\",\n" +
+                "\"404cca5c51c4\",\n" +
+                "\"404cca5c4a60\",\n" +
+                "\"404cca5c5fd0\",\n" +
+                "\"404cca5c3874\",\n" +
+                "\"404cca5c3878\",\n" +
+                "\"404cca5c4424\",\n" +
+                "\"404cca5c4e74\",\n" +
+                "\"404cca5c5d14\",\n" +
+                "\"404cca5c4f40\",\n" +
+                "\"404cca5c345c\",\n" +
+                "\"404cca5c5ff8\",\n" +
+                "\"404cca5c418c\",\n" +
+                "\"404cca5c6014\",\n" +
+                "\"404cca5c48bc\",\n" +
+                "\"404cca5c6210\",\n" +
+                "\"404cca5c43e8\",\n" +
+                "\"404cca5c5d28\",\n" +
+                "\"404cca5c5198\",\n" +
+                "\"404cca5c51ec\",\n" +
+                "\"404cca5c4190\",\n" +
+                "\"404cca5c5750\",\n" +
+                "\"404cca5c50c0\",\n" +
+                "\"404cca5c6068\",\n" +
+                "\"404cca5c48c0\",\n" +
+                "\"404cca5c4e60\",\n" +
+                "\"404cca5c5710\",\n" +
+                "\"404cca5c601c\",\n" +
+                "\"404cca5c61d8\",\n" +
+                "\"404cca5c5758\",\n" +
+                "\"404cca5c5c40\",\n" +
+                "\"404cca5c4460\",\n" +
+                "\"404cca5c60b8\",\n" +
+                "\"404cca5c6888\",\n" +
+                "\"404cca5c5e0c\",\n" +
+                "\"404cca5c5c64\",\n" +
+                "\"404cca5c419c\",\n" +
+                "\"404cca5c4e50\",\n" +
+                "\"404cca5c4230\",\n" +
+                "\"404cca5c5078\",\n" +
+                "\"404cca5c32a8\",\n" +
+                "\"404cca5c4200\"";
+        String[] split = s.split(",");
+        List<String> strings = Arrays.asList(split);
+        String value = "\"404cca5c5fcc\",\n" +
+                "\"404cca5c41a0\",\n" +
+                "\"404cca5c41b0\",\n" +
+                "\"404cca5c345c\",\n" +
+                "\"404cca5c4e74\",\n" +
+                "\"404cca5c32a4\",\n" +
+                "\"404cca5c5d14\",\n" +
+                "\"404cca5c5fd0\",\n" +
+                "\"404cca5c5a94\",\n" +
+                "\"404cca5c5cc0\",\n" +
+                "\"404cca5c5d38\",\n" +
+                "\"404cca5c5cbc\",\n" +
+                "\"404cca5c3424\",\n" +
+                "\"404cca5c4a98\",\n" +
+                "\"404cca5c3878\",\n" +
+                "\"404cca5c4424\",\n" +
+                "\"404cca5c51c4\",\n" +
+                "\"404cca5c674c\",\n" +
+                "\"404cca5c5c88\",\n" +
+                "\"404cca5c5cb4\",\n" +
+                "\"404cca5c5a30\",\n" +
+                "\"404cca5c62a8\",\n" +
+                "\"404cca5c41e0\",\n" +
+                "\"404cca5c5dd4\",\n" +
+                "\"404cca5c32f0\",\n" +
+                "\"404cca5c4a60\",\n" +
+                "\"404cca5c48b8\",\n" +
+                "\"404cca5c4188\",\n" +
+                "\"404cca5c339c\",\n" +
+                "\"404cca5c572c\",\n" +
+                "\"404cca5c3874\",\n" +
+                "\"404cca5c54f4\",\n" +
+                "\"404cca5c32a0\",\n" +
+                "\"404cca5c5708\",\n" +
+                "\"404cca5c4f40\",\n" +
+                "\"404cca5c576c\",\n" +
+                "\"404cca5c5e0c\",\n" +
+                "\"404cca5c61d8\",\n" +
+                "\"404cca5c601c\",\n" +
+                "\"404cca5c5c64\",\n" +
+                "\"404cca5c5c40\",\n" +
+                "\"404cca5c5758\",\n" +
+                "\"404cca5c60b8\",\n" +
+                "\"404cca5c51ec\",\n" +
+                "\"404cca5c50c0\",\n" +
+                "\"404cca5c5198\",\n" +
+                "\"404cca5c4460\",\n" +
+                "\"404cca5c5710\",\n" +
+                "\"404cca5c6888\",\n" +
+                "\"404cca5c4e50\",\n" +
+                "\"404cca5c418c\",\n" +
+                "\"404cca5c5ff8\",\n" +
+                "\"404cca5c4200\",\n" +
+                "\"404cca5c48bc\",\n" +
+                "\"404cca5c6068\",\n" +
+                "\"404cca5c5d28\",\n" +
+                "\"404cca5c5078\",\n" +
+                "\"404cca5c4190\",\n" +
+                "\"404cca5c43e8\",\n" +
+                "\"404cca5c5750\",\n" +
+                "\"404cca5c6210\",\n" +
+                "\"404cca5c48c0\",\n" +
+                "\"404cca5c6014\",\n" +
+                "\"404cca5c4e60\",\n" +
+                "\"404cca5c419c\",\n" +
+                "\"404cca5c4230\",\n" +
+                "\"404cca5c47e8\",\n" +
+                "\"404cca5c5e30\",\n" +
+                "\"404cca5c48a0\",\n" +
+                "\"404cca5c34fc\",\n" +
+                "\"404cca5c5a9c\",\n" +
+                "\"404cca5c5740\",\n" +
+                "\"404cca5c6054\",\n" +
+                "\"404cca5c4464\",\n" +
+                "\"404cca5c4acc\",\n" +
+                "\"404cca5c5ca8\",\n" +
+                "\"404cca5c6214\",\n" +
+                "\"404cca5c32f8\",\n" +
+                "\"404cca5c3294\",\n" +
+                "\"404cca5c344c\",\n" +
+                "\"404cca5c5ce0\",\n" +
+                "\"404cca5c4864\",\n" +
+                "\"404cca5c5a90\",\n" +
+                "\"404cca5c516c\",\n" +
+                "\"404cca5c6250\",\n" +
+                "\"404cca5c6248\",\n" +
+                "\"404cca5c428c\",\n" +
+                "\"404cca5c36a0\",\n" +
+                "\"404cca5c5a50\",\n" +
+                "\"404cca5c5b90\",\n" +
+                "\"404cca5c3440\",\n" +
+                "\"404cca5c5b44\",\n" +
+                "\"404cca5c3464\",\n" +
+                "\"404cca5c32a8\",\n" +
+                "\"404cca5c44b4\",\n" +
+                "\"404cca5c57b8\",\n" +
+                "\"404cca5c6204\",\n" +
+                "\"404cca5c48cc\",\n" +
+                "\"404cca5c5cec\",\n" +
+                "\"404cca5c5d20\",\n" +
+                "\"404cca5c489c\",\n" +
+                "\"404cca5c41c0\",\n" +
+                "\"404cca5c3428\",\n" +
+                "\"404cca5c60b0\",\n" +
+                "\"404cca5c32c8\",\n" +
+                "\"404cca5c538c\",\n" +
+                "\"404cca5c5a88\",\n" +
+                "\"404cca5c66e8\",\n" +
+                "\"404cca5c48e8\",\n" +
+                "\"404cca5c5cc4\",\n" +
+                "\"404cca5c6744\",\n" +
+                "\"404cca5c5714\",\n" +
+                "\"404cca5c33bc\",\n" +
+                "\"404cca5c6754\",\n" +
+                "\"404cca5c53fc\",\n" +
+                "\"404cca5c54d8\",\n" +
+                "\"404cca5c5cd0\",\n" +
+                "\"404cca5c54c0\",\n" +
+                "\"404cca5c5488\",\n" +
+                "\"404cca5c6064\",\n" +
+                "\"404cca5c5e1c\",\n" +
+                "\"404cca5c4aa0\",\n" +
+                "\"404cca5c5cd4\",\n" +
+                "\"404cca5c3290\",\n" +
+                "\"404cca5c6238\",\n" +
+                "\"404cca5c5ba8\",\n" +
+                "\"404cca5c6758\",\n" +
+                "\"404cca5c5fec\",\n" +
+                "\"404cca5c3298\",\n" +
+                "\"404cca5c57a4\",\n" +
+                "\"404cca5c6714\",\n" +
+                "\"404cca5c66f4\",\n" +
+                "\"404cca5c66f0\",\n" +
+                "\"404cca5c5cb8\",\n" +
+                "\"404cca5c6738\",\n" +
+                "\"404cca5c4858\",\n" +
+                "\"404cca5c43e0\",\n" +
+                "\"404cca5c486c\",\n" +
+                "\"404cca5c5d04\",\n" +
+                "\"404cca5c6298\",\n" +
+                "\"404cca5c32d8\",\n" +
+                "\"404cca5c5d08\",\n" +
+                "\"404cca5c5e14\",\n" +
+                "\"404cca5c54b0\",\n" +
+                "\"404cca5c3394\",\n" +
+                "\"404cca5c6088\",\n" +
+                "\"404cca5c5df4\",\n" +
+                "\"404cca5c5e04\",\n" +
+                "\"404cca5c41f8\",\n" +
+                "\"404cca5c5744\",\n" +
+                "\"404cca5c4a94\",\n" +
+                "\"404cca5c62bc\",\n" +
+                "\"404cca5c4208\",\n" +
+                "\"404cca5c4184\",\n" +
+                "\"404cca5c6004\",\n" +
+                "\"404cca5c54c8\",\n" +
+                "\"404cca5c48a4\",\n" +
+                "\"404cca5c5b9c\",\n" +
+                "\"404cca5c4174\",\n" +
+                "\"404cca5c41d0\",\n" +
+                "\"404cca5c4198\",\n" +
+                "\"404cca5c5dd8\",\n" +
+                "\"404cca5c4a64\",\n" +
+                "\"404cca5c5a98\"";
+        String[] split1 = value.split(",");
+        List<String> strings1 = Arrays.asList(split1);
+
+        List<String> result = strings1.stream()
+                .filter(e -> !strings.contains(e))
+                .collect(Collectors.toList());
+
+        System.out.println(JSON.toJSONString(result));
+
+        String result1 = "\"4847ac66ebdc4f26806a225ca508faf5\",\"404CCA5C5FCC\".\n" +
+                "\"9932e41693414b2ba7e0a2a5acded4fa\",\"404CCA5C41A0\".\n" +
+                "\"8b8ed5b90e7d417db4f4c4c2f073aaa5\",\"404CCA5C41B0\".\n" +
+                "\"32ad3fb3a77e4429a3ab73888eac66d5\",\"404CCA5C345C\".\n" +
+                "\"e04bb716da2d41c89945cdfba2bf178e\",\"404CCA5C4E74\".\n" +
+                "\"a16e5ed1c8364d80adc80ee0007c871e\",\"404CCA5C32A4\".\n" +
+                "\"57de7e40aefe4bd0ac329a71509d512f\",\"404CCA5C5D14\".\n" +
+                "\"dc6a49b4d480436c9ece78f1f876b1b6\",\"404CCA5C5FD0\".\n" +
+                "\"bb758859991e4c1cb3875b6472e66e13\",\"404CCA5C5A94\".\n" +
+                "\"c0f35d6889b44b7185a57c4195cd7658\",\"404CCA5C5CC0\".\n" +
+                "\"89ca27efd60b4f7489287d33e3752fd2\",\"404CCA5C5D38\".\n" +
+                "\"5b6a758a399f4c22964694a57a5cf736\",\"404CCA5C5CBC\".\n" +
+                "\"f8a36a53b42244c6b8c3f343f8331cfb\",\"404CCA5C3424\".\n" +
+                "\"efcd8a8c64564c989c5e9c60ec8942ca\",\"404CCA5C4A98\".\n" +
+                "\"a76724229d474dfda467f033f6112a02\",\"404CCA5C3878\".\n" +
+                "\"fceaf92cfafd412e921c235c3bcd43e0\",\"404CCA5C4424\".\n" +
+                "\"1a27fa8872aa4107a817ed23c697bd37\",\"404CCA5C51C4\".\n" +
+                "\"aaae3fb7cf574530a6ec42fbd3ef284e\",\"404CCA5C674C\".\n" +
+                "\"9a8d68f69b4e494cafa284c6b08ec235\",\"404CCA5C5C88\".\n" +
+                "\"1e9be6e05d4d4cdab3c92462e2ff4198\",\"404CCA5C5CB4\".\n" +
+                "\"827d35f6a8504fbe9c6f69f0df32cbd7\",\"404CCA5C5A30\".\n" +
+                "\"899bbd750bd04df695b4f0885877e707\",\"404CCA5C62A8\".\n" +
+                "\"9ff048b91e17406d9b3ea7ccbe80fc18\",\"404CCA5C41E0\".\n" +
+                "\"7925c467b3a44f5299375d31e638a022\",\"404CCA5C5DD4\".\n" +
+                "\"054b8168fd2a43bd9e4ee5475cc60e47\",\"404CCA5C32F0\".\n" +
+                "\"c36e2060e9d24608ba97c377c4b25282\",\"404CCA5C4A60\".\n" +
+                "\"03eee252660546528bdaabe7b861481b\",\"404CCA5C48B8\".\n" +
+                "\"203992695e234a618417326ba2ae1043\",\"404CCA5C4188\".\n" +
+                "\"04e85fe794e847b5a6b45f8cb2a31e72\",\"404CCA5C339C\".\n" +
+                "\"0e9c41228bbd4876b2017cc6f469a7f4\",\"404CCA5C572C\".\n" +
+                "\"33cafe3e3ff544b792fad8482ccd3464\",\"404CCA5C3874\".\n" +
+                "\"a628389cef134e4099cdc4fff013d910\",\"404CCA5C54F4\".\n" +
+                "\"84d10e344f3b4f748d25be4571fbbc06\",\"404CCA5C32A0\".\n" +
+                "\"dea88678d442407b8183ad6788525d2d\",\"404CCA5C5708\".\n" +
+                "\"6488a1c95c79438fb2b3de34ebee50af\",\"404CCA5C4F40\".\n" +
+                "\"f9ae041fa9154117bb94abe9f7c9b550\",\"404CCA5C576C\".\n" +
+                "\"c6db1bc854df4daab35f02fb90beba9c\",\"404CCA5C5E0C\".\n" +
+                "\"f456f1f4d87f4044ab4c517df49410e9\",\"404CCA5C61D8\".\n" +
+                "\"e0ec9b718b7640409f364d97f6353e42\",\"404CCA5C601C\".\n" +
+                "\"5dc8cc54d3a445ad882ef9e0b1861c39\",\"404CCA5C5C64\".\n" +
+                "\"17842a2ef22f4b0e9904781aa8303af9\",\"404CCA5C5C40\".\n" +
+                "\"731fe0c720354db6a21b977c7a23a9a4\",\"404CCA5C5758\".\n" +
+                "\"7e030ed30ad6465785b4b271f37a5eeb\",\"404CCA5C60B8\".\n" +
+                "\"4cb16b1735d0490aa6fd0630a95f0027\",\"404CCA5C51EC\".\n" +
+                "\"82e6f92ed3424fd09486c6f4d1379887\",\"404CCA5C50C0\".\n" +
+                "\"532031aa18b24055b3ba8d2310c2332e\",\"404CCA5C5198\".\n" +
+                "\"6b886629a70b4aa691a3c6384bc94efe\",\"404CCA5C4460\".\n" +
+                "\"85a6b7a898d141c9b9eeb22aa3c1ccbe\",\"404CCA5C5710\".\n" +
+                "\"7e8a90f19df8448181745658f7bb4385\",\"404CCA5C6888\".\n" +
+                "\"3fb6ae274e1f4e1b8e4f930e3ff9c6f8\",\"404CCA5C4E50\".\n" +
+                "\"32734e3cda82409b853028d570df11c7\",\"404CCA5C418C\".\n" +
+                "\"0b965fe4307b4af3979e763719d9f738\",\"404CCA5C5FF8\".\n" +
+                "\"a7d9b366cf214641a87f08eed47ab9f3\",\"404CCA5C4200\".\n" +
+                "\"29a53746ab2445db93e623083e1ef310\",\"404CCA5C48BC\".\n" +
+                "\"898636775217402db4a87c342292138a\",\"404CCA5C6068\".\n" +
+                "\"d592a2e0b05a444e8cb112fedc088f62\",\"404CCA5C5D28\".\n" +
+                "\"a0d48458ae584c45915fa244990cd186\",\"404CCA5C5078\".\n" +
+                "\"54f8d65d32484fecaed06bdfbb11a34f\",\"404CCA5C4190\".\n" +
+                "\"e539fb2740e640dd9ae1037f269a8fd0\",\"404CCA5C43E8\".\n" +
+                "\"9211070fa05f4bed8b83a2735823c66e\",\"404CCA5C5750\".\n" +
+                "\"f2c667d1140d463f9553401d455c7e15\",\"404CCA5C6210\".\n" +
+                "\"baf76d939dfa4f41b11ee2962c1262e1\",\"404CCA5C48C0\".\n" +
+                "\"ee08ceca96784130a1fdc17fca58f328\",\"404CCA5C6014\".\n" +
+                "\"19ebfdd4e98943879c873bcca327b696\",\"404CCA5C4E60\".\n" +
+                "\"92f8a0d20d164ab38534c404781ac4f9\",\"404CCA5C419C\".\n" +
+                "\"493225451878485998cb91d171baaf0e\",\"404CCA5C4230\".\n" +
+                "\"77f9d70b3edc4a07840f8fc2552c5ca7\",\"404CCA5C47E8\".\n" +
+                "\"ed4e8eb003a64f20a3bf7965b118299f\",\"404CCA5C5E30\".\n" +
+                "\"2c933812de6b4c138d5f2fc86f748d87\",\"404CCA5C48A0\".\n" +
+                "\"e7a405ca7ba64cc1825e1f6e13e4490e\",\"404CCA5C34FC\".\n" +
+                "\"a33ef62c16644ff283a94c7015901dcf\",\"404CCA5C5A9C\".\n" +
+                "\"055d364a83f44743b027e17955bd302a\",\"404CCA5C5740\".\n" +
+                "\"ce8702bcd7824d2997cc104d7e75f2ab\",\"404CCA5C6054\".\n" +
+                "\"01d213fd0e174a5c8f7b0156997bf153\",\"404CCA5C4464\".\n" +
+                "\"630da7edbbff4bb28885f30815ad8304\",\"404CCA5C4ACC\".\n" +
+                "\"ab159e7b417a4109a1b23c55cb8eb4c2\",\"404CCA5C5CA8\".\n" +
+                "\"96a2708900d44b249917f73ddeb90f53\",\"404CCA5C6214\".\n" +
+                "\"cdf6e52d17444b998e74085517391db4\",\"404CCA5C32F8\".\n" +
+                "\"e0f42665c3ba46f2946e963be3ce2bd4\",\"404CCA5C3294\".\n" +
+                "\"1c588e25e1fd4a07b7c6c35983ab7480\",\"404CCA5C344C\".\n" +
+                "\"4d86419171fb46379bc261a4445b4cb0\",\"404CCA5C5CE0\".\n" +
+                "\"442d46df8b534cda8f17067bcdf3879c\",\"404CCA5C4864\".\n" +
+                "\"2b07020b0dd74d2ca65e2fc161bbd50b\",\"404CCA5C5A90\".\n" +
+                "\"89d6695874804c9fb88b53b4f684720f\",\"404CCA5C516C\".\n" +
+                "\"1bc2e8a496e14004aea322338543c519\",\"404CCA5C6250\".\n" +
+                "\"53b3ccb737fd4493a38a64a87b636fbd\",\"404CCA5C6248\".\n" +
+                "\"d9f058a7a72f419dbf0a7e87a7c7b484\",\"404CCA5C428C\".\n" +
+                "\"42fb3efe49114d1c9bfa84c80d2db842\",\"404CCA5C36A0\".\n" +
+                "\"9106d291f87947818503eb238e025fda\",\"404CCA5C5A50\".\n" +
+                "\"787833708fd0456cb9a7963f8b5be8f3\",\"404CCA5C5B90\".\n" +
+                "\"bcae09e02f674df1837507dd1e67106a\",\"404CCA5C3440\".\n" +
+                "\"8f4e61c2e88e46cd882a8c547a1ecf28\",\"404CCA5C5B44\".\n" +
+                "\"b92addce81ec4b7a8788706239d77d7d\",\"404CCA5C3464\".\n" +
+                "\"f0c0de6f66bf4e20b97d0f228d758e82\",\"404CCA5C32A8\".\n" +
+                "\"1ceb52b42e8440178fce4a59f966f65e\",\"404CCA5C44B4\".\n" +
+                "\"ac175737f53e4838a8e44a92f3d6550c\",\"404CCA5C57B8\".\n" +
+                "\"f62858ecef9e409fb8928e66ba46f713\",\"404CCA5C6204\".\n" +
+                "\"42c98bd5e2a547e895e850957a7c32eb\",\"404CCA5C48CC\".\n" +
+                "\"22cf402e19b940a6b02c043145c610c6\",\"404CCA5C5CEC\".\n" +
+                "\"2c81988396f74720831b3eee243e20cf\",\"404CCA5C5D20\".\n" +
+                "\"709cb4d220de4f028e55a0fe793bd0c7\",\"404CCA5C489C\".\n" +
+                "\"d7759df84fd1458cb12f1877b53ecc37\",\"404CCA5C41C0\".\n" +
+                "\"161b20f575f1430dbcd1eb20f9827f8a\",\"404CCA5C3428\".\n" +
+                "\"bd1ea0648feb40679ff19bda8b84fd11\",\"404CCA5C60B0\".\n" +
+                "\"5114d5f0d9bf424dae7fbc41d3eba93c\",\"404CCA5C32C8\".\n" +
+                "\"9e0d9fca85da45b7a2980bdbcc00f39d\",\"404CCA5C538C\".\n" +
+                "\"63226b5fe59641efa6371d2b5b2e6a14\",\"404CCA5C5A88\".\n" +
+                "\"d910c285f0304b148bd7be61dd3e8581\",\"404CCA5C66E8\".\n" +
+                "\"9038f6544c4d46f493918665757cd33a\",\"404CCA5C48E8\".\n" +
+                "\"9018800448a54a70900fe818dc1b1f59\",\"404CCA5C5CC4\".\n" +
+                "\"31422a7925044fb7b1b23f0c720be64c\",\"404CCA5C6744\".\n" +
+                "\"2000dbe6e5ab46fe84062b3515f5a9d1\",\"404CCA5C5714\".\n" +
+                "\"06c6267abd3446099f115992199e0251\",\"404CCA5C33BC\".\n" +
+                "\"9ad447e33a8643b195583096962454a3\",\"404CCA5C6754\".\n" +
+                "\"c99dd8fbafa54ed0a48143f21f1d8be7\",\"404CCA5C53FC\".\n" +
+                "\"d420fe6ac0e34f62a27542ed33fe369e\",\"404CCA5C54D8\".\n" +
+                "\"a00a3b6691744f149258f2c021616247\",\"404CCA5C5CD0\".\n" +
+                "\"cfadcf5c19794305861c1971bc4020f6\",\"404CCA5C54C0\".\n" +
+                "\"e62d925c62ec49c8b73224888ba11123\",\"404CCA5C5488\".\n" +
+                "\"45dad39ed2a043d9b95b61ed75827641\",\"404CCA5C6064\".\n" +
+                "\"e02b99a60e9e4b1abb5eed53a14f3aef\",\"404CCA5C5E1C\".\n" +
+                "\"929f5870f3414f0a9a3f5b2ccf41bc0e\",\"404CCA5C4AA0\".\n" +
+                "\"9af2dd21476b48f2bbadd19655d342e1\",\"404CCA5C5CD4\".\n" +
+                "\"e0a9563d84054181b1fb5388d7404918\",\"404CCA5C3290\".\n" +
+                "\"2c00e1f4a5f44cf19fdc13e8c6f08210\",\"404CCA5C6238\".\n" +
+                "\"88ad212c54cb4a46978b7d9ad341cf6a\",\"404CCA5C5BA8\".\n" +
+                "\"0dd84d8da71f48afb03cbd42a2735952\",\"404CCA5C6758\".\n" +
+                "\"aef907538ceb44628b0c823fea354e8c\",\"404CCA5C5FEC\".\n" +
+                "\"8c9ed8f9219c4ec1b9d3e33bbe473a83\",\"404CCA5C3298\".\n" +
+                "\"8c20fff68a694f4bb7055a2de23c38fb\",\"404CCA5C57A4\".\n" +
+                "\"803ecee434d84ee1b841965caa96f961\",\"404CCA5C6714\".\n" +
+                "\"bcc26958c456477dbaf45eb18d2eeacc\",\"404CCA5C66F4\".\n" +
+                "\"77b5010844d246e29058f3fb04a9250d\",\"404CCA5C66F0\".\n" +
+                "\"6e106449fe0649f5a6b92077aa3afe7c\",\"404CCA5C5CB8\".\n" +
+                "\"48571db720534c10bb42d8573f6f0adb\",\"404CCA5C6738\".\n" +
+                "\"bfeb4d8413da430f8ca76bd2bdd3ea24\",\"404CCA5C4858\".\n" +
+                "\"beeedf409c9042f1b8df8e062dc08f1b\",\"404CCA5C43E0\".\n" +
+                "\"823e71102f9742e3b476fa26cb2adc50\",\"404CCA5C486C\".\n" +
+                "\"0a292ae48625426c82b2ca2ec9fca4c7\",\"404CCA5C5D04\".\n" +
+                "\"14d08c5a26204637ae0b1b05c728d724\",\"404CCA5C6298\".\n" +
+                "\"e13bdc4f0fe54b1c905dd4727c74036c\",\"404CCA5C32D8\".\n" +
+                "\"f027b72543494b459f8f74b5597a4453\",\"404CCA5C5D08\".\n" +
+                "\"04fb87ba46e04ccfa6df28c38c13bae7\",\"404CCA5C5E14\".\n" +
+                "\"6bc087f1ef4147cf933e202835ef4c57\",\"404CCA5C54B0\".\n" +
+                "\"363625bc6a9f42a28b6e747c2eee64f6\",\"404CCA5C3394\".\n" +
+                "\"f20fe99d5a6349c68b81ac3af8064d8b\",\"404CCA5C6088\".\n" +
+                "\"f6032c76a0bd494e872e434f86a785c6\",\"404CCA5C5DF4\".\n" +
+                "\"b293784f5e68482a829aeb26e99d3156\",\"404CCA5C5E04\".\n" +
+                "\"e787c34134024759854bac0dd8dfe2a0\",\"404CCA5C41F8\".\n" +
+                "\"2154d4f3b1b4493c823dc4da6ccd8c2f\",\"404CCA5C5744\".\n" +
+                "\"e29b29017110461fbf17de4731b31949\",\"404CCA5C4A94\".\n" +
+                "\"528e4d03cd46432482ed011165eb6251\",\"404CCA5C62BC\".\n" +
+                "\"c170dc1fc5ee4a8ca6911ef5c7ce8c1a\",\"404CCA5C4208\".\n" +
+                "\"f5d7c6286033468097b80a432b0b1837\",\"404CCA5C4184\".\n" +
+                "\"eedf99a4894d456c894dddf43310eab9\",\"404CCA5C6004\".\n" +
+                "\"eaf4e938fe74491a91c9d14734111d40\",\"404CCA5C54C8\".\n" +
+                "\"55c5590803794e09958d7a16707847b0\",\"404CCA5C48A4\".\n" +
+                "\"7cd31fffa4064168b9675cf800e3a621\",\"404CCA5C5B9C\".\n" +
+                "\"28914ab0fa854818aeef1f65fe73c616\",\"404CCA5C4174\".\n" +
+                "\"b636a7c21a064b29aaef4711c8efc624\",\"404CCA5C41D0\".\n" +
+                "\"8e3654af80584bdab86018f206b88cb4\",\"404CCA5C4198\".\n" +
+                "\"4772751b584d4b0daecb3434b0b99e5e\",\"404CCA5C5DD8\".\n" +
+                "\"1786f7f63c2646949987d50040a380a8\",\"404CCA5C4A64\".\n" +
+                "\"a0fb45bc88f349d9a52843b6fc0d8e9e\",\"404CCA5C5A98\".\n";
+
+        Map<String, String> objectObjectHashMap = new HashMap<>();
+        String[] split2 = result1.split(".\n");
+        for (int i = 0; i < split2.length; i++) {
+            String s1 = split2[i];
+            String[] split3 = s1.split(",");
+            String s2 = split3[0];
+            String s3 = split3[1];
+            objectObjectHashMap.put(s3.toLowerCase().replace("\"", ""),s2);
+        }
+        System.out.println(JSON.toJSONString(objectObjectHashMap));
+
+        Map<String, String> objectObjectHashMap1 = new HashMap<>();
+        for (int i = 0; i < result.size(); i++) {
+            String s1 = result.get(i).replace("\"", "").replace("\n", "");
+            String s2 = objectObjectHashMap.get(s1);
+            objectObjectHashMap1.put(s1,s2);
+        }
+        System.out.println(JSON.toJSONString(objectObjectHashMap1));
+        
+    }
+}

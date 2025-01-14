@@ -1,51 +1,51 @@
-# javaÊ¹ÓÃeasyExcel¶ÁÐ´excel
+# javaÊ¹ï¿½ï¿½easyExcelï¿½ï¿½Ð´excel
 https://gitcode.csdn.net/65aa453eb8e5f01e1e45027c.html?dp_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NTkyMDY1LCJleHAiOjE3MzI2MDMwMzQsImlhdCI6MTczMTk5ODIzNCwidXNlcm5hbWUiOiJjaGFzZXN1bnNoaW5lIn0._pNsAhVq9xvnb59OwJQ1D9dJ8uprx5RtOGiNiSDU3oA&spm=1001.2101.3001.6650.15&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Eactivity-15-111505745-blog-135001946.235%5Ev43%5Epc_blog_bottom_relevance_base9&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Eactivity-15-111505745-blog-135001946.235%5Ev43%5Epc_blog_bottom_relevance_base9&utm_relevant_index=25
-## Ê×ÏÈµÚÒ»²½µÃÏÈµ¼ÈëEasyExcelµÄJar°ü
+## ï¿½ï¿½ï¿½Èµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½EasyExcelï¿½ï¿½Jarï¿½ï¿½
         <dependency>
-        ¡¡¡¡<groupId>com.alibaba</groupId>
-        ¡¡¡¡<artifactId>easyexcel</artifactId>
-        ¡¡¡¡<version>2.2.4</version>
+        ï¿½ï¿½ï¿½ï¿½<groupId>com.alibaba</groupId>
+        ï¿½ï¿½ï¿½ï¿½<artifactId>easyexcel</artifactId>
+        ï¿½ï¿½ï¿½ï¿½<version>2.2.4</version>
         </dependency>
 
         <!--xls-->
         <dependency>
-        ¡¡¡¡<groupId>org.apache.poi</groupId>
-        ¡¡¡¡<artifactId>poi</artifactId>
-        ¡¡¡¡<version>3.17</version>
+        ï¿½ï¿½ï¿½ï¿½<groupId>org.apache.poi</groupId>
+        ï¿½ï¿½ï¿½ï¿½<artifactId>poi</artifactId>
+        ï¿½ï¿½ï¿½ï¿½<version>3.17</version>
         </dependency>
         <dependency>
-        ¡¡¡¡<groupId>org.apache.poi</groupId>
-        ¡¡¡¡<artifactId>poi-ooxml</artifactId>
-        ¡¡¡¡<version>3.17</version>
+        ï¿½ï¿½ï¿½ï¿½<groupId>org.apache.poi</groupId>
+        ï¿½ï¿½ï¿½ï¿½<artifactId>poi-ooxml</artifactId>
+        ï¿½ï¿½ï¿½ï¿½<version>3.17</version>
         </dependency>
 
-## ¸ù¾Ý¶ÔÏóÐ´Èë
-    ½ÓÏÂÀ´ÊÇ¸ù¾Ý¶ÔÏóµ¼ÈëExcel£¬Ê×ÏÈÎÒÃÇÒª¶¨ÒåÒ»¸ö¶ÔÏó£º
+## ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½Ð´ï¿½ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½ï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         @Data
         public class User {
 
-            @ExcelProperty("ÐÕÃû")
+            @ExcelProperty("ï¿½ï¿½ï¿½ï¿½")
             private String name;
 
-            @ExcelProperty("ÐÔ±ð")
+            @ExcelProperty("ï¿½Ô±ï¿½")
             private String sex;
 
-            @ExcelProperty("ÄêÁä")
+            @ExcelProperty("ï¿½ï¿½ï¿½ï¿½")
             private Integer age;
 
-            @ExcelProperty("Éí·ÝÖ¤")
+            @ExcelProperty("ï¿½ï¿½ï¿½Ö¤")
             private String cardid;
         }
 
-## Ê¹ÓÃ@ExcelProperty×¢½âÀ´Ö¸¶¨±êÌâÃû³Æ
+## Ê¹ï¿½ï¿½@ExcelProperty×¢ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         @SpringBootTest
         class Tests {
 
          @Test
          public void test() {
-              // Éú³ÉExcelÂ·¾¶
-              String fileName = "C:\\Users\\likun\\Desktop\\²âÊÔ.xlsx";
-              EasyExcel.write(fileName, User.class).sheet("Ä£°å").doWrite(data());
+              // ï¿½ï¿½ï¿½ï¿½ExcelÂ·ï¿½ï¿½
+              String fileName = "C:\\Users\\likun\\Desktop\\ï¿½ï¿½ï¿½ï¿½.xlsx";
+              EasyExcel.write(fileName, User.class).sheet("Ä£ï¿½ï¿½").doWrite(data());
             }
 
             private List<User> data() {
@@ -53,8 +53,8 @@ https://gitcode.csdn.net/65aa453eb8e5f01e1e45027c.html?dp_token=eyJ0eXAiOiJKV1Qi
                 User user;
                 for (int i = 1; i <= 10; i++) {
                     user = new User();
-                    user.setName("ÕÅÈý" + i);
-                    user.setSex("ÄÐ");
+                    user.setName("ï¿½ï¿½ï¿½ï¿½" + i);
+                    user.setSex("ï¿½ï¿½");
                     user.setAge(i);
                     user.setCardid("440582xxxx");
                     userList.add(user);
@@ -63,46 +63,46 @@ https://gitcode.csdn.net/65aa453eb8e5f01e1e45027c.html?dp_token=eyJ0eXAiOiJKV1Qi
             }
         }
 
-## ºöÂÔ×Ö¶Î
-    Èç¹û¶ÔÏóÀïÃæÓÐÐ©×Ö¶ÎÎÒÃÇ²¢²»Ïëµ¼³öµ½ExcelÖÐ£¬Ö»ÒªÊ¹ÓÃ@ExcelIgnore×¢½â¾Í¿ÉÒÔÁË£º
+## ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ëµ¼ï¿½ï¿½ï¿½ï¿½Excelï¿½Ð£ï¿½Ö»ÒªÊ¹ï¿½ï¿½@ExcelIgnore×¢ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½Ë£ï¿½
         /*
-         ºöÂÔÕâ¸ö×Ö¶Î
+         ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½
         */
         @ExcelIgnore
         private String filed;
 
-## Ð´ÈëÖ¸¶¨µÄÁÐ
-    Èç¹ûÎÒÃÇÏëµ¼³öÊý¾Ýµ½Ö¸¶¨µÄÁÐÖÐ¸ÃÈçºÎÉèÖÃÄØ£¿
+## Ð´ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ¼ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½
         @Data
         public class User {
 
-            @ExcelProperty(value = "ÐÕÃû", index = 0)
+            @ExcelProperty(value = "ï¿½ï¿½ï¿½ï¿½", index = 0)
             private String name;
 
-            @ExcelProperty(value = "ÐÔ±ð", index = 1)
+            @ExcelProperty(value = "ï¿½Ô±ï¿½", index = 1)
             private String sex;
 
-            @ExcelProperty(value = "ÄêÁä", index = 2)
+            @ExcelProperty(value = "ï¿½ï¿½ï¿½ï¿½", index = 2)
             private Integer age;
 
-            @ExcelProperty(value = "Éí·ÝÖ¤", index = 4)
+            @ExcelProperty(value = "ï¿½ï¿½ï¿½Ö¤", index = 4)
             private String cardid;
         }
 
 
-# @ExcelProperty¶ÁÈ¡excelÖÐµÄÊý¾Ý
-    @ExcelProperty¶ÁÈ¡excelÖÐµÄÊý¾Ý
-    Ê¹ÓÃEasyExcel¿âÀ´¶ÁÈ¡ExcelÊý¾Ý¿ÉÒÔÍ¨¹ýÒÔÏÂ²½ÖèÊµÏÖ£º
-    1. Ìí¼ÓEasyExcelÒÀÀµµ½ÏîÄ¿ÖÐ¡£
-    2. ´´½¨Ò»¸öÊµÌåÀàÀ´Ó³ÉäExcelµÄÁÐ¡£
-    3. Ê¹ÓÃ@ExcelProperty×¢½âÀ´Ö¸¶¨ÁÐµÄÃû³ÆºÍË³Ðò¡£
-    4. Ê¹ÓÃEasyExcelÌá¹©µÄAPI¶ÁÈ¡ExcelÊý¾Ý¡£
-    ÒÔÏÂÊÇÒ»¸ö¼òµ¥µÄÊ¾Àý´úÂë£º
+# @ExcelPropertyï¿½ï¿½È¡excelï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+    @ExcelPropertyï¿½ï¿½È¡excelï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+    Ê¹ï¿½ï¿½EasyExcelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Excelï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½
+    1. ï¿½ï¿½ï¿½EasyExcelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ð¡ï¿½
+    2. ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½Excelï¿½ï¿½ï¿½Ð¡ï¿½
+    3. Ê¹ï¿½ï¿½@ExcelProperty×¢ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Æºï¿½Ë³ï¿½ï¿½
+    4. Ê¹ï¿½ï¿½EasyExcelï¿½á¹©ï¿½ï¿½APIï¿½ï¿½È¡Excelï¿½ï¿½ï¿½Ý¡ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½òµ¥µï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ë£º
         import com.alibaba.excel.EasyExcel;
         import com.alibaba.excel.annotation.ExcelProperty;
         import java.util.List;
 
-        // ÊµÌåÀàÓ³ÉäExcelÁÐ
+        // Êµï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½Excelï¿½ï¿½
         public class DataModel {
             @ExcelProperty(index = 0)
             private String column1;
@@ -110,23 +110,23 @@ https://gitcode.csdn.net/65aa453eb8e5f01e1e45027c.html?dp_token=eyJ0eXAiOiJKV1Qi
             @ExcelProperty(index = 1)
             private String column2;
 
-            // Ê¡ÂÔgetterºÍsetter·½·¨
+            // Ê¡ï¿½ï¿½getterï¿½ï¿½setterï¿½ï¿½ï¿½ï¿½
         }
 
         public class ExcelReaderExample {
             public static void main(String[] args) {
-                String fileName = "example.xlsx"; // ExcelÎÄ¼þÂ·¾¶
+                String fileName = "example.xlsx"; // Excelï¿½Ä¼ï¿½Â·ï¿½ï¿½
                 List<DataModel> dataList = EasyExcel.read(fileName)
                     .head(DataModel.class)
                     .sheet()
                     .doReadSync();
 
-                // ´¦Àí¶ÁÈ¡µ½µÄÊý¾Ý
+                // ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 for (DataModel data : dataList) {
                     System.out.println(data.getColumn1() + ", " + data.getColumn2());
                 }
             }
         }
-        È·±£example.xlsxÎÄ¼þ´æÔÚÓÚÏîÄ¿µÄÏàÓ¦Ä¿Â¼ÏÂ£¬²¢ÇÒÎÄ¼þµÄµÚÒ»ÐÐÊÇÁÐµÄÍ·²¿¡£
-        ´úÂëÖÐDataModelÀàµÄ×Ö¶ÎÍ¨¹ý@ExcelProperty×¢½âÓëExcelÁÐ¶ÔÓ¦£¬indexÊôÐÔ±íÊ¾ÁÐµÄË³Ðò¡£EasyExcel.read()·½·¨ÓÃÓÚ¶ÁÈ¡ÎÄ¼þ£¬
-        ²¢Í¨¹ý.head(DataModel.class)Ö¸¶¨Í·²¿Ó³ÉäµÄÊµÌåÀà¡£×îºó£¬.sheet()¶ÁÈ¡µÚÒ»¸ösheet£¬.doReadSync()Í¬²½¶ÁÈ¡Êý¾Ý¡£
+        È·ï¿½ï¿½example.xlsxï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ó¦Ä¿Â¼ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Äµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Í·ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DataModelï¿½ï¿½ï¿½ï¿½Ö¶ï¿½Í¨ï¿½ï¿½@ExcelProperty×¢ï¿½ï¿½ï¿½ï¿½Excelï¿½Ð¶ï¿½Ó¦ï¿½ï¿½indexï¿½ï¿½ï¿½Ô±ï¿½Ê¾ï¿½Ðµï¿½Ë³ï¿½ï¿½EasyExcel.read()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½
+        ï¿½ï¿½Í¨ï¿½ï¿½.head(DataModel.class)Ö¸ï¿½ï¿½Í·ï¿½ï¿½Ó³ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½à¡£ï¿½ï¿½ï¿½.sheet()ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½ï¿½sheetï¿½ï¿½.doReadSync()Í¬ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¡ï¿½

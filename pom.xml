@@ -26,8 +26,6 @@
         <module>log-eureka</module>
         <module>log-zuul</module>
         <module>log-core</module>
-        <module>log-service1</module>
-        <module>log-service2</module>
         <module>demo-mybatis-plus6</module>
         <module>demo-mybatis-plus7</module>
         <module>demo-mybatis-plus8</module>
@@ -39,6 +37,9 @@
         <module>demo-mybatis-plus11</module>
         <module>demo-mybatis-plus12</module>
         <module>demo-mybatis-plus15</module>
+        <module>demo-mybatis-plus16</module>
+        <module>demo-mybatis-plus17</module>
+        <module>demo-mybatis-plus18</module>
     </modules>
 
     <parent>
