@@ -26,8 +26,6 @@
         <module name="log-serive2" />
         <module name="log-serive1" />
         <module name="redis-mysql-consistency" />
-        <module name="log-service1" />
-        <module name="log-service2" />
         <module name="demo-mybatis-plus17" />
         <module name="demo-mybatis-plus18" />
         <module name="rocketmq" />

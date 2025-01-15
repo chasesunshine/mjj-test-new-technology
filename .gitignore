@@ -11,9 +11,6 @@
 target/
 build/
 
-# 忽略本地配置文件
-application.properties
-application.yml
 
 # 忽略日志文件
 logs/
