@@ -30,24 +30,28 @@ public class Code_560 {
         System.out.println(i);
     }
 
+    /**
+     * 这个思路简单
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
     public static int subarraySum(int[] nums, int k) {
-        int n = nums.length;
-        int[] sums = new int[n + 1];
-        for (int i = 0; i < n; i++) {
-            sums[i + 1] = sums[i] + nums[i];
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int a = nums[i];
+            if (a == k) {
+                ++sum;
+            }
+            for (int j = i + 1; j < nums.length; j++) {
+                if (a + nums[j] == k) {
+                    ++sum;
+                }
+                a = a + nums[j];
+            }
         }
-
-        // key-前缀和, value-前缀和为key的个数
-        // 问题转化为和为 k 的问题
-        Map<Integer, Integer> map = new HashMap<>();
-        int count = 0;
-        for (int i = 0; i <= n; i++) {
-            // 如果有与当前 sums[i] 差为 k 的则加上它的个数
-            count += map.getOrDefault(sums[i] - k, 0);
-            // 前缀和的个数
-            map.put(sums[i], map.getOrDefault(sums[i], 0) + 1);
-        }
-        return count;
+        return sum;
     }
 
 }
