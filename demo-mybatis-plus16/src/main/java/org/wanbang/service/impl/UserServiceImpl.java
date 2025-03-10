@@ -1,6 +1,7 @@
 package org.wanbang.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.wanbang.dao.UserMapper;
@@ -10,6 +11,7 @@ import org.wanbang.validationTest.MyService;
 import org.wanbang.validationTest.UserEntity;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (SpringWord)表服务实现类
@@ -47,6 +49,14 @@ public class UserServiceImpl implements UserService {
 
         String s = myService.processOrder(userEntity);
         return s;
+    }
+
+    @Override
+    public List<User> selectData(int pageNum, int pageSize) {
+        // 创建分页对象
+        Page<User> page = new Page<>(pageNum, pageSize);
+        Page<User> userPage = userMapper.selectPage(page, null);
+        return userPage.getRecords();
     }
 
 

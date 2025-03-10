@@ -2,6 +2,8 @@ package org.wanbang.service;
 
 import org.wanbang.entity.User;
 
+import java.util.List;
+
 /**
  * (SpringWord)表服务接口
  *
@@ -19,4 +21,6 @@ public interface UserService {
     User queryById(String name);
 
     String testValidate();
+
+    List<User> selectData(int pageNum, int pageSize);
 }

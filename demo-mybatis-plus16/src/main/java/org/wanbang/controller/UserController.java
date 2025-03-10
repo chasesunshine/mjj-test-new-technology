@@ -12,6 +12,7 @@ import org.wanbang.util.raft.RaftRateLimiter;
 import org.wanbang.util.raft.RateLimitedRaftRequestHandler2;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (SpringWord)表控制层
@@ -30,6 +31,12 @@ public class UserController {
     public String selectOne() {
         User user = userService.queryById("1");
         return JSON.toJSONString(user);
+    }
+
+    @GetMapping("/selectData")
+    public List<User> selectData() {
+        List<User> user = userService.selectData(1,3);
+        return user;
     }
 
 
