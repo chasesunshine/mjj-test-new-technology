@@ -66,6 +66,13 @@ public class UserServiceImpl implements UserService {
         return new User(userId, "User" + userId);
     }
 
+    @Cacheable(value = "users2", key = "#userId", unless = "#result == null")
+    public User getUser2ById(Long userId) {
+        // 模拟从数据库中查询数据
+        System.out.println("Fetching user from database...");
+        return new User(userId, "User" + userId);
+    }
+
     /**
      * @CachePut 注解用于标记一个方法，表示该方法的结果应该被存入缓存，但无论缓存中是否存在对应的值，都会执行方法体。通常用于更新缓存中的数据。
      *

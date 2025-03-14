@@ -37,6 +37,11 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    @GetMapping("test2/{id}")
+    public User getUser2ById(@PathVariable Long id) {
+        return userService.getUser2ById(id);
+    }
+
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userService.updateUser(user);

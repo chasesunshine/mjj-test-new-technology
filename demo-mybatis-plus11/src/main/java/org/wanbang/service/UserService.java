@@ -20,6 +20,8 @@ public interface UserService {
 
     User getUserById(Long userId);
 
+    User getUser2ById(Long userId);
+
     public User updateUser(User user);
 
     public void deleteUser(Long userId);
