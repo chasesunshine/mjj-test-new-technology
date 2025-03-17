@@ -1,6 +1,7 @@
 package org.wanbang.study.allDesignMode.publishSubscribe.publish;
 
 
+import com.alibaba.fastjson.JSON;
 import org.wanbang.study.allDesignMode.publishSubscribe.subscribe.Subscriber;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class ConcretePublisher implements Publisher {
     public void subscribe(String eventType, Subscriber subscriber) {
         List<Subscriber> subscribersList = subscribers.computeIfAbsent(eventType, k -> new ArrayList<>());
         subscribersList.add(subscriber);
+        System.out.println("发布者中 - 订阅者的集合:"+ JSON.toJSONString(subscribers));
     }
 
     @Override
