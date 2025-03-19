@@ -42,6 +42,8 @@
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus9/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-doc-study/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-doc-study/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-springBoot-kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-springBoot-kafka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-service1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-service2/src/main/java" charset="UTF-8" />

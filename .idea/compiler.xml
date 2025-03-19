@@ -37,6 +37,7 @@
         <module name="demo-eureka" />
         <module name="demo-job" />
         <module name="demo-eureka-order" />
+        <module name="demo-springBoot-kafka" />
         <module name="demo-eureka-item" />
         <module name="log-zuul" />
         <module name="demo-mybatis-plus8" />
@@ -92,6 +93,7 @@
       <module name="demo-mybatis-plus8" options="-parameters" />
       <module name="demo-mybatis-plus9" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
+      <module name="demo-springBoot-kafka" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-serive1" options="-parameters" />
       <module name="log-serive2" options="-parameters" />

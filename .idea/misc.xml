@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/log-service1/pom.xml" />
         <option value="$PROJECT_DIR$/log-service2/pom.xml" />
         <option value="$PROJECT_DIR$/demo-mongodb/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-springBoot-kafka/pom.xml" />
       </list>
     </option>
   </component>
