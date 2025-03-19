@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-kafka.iml" filepath="$PROJECT_DIR$/demo-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-test/dubbo-zookeeper-test.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-test/dubbo-zookeeper-test.iml" />
     </modules>
   </component>
