@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rocketmq-consumer-demo" />
-        <module name="demo-kafka" />
         <module name="springcloud-gateway" />
         <module name="spring-bilibili-study" />
         <module name="threadpool-spring-boot-starter" />
