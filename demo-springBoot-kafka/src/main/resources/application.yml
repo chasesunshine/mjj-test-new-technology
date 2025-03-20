@@ -1,7 +1,8 @@
 server:
+  port: 8123
   servlet:
     #应用访问地址
-    context-path: /springboot-kafka
+    context-path: /
 spring:
   #kafka配置
   kafka:

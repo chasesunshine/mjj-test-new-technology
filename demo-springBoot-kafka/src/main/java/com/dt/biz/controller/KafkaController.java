@@ -16,7 +16,7 @@ import java.util.List;
  * kafka控制器
  */
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("test")
 public class KafkaController {
     @Autowired
     private KafkaUtils KafkaUtils;
@@ -25,7 +25,7 @@ public class KafkaController {
     @Resource
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    @RequestMapping("/kafka/send")
+    @GetMapping("/kafka/send")
     public void send() {
         Date date = new Date();
         System.out.println("发送时间：=================" + date);
@@ -51,7 +51,7 @@ public class KafkaController {
      */
     @KafkaListener(topics = {"test"})
     public void consume(String message) {
-        System.out.println("receive msg: " + message);
+        System.out.println("消费者接受消息 receive msg: " + message);
     }
 
     /**

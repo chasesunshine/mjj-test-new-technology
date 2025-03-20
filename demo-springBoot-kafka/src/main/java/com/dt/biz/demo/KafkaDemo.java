@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
  */
 public class KafkaDemo {
     private AdminClient adminClient;
+
     @Resource
     private KafkaTemplate<String,Object> kafkaTemplate;
 
