@@ -37,6 +37,7 @@
         <module name="demo-eureka" />
         <module name="demo-job" />
         <module name="demo-eureka-order" />
+        <module name="demo-springBoot-kafka" />
         <module name="demo-eureka-item" />
         <module name="log-zuul" />
         <module name="demo-mybatis-plus8" />
@@ -52,6 +53,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo-kafka" target="1.8" />
       <module name="log-service1" target="1.8" />
       <module name="log-service2" target="1.8" />
       <module name="mqtt-server" target="1.8" />
@@ -68,6 +70,7 @@
       <module name="demo-eureka-item" options="-parameters" />
       <module name="demo-eureka-order" options="-parameters" />
       <module name="demo-job" options="-parameters" />
+      <module name="demo-kafka" options="-parameters" />
       <module name="demo-mongodb" options="-parameters" />
       <module name="demo-mqtt-consumer" options="-parameters" />
       <module name="demo-mqtt-provider" options="-parameters" />
@@ -90,6 +93,7 @@
       <module name="demo-mybatis-plus8" options="-parameters" />
       <module name="demo-mybatis-plus9" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
+      <module name="demo-springBoot-kafka" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-serive1" options="-parameters" />
       <module name="log-serive2" options="-parameters" />

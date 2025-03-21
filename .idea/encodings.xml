@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/demo-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-job/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-job/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mongodb/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mqtt-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mqtt-provider/src/main/java" charset="UTF-8" />
@@ -25,7 +26,6 @@
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus17/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus18/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/demo-mybatis-plus2/src/main/java/org/wanbang/study/synchronizedConditonTest/加锁几种方式看这个.md" charset="GBK" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus3/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus3/src/main/resources" charset="UTF-8" />
@@ -42,12 +42,16 @@
     <file url="file://$PROJECT_DIR$/demo-mybatis-plus9/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-doc-study/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-doc-study/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-springBoot-kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-springBoot-kafka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-service1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-service2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log-zuul/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mjj_test_rocketmq_demo/rocketmq-consumer-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mjj_test_rocketmq_demo/rocketmq-producer-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjj_test_rocketmq_demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjj_test_rocketmq_demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/redis-mysql-consistency/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/redis-mysql-consistency/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rocketmq/src/main/java" charset="UTF-8" />
