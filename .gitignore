@@ -7,9 +7,13 @@
 *.ipr
 *.iws
 
-# 忽略 Maven 和 Gradle 的输出目录
+# Maven 忽略
 target/
+**/target/
+
+# Gradle 忽略
 build/
+**/build/
 
 
 # 忽略日志文件
