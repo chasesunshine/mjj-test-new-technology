@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 @Component
 @AllArgsConstructor
 @Slf4j
-public class LockExecutor {
+public class LockExecutor2 {
 
     private final RedissonClient redissonClient;
 

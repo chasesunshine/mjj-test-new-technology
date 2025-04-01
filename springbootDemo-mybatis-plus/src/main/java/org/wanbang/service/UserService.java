@@ -15,8 +15,8 @@ import org.wanbang.entity.common.UserVo;
 import org.wanbang.entity.common.UserVo1;
 import org.wanbang.util.common.CallBack;
 import org.wanbang.util.redis.RedisUtils;
-import org.wanbang.util.redis.lock.LockExecutor;
-import org.wanbang.util.spring.SpringUtil;
+import org.wanbang.util.redis.lock.LockExecutor2;
+import org.wanbang.util.spring.SpringUtil1;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -38,12 +38,12 @@ public class UserService {
     @Resource(name = "redisStringTemplate")
     private RedisTemplate redisTemplate;
     @Resource
-    private LockExecutor lockExecutor;
+    private LockExecutor2 lockExecutor2;
 
     public String TestRedisson() throws Exception {
         User user = new User();
         String a = "1";
-        String mjj1 = lockExecutor.exec("token", 3, () -> {
+        String mjj1 = lockExecutor2.exec("token", 3, () -> {
 
             return "1";
         });
@@ -179,7 +179,7 @@ public class UserService {
     // https://blog.csdn.net/mameng1988/article/details/85548812
     //解决事务失效
     private UserService getService(){
-        return SpringUtil.getBean(this.getClass());   //SpringUtil工具类见下面代码
+        return SpringUtil1.getBean(this.getClass());   //SpringUtil工具类见下面代码
     }
 
     public static List<User> getMaterialNo(CallBack callBack){
