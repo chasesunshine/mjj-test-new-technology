@@ -17,17 +17,17 @@ import java.util.List;
 @Slf4j
 public class WorldUserService {
     @Resource
-    private WorldUserMapper userMapper;
+    private WorldUserMapper worldUserMapper;
 
     public String selectOne() {
-        WorldUser worldUser = userMapper.selectOne(Wrappers.<WorldUser>query().lambda()
+        WorldUser worldUser = worldUserMapper.selectOne(Wrappers.<WorldUser>query().lambda()
                 .eq(org.wanbang.entity.WorldUser::getId, 1));
 
         return JSON.toJSONString(worldUser);
     }
 
     public Integer insertOnedata(String name,Integer age) {
-        int mjj = userMapper.insertOneData(WorldUser.builder().name(name).age(age).build());
+        int mjj = worldUserMapper.insertOneData(WorldUser.builder().name(name).age(age).build());
         return mjj;
     }
 
@@ -53,13 +53,13 @@ public class WorldUserService {
 
     @Transactional(rollbackFor = Exception.class)
     public Integer insetOneMybatisTest1(WorldUser worldUser) {
-        int i = userMapper.insertOneData(worldUser);
+        int i = worldUserMapper.insertOneData(worldUser);
         return i;
     }
 
     @Transactional(rollbackFor = Exception.class)
     public Integer insert(String name,Integer age) {
-        int mjj = userMapper.insert(WorldUser.builder().name(name).age(age).build());
+        int mjj = worldUserMapper.insert(WorldUser.builder().name(name).age(age).build());
 
         if(true){
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
@@ -70,7 +70,7 @@ public class WorldUserService {
 
 
     public Integer insert1(String name,Integer age) {
-        int mjj = userMapper.insert(WorldUser.builder().name(name).age(2).build());
+        int mjj = worldUserMapper.insert(WorldUser.builder().name(name).age(2).build());
 
         if(true){
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
@@ -83,10 +83,10 @@ public class WorldUserService {
     public String selectTwo() {
         WorldUser build1 = WorldUser.builder().name("mjj1").age(2).sex("男").build();
         WorldUser build2 = WorldUser.builder().name("lj2").age(3).sex("xxx").build();
-        userMapper.insert(build1);
+        worldUserMapper.insert(build1);
 
         // 只需要方法外部加事务即可
-        asnRewrite(userMapper,build2);
+        asnRewrite(worldUserMapper,build2);
         return "s";
     }
 
@@ -95,7 +95,7 @@ public class WorldUserService {
     }
 
     public String insetData(WorldUser worldUser) {
-        int insert = userMapper.insert(worldUser);
+        int insert = worldUserMapper.insert(worldUser);
         return String.valueOf(insert);
     }
 }

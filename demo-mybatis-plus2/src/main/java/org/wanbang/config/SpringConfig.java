@@ -46,10 +46,10 @@ public class SpringConfig {
         return starterServiceProperties;
     }
 
-    @Bean("starterService")
-    public StarterService starterService(@Qualifier("starterServiceProperties") StarterServiceProperties starterServiceProperties) {
-        StarterService starterService = new StarterService();
-        starterService.setUserStr(starterServiceProperties.getUserStr());
-        return starterService;
-    }
+//    @Bean("starterService")
+//    public StarterService starterService(@Qualifier("starterServiceProperties") StarterServiceProperties starterServiceProperties) {
+//        StarterService starterService = new StarterService();
+//        starterService.setUserStr(starterServiceProperties.getUserStr());
+//        return starterService;
+//    }
 }
