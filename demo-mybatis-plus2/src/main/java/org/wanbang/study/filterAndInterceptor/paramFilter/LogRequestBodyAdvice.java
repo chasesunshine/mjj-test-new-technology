@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 
 @Slf4j
-@ControllerAdvice("org.wanbang")
+//@ControllerAdvice("org.wanbang")
 public class LogRequestBodyAdvice implements RequestBodyAdvice {
     @Override
     public boolean supports(MethodParameter methodParameter, Type type, Class<? extends HttpMessageConverter<?>> aClass) {

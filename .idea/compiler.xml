@@ -91,7 +91,7 @@
       <module name="demo-mybatis-plus8" options="-parameters" />
       <module name="demo-mybatis-plus9" options="-parameters" />
       <module name="demo-spring-doc-study" options="-parameters" />
-      <module name="demo-springBoot-kafka" options="" />
+      <module name="demo-springBoot-kafka" options="-parameters" />
       <module name="log-eureka" options="-parameters" />
       <module name="log-serive1" options="-parameters" />
       <module name="log-serive2" options="-parameters" />

@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 */
 
 @RestController
-public class HelloController {
+public class HelloController3 {
 
     @Resource
     private ApplicationContext applicationContext;

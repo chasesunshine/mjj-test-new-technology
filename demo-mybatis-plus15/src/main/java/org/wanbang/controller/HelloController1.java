@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value="/swaggerTest")
 @Api("测试swagger")
-public class HelloController {
+public class HelloController1 {
 
 
     //    @RequestMapping("/hello")

@@ -18,7 +18,7 @@ import java.util.UUID;
  * @date 2020/9/14 8:47 下午
  */
 @RestController
-public class HelloController {
+public class HelloController4 {
 
 
     @Autowired
