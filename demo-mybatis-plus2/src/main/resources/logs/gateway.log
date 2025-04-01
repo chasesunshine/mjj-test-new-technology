@@ -653,3 +653,137 @@ Action:
 
 Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
 
+2025-04-01 15:21:56.068 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 42436 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2025-04-01 15:21:56.070 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2025-04-01 15:21:56.119 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 15:21:56.119 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 15:21:58.773 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-04-01 15:21:58.774 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2025-04-01 15:21:58.879 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 96ms. Found 0 repository interfaces.
+2025-04-01 15:21:58.988 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2025-04-01 15:21:58.988 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2025-04-01 15:21:58.988 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2025-04-01 15:21:58.988 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\springbootDemo-mybatis-plus\target\classes\org\wanbang\mapper\UserMapper.class]
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'userMapper' and 'org.wanbang.mapper.UserMapper' mapperInterface
+2025-04-01 15:21:58.989 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2025-04-01 15:21:59.032 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2025-04-01 15:21:59.033 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2025-04-01 15:21:59.033 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2025-04-01 15:21:59.033 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\springbootDemo-mybatis-plus\target\classes\org\wanbang\mapper\UserMapper.class]
+2025-04-01 15:21:59.034 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  Skipping MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface. Bean already defined with the same name!
+2025-04-01 15:21:59.034 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  Skipping MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface. Bean already defined with the same name!
+2025-04-01 15:21:59.034 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  Skipping MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface. Bean already defined with the same name!
+2025-04-01 15:21:59.034 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  Skipping MapperFactoryBean with name 'userMapper' and 'org.wanbang.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2025-04-01 15:21:59.034 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:  No MyBatis mapper was found in '[org.wanbang.mapper]' package. Please check your configuration.
+2025-04-01 15:21:59.973 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$23586f65] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-04-01 15:22:00.025 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d94d740] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-04-01 15:22:00.599 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2025-04-01 15:22:00.609 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2025-04-01 15:22:00.615 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2025-04-01 15:22:00.615 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2025-04-01 15:22:00.621 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  Loaded APR based Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2025-04-01 15:22:00.622 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2025-04-01 15:22:00.622 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-04-01 15:22:00.625 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2025-04-01 15:22:00.742 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2025-04-01 15:22:00.743 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 4623 ms
+2025-04-01 15:22:01.112 [restartedMain] INFO  org.redisson.Version:  Redisson 3.13.6
+2025-04-01 15:22:01.518 [redisson-netty-2-22] INFO  o.r.connection.pool.MasterPubSubConnectionPool:  1 connections initialized for localhost/127.0.0.1:6379
+2025-04-01 15:22:01.544 [redisson-netty-2-17] INFO  org.redisson.connection.pool.MasterConnectionPool:  24 connections initialized for localhost/127.0.0.1:6379
+2025-04-01 15:22:02.112 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bizController': Unsatisfied dependency expressed through field 'bizService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bizService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userMapper' is expected to be of type 'org.wanbang.mapper.WorldUserMapper' but was actually of type 'com.sun.proxy.$Proxy120'
+2025-04-01 15:22:02.136 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-0} closing ...
+2025-04-01 15:22:02.138 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Stopping service [Tomcat]
+2025-04-01 15:22:02.146 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase:  The web application [ROOT] appears to have started a thread named [Thread-13] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
+ sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:144)
+2025-04-01 15:22:02.154 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-01 15:22:02.156 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter:  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userMapper' could not be injected as a 'org.wanbang.mapper.WorldUserMapper' because it is a JDK dynamic proxy that implements:
+	com.baomidou.mybatisplus.core.mapper.BaseMapper
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2025-04-01 15:28:39.796 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Starting Application_Mybatis2 on RD-500-789 with PID 25744 (D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes started by daikin in D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology)
+2025-04-01 15:28:39.799 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  No active profile set, falling back to default profiles: default
+2025-04-01 15:28:39.833 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 15:28:39.833 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor:  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 15:28:40.549 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-04-01 15:28:40.550 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Bootstrapping Spring Data repositories in DEFAULT mode.
+2025-04-01 15:28:40.637 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:  Finished Spring Data repository scanning in 79ms. Found 0 repository interfaces.
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\CityMapper.class]
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\SysLogMapper.class]
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Identified candidate component class: file [D:\allWorkSpace\ideaWorkSpace\mjjOwner\mjj-test-new-technology\demo-mybatis-plus2\target\classes\org\wanbang\mapper\WorldUserMapper.class]
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'cityMapper' and 'org.wanbang.mapper.CityMapper' mapperInterface
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'cityMapper'.
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'sysLogMapper' and 'org.wanbang.mapper.SysLogMapper' mapperInterface
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'sysLogMapper'.
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Creating MapperFactoryBean with name 'worldUserMapper' and 'org.wanbang.mapper.WorldUserMapper' mapperInterface
+2025-04-01 15:28:40.712 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner:  Enabling autowire by type for MapperFactoryBean with name 'worldUserMapper'.
+2025-04-01 15:28:40.879 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc2e5f36] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-04-01 15:28:41.222 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat initialized with port(s): 8091 (http)
+2025-04-01 15:28:41.230 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Initializing ProtocolHandler ["http-nio-8091"]
+2025-04-01 15:28:41.235 [restartedMain] INFO  org.apache.catalina.core.StandardService:  Starting service [Tomcat]
+2025-04-01 15:28:41.235 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:  Starting Servlet Engine: Apache Tomcat/9.0.13
+2025-04-01 15:28:41.240 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  Loaded APR based Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2025-04-01 15:28:41.240 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2025-04-01 15:28:41.240 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-04-01 15:28:41.243 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:  OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2025-04-01 15:28:41.335 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:  Initializing Spring embedded WebApplicationContext
+2025-04-01 15:28:41.336 [restartedMain] INFO  org.springframework.web.context.ContextLoader:  Root WebApplicationContext: initialization completed in 1503 ms
+2025-04-01 15:28:41.796 [restartedMain] INFO  o.w.study.beanPostProcessorBeforeAndAfter.Dog1:  ---dog的无参构造方法被执行
+2025-04-01 15:28:41.796 [restartedMain] INFO  o.w.s.b.MyBeanPostProcessor:  postProcessBeforeInitialization---dog1
+2025-04-01 15:28:41.796 [restartedMain] INFO  o.w.study.beanPostProcessorBeforeAndAfter.Dog1:  ---afterPropertiesSet被执行
+2025-04-01 15:28:41.796 [restartedMain] INFO  o.w.s.b.MyBeanPostProcessor:  postProcessAfterInitialization---dog1
+2025-04-01 15:28:41.832 [restartedMain] INFO  o.w.study.beanPostProcessorBeforeAndAfter.Dog1:  ---dog的无参构造方法被执行
+2025-04-01 15:28:41.833 [restartedMain] INFO  o.w.study.beanPostProcessorBeforeAndAfter.Dog1:  ---afterPropertiesSet被执行
+2025-04-01 15:28:41.833 [restartedMain] INFO  o.w.study.beanPostProcessorBeforeAndAfter.Dog1:  ---initMethod被执行
+2025-04-01 15:28:42.005 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Initializing ExecutorService 'applicationTaskExecutor'
+2025-04-01 15:28:42.298 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} inited
+2025-04-01 15:28:42.545 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Using default implementation for ThreadExecutor
+2025-04-01 15:28:42.554 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl:  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-04-01 15:28:42.554 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Quartz Scheduler v.2.3.0 created.
+2025-04-01 15:28:42.554 [restartedMain] INFO  org.quartz.simpl.RAMJobStore:  RAMJobStore initialized.
+2025-04-01 15:28:42.555 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-04-01 15:28:42.555 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-04-01 15:28:42.555 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory:  Quartz scheduler version: 2.3.0
+2025-04-01 15:28:42.555 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@57149f7f
+2025-04-01 15:28:42.682 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:  LiveReload server is running on port 35729
+2025-04-01 15:28:42.701 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Starting Quartz Scheduler now
+2025-04-01 15:28:42.701 [restartedMain] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-04-01 15:28:42.706 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:  Starting ProtocolHandler ["http-nio-8091"]
+2025-04-01 15:28:42.717 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:  Using a shared selector for servlet write/read
+2025-04-01 15:28:42.733 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:  Tomcat started on port(s): 8091 (http) with context path ''
+2025-04-01 15:28:42.735 [restartedMain] INFO  org.wanbang.Application_Mybatis2:  Started Application_Mybatis2 in 3.36 seconds (JVM running for 4.184)
+2025-04-01 15:28:48.655 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-04-01 15:28:48.656 [Thread-15] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:  Shutting down Quartz Scheduler
+2025-04-01 15:28:48.656 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2025-04-01 15:28:48.656 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-04-01 15:28:48.656 [Thread-15] INFO  org.quartz.core.QuartzScheduler:  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2025-04-01 15:28:48.657 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:  Shutting down ExecutorService 'applicationTaskExecutor'
+2025-04-01 15:28:48.657 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closing ...
+2025-04-01 15:28:48.665 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource:  {dataSource-1} closed
