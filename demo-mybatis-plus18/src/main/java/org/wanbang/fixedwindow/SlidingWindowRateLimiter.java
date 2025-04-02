@@ -25,7 +25,7 @@ public class SlidingWindowRateLimiter {
     private static final String REDIS_HOST = "localhost";
     private static final int REDIS_PORT = 6379;
     private static final int LIMIT = 10; // 每窗口的最大请求数
-    private static final int WINDOW_SIZE = 60; // 窗口大小（秒）
+    private static final int WINDOW_SIZE = 10; // 窗口大小（秒）
 
     private Jedis jedis;
 
@@ -34,16 +34,23 @@ public class SlidingWindowRateLimiter {
     }
 
     public boolean isAllowed(String userId) {
-        String key = "sliding_rate_limit:" + userId;
         // 表示的是秒
         long currentTime = System.currentTimeMillis() / 1000;
+        System.out.println("currentTime:"+ currentTime);
+        // 当前秒 减去 60s
         long windowStart = currentTime - WINDOW_SIZE;
+        System.out.println("windowStart:"+ windowStart);
 
-        // 清理过期请求 ， 清理60s之前的
+        String key = "sliding_rate_limit:" + userId;
+        // 清理过期请求 , 删除所有满足 start ≤ score ≤ end 的成员。
+        // key	String	有序集合的键名。
+        // start	double	分数范围的最小值（闭区间，包含边界），例如 100.0 表示 score ≥ 100.0。
+        // end	double	分数范围的最大值（闭区间，包含边界），例如 200.0 表示 score ≤ 200.0。
         jedis.zremrangeByScore(key, 0, windowStart);
 
         // 获取当前窗口内的请求数量
         long count = jedis.zcard(key);
+        System.out.println("count:"+count);
         if (count < LIMIT) {
             jedis.zadd(key, currentTime, String.valueOf(currentTime));
             jedis.expire(key, WINDOW_SIZE);
@@ -53,11 +60,14 @@ public class SlidingWindowRateLimiter {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         SlidingWindowRateLimiter limiter = new SlidingWindowRateLimiter();
         String userId = "user123";
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 20; i++) {
+            if(i == 10){
+                Thread.sleep(1000);
+            }
             System.out.println("Request " + (i + 1) + ": " + limiter.isAllowed(userId));
         }
     }

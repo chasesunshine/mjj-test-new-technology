@@ -28,19 +28,21 @@ public class FixedWindowRateLimiter {
     }
 
     public boolean isAllowed(String userId) {
-        String key = "rate_limit:" + userId;
-        // System.currentTimeMillis() / 1000 表示秒  / WINDOW_SIZE 表示的是分钟
+        // System.currentTimeMillis() / 1000 表示秒        再  / WINDOW_SIZE 表示的是分钟
         long currentWindow = System.currentTimeMillis() / 1000 / WINDOW_SIZE;
-        String windowKey = key + ":" + currentWindow;
+        // 时间窗 key
+        String windowKey = "rate_limit:" + userId + ":" + currentWindow;
 
         if (jedis.exists(windowKey)) {
             if (Integer.parseInt(jedis.get(windowKey)) < LIMIT) {
+                // 用于对 Redis 中存储的 整数值 执行原子性的 递增操作
                 jedis.incr(windowKey);
                 return true;
             } else {
                 return false;
             }
         } else {
+            //   key , 键的过期时间（生存时间，TTL），单位为秒  , 值
             jedis.setex(windowKey, WINDOW_SIZE, "1");
             return true;
         }
