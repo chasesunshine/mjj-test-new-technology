@@ -1,0 +1,105 @@
+# Java Redis多限流
+https://www.cnblogs.com/mybook000/p/18649909
+
+二、固定窗口限流
+固定窗口限流是最简单的限流算法。它将时间划分为固定的窗口，每个窗口内限制请求次数。
+
+1. 实现逻辑
+每当一个请求到达时，检查当前窗口内的请求数量是否超过限制。如果未超过，则允许请求并增加计数；否则，拒绝请求。
+
+2. 示例代码
+import redis.clients.jedis.Jedis;
+
+public class FixedWindowRateLimiter {
+    private static final String REDIS_HOST = "localhost";
+    private static final int REDIS_PORT = 6379;
+    private static final int LIMIT = 10; // 每窗口的最大请求数
+    private static final int WINDOW_SIZE = 60; // 窗口大小（秒）
+
+    private Jedis jedis;
+
+    public FixedWindowRateLimiter() {
+        this.jedis = new Jedis(REDIS_HOST, REDIS_PORT);
+    }
+
+    public boolean isAllowed(String userId) {
+        String key = "rate_limit:" + userId;
+        long currentWindow = System.currentTimeMillis() / 1000 / WINDOW_SIZE;
+        String windowKey = key + ":" + currentWindow;
+
+        if (jedis.exists(windowKey)) {
+            if (Integer.parseInt(jedis.get(windowKey)) < LIMIT) {
+                jedis.incr(windowKey);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            jedis.setex(windowKey, WINDOW_SIZE, "1");
+            return true;
+        }
+    }
+
+    public static void main(String[] args) {
+        FixedWindowRateLimiter limiter = new FixedWindowRateLimiter();
+        String userId = "user123";
+
+        for (int i = 0; i < 15; i++) {
+            System.out.println("Request " + (i + 1) + ": " + limiter.isAllowed(userId));
+        }
+    }
+}
+​
+
+
+三、滑动窗口限流
+滑动窗口限流能够更精确地控制请求速率，避免固定窗口算法中临界点的突发流量问题。
+
+1. 实现逻辑
+滑动窗口限流记录每个请求的时间戳，并在每次请求时清理过期的记录。
+
+2. 示例代码
+import redis.clients.jedis.Jedis;
+import java.util.stream.Collectors;
+import java.util.List;
+
+public class SlidingWindowRateLimiter {
+    private static final String REDIS_HOST = "localhost";
+    private static final int REDIS_PORT = 6379;
+    private static final int LIMIT = 10; // 每窗口的最大请求数
+    private static final int WINDOW_SIZE = 60; // 窗口大小（秒）
+
+    private Jedis jedis;
+
+    public SlidingWindowRateLimiter() {
+        this.jedis = new Jedis(REDIS_HOST, REDIS_PORT);
+    }
+
+    public boolean isAllowed(String userId) {
+        String key = "sliding_rate_limit:" + userId;
+        long currentTime = System.currentTimeMillis() / 1000;
+        long windowStart = currentTime - WINDOW_SIZE;
+
+        // 清理过期请求
+        jedis.zremrangeByScore(key, 0, windowStart);
+
+        // 获取当前窗口内的请求数量
+        long count = jedis.zcard(key);
+        if (count < LIMIT) {
+            jedis.zadd(key, currentTime, String.valueOf(currentTime));
+            jedis.expire(key, WINDOW_SIZE);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        SlidingWindowRateLimiter limiter = new SlidingWindowRateLimiter();
+        String userId = "user123";
+
+        for (int i = 0; i < 15; i++) {
+            System.out.println("Request " + (i + 1) + ": " + limiter.isAllowed(userId));
+        }
+    }
+}
