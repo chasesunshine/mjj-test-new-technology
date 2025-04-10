@@ -1,0 +1,289 @@
+# springboot集成hadoop上传文件
+    https://blog.csdn.net/xlb0108/article/details/140637961
+    springboot集成hadoop上传文件
+    ps：springboot版本2.5
+    ## 1.引入依赖
+        <!-- hadoop依赖 -->
+                <dependency>
+                    <groupId>org.apache.hadoop</groupId>
+                    <artifactId>hadoop-client</artifactId>
+                    <version>2.7.3</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.slf4j</groupId>
+                            <artifactId>slf4j-log4j12</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>javax.servlet</groupId>
+                            <artifactId>servlet-api</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.hadoop</groupId>
+                    <artifactId>hadoop-common</artifactId>
+                    <version>2.7.3</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.slf4j</groupId>
+                            <artifactId>slf4j-log4j12</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>javax.servlet</groupId>
+                            <artifactId>servlet-api</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.hadoop</groupId>
+                    <artifactId>hadoop-hdfs</artifactId>
+                    <version>2.7.3</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.slf4j</groupId>
+                            <artifactId>slf4j-log4j12</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>javax.servlet</groupId>
+                            <artifactId>servlet-api</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+    ## 2.YAML文件配置
+        # HDFS 配置
+        hadoop:
+          #服务器地址
+          fsUri: hdfs://xxx.xxx.xxx.xx:9000
+          #上传路径
+          input:
+            path: /datasource/dailyData/
+          #下载路径
+          output:
+            path: /datasource/dailyData/
+
+    ## 3.编写配置类
+        package com.dfxn.system.config;
+
+        import org.apache.hadoop.conf.Configuration;
+        import org.apache.hadoop.fs.FileSystem;
+        import org.springframework.beans.factory.annotation.Value;
+        import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+        import org.springframework.context.annotation.Bean;
+
+        import java.io.IOException;
+        import java.net.URI;
+        import java.net.URISyntaxException;
+
+        /**
+         * @Author
+         * @Date 2024/7/22 上午11:50
+         * @Version 1.0
+         */
+
+        @org.springframework.context.annotation.Configuration
+        @ConditionalOnProperty(name="hadoop.fsUri")
+        public class HadoopConfig {
+
+            @Value("${hadoop.fsUri}")
+            private String fsUri;
+
+
+            /**
+             * Configuration conf=new Configuration（）；
+             * 创建一个Configuration对象时，其构造方法会默认加载hadoop中的两个配置文件，
+             * 分别是hdfs-site.xml以及core-site.xml，这两个文件中会有访问hdfs所需的参数值，
+             * 主要是fs.default.name，指定了hdfs的地址，有了这个地址客户端就可以通过这个地址访问hdfs了。
+             * 即可理解为configuration就是hadoop中的配置信息。
+             * @return
+             */
+            @Bean
+            public FileSystem fileSystem() throws IOException, InterruptedException, URISyntaxException {
+                // 创建Hadoop Configuration实例
+                Configuration configuration = new Configuration();
+                // 设置HDFS系统URL
+                configuration.set("fs.defaultFS", fsUri);
+                // 使用指定的URI、配置和用户名"root"来获取一个FileSystem实例
+                return FileSystem.get(new URI(fsUri), configuration, "root");
+            }
+        }
+
+    ## 4.编写工具类操作
+        package com.dfxn.system.util;
+
+        import lombok.extern.log4j.Log4j2;
+        import org.springframework.stereotype.Component;
+
+        import org.apache.hadoop.fs.FSDataInputStream;
+        import org.apache.hadoop.fs.FSDataOutputStream;
+        import org.apache.hadoop.fs.FileSystem;
+        import org.apache.hadoop.fs.Path;
+        import org.springframework.beans.factory.annotation.Value;
+
+        import javax.annotation.Resource;
+        import java.io.*;
+        /**
+         * Hadoop工具类
+         * @Author
+         * @Date 2024/7/23 下午2:54
+         * @Version 1.0
+         */
+        @Component
+        @Log4j2
+        public class HadoopUtil {
+
+            @Value("${hadoop.fsUri}")
+            private String fsUri;
+
+            @Value("${hadoop.input.path}")
+            private String inputPath;
+
+            @Resource
+            private FileSystem fileSystem;
+
+
+            /**
+             * 输入流上传
+             * @param inputStream 输入流
+             * @param hdfsFilePath 路径
+             * @throws IOException
+             */
+            public void uploadFileToHDFS(InputStream inputStream, String hdfsFilePath) throws IOException {
+                Path path = new Path(hdfsFilePath);
+                try (FSDataOutputStream outputStream = fileSystem.create(path)) {
+                    byte[] buffer = new byte[4096];
+                    int bytesRead;
+                    while ((bytesRead = inputStream.read(buffer)) > 0) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                    log.info("文件上传成功");
+                } finally {
+                    inputStream.close();
+                }
+            }
+
+            /**
+             * 本地文件上传
+             * @param localFilePath 文件路径
+             * @param hdfsFilePath 上传路径
+             * @throws IOException
+             */
+            public void uploadLocalFileToHDFS(String localFilePath, String hdfsFilePath) throws IOException {
+                try (InputStream inputStream = new FileInputStream(localFilePath)) {
+                    uploadFileToHDFS(inputStream, hdfsFilePath);
+                } catch (FileNotFoundException e) {
+                    throw new IOException("找不到文件：" + localFilePath, e);
+                }
+            }
+
+            /**
+             * 文件下载
+             * @param hdfsFilePath 文件路径
+             * @param outputStream 输出流
+             * @throws IOException
+             */
+            public void downloadFileFromHDFS(String hdfsFilePath, OutputStream outputStream) throws IOException {
+                Path path = new Path(hdfsFilePath);
+                try (FSDataInputStream inputStream = fileSystem.open(path)) {
+                    byte[] buffer = new byte[4096];
+                    int bytesRead;
+                    while ((bytesRead = inputStream.read(buffer)) > 0) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                }
+            }
+
+            /**
+             * 创建目录
+             * @param hdfsDirPath 文件目录
+             * @throws IOException
+             */
+            public void createDirectoryInHDFS(String hdfsDirPath) throws IOException {
+                Path path = new Path(hdfsDirPath);
+                // 检查目录是否已经存在
+                if (fileSystem.exists(path)) {
+                    // 目录已存在
+                    log.info("目录已存在: " + hdfsDirPath);
+                    return;
+                }
+                // 创建目录
+                boolean success = fileSystem.mkdirs(path);
+                if (!success) {
+                    throw new IOException("目录创建失败: " + hdfsDirPath);
+                }
+                log.info("目录创建成功: " + hdfsDirPath);
+            }
+        }
+
+    ## 5.实际操作
+        @RestController
+        @RequestMapping("/hadoop/files")
+        public class HadoopController {
+        	@Autowired
+            private HadoopUtil hadoopUtil;
+             /**
+             * 服务器地址
+             */
+            @Value("${hadoop.fsUri}")
+            private String fsUri;
+
+            /**
+             * 上传路径
+             */
+            @Value("${hadoop.input.path}")
+            private String inputPath;
+             /**
+             * 上传本地文件
+             * @param srcFile 文件路径
+             * @return
+             * @throws IOException
+             */
+            @PostMapping("/uploadLocal")
+            public String uploadlocal(@RequestParam String srcFile) throws IOException {
+                //上传时需要补全文件名
+                String uploadUrl = fsUri+inputPath+"xx.csv";
+                hadoopUtil.uploadLocalFileToHDFS(srcFile, uploadUrl);
+                return "upload";
+            }
+
+            /**
+             * 下载文件
+             * @param srcFile 文件名
+             * @param response
+             */
+            @GetMapping("/download")
+            public void downloadFile(@RequestParam String srcFile, HttpServletResponse response) {
+                //下载文件名及路径
+                String hdfsFilePath=fsUri+inputPath+"/"+srcFile;
+                response.setContentType("application/octet-stream");
+                response.setHeader("Content-Disposition", "attachment; filename=" + hdfsFilePath.substring(hdfsFilePath.lastIndexOf('/') + 1));
+                try {
+                    hadoopUtil.downloadFileFromHDFS(hdfsFilePath, response.getOutputStream());
+                    response.flushBuffer();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                }
+            }
+
+
+        }
+
+# springboot项目启动时 java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+    3. 对于开发环境快速解决
+    如果你只是想在开发环境中快速解决这个问题（不推荐用于生产环境）：
+        在Spring Boot的main方法中添加以下代码：
+            public static void main(String[] args) {
+                System.setProperty("hadoop.home.dir", "C:\\hadoop"); // 指向你的hadoop目录
+                SpringApplication.run(YourApplication.class, args);
+            }
+
+# 在Hadoop中使用Java FileSystem API设置用户
+    在Hadoop中使用Java FileSystem API时，可以通过几种方式设置操作用户身份：
+    2. 在配置中指定用户
+        Configuration conf = new Configuration();
+        // 设置代理用户
+        conf.set("hadoop.proxyuser.superuser.hosts", "*");
+        conf.set("hadoop.proxyuser.superuser.groups", "*");
+
+        // 或者在获取FileSystem时指定用户
+        FileSystem fs = FileSystem.get(new URI("hdfs://namenode:8020"), conf, "username");

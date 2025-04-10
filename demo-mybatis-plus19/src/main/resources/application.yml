@@ -18,3 +18,14 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志
+
+# HDFS 配置
+hadoop:
+  #服务器地址
+  fsUri: hdfs://localhost:9000
+  #上传路径
+  input:
+    path: /datasource/dailyData/
+  #下载路径
+  output:
+    path: /datasource/dailyData/
