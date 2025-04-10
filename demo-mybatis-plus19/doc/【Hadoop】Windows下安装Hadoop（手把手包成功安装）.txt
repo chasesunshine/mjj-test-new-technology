@@ -1,0 +1,109 @@
+# 【Hadoop】Windows下安装Hadoop（手把手包成功安装）
+https://blog.csdn.net/tttzzzqqq2018/article/details/131928028
+## 二、下载Hadoop的相关文件
+    Hadoop3.1.0版本的安装包：https://archive.apache.org/dist/hadoop/common/hadoop-3.1.0/hadoop-3.1.0.tar.gz
+    Windows环境安装所需的bin文件包（我们这里选择3.1.0）：
+        1、可以打开地址：https://gitee.com/nkuhyx/winutils ，里面选 3.1.0。 (马佳健个人用的是这个)
+        2、或者直接下载：https://gitee.com/tttzzzqqq/apache-hadoop-3.1.0-winutils（用这个启动的时候会报错）
+
+## 三、解压Hadoop安装包
+
+## 四、替换bin文件夹
+    替换到Hadoop安装目录下
+    可以发现apache-hadoop-3.1.0-winutils-master这个文件夹解压后里面只有bin这一个文件夹，我们将这个bin文件夹复制到hadoop-3.1.0文件夹中替换原有的bin文件夹
+
+## 五、配置Hadoop环境变量
+   HADOOP_HOME
+   D:\hadoop-3.1.0
+   path里面加上 %HADOOP_HOME%\bin
+
+## 六、检查环境变量是否配置成功
+   hadoop version
+
+## 七、配置Hadoop的配置文件
+   7.1、配置 core-site.xml 文件
+   先在 D:/hadoop-3.1.0/data/ 目录下建 tmp 文件夹
+   配置 core-site.xml 文件，文件路径：\hadoop-3.1.0\etc\hadoop\core-site.xml
+
+   7.2、配置 mapred-site.xml 文件
+   文件路径：\hadoop-3.1.0\etc\hadoop\mapred-site.xml
+
+   7.3、配置 yarn-site.xml 文件
+   文件路径：\hadoop-3.1.0\etc\hadoop\yarn-site.xml
+
+   7.4、新建namenode文件夹和datanode文件夹还有tmp文件夹
+        7.4.1、在D:\hadoop-3.1.0创建data文件夹（这个也可以是别的名字，但后面配置要对应修改）
+        7.4.2、在data文件夹中（D:\hadoop-3.1.0\data）创建datanode和namenode文件夹还有tmp文件夹
+
+   7.5、配置 hdfs-site.xml 文件
+   文件路径：\hadoop-3.1.0\etc\hadoop\hdfs-site.xml
+
+   7.6、配置 hadoop-env.sh 文件
+   文件路径：\hadoop-3.1.0\etc\hadoop\hadoop-env.sh
+   使用查找功能（ctrl+f）查找export JAVA_HOME，找到相应的位置：
+   JAVA_HOME的具体路径在环境变量中查找到
+
+   7.7、配置 hadoop-env.cmd 文件
+   文件路径：\hadoop-3.1.0\etc\hadoop\hadoop-env.cmd
+   打开后使用查找功能（ctrl+f），输入@rem The java implementation to use查找到对应行
+   在set JAVA_HOME那一行将自己的JAVA_HOME路径配置上去
+
+## 八、启动Hadoop服务
+    8.1、namenode格式化：hdfs namenode -format
+    以管理员模式打开命令窗口
+    在cmd中进入到D:\hadoop-3.1.0\bin路径
+    或者直接在对应的文件夹里面输入cmd进入
+    输入命令:
+        hdfs namenode -format
+    如果没报错的话，证明配置文件没出问题！
+    出现类似下图说明成功。如果出错，可能原因有如：环境变量配置错误如路径出现空格，或者winutils版本不对或hadoop版本过高等，或hadoop的etc下文件配置有误
+
+    8.2、开启hdfs：start-dfs.cmd
+    然后再进入到D:\hadoop-3.1.0\sbin路径
+    输入命令：
+        start-dfs.cmd
+    会跳出两个窗口，不要关闭！
+
+    8.3、开启yarn：start-yarn.cmd
+    再输入命令：
+        start-yarn.cmd
+    会跳出两个窗口，也不要关闭！
+
+    8.4、或者直接开启所有服务：start-all.cmd
+    也可以直接执行下面命令：（以管理员模式打开命令窗口）
+        start-all.cmd
+    然后回车，此时会弹出4个cmd窗口，分别是NameNode、ResourceManager、NodeManager、DataNode。检查4个窗口有没有报错。
+
+    8.5、查看Hadoop运行的进程：jps
+    在CMD执行jps看到这4个进程，启动成功
+
+    8.6、访问namenode和HDFS的页面以及resourcemanager的页面来观察集群是否正常
+    可以通过访问namenode和HDFS的Web UI界面（http://localhost:9870）
+    注意：
+    Hadoop版本是3.xx的是 http://localhost:9870/
+    Hadoop版本是2.xx的是 http://localhost:50070/
+    本文演示的hadoop版本是3.1.0，所以是前者
+
+    8.7、关闭Hadoop集群：stop-all.cmd
+    以管理员模式打开命令窗口
+    进入到hadoop的目录：D:\hadoop-3.1.0\sbin
+    执行命令：stop-all.cmd
+    D:\hadoop-3.1.0\sbin>stop-all.cmd
+
+
+# 注意点：
+## windows下安装hadoophadoop version 显示报错 Error: JAVA_HOME is incorrectly set.（deepseek）
+    使用短路径，因为个人就是用了长路径带空格所以报错了
+3. 修改 Hadoop 配置
+    Hadoop 需要显式指定 JAVA_HOME，因为 Windows 下的脚本可能无法自动读取系统变量。
+    编辑 hadoop-env.cmd
+    进入 Hadoop 安装目录的 etc\hadoop 文件夹，找到 hadoop-env.cmd 文件，用文本编辑器打开，取消注释或添加以下行：
+    set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_301
+    注意：
+        1. 路径中如果有空格，需要用引号包裹：set JAVA_HOME="C:\Program Files\Java\jdk1.8.0_301"。
+        2. 或者改用短路径（推荐）：
+            C:\Progra~1\Java\jdk1.8.0_301（Progra~1 是 Program Files 的缩写）。
+
+## 启动hadoop时 ERROR namenode.NameNode: Failed to start namenode.java.lang.UnsatisfiedLinkError: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
+    这个错误表明 Hadoop 在 Windows 系统上运行时缺少必要的本地库支持。Hadoop 在 Windows 上需要 winutils.exe 和 hadoop.dll 等本地库文件才能正常运行。
+    个人最后 用的是这个替换的bin文件：1、可以打开地址：https://gitee.com/nkuhyx/winutils ，里面选 3.1.0。 (马佳健个人用的是这个)
