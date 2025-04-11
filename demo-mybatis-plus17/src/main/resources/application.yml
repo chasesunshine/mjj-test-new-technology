@@ -21,3 +21,7 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印与sql相关的日志
+
+access:
+  key:
+    property: dsd1sd2dr4
