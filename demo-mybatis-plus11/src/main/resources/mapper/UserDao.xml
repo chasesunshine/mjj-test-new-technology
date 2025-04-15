@@ -2,10 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.wanbang.dao.UserMapper">
+<mapper namespace="org.wanbang.dao.UserDao">
+    <insert id="batchInsert">
+        insert into user(name,age)
+        values
+        <foreach collection="param" item="item" separator=",">
+            (#{item.name},#{item.age})
+        </foreach>
+    </insert>
 
-    <select id="login" resultType="org.wanbang.entity.User">
-        select id, name, password from user where name=#{name} and password=#{password}
-    </select>
-
+    <update id="login1"></update>
 </mapper>
