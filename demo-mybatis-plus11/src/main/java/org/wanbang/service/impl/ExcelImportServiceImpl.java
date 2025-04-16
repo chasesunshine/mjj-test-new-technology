@@ -39,6 +39,22 @@ public class ExcelImportServiceImpl implements ExcelImportService {
     @Resource
     private UserDao userDao;
 
+    /**
+     * 执行流程：
+     *
+     *  线程：Thread[http-nio-8101-exec-1,5,main]循环处理批量数据
+     *  线程：Thread[http-nio-8101-exec-1,5,main]循环处理批量数据
+     *  线程：Thread[http-nio-8101-exec-1,5,main]处理最后一批数据
+     *  线程：Thread[http-nio-8101-exec-1,5,main]主线程执行完成
+     *  ...
+     *  线程：Thread[pool-1-thread-1,5,main]处理数据:50
+     *  线程：Thread[pool-1-thread-2,5,main]处理数据:50
+     *  线程：Thread[pool-1-thread-3,5,main]处理数据:20
+     *
+     * @param file
+     * @return
+     * @throws Exception
+     */
     @Override
     public int importLargeExcel(MultipartFile file) throws Exception {
         ExcelDataListener listener = new ExcelDataListener();
@@ -51,6 +67,8 @@ public class ExcelImportServiceImpl implements ExcelImportService {
         ReadSheet readSheet = EasyExcel.readSheet(0).build();
         excelReader.read(readSheet);
         excelReader.finish();
+
+        System.out.println("线程："+Thread.currentThread()+"主线程执行完成");
 
         return listener.getTotal();
     }
@@ -67,6 +85,7 @@ public class ExcelImportServiceImpl implements ExcelImportService {
                 // 提交批次任务到线程池
                 submitBatch(new ArrayList<>(batchList));
                 batchList.clear();
+                System.out.println("线程："+Thread.currentThread()+"循环处理批量数据");
             }
         }
 
@@ -75,6 +94,7 @@ public class ExcelImportServiceImpl implements ExcelImportService {
             // 处理最后一批数据
             if (!batchList.isEmpty()) {
                 submitBatch(batchList);
+                System.out.println("线程："+Thread.currentThread()+"处理最后一批数据");
             }
         }
 
@@ -84,6 +104,7 @@ public class ExcelImportServiceImpl implements ExcelImportService {
                 // 这里可以使用批量插入
                 userDao.batchInsert(copy);
                 total.addAndGet(copy.size());
+                System.out.println("线程："+Thread.currentThread()+"处理数据:"+copy.size());
             });
         }
 
