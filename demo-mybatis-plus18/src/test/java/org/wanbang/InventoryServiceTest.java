@@ -28,7 +28,7 @@ public class InventoryServiceTest {
 
     private Long testProductId = 1L;
 
-    @BeforeEach
+    @Test
     public void setup() {
         // 初始化测试商品库存
         inventoryService.initInventory(testProductId, 1000);
