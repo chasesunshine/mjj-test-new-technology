@@ -23,7 +23,7 @@ public class SchedulerExample {
         };
 
         // 安排一个任务，在1秒后首次执行，然后每隔2秒执行一次
-        scheduler.scheduleAtFixedRate(task, 1, 2, TimeUnit.SECONDS);
+//        scheduler.scheduleAtFixedRate(task, 1, 2, TimeUnit.SECONDS);
 
         // 如果你想要在一定时间后关闭调度器，可以这样做：
         // scheduler.schedule(() -> scheduler.shutdown(), 60, TimeUnit.SECONDS);
