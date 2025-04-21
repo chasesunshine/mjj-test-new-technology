@@ -62,6 +62,7 @@ public class InventoryServiceImpl implements InventoryService {
                 }
             } finally {
                 // 释放锁
+                System.out.println("线程："+Thread.currentThread()+" 释放锁: "+lockKey);
                 lockService.unlock(lockKey);
             }
         }

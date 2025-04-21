@@ -9,6 +9,5 @@ import org.wanbang.Inventoryquestion.entity.InventorySegment;
 @Mapper
 public interface InventorySegmentMapper extends BaseMapper<InventorySegment> {
 
-    @Update("UPDATE inventory_segment SET stock = stock - #{deduct}, version = version + 1 WHERE id = #{id} AND version = #{version} AND stock >= #{deduct}")
     int reduceStock(@Param("id") Long id, @Param("deduct") int deduct, @Param("version") int version);
 }

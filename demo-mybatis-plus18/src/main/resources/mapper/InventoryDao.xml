@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wanbang.Inventoryquestion.mapper.InventorySegmentMapper">
+
+    <update id="reduceStock">
+        UPDATE inventory_segment SET stock = stock - #{deduct}, version = version + 1 WHERE id = #{id} AND version = #{version} AND stock >= #{deduct}
+    </update>
+</mapper>
