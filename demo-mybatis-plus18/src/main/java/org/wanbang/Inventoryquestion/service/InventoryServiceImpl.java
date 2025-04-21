@@ -24,11 +24,9 @@ public class InventoryServiceImpl implements InventoryService {
     @Transactional
     public boolean reduceInventory(Long productId, int quantity) {
         // 1. 获取商品所有库存分段
-        List<InventorySegment> segments = segmentMapper.selectList(
-                new LambdaQueryWrapper<InventorySegment>()
+        List<InventorySegment> segments = segmentMapper.selectList(new LambdaQueryWrapper<InventorySegment>()
                         .eq(InventorySegment::getProductId, productId)
-                        .orderByAsc(InventorySegment::getSegmentNo)
-        );
+                        .orderByAsc(InventorySegment::getSegmentNo));
 
         if (segments.isEmpty()) {
             throw new RuntimeException("商品库存不存在");
@@ -45,6 +43,7 @@ public class InventoryServiceImpl implements InventoryService {
             try {
                 // 获取分布式锁
                 if (!lockService.tryLock(lockKey, 3, 10)) {
+                    System.out.println("获取分布式锁失败: "+lockKey);
                     continue; // 获取锁失败，尝试下一个分段
                 }
 
@@ -53,11 +52,7 @@ public class InventoryServiceImpl implements InventoryService {
                     int deduct = Math.min(remaining, segment.getStock());
 
                     // 乐观锁更新库存
-                    int updated = segmentMapper.reduceStock(
-                            segment.getId(),
-                            deduct,
-                            segment.getVersion()
-                    );
+                    int updated = segmentMapper.reduceStock(segment.getId(), deduct, segment.getVersion());
 
                     if (updated > 0) {
                         remaining -= deduct;
