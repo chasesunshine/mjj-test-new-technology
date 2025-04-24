@@ -62,6 +62,7 @@ public class LogFilter extends ZuulFilter {
             httpEntity.setTraceId(RequestContext.getCurrentContext().getZuulRequestHeaders().get(LogCollectionConstants.traceId));
             log.info("接口统计 {}",JSON.toJSONString(httpEntity));
             RequestContext.getCurrentContext().setResponseBody(body);
+            log.info("记录请求的详细信息，请求参数，返回值，时长等信息");
         } catch (Exception e) {
             log.error("日志统计失败", e);
             return true;

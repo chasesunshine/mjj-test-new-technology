@@ -5,6 +5,7 @@ import com.log.collection.core.LogHelper;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +17,7 @@ import java.util.UUID;
  * @description : 生成traceId，将traceId加入到RequestHeader中，带入到下游请求中。
  */
 @Component
+@Slf4j
 public class TracePreFilter extends ZuulFilter {
 
     @Override
@@ -39,6 +41,7 @@ public class TracePreFilter extends ZuulFilter {
         MDC.put(LogCollectionConstants.traceId, traceIdVal);
         RequestContext ctx = RequestContext.getCurrentContext();
         ctx.addZuulRequestHeader(LogCollectionConstants.traceId, traceIdVal);
+        log.info("生成traceId，将traceId加入到RequestHeader中，带入到下游请求中。");
         return null;
     }
 }
