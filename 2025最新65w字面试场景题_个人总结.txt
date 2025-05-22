@@ -502,9 +502,33 @@
         注意，这里需要实现业务系统能够实现故障转移或者请求幂等。这样才能保证用户请求不会出问题。
 ## 43.2 解决方案
     对于 unable to create new native thread 、Metaspace、Direct buffer memory 和 GC overhead limit exceeded,它们的原因相对简单，可以直接给出结论。
+     unable to create new native thread : 无法创建更多的操作系统线程，以下 3 种情况:
+         说明当前系统的线程数过多，超过了系统线程数的上限，减少当前应用创建的线程即可。
+         没有 native 内存
+     Metaspace：
+         说明 Metaspace 不够用，修改 -XX:MaxMetaspaceSize 启动参数，调大永久代空间即可
+     Direct buffer memory：
+         Direct ByteBuffer 的默认大小为 64 MB，一旦使用超出限制，就会抛出Directbuffer memory 错误
+     GC overhead limit exceeded：
+         当 jvm 98%的时间都在 GC 时，就会出现该异常。这种情况需要增大堆或者结合下面的方法继续排查。
+### 43.2.1 分析
+    当应用发生 oom 后，最佳的分析载体就是 heap dump。通过添加-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/app.dump参数，可以实现当应用发生 oom 时，全自动导出 heap dump。
+    有了 heap dump，我们就可以借助 Eclipse MAT 这款工具来分析 heapdump 了
+### 43.2.2 规避
+    oom 发生的原因有两种:
+        1. 应用正常，但是堆设置过小，无法支持正常的对象分配
+        2. 应用发生了内存泄漏，导致应该被清理的对象没有清理，无限增长通过分析 heap dump，我们基本可以区分出两种情况，
+            第一种情况，对象的分布都正确，没有那种以下占用 30%*-，甚至 50%的对象。第二种情况就是某一种类型的对象，占据了大量的内存空间。
+            第一种情况的解决方案就是：
+                3. 增大堆内存
+                4. 优化应用内存使用效率
+            第二种情况，就需要针对性分析了，这里笔者给出常见的 oom 原因，大家在问题排查时，可以逐个排除，直到找到正确答案：
+                5. ThreadLocal 未清理
+                6. 出现了未指定分页的大数据量查询
+                7. 定时任务中 list 忘记清空，每次都追加数据
+                8. 监控系统中使用了不可控的字段作为 label,导致 label 无限增长
 
-
-
+44. [线上问题排查]CPU 使用率较高排查和解决思路
 
 
 
