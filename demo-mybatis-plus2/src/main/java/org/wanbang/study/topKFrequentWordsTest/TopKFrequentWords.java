@@ -29,10 +29,14 @@ public class TopKFrequentWords {
 
         String line;
         while ((line = reader.readLine()) != null) {
+            // line是单词， 数据形式 （“aaa”,0+1）
+            //                    （“bbb”,1+1）
             wordCount.put(line, wordCount.getOrDefault(line, 0) + 1);
             currentSize += line.length() + 16; // 保守估计内存占用
 
             if (currentSize >= BLOCK_SIZE) {
+                // 将统计的数据写入到文件中，文件中的数据形式  aaa:1
+                //                                    bbb:2
                 File chunkFile = writeChunkToFile(wordCount, chunkIndex++);
                 chunkFiles.add(chunkFile);
                 wordCount.clear();
