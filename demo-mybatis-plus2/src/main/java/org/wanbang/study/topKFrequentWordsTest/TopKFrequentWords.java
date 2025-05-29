@@ -1,5 +1,7 @@
 package org.wanbang.study.topKFrequentWordsTest;
 
+import com.alibaba.fastjson.JSON;
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
@@ -90,6 +92,7 @@ public class TopKFrequentWords {
 
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
             minHeap.offer(entry);
+            // 这地方是一旦超过了 k ，就在队列中把最小的给弹出
             if (minHeap.size() > k) {
                 minHeap.poll();
             }
@@ -98,5 +101,20 @@ public class TopKFrequentWords {
         List<Map.Entry<String, Integer>> result = new ArrayList<>(minHeap);
         result.sort((a, b) -> b.getValue().compareTo(a.getValue()));
         return result;
+    }
+
+
+    public static void main(String[] args) {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("aaa",1);
+        map.put("bbb",2);
+        map.put("ccc",3);
+        map.put("ddd",4);
+        map.put("eee",5);
+        map.put("fff",6);
+        map.put("ggg",7);
+        map.put("hhh",8);
+        List<Map.Entry<String, Integer>> topK = getTopK(map, 5);
+        System.out.println(JSON.toJSONString(topK));
     }
 }
