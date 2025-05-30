@@ -608,6 +608,19 @@
         将ai的URL加载到HashSet中（内存中可以容纳）
         遍历bi中的URL，检查是否存在于ai的HashSet中
         输出共同的URL
+## 45.6 [大众点评]如何找出排名前 500 的数？
+    有 1w 个数组，每个数组有 500 个元素，并且有序排列。如何在这 10000*500个数中找出前 500 的数？
+    马佳健个人思路：
+        1. 新建一个 PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
+            这么一个优先级队列，按照值的大小进行排序
+        2. 遍历这 1w 个数组
+            遍历每个数组，放入 minHeap 中，它会按照值进行放入和排序，如果超过500个数，就一直offer，一直poll出去，直到遍历完成（以下是思路）
+            minHeap.offer(entry);
+            // 这地方是一旦超过了 k ，就在队列中把最小的给弹出
+            if (minHeap.size() > k) {
+                minHeap.poll();
+            }
+
 
 
 
