@@ -665,9 +665,115 @@
         服务端校对完成后，会更新二维码状态，并且给 PC 端生成一个正式的 token。
         后续 PC 端就是持有这个 token 访问服务端。
 
+# 49. [京东一面]如何用 Redis 统计用户访问量
+    拼多多有数亿的用户，那么对于某个网页，怎么使用Redis来统计一个网站的用户访问数呢？
+    1、Hash
+        哈希是Redis的一种基础数据结构，Redis底层维护的是一个开散列，会把不同的key映射到哈希表上，如果是遇到关键字冲突，那么就会拉出一个链表出来
+        当一个用户访问的时候，如果用户登陆过，那么我们就使用用户的id，如果用户没有登陆过，那么我们也能够前端页面随机生成一个key用来标识用户
+        当用户访问的时候，我们可以使用HSET命令，key可以选择URI与对应的日期进行拼凑，field 可以使用用户的id或者随机标识，value可以简单设置为1。
+        当我们要统计某一个网站某一天的访问量的时候，就可以直接使用HLEN来得到最终的结果了。
+            [root@VM 0 2 centos ~]# redis-c
+            redis-check-aof redis-check-rdbredis-cli
+            [root@VM 0 2 centos ~]# redis-cli
+            127.0.0.1:6379>hset index.html0527 11110 1
+            (integer)1
+            127.0.0.1:6379> hset index.html0527 11115 2
+            (integer)1
+            127.0.0.1:6379> hlen index.html0527
+            (integer)2
+        优点：简单，容易实现，查询也是非常方便，数据准确性非常高。
+        缺点：占用内存过大。随着key的增多，性能也会下降。网站访问量不高还行，拼多多这种数亿PV的网站肯定顶不住。
+    2、Bitset
+        我们知道，对于一个32位的int，如果我们只用来记录id，那么只能够记录一个用户，但如果我们转成2进制，每位用来表示一个用户，那么我们就能够一口气表示32个用户，空间节省了32倍！
+        对于有大量数据的场景，如果我们使用bitset，那么可以节省非常多的内存。
+        对于没有登陆的用户，我们也可以使用哈希算法，把对应的用户标识哈希成一个数字id。bitset 非常的节省内存，假设有1亿个用户，也只需要100000000/8/1024/1024约等于12兆内存。
+        Redis 已经为我们提供了SETBIT的方法，使用起来非常的方便，我们可以看看下面的例子。
+        我们在item页面可以不停地使用SETBIT命令，设置用户已经访问了该页面，也可以使用GETBIT的方法查询某个用户是否访问。最后我们通过BITCOUNT可以统计该网页每天的访问数量。
+            127.0.0.1:6379> setbit item.html0528 11111 1
+            (integer)0
+            127.0.0.1:6379>setbit item.html0528 11 1
+            (integer)0
+            127.0 0.1:6379> getbit item.html0528 33
+            (integer)0
+            127.0.0 1:6379> getbit item.html0528 11
+            (integer)1
+            127.0.0.1:6379> bitcount item.html0528
+            (integer)2
+        优点： 占用内存更小，查询方便，可以指定查询某个用户，数据可能略有瑕疵，对于非登陆的用户，可能不同的key映射到同一个id，否则需要维护一个非登陆用户的映射，有额外的开销。
+        缺点： 如果用户非常的稀疏，那么占用的内存可能比方法一更大
+        个人理解：
+             redisTemplate.opsForValue().setBit("", 1, true)
+             源码：               Boolean setBit(K key, long offset, boolean value);
+             deepseek：
+                 # RedisTemplate API 中的 setBit 方法含义
+                 `Boolean setBit(K key, long offset, boolean value)` 是 Spring Data Redis 中 RedisTemplate 提供的一个方法，用于操作 Redis 的位图(bitmap)数据结构。
+                 ## 方法参数解释
+                     - `K key`: Redis 中位图的键名
+                     - `long offset`: 位偏移量(从0开始)
+                     - `boolean value`: 要设置的值(true表示1，false表示0)
+                 ## 功能说明
+                     这个方法用于对指定键的位图在指定偏移量处设置位值：
+                     - 如果value为true，则将偏移量处的位设置为1
+                     - 如果value为false，则将偏移量处的位设置为0
+                 ## 返回值
+                     该方法返回一个Boolean值，表示该偏移量处原来的位值：
+                     - 返回true表示原来该位是1
+                     - 返回false表示原来该位是0
+                 ## 底层原理
+                     这个方法对应于Redis的`SETBIT`命令，允许你对字符串值进行位级操作。Redis将字符串视为位数组，可以单独设置或获取每一位的值。
+                 ## 使用示例
+                     ```java
+                     // 设置键"mybitmap"的第10位为1，并获取原来的值
+                     Boolean previousValue = redisTemplate.opsForValue().setBit("mybitmap", 10, true);
+                     // 设置键"flags"的第5位为0
+                     redisTemplate.opsForValue().setBit("flags", 5, false);
+                     ```
+                 ## 注意事项
+                     1. 如果键不存在，Redis会自动创建一个新的位图
+                     2. 偏移量必须是非负整数
+                     3. 位图会自动扩展以容纳设置的偏移量，中间未设置的位默认为0
+                 位图常用于实现布隆过滤器、用户在线状态统计等场景。
+    3、概率算法
+        对于拼多多这种多个页面都可能非常多访问量的网站，如果所需要的数量不用那么准确，可以使用概率算法。
+        事实上，我们对一个网站的UV的统计，1亿跟1亿零30万其实是差不多的。
+        在Redis中，已经封装了HyperLogLog算法，他是一种基数评估算法。这种算法的特征，一般都是数据不存具体的值，而是存用来计算概率的一些相关数据。
+            127.0.0.1:6379> pfadd pay.html0528 111 222 123 asb
+            (integer)1
+            127.0.0.1:6379> pfcount pay.html0528
+            (integer)4
+        当用户访问网站的时候，我们可以使用PFADD命令，设置对应的命令，最后我们只要通过PFCOUNT就能顺利计算出最终的结果，因为这个只是一个概率算法，所以可能存在0.81%的误差
+        优点： 占用内存极小，对于一个key，只需要12kb。对于拼多多这种超多用户的特别适用。
+        缺点： 查询指定用户的时候，可能会出错，毕竟存的不是具体的数据。总数也存在一定的误差。
+        上面就是常见的3种适用Redis统计网站用户访问数的方法了。
+            deepseek：
+                # Redis PFADD 命令解析
+                    您提供的命令是 Redis 的 HyperLogLog 数据结构操作命令：
+                    ```
+                    PFADD pay.html0528 111 222 123 asb
+                    ```
+                ## 命令含义
+                    `PFADD` 是 Redis HyperLogLog 数据结构的添加命令，用于:
+                    1. 向名为 `pay.html0528` 的 HyperLogLog 结构中添加元素 `111`, `222`, `123`, `asb`
+                    2. 如果 HyperLogLog 不存在，会自动创建
+                    3. 如果添加的元素导致基数估计发生变化，返回 1；否则返回 0
+                ## HyperLogLog 特性
+                    1. **高效统计不重复元素**：用于估计集合的基数(唯一元素数量)
+                    2. **固定内存占用**：无论添加多少元素，只占用约12KB内存
+                    3. **误差率约0.81%**：是概率性数据结构，不是精确计数
+                ## 使用场景
+                    - 统计网站每日独立访客(UV)
+                    - 统计搜索关键词的不同数量
+                    - 统计用户点击的不同商品ID数量
+                ## 相关命令
+                    - `PFCOUNT key`：获取基数估计值
+                    - `PFMERGE destkey sourcekey [sourcekey...]`：合并多个HyperLogLog
+                ## 注意事项
+                    1. HyperLogLog 只提供基数估计，不存储实际元素
+                    2. 无法获取已添加的元素列表
+                    3. 适合大数据量下的近似统计，不适用于需要精确结果的场景
+                您可以使用 `PFCOUNT pay.html0528` 来查看这个 HyperLogLog 中估计的唯一元素数量。
 
-
-
+# 50. shoppe面试题实时订阅推送设计与实现
 
 
 
