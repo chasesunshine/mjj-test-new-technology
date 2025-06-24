@@ -1427,5 +1427,99 @@
     ```
 理解MySQL行级锁的真实锁定对象可以帮助开发者避免死锁、提高并发性能，并正确设计数据库访问模式。
 
+# 46.17 [阿里]如何实现一个类加载器？为什么是LoadClass而不是findClass？
+# 实现类加载器及 loadClass 与 findClass 的区别
+## 一、如何实现自定义类加载器
+### 1. 基本实现步骤
+    ```java
+    public class MyClassLoader extends ClassLoader {
+        private String classPath;
+
+        public MyClassLoader(String classPath) {
+            this.classPath = classPath;
+        }
+
+        @Override
+        protected Class<?> findClass(String name) throws ClassNotFoundException {
+            try {
+                // 1. 获取类文件字节码
+                byte[] classData = getClassData(name);
+                // 2. 定义类对象
+                return defineClass(name, classData, 0, classData.length);
+            } catch (IOException e) {
+                throw new ClassNotFoundException(name);
+            }
+        }
+
+        private byte[] getClassData(String className) throws IOException {
+            // 转换类名路径：com.example.Test -> com/example/Test.class
+            String path = classPath + File.separatorChar +
+                         className.replace('.', File.separatorChar) + ".class";
+            try (InputStream ins = new FileInputStream(path);
+                 ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                byte[] buffer = new byte[4096];
+                int bytesNumRead;
+                while ((bytesNumRead = ins.read(buffer)) != -1) {
+                    baos.write(buffer, 0, bytesNumRead);
+                }
+                return baos.toByteArray();
+            }
+        }
+    }
+    ```
+### 2. 使用示例
+    ```java
+    public class Main {
+        public static void main(String[] args) throws Exception {
+            MyClassLoader loader = new MyClassLoader("D:/myclasses");
+            Class<?> clazz = loader.loadClass("com.example.Demo");
+            Object obj = clazz.newInstance();
+            System.out.println(obj.getClass().getClassLoader());
+        }
+    }
+    ```
+## 二、为什么重写 findClass 而不是 loadClass
+### 1. 双亲委派模型流程
+    ```
+    loadClass(String name, boolean resolve)
+      └─ findLoadedClass(name)       // 检查是否已加载
+         └─ parent.loadClass(name)   // 委托父加载器
+            └─ ... (递归向上委托)
+               └─ findClass(name)   // 最终调用自己的findClass
+    ```
+### 2. 关键区别
+    | 特性                | loadClass                          | findClass                          |
+    |---------------------|-----------------------------------|-----------------------------------|
+    | 默认实现            | 包含完整双亲委派逻辑               | 直接抛出ClassNotFoundException    |
+    | 重写影响            | 可能破坏双亲委派机制               | 保持双亲委派完整性                |
+    | 主要职责            | 类加载流程控制                     | 实际类加载实现                    |
+    | 是否调用defineClass | 否（由findClass调用）             | 是                                |
+    | 典型使用场景        | 需要打破双亲委派时                 | 标准自定义类加载器实现            |
+### 3. 核心原因
+    1. **架构清晰性**：`loadClass`处理流程控制，`findClass`处理具体加载逻辑
+    2. **安全性保障**：避免自定义加载器绕过父类加载器检查
+    3. **维护双亲委派**：默认`loadClass`实现已经包含规范的委派逻辑
+    4. **扩展友好性**：只需关注如何获取类字节码，不用重复实现委派逻辑
+### 4. 需要重写loadClass的特殊情况
+    当需要**打破双亲委派模型**时（如热部署、模块化加载）：
+    ```java
+    @Override
+    protected Class<?> loadClass(String name, boolean resolve)
+        throws ClassNotFoundException {
+        // 1. 检查特定包下的类自行加载
+        if (name.startsWith("com.myapp.")) {
+            return findClass(name);
+        }
+        // 2. 其他类仍走双亲委派
+        return super.loadClass(name, resolve);
+    }
+    ```
+## 三、最佳实践建议
+    1. **优先重写findClass**：99%的场景只需重写findClass
+    2. **保持双亲委派**：除非明确需要打破该模型
+    3. **注意类卸载**：自定义类加载器加载的类在 loader 被回收时才能卸载
+    4. **线程安全**：ClassLoader的方法需要保证线程安全
+    5. **资源释放**：及时关闭文件流等资源
+    通过这种设计，Java既保持了类加载的安全性，又为开发者提供了足够的扩展灵活性。
 
 
